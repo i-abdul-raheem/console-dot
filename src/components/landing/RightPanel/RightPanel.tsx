@@ -15,6 +15,7 @@ import {
   BottomPanel,
   BottomLink,
   ArrowBtn,
+  RightContainer,
 } from "./elements";
 import Link from "next/link";
 import { useIsMobileView } from "../utils/utils";
@@ -30,7 +31,7 @@ export const RightPanel = () => {
         flexDirection: isMobileView ? "column" : "row",
       }}
     >
-      <div style={{ width: "100%" }}>
+      <div style={{width:'100%'}}>
         <div
           style={{
             display: "flex",

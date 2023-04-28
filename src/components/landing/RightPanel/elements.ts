@@ -1,14 +1,24 @@
 import { styled, Box, Typography } from "@mui/material";
 import Link from "next/link";
-export const RightBox = styled(Box)({
+import { useIsMobileView } from "../utils/utils";
+
+
+
+export const RightContainer=()=>{
+  width: "100%" 
+}
+export const RightBox = styled(Box)(()=>{
+  const isMobileView=useIsMobileView();
+  return {
   display: "flex",
   flexDirection: "column",
   justifyContent: "flex-end",
   alignItems: "center",
   width: "67px",
   height: "calc(100vh - 64px)",
-  position: "relative",
+  position: isMobileView? "fixed" :"relative",
   borderLeft: "1px solid #696969",
+  }
 });
 
 export const IconsList = styled(Box)({
@@ -38,7 +48,7 @@ export const SubHeading = styled(Typography)({
   fontSize: "35px",
   width: "100%",
   display: "block",
-  overflow: "hidden"
+  overflow: "hidden",
 });
 
 export const DynamicText = styled(Box)({
@@ -76,16 +86,16 @@ export const BottomLink = styled(Link)({
   color: "#000",
   textDecoration: "none",
   height: 72,
-  display:'flex',
+  display: "flex",
   alignItems: "center",
-  padding:'0 24px'
+  padding: "0 24px",
 });
 
 export const ArrowBtn = styled(Link)({
   color: "#000",
   backgroundColor: "whitesmoke",
   height: 72,
-  display:'flex',
+  display: "flex",
   alignItems: "center",
-  padding:'0 24px'
+  padding: "0 24px",
 });
