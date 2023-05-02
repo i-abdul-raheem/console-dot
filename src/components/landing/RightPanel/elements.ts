@@ -10,8 +10,8 @@ export const RightContainer=()=>{
 export const RightBox = styled(Box)(()=>{
   const isMobileView=useIsMobileView();
   return {
-  display: "flex",
-  flexDirection: "column",
+  display: isMobileView? "none": "flex",
+  flexDirection: isMobileView? "row" : "column",
   justifyContent: "flex-end",
   alignItems: "center",
   width: "67px",
