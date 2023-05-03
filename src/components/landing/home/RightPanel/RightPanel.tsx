@@ -18,7 +18,7 @@ import {
   RightContainer,
 } from "./elements";
 import Link from "next/link";
-import { useIsMobileView } from "../utils/utils";
+import { useIsMobileView } from "../../utils/utils";
 export const RightPanel = () => {
   const isMobileView = useIsMobileView();
   return (
@@ -58,7 +58,7 @@ export const RightPanel = () => {
           <DynamicText>
             <Typewriter
               options={{
-                strings: ["HARDWARE", "SOFTWARE", "EMBEDDED"],
+                strings: ["HARDWARE ", "SOFTWARE ", "EMBEDDED "],
                 autoStart: true,
                 loop: true,
               }}

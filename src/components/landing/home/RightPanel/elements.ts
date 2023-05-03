@@ -1,6 +1,6 @@
 import { styled, Box, Typography } from "@mui/material";
 import Link from "next/link";
-import { useIsMobileView } from "../utils/utils";
+import { useIsMobileView } from "../../utils/utils";
 
 
 
@@ -18,6 +18,7 @@ export const RightBox = styled(Box)(()=>{
   height: "calc(100vh - 64px)",
   position: isMobileView? "fixed" :"relative",
   borderLeft: "1px solid #696969",
+  borderBottom:"1px solid #696969",
   }
 });
 
@@ -75,6 +76,7 @@ export const DescripItems = styled(Typography)({
 
 export const BottomPanel = styled(Box)({
   borderTop: "1px solid #696969",
+  borderBottom:"1px solid #696969",
   margin: "0px",
   padding: 0,
   display: "flex",

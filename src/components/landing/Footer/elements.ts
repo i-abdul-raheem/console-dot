@@ -80,9 +80,9 @@ export const EmailInfo=styled(Box)({
 })
 
 export const FooterBottom=styled(Box)(({ theme}) =>({
-    width:'100%',
+    
     height:66,
-    backgroundColor:'red',
+    backgroundColor:'#696969',
     display:'flex',
     alignItems:'center',
     justifyContent:'space-between',
@@ -98,12 +98,12 @@ export const FooterBottom=styled(Box)(({ theme}) =>({
 export const SocialMediaIconsList=styled(Box)({
     display:"flex",
     flexDirection:"column",
-    margin:"0 20px",
+    marginLeft:'30px'
     
 })
 
 export const FooterBottomCopyRight=styled(Typography)({
-    margin:'0 50px',
+    marginLeft:'',
     fontFamily:'sans-serif'
 
 })

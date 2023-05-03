@@ -1,29 +1,15 @@
 import { TextField, Button ,TextareaAutosize} from "@mui/material";
-import { StyledButton } from "./elements";
+import { FormSection, InputsFirstRow, InputsSecondRow, SectionContainer, SectionTitle, StyledButton } from "./elements";
 
 export const InquireSection = () => {
   return (
     <>
-      <div
-        style={{
-          display: "flex",
-          backgroundColor: "whitesmoke",
-          padding: "50px",
-        }}
-      >
-        <div
-          style={{
-            display: "block",
-            width: "25%",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: "20px",
-          }}
-        >
+      <SectionContainer>
+        <SectionTitle>
           <h1>How Can We Help You? </h1>
-        </div>
-        <div style={{ width: "100%" }}>
-          <div style={{ display: "flex", width: "100%", columnGap: "30px" ,marginBottom:'20px'}}>
+        </SectionTitle>
+        <FormSection>
+          <InputsFirstRow>
             <div className="name" style={{ width: "100%" }}>
               <TextField
                 id="outlined-basic"
@@ -48,9 +34,9 @@ export const InquireSection = () => {
                 variant="outlined"
               />
             </div>
-          </div>
+            </InputsFirstRow>
 
-          <div className="message" style={{marginBottom:'20px'}}>
+          <InputsSecondRow>
             <TextareaAutosize
               id="outlined-basic"
               placeholder="Your Message"
@@ -58,12 +44,12 @@ export const InquireSection = () => {
               
               style={{width:'100%',fontSize:'20px'}}
             />
-          </div>
+          </InputsSecondRow>
           <div style={{display:"flex",justifyContent:"flex-end"}}>
             <StyledButton >Inquire Now</StyledButton>
           </div>
-        </div>
-      </div>
+          </FormSection>
+        </SectionContainer>
       ;
     </>
   );

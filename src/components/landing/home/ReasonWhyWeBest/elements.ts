@@ -1,7 +1,11 @@
-import { styled , Box ,Typography} from "@mui/material";
+import { Box, Typography, styled } from "@mui/material"
 
-export const DigiContainer=styled(Box)({
+
+
+
+export const ReasonWhyWeContainer=styled(Box)({
     padding:'40px 10px',
+    
     width:'auto',
     marginBottom:'10px'
 })
@@ -12,6 +16,7 @@ export const SectionTitleDescrip=styled(Box)({
     flexDirection:'column',
     alignItems:'center',
     justifyContent:"center",
+    marginBottom:"20px"
     
 })
 
