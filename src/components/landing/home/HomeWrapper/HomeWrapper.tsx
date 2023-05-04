@@ -14,9 +14,9 @@ export const HomeWrapper = () => {
     <>
       <Header />
       <RightPanel />
+      <AboutUs />
       <CccSection />
       <DigitalTransformation />
-      <AboutUs />
       <FortuneClients />
       <ReasonWhyWeBest />
       <RemoteAgile />

@@ -31,7 +31,7 @@ export const RightPanel = () => {
         flexDirection: isMobileView ? "column" : "row",
       }}
     >
-      <div style={{width:'100%'}}>
+      <div style={{ width: "100%" }}>
         <div
           style={{
             display: "flex",
@@ -41,7 +41,7 @@ export const RightPanel = () => {
             width: "calc(100%)",
             height: "calc(100vh - 64px - 73px - 64px)",
             textAlign: "center",
-            padding: 32
+            padding: 32,
           }}
         >
           <Heading>DEDICATED TO INNOVATION </Heading>
@@ -58,11 +58,12 @@ export const RightPanel = () => {
           <DynamicText>
             <Typewriter
               options={{
-                strings: ["HARDWARE ", "SOFTWARE ", "EMBEDDED "],
+                strings: ["HARDWARE", "SOFTWARE", "EMBEDDED"],
                 autoStart: true,
                 loop: true,
               }}
             />
+            &nbsp;
             <span style={{ color: "#000" }}>DEVELOPMENT</span>
           </DynamicText>
 

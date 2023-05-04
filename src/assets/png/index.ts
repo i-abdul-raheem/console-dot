@@ -11,6 +11,16 @@ import Verizon from "./verizon.png";
 import React from "./react.png";
 import Life from "./life.jpg";
 import Event from "./event.jpg";
+import JobOpening from "./jobopening-removebg-preview.png";
+import Workwithus1 from "./workwithus1.jpg";
+import Workwithus2 from "./workwithus2.jpg";
+import Workwithus3 from "./workwithus3.jpg";
+import Workwithus4 from "./Withus4.jpg";
+import Fb from "./fbicon.png";
+import Insta from "./insta.png";
+import Linkedin from "./linkedin.png";
+import Hassaan from "./has.jpg";
+import ReviewIcon from "./reviewicon.jpg";
 export {
     MainLogo,
     Pic1,
@@ -24,5 +34,16 @@ export {
     Verizon,
     React,
     Life,
-    Event
+    Event,
+    JobOpening,
+    Workwithus1,
+    Workwithus2,
+    Workwithus3,
+    Workwithus4,
+    Fb,
+    Insta,
+    Linkedin,
+    Hassaan,
+    ReviewIcon
+
 }

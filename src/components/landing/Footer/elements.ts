@@ -3,7 +3,7 @@ import { styled, Box, Typography , useTheme, useMediaQuery} from "@mui/material"
 export const FooterSection = styled(Box)(({ theme}) => ({
   display: "flex",
   backgroundColor: "whitesmoke",
-  width: "100%",
+  width: "auto",
   padding: "70px 0",
   alignItems: "flex-start",
   justifyContent: "center",

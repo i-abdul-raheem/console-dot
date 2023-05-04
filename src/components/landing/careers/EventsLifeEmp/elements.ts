@@ -1,15 +1,22 @@
 import styled from "@emotion/styled";
 import { Box, Typography, Button } from "@mui/material";
+import { useIsMobileView } from "../../utils/utils";
 
-export const ComponentContainer = styled(Box)({
-  display: "flex",
+export const ComponentContainer = styled(Box)(()=>{
+  const isMobileView=useIsMobileView();
+  return{display: "flex",
+  flexDirection: isMobileView? 'column':'row',
   padding: "70px",
-  columnGap: "20px",
+  rowGap:'20px',
+  columnGap: "20px",}
 });
 
 export const Section1 = styled(Box)({
   backgroundColor: "whitesmoke",
   width: "100%",
+  display:"flex",
+  flexDirection:"column",
+  justifyContent:"space-between"
 });
 
 export const ImageSection = styled(Box)({});
@@ -36,3 +43,4 @@ export const StyledButton = styled(Button)({
   border: "1px solid rgb(23 , 96 , 128 )",
   color: "rgb(23 , 96 , 128 )",
 });
+

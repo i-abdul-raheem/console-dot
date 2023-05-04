@@ -15,8 +15,9 @@ export const EventsLifeEmp = () => {
     <>
       <ComponentContainer>
         <Section1>
+          <div>
           <ImageSection>
-            <Image src={Event} alt="Event Image" width={389} height={222} />
+            <Image src={Event} alt="Event Image" width={389} height={235} style={{width: "100%"}}/>
           </ImageSection>
 
           <SectionTitle>
@@ -26,15 +27,18 @@ export const EventsLifeEmp = () => {
             Whether it is birthdays, culture, festivals, or seasons- we
             celebrate every occasion with enthusiasm and joy.
           </SectionDescription>
+          </div>
           <SectionButton>
             <StyledButton>
               VIEW MORE
               </StyledButton>
             </SectionButton>
+            
         </Section1>
         <Section1>
+          <div>
           <ImageSection>
-            <Image src={Life} alt="Event Image" width={389} height={222} />
+            <Image src={Life} alt="Event Image" width={389} height={320} style={{width: "100%", height: "auto"}} />
           </ImageSection>
 
           <SectionTitle>
@@ -44,15 +48,18 @@ export const EventsLifeEmp = () => {
             With a perfect mix of life and work, our employees understand the
             responsibility and resonate the same.
           </SectionDescription>
+          </div>
           <SectionButton>
             <StyledButton>
               VIEW MORE
               </StyledButton>
             </SectionButton>
+            
         </Section1>
         <Section1>
+          <div style={{marginBottom:"20px"}}>
           <ImageSection>
-            <Image src={Life} alt="Event Image" width={389} height={222} />
+            <Image src={Life} alt="Event Image" width={389} height={320} style={{width:'100%',height:"auto"}}/>
           </ImageSection>
 
           <SectionTitle>
@@ -63,11 +70,13 @@ export const EventsLifeEmp = () => {
             your unsaid needs and ensure to avail you a fertile work
             environment.
           </SectionDescription>
+          </div>
           <SectionButton>
             <StyledButton>
               VIEW MORE
               </StyledButton>
             </SectionButton>
+            
         </Section1>
       </ComponentContainer>
     </>
