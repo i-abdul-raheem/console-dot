@@ -1,4 +1,4 @@
 export * from "./Header";
 export * from "./utils";
-export * from "./RightPanel";
-export * from "./Footer";
+export * from "./home";
+export * from "./careers";

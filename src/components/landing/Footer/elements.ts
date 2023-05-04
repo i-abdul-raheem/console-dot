@@ -1,13 +1,18 @@
-import { styled, Box, Typography } from "@mui/material";
+import { styled, Box, Typography , useTheme, useMediaQuery} from "@mui/material";
 
-export const FooterSection = styled(Box)({
+export const FooterSection = styled(Box)(({ theme}) => ({
   display: "flex",
   backgroundColor: "whitesmoke",
-  width: "100%",
+  width: "auto",
   padding: "70px 0",
   alignItems: "flex-start",
   justifyContent: "center",
-});
+  [theme.breakpoints.down("lg")]: {
+    flexDirection: "column",
+    margin:"0 0 0 30px"
+
+  },
+}));
 
 export const ReviewSection = styled(Box)({
   display: "flex",
@@ -51,7 +56,9 @@ export const NavItem=styled(Box)({
 })
 
 export const ContactInfo=styled(Box)({
-   
+   display:"flex",
+   flexDirection:'column',
+
 
 })
 
@@ -68,28 +75,35 @@ export const WhatsAppInfo=styled(Box)({
 })
 
 export const EmailInfo=styled(Box)({
-    margin:'10px'
+    
 
 })
 
-export const FooterBottom=styled(Box)({
-    width:'100%',
+export const FooterBottom=styled(Box)(({ theme}) =>({
+    
     height:66,
-    backgroundColor:'red',
+    backgroundColor:'#696969',
     display:'flex',
     alignItems:'center',
-    justifyContent:'flex-start',
-    columnGap:"500px"
-})
+    justifyContent:'space-between',
+  padding: '0 20px',
+  [theme.breakpoints.down("lg")]: {
+    flexDirection: "column",
+    height: "auto",
+    justifyContent: "flex-start",
+    
+  },
+}));
 
 export const SocialMediaIconsList=styled(Box)({
     display:"flex",
     flexDirection:"column",
-    margin:"0 20px"
+    marginLeft:'30px'
+    
 })
 
 export const FooterBottomCopyRight=styled(Typography)({
-    margin:'0 50px',
+    marginLeft:'',
     fontFamily:'sans-serif'
 
 })

@@ -18,7 +18,7 @@ import {
   RightContainer,
 } from "./elements";
 import Link from "next/link";
-import { useIsMobileView } from "../utils/utils";
+import { useIsMobileView } from "../../utils/utils";
 export const RightPanel = () => {
   const isMobileView = useIsMobileView();
   return (
@@ -31,7 +31,7 @@ export const RightPanel = () => {
         flexDirection: isMobileView ? "column" : "row",
       }}
     >
-      <div style={{width:'100%'}}>
+      <div style={{ width: "100%" }}>
         <div
           style={{
             display: "flex",
@@ -41,7 +41,7 @@ export const RightPanel = () => {
             width: "calc(100%)",
             height: "calc(100vh - 64px - 73px - 64px)",
             textAlign: "center",
-            padding: 32
+            padding: 32,
           }}
         >
           <Heading>DEDICATED TO INNOVATION </Heading>
@@ -63,6 +63,7 @@ export const RightPanel = () => {
                 loop: true,
               }}
             />
+            &nbsp;
             <span style={{ color: "#000" }}>DEVELOPMENT</span>
           </DynamicText>
 

@@ -60,18 +60,6 @@ export const Header = () => {
                     padding: "0.5rem",
                   }}
                 >
-                  WHO WE WORK WITH
-                </button>
-              </ListItem>
-              <ListItem>
-                <button
-                  style={{
-                    background: "none",
-                    border: "none",
-                    fontSize: "0.8rem",
-                    padding: "0.5rem",
-                  }}
-                >
                   ABOUT US{" "}
                 </button>
               </ListItem>
