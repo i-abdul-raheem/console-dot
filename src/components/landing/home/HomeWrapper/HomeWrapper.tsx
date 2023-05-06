@@ -1,5 +1,6 @@
 import { Footer } from "../../Footer";
 import { Header } from "../../Header";
+import { Wrapper } from "../../utils";
 import { AboutUs } from "../AboutUs";
 import { CccSection } from "../CccSection";
 import { DigitalTransformation } from "../DigitalTransformation";
@@ -14,6 +15,7 @@ export const HomeWrapper = () => {
     <>
       <Header />
       <RightPanel />
+
       <AboutUs />
       <CccSection />
       <DigitalTransformation />
@@ -21,6 +23,7 @@ export const HomeWrapper = () => {
       <ReasonWhyWeBest />
       <RemoteAgile />
       <InquireSection />
+
       <Footer />
     </>
   );

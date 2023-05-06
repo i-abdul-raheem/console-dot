@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { DescriptionSection, TitleSection, TitleSectionTop } from "./elements";
 import { Fb, Hassaan, ReviewIcon } from "@/assets";
-
 export const ConsoleDotWarriorsReview = () => {
   return (
     <>
@@ -17,7 +16,7 @@ export const ConsoleDotWarriorsReview = () => {
       </DescriptionSection>
 
       <div style={{padding:'70px' }}>
-        <Image src={ReviewIcon} alt="Image" width={80} height={80} style={{marginTop:'20px'}}/>
+        <Image src={ReviewIcon} alt="Image" width={80} height={80} style={{}}/>
         <div style={{padding:"100px" , backgroundColor:"rgb(23 , 96 , 128, 0.5 )", borderRadius:'0 100px 0 100px'}}>
           <div style={{display:"flex" , columnGap:'30px'}}>
             <div>

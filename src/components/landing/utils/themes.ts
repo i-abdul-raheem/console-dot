@@ -1,4 +1,4 @@
-import { orange } from "@mui/material/colors";
+import { Box, styled } from "@mui/material";
 
 interface Types {
   mode: string;
@@ -70,3 +70,16 @@ export const getTheme = (mode: string) => ({
   },
 });
 
+export const FullPage = styled(Box)({
+  position: "relative",
+  width: "100%",
+  backgroundColor: "red",
+});
+
+export const Wrapper = styled(Box)({
+  width: "1349px",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  position: "relative",
+});

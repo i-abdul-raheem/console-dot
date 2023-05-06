@@ -8,10 +8,12 @@ import {
   SectionTitleDescrip,
 } from "./elements";
 import Image from "next/image";
+import { Wrapper } from "../../utils";
 
 export const ReasonWhyWeBest = () => {
   return (
     <>
+    <Wrapper>
       <ReasonWhyWeContainer>
         <SectionTitleDescrip>
           <SectionTitle>Reasons why we are the best</SectionTitle>
@@ -56,6 +58,7 @@ export const ReasonWhyWeBest = () => {
           </div>
         </div>
       </div>
+      </Wrapper>
     </>
   );
 };

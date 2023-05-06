@@ -1,17 +1,16 @@
-import { styled, Box, Typography , useTheme, useMediaQuery} from "@mui/material";
+import { styled, Box, Typography} from "@mui/material";
 
-export const FooterSection = styled(Box)(({ theme}) => ({
+export const FooterSection = styled(Box)(() => ({
+  
   display: "flex",
   backgroundColor: "whitesmoke",
   width: "auto",
   padding: "70px 0",
   alignItems: "flex-start",
   justifyContent: "center",
-  [theme.breakpoints.down("lg")]: {
-    flexDirection: "column",
-    margin:"0 0 0 30px"
+  
 
-  },
+  
 }));
 
 export const ReviewSection = styled(Box)({
@@ -87,12 +86,7 @@ export const FooterBottom=styled(Box)(({ theme}) =>({
     alignItems:'center',
     justifyContent:'space-between',
   padding: '0 20px',
-  [theme.breakpoints.down("lg")]: {
-    flexDirection: "column",
-    height: "auto",
-    justifyContent: "flex-start",
-    
-  },
+  
 }));
 
 export const SocialMediaIconsList=styled(Box)({

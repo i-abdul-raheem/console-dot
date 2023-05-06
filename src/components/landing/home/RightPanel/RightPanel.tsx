@@ -19,9 +19,11 @@ import {
 } from "./elements";
 import Link from "next/link";
 import { useIsMobileView } from "../../utils/utils";
+import { Wrapper } from "../../utils";
 export const RightPanel = () => {
   const isMobileView = useIsMobileView();
   return (
+    
     <div
       style={{
         display: "flex",

@@ -19,9 +19,11 @@ import {
 import { Image0, Image1, Image2, Image4, Image5, Image6, Pic1 } from "@/assets";
 import { url } from "inspector";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import { Wrapper } from "../../utils";
 export const CccSection = () => {
   return (
-    <>
+    
+    <Wrapper>
       <CccContainer>
         <SectionTitleDescrip>
           <SectionTitle>Connect, Collaborate and Create</SectionTitle>
@@ -76,6 +78,6 @@ export const CccSection = () => {
 
         <CardSection></CardSection>
       </CccContainer>
-    </>
+      </Wrapper>
   );
 };

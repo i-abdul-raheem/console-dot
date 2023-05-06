@@ -10,7 +10,7 @@ import {
   NavMenuIcon,
   RightNav,
 } from "./elements";
-import { getTheme } from "../utils";
+import { Wrapper, getTheme } from "../utils";
 
 export const Header = () => {
   return (
@@ -49,6 +49,18 @@ export const Header = () => {
                   }}
                 >
                   WHAT WE DO
+                </button>
+              </ListItem>
+              <ListItem>
+                <button
+                  style={{
+                    background: "none",
+                    border: "none",
+                    fontSize: "0.8rem",
+                    padding: "0.5rem",
+                  }}
+                >
+                  WHO WE WORK WITH
                 </button>
               </ListItem>
               <ListItem>

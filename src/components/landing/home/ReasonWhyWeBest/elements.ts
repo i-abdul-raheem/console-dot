@@ -4,7 +4,7 @@ import { Box, Typography, styled } from "@mui/material"
 
 
 export const ReasonWhyWeContainer=styled(Box)({
-    padding:'40px 10px',
+    padding:'70px',
     
     width:'auto',
     marginBottom:'10px'

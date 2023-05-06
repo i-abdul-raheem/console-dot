@@ -1,7 +1,7 @@
 import { styled, Box, Typography } from "@mui/material";
 import { TransformImage } from "@/assets";
 export const DigiContainer = styled(Box)({
-  padding: "40px 10px",
+  padding: "70px",
   width: "auto",
   marginBottom: "10px",
 });

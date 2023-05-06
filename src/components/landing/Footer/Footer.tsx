@@ -23,9 +23,11 @@ import {
   SocialMediaIconsList,
   FooterBottomCopyRight,
 } from "./elements";
+import { Wrapper } from "../utils";
 export const Footer = () => {
   return (
     <>
+    
       <FooterSection>
         <ReviewSection>
           <FooterHeading>About ConsoleDot Review</FooterHeading>
@@ -93,6 +95,7 @@ export const Footer = () => {
           </SocialMediaIconsList>
         </div>
       </FooterBottom>
+      
     </>
   );
 };

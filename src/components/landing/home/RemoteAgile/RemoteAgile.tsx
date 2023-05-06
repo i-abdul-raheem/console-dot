@@ -1,9 +1,11 @@
 import { Button } from "@mui/material";
+import { Wrapper } from "../../utils";
 
 export const RemoteAgile = () => {
   return (
     <>
-      <div style={{ padding: "30px" }}>
+    <Wrapper>
+      <div style={{ padding: "70px" }}>
         <div style={{ display: "flex", columnGap: "20px" }}>
           <div>
             <h1>
@@ -50,6 +52,7 @@ export const RemoteAgile = () => {
           </div>
         </div>
       </div>
+      </Wrapper>
     </>
   );
 };

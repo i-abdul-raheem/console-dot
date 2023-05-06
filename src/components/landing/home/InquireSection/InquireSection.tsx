@@ -1,9 +1,11 @@
 import { TextField, Button ,TextareaAutosize} from "@mui/material";
 import { FormSection, InputsFirstRow, InputsSecondRow, SectionContainer, SectionTitle, StyledButton } from "./elements";
+import { Wrapper } from "../../utils";
 
 export const InquireSection = () => {
   return (
     <>
+    <Wrapper>
       <SectionContainer>
         <SectionTitle>
           <h1>How Can We Help You? </h1>
@@ -50,7 +52,7 @@ export const InquireSection = () => {
           </div>
           </FormSection>
         </SectionContainer>
-      ;
+        </Wrapper>
     </>
   );
 };

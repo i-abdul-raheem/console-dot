@@ -21,6 +21,8 @@ import Insta from "./insta.png";
 import Linkedin from "./linkedin.png";
 import Hassaan from "./has.jpg";
 import ReviewIcon from "./reviewicon.jpg";
+import SeeOpeningTopImage from "./see opening.jpg";
+import JobsLinkedin from "./jobslinkedin.png";
 export {
     MainLogo,
     Pic1,
@@ -44,6 +46,9 @@ export {
     Insta,
     Linkedin,
     Hassaan,
-    ReviewIcon
+    ReviewIcon,
+    SeeOpeningTopImage,
+    JobsLinkedin,
+    
 
 }

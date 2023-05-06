@@ -12,7 +12,8 @@ export const StyledButton = styled(Button)({
 export const SectionContainer = styled(Box)({
   display: "flex",
   backgroundColor: "whitesmoke",
-  padding: "50px",
+  padding: "70px",
+  width:"auto"
 });
 
 export const SectionTitle = styled(Box)({

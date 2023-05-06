@@ -2,7 +2,7 @@ import { styled, Box, Typography } from "@mui/material";
 import { Image0, Image1, Image2, Image4, Image5, Image6 } from "@/assets";
 
 export const CccContainer = styled(Box)({
-  padding: "40px 10px",
+  padding: "70px",
 
   width: "auto",
   marginBottom: "10px",
