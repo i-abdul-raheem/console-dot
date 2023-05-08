@@ -47,8 +47,10 @@ export const Card = ({ image, title, experiance, locationText }: props) => {
         </CardSection>
       </div>
       <SectionButton>
-        <StyledButton onClick={() => router.push("./")}>READ MORE</StyledButton>
-        <StyledButton1 onClick={() => router.push("./JobsDescription")}>
+        <StyledButton onClick={() => router.push("./]")}>
+          READ MORE
+        </StyledButton>
+        <StyledButton1 onClick={() => router.push("./")}>
           APPLY NOW
         </StyledButton1>
       </SectionButton>

@@ -14,7 +14,7 @@ export const JobsOpeningPageWrapper=()=>{
         <JobsOpeningTop/>
         <OpenJobsSection/>
 
-        <JobsDescription/>
+        
         <Footer/>
         </>
     )
