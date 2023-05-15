@@ -4,6 +4,7 @@ export const CareerContainer = styled(Box)({
   display: "flex",
   padding: "70px",
   columnGap: "50px",
+  
 });
 
 export const StyledButton = styled(Box)({
