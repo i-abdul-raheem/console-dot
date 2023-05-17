@@ -13,11 +13,13 @@ export const Heading = styled(Typography)({
   fontWeight: "bold",
   fontSize: "25px",
   color: "black",
+  textAlign:"center"
 });
 
 export const DescriptionSection = styled(Typography)({
   fontSize: "20px",
-  marginBottom: "20px",
+  padding: "20px",
+  textAlign:"center"
 });
 
 export const FortuneButton = styled(Button)({

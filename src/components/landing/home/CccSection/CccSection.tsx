@@ -15,6 +15,7 @@ import {
   ImageText,
   ImageRow,
   ImageSectionContainer,
+  ColumnInMobile,
 } from "./elements";
 import { Image0, Image1, Image2, Image4, Image5, Image6, Pic1 } from "@/assets";
 import { url } from "inspector";
@@ -22,62 +23,64 @@ import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import { Wrapper } from "../../utils";
 export const CccSection = () => {
   return (
-    
-    <Wrapper>
-      <CccContainer>
-        <SectionTitleDescrip>
-          <SectionTitle>Connect, Collaborate and Create</SectionTitle>
-          <SectionDescrip>
-            Partner with us to work with on-demand Agile product team. We are
-            always committed to your growth.
-          </SectionDescrip>
-        </SectionTitleDescrip>
-        <ImageSectionContainer>
+    <CccContainer>
+      <SectionTitleDescrip>
+        <SectionTitle>Connect, Collaborate and Create</SectionTitle>
+        <SectionDescrip>
+          Partner with us to work with on-demand Agile product team. We are
+          always committed to your growth.
+        </SectionDescrip>
+      </SectionTitleDescrip>
+      <ImageSectionContainer>
+        <ImageRow>
           
-          <ImageRow>
-            <ImageLarge1>
-              <ImageSectionContent>
-                <ImageText> ConsoleDot Tech Agility</ImageText>
-                <ArrowRightAltIcon />
-              </ImageSectionContent>
-            </ImageLarge1>
+          <ImageLarge1>
+            <ImageSectionContent>
+              <ImageText> ConsoleDot Tech Agility</ImageText>
+              <ArrowRightAltIcon />
+            </ImageSectionContent>
+          </ImageLarge1>
+          
+          <ColumnInMobile>
             <ImageSmall2>
               <ImageSectionContent>
                 <ImageText> ConsoleDot Tech Agility</ImageText>
                 <ArrowRightAltIcon />
               </ImageSectionContent>
-            </ImageSmall2>
-            <ImageSmall3>
+              </ImageSmall2>
+              <ImageSmall3>
               <ImageSectionContent>
                 <ImageText> ConsoleDot Tech Agility</ImageText>
                 <ArrowRightAltIcon />
               </ImageSectionContent>
             </ImageSmall3>
-          </ImageRow>
-          <ImageRow>
-            <ImageSmall4>
-              <ImageSectionContent>
-                <ImageText>ConsoleDot Tech Agility</ImageText>
-                <ArrowRightAltIcon />
-              </ImageSectionContent>
-            </ImageSmall4>
-            <ImageSmall5>
-              <ImageSectionContent>
-                <ImageText>ConsoleDot Tech Agility</ImageText>
-                <ArrowRightAltIcon />
-              </ImageSectionContent>
-            </ImageSmall5>
-            <ImageLarge6>
-              <ImageSectionContent>
-                <ImageText>ConsoleDot Tech Agility</ImageText>
-                <ArrowRightAltIcon />
-              </ImageSectionContent>
-            </ImageLarge6>
-          </ImageRow>
-        </ImageSectionContainer>
+            </ColumnInMobile>
+        </ImageRow>
+        <ImageRow>
+          <ColumnInMobile>
+          <ImageSmall4>
+            <ImageSectionContent>
+              <ImageText>ConsoleDot Tech Agility</ImageText>
+              <ArrowRightAltIcon />
+            </ImageSectionContent>
+          </ImageSmall4>
+          <ImageSmall5>
+            <ImageSectionContent>
+              <ImageText>ConsoleDot Tech Agility</ImageText>
+              <ArrowRightAltIcon />
+            </ImageSectionContent>
+          </ImageSmall5>
+          </ColumnInMobile>
+          <ImageLarge6>
+            <ImageSectionContent>
+              <ImageText>ConsoleDot Tech Agility</ImageText>
+              <ArrowRightAltIcon />
+            </ImageSectionContent>
+          </ImageLarge6>
+        </ImageRow>
+      </ImageSectionContainer>
 
-        <CardSection></CardSection>
-      </CccContainer>
-      </Wrapper>
+      <CardSection></CardSection>
+    </CccContainer>
   );
 };

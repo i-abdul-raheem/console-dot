@@ -9,7 +9,6 @@ export const SectionContainer=styled(Box)({
     display:'flex',
     alignItems:'center',
     justifyContent:"center",
-    padding:"70px"
 
 })
 

@@ -1,7 +1,8 @@
 import { styled, Box, Typography } from "@mui/material";
+import { useIsMobileView } from "../../utils/utils";
 
 export const AboutUsContainer = styled(Box)({
-  padding: "70px",
+  
   width: "auto",
   marginBottom: "10px",
 });
@@ -11,20 +12,23 @@ export const SectionTitleDescrip = styled(Box)({
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
-  marginBottom: "20px",
+  width: "100%",
 });
 
 export const SectionTitle = styled(Typography)({
   fontWeight: "bold",
-  fontSize: "30px",
+  fontSize: "25px",
   alignItems: "center",
   justifyContent: "center",
   marginBottom: "10px",
 });
 
 export const SectionDescrip = styled(Typography)({
-  fontSize: "25px",
+  fontSize: "20px",
   color: "#696969",
+  display:"flex",
+  justifyContent:"center",
+  textAlign:"center"
 });
 
 export const AgileContainer = styled(Box)({
@@ -33,10 +37,14 @@ export const AgileContainer = styled(Box)({
   columnGap: "30px",
 });
 
-export const DetailRow = styled(Box)({
+export const DetailRow = styled(Box)(()=>{
+  const isMobileView=useIsMobileView();
+  return{
   display: "flex",
+  flexDirection:isMobileView? 'column':'row',
   justifyContent: "center",
   columnGap: "30px",
+  }
 });
 
 export const DetailRowBox = styled(Box)({
@@ -51,16 +59,27 @@ export const BoxText = styled(Typography)({
 });
 export const BoxLabel = styled("label")({});
 
-export const PicSectionContainer = styled(Box)({
-  display: "flex",
-  columnGap: "10px",
-  marginTop: "50px",
+export const PicSectionContainer = styled(Box)(() => {
+  const isMobileView = useIsMobileView();
+  return {
+    display: "flex",
+    flexDirection: isMobileView ? "column" : "row",
+    columnGap: "10px",
+    width: "100%",
+  };
 });
 
-export const PicSection=styled(Box)({
-  display:'flex', flexDirection:'column',justifyContent:'center',width:'100%'
-})
+export const PicSection = styled(Box)({
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  width: "auto",
+});
 
-export const PicContainerContentSection=styled(Box)({
-  display:'flex', flexDirection:'column',justifyContent:'center',width:'100%'
-})
+export const PicContainerContentSection = styled(Box)({
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  width: "auto",
+  textAlign:'center'
+});

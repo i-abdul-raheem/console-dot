@@ -23,14 +23,15 @@ import { Wrapper } from "../../utils";
 export const RightPanel = () => {
   const isMobileView = useIsMobileView();
   return (
-    
     <div
       style={{
+        position:"relative",
         display: "flex",
         alignItems: "flex-start",
         justifyContent: "center",
         width: "100%",
         flexDirection: isMobileView ? "column" : "row",
+        zIndex: 3,
       }}
     >
       <div style={{ width: "100%" }}>
@@ -40,7 +41,7 @@ export const RightPanel = () => {
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
-            width: "calc(100%)",
+            width: "calc(100% - 65px)",
             height: "calc(100vh - 64px - 73px - 64px)",
             textAlign: "center",
             padding: 32,
@@ -66,7 +67,7 @@ export const RightPanel = () => {
               }}
             />
             &nbsp;
-            <span style={{ color: "#000" }}>DEVELOPMENT</span>
+            <span style={{ color: "#fff" }}>DEVELOPMENT</span>
           </DynamicText>
 
           <DescripHeading>
@@ -78,7 +79,7 @@ export const RightPanel = () => {
         <BottomPanel>
           <BottomLink href="#">LEARN MORE</BottomLink>
           <ArrowBtn href="#">
-            <KeyboardArrowDownIcon />{" "}
+            <KeyboardArrowDownIcon style={{color:"#fff"}} />{" "}
           </ArrowBtn>
         </BottomPanel>
       </div>
@@ -86,13 +87,13 @@ export const RightPanel = () => {
       <RightBox>
         <IconsList>
           <ListItems>
-            <FacebookIcon />
+            <FacebookIcon style={{color:"#fff"}}/>
           </ListItems>
           <ListItems>
-            <LinkedInIcon />
+            <LinkedInIcon style={{color:"#fff"}}/>
           </ListItems>
           <ListItems>
-            <TwitterIcon />
+            <TwitterIcon style={{color:"#fff"}}/>
           </ListItems>
         </IconsList>
       </RightBox>

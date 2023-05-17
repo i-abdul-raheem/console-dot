@@ -10,7 +10,7 @@ import { WorkingAtConsoleDot } from "../WorkingAtConsoleDot";
 export const CareersWrapper = () => {
   return (
     <>
-    <Wrapper>
+    
       <CareersTopPage />
       <EventsLifeEmp />
       <WorkingAtConsoleDot/>
@@ -18,7 +18,7 @@ export const CareersWrapper = () => {
       <ConsoleDotWarriorsReview/>
       <SignUpForNewsletter/>
       <FollowUsOn/>
-      </Wrapper>
+      
     </>
   )
 };

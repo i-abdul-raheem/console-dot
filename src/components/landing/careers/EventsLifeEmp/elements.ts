@@ -6,7 +6,6 @@ export const ComponentContainer = styled(Box)(()=>{
   const isMobileView=useIsMobileView();
   return{display: "flex",
   flexDirection: isMobileView? 'column':'row',
-  padding: "70px",
   rowGap:'20px',
   columnGap: "20px",}
 });

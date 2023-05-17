@@ -2,6 +2,7 @@ import { JobsLinkedin } from "@/assets";
 import Image from "next/image";
 import {
   CardBox,
+  CardContainer,
   CardSection,
   CardTitle,
   SectionButton,
@@ -130,22 +131,23 @@ export const OpenJobsSection = () => {
   return (
     <>
       <TopHeading>
-        <h1 style={{ fontSize: "35px" }}>Follow Us On</h1>
+        <h1 style={{ fontSize: "25px" }}>Follow Us On</h1>
         <Image src={JobsLinkedin} alt="Image" width={210} height={111} />
-        <h1 style={{ fontSize: "35px" }}>For The Latest Job Opportunities</h1>
+        <h1 style={{ fontSize: "25px" ,alignItems:"center",justifyContent:"center"}}>For The Latest Job Opportunities</h1>
       </TopHeading>
-
-      <CardBox>
-        {cardContent.map((i, index) => (
-          <Card
-            key={index}
-            image={i.image}
-            title={i.title}
-            experiance={i.experiance}
-            locationText={i.locationText}
-          />
-        ))}
-      </CardBox>
+      <CardContainer>
+        <CardBox>
+          {cardContent.map((i, index) => (
+            <Card
+              key={index}
+              image={i.image}
+              title={i.title}
+              experiance={i.experiance}
+              locationText={i.locationText}
+            />
+          ))}
+        </CardBox>
+      </CardContainer>
     </>
   );
 };

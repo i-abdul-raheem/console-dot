@@ -1,4 +1,5 @@
 import { styled, Button, Box } from "@mui/material";
+import { useIsMobileView } from "../../utils/utils";
 
 export const StyledButton = styled(Button)({
   color: "orange",
@@ -9,19 +10,24 @@ export const StyledButton = styled(Button)({
   },
 });
 
-export const SectionContainer = styled(Box)({
+export const SectionContainer = styled(Box)(()=>{
+  const isMobileView=useIsMobileView();
+  return {
   display: "flex",
+  flexDirection:isMobileView? 'column':'row',
   backgroundColor: "whitesmoke",
-  padding: "70px",
-  width:"auto"
+  padding:"20px",
+  width:"auto"}
 });
 
-export const SectionTitle = styled(Box)({
-  display: "block",
-  width: "25%",
+export const SectionTitle = styled(Box)(()=>{
+  const isMobileView=useIsMobileView();
+  return{
+  display: isMobileView? "flex": "block",
+  width:isMobileView? "100%" : "25%",
   alignItems: "center",
   justifyContent: "center",
-  padding: "20px",
+  padding: "20px",}
 });
 
 export const FormSection=styled(Box)({

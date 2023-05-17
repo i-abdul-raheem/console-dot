@@ -1,16 +1,12 @@
-import { styled, Box, Typography} from "@mui/material";
+import { styled, Box, Typography } from "@mui/material";
 
 export const FooterSection = styled(Box)(() => ({
-  
   display: "flex",
-  backgroundColor: "whitesmoke",
+  backgroundColor: "rgb(23 , 96 , 128, 0.5 )",
   width: "auto",
   padding: "70px 0",
   alignItems: "flex-start",
   justifyContent: "center",
-  
-
-  
 }));
 
 export const ReviewSection = styled(Box)({
@@ -19,7 +15,7 @@ export const ReviewSection = styled(Box)({
   width: "400px",
   alignItems: "flex-start",
   justifyContent: "flex-start",
-  marginBottom:'20px'
+  marginBottom: "20px",
 });
 
 export const NavSection = styled(Box)({
@@ -28,8 +24,7 @@ export const NavSection = styled(Box)({
   width: "400px",
   alignItems: "flex-start",
   justifyContent: "flex-start",
-  marginBottom:'20px'
-  
+  marginBottom: "20px",
 });
 
 export const ContactSection = styled(Box)({
@@ -38,66 +33,51 @@ export const ContactSection = styled(Box)({
   width: "400px",
   alignItems: "flex-start",
   justifyContent: "flex-start",
-  marginBottom:'20px'
+  marginBottom: "20px",
 });
 
-export const FooterHeading=styled(Typography)({
-    fontWeight:'bold',
-    marginBottom:'5px'
+export const FooterHeading = styled(Typography)({
+  fontWeight: "bold",
+  marginBottom: "5px",
+});
+export const NavItemList = styled(Box)({});
 
-})
-export const NavItemList=styled(Box)({
-    
-})
+export const NavItem = styled(Box)({
+  padding: "0 10px",
+});
 
-export const NavItem=styled(Box)({
-    padding:'0 10px'
-})
+export const ContactInfo = styled(Box)({
+  display: "flex",
+  flexDirection: "column",
+});
 
-export const ContactInfo=styled(Box)({
-   display:"flex",
-   flexDirection:'column',
+export const AddressInfo = styled(Box)({
+  marginBottom: "10px",
+});
 
+export const WhatsAppInfo = styled(Box)({
+  marginBottom: "10px",
+});
 
-})
+export const EmailInfo = styled(Box)({});
 
-export const AddressInfo=styled(Box)({
-    marginBottom:'10px'
-
-   
-
-})
-
-export const WhatsAppInfo=styled(Box)({
-    marginBottom:'10px'
-
-})
-
-export const EmailInfo=styled(Box)({
-    
-
-})
-
-export const FooterBottom=styled(Box)(({ theme}) =>({
-    
-    height:66,
-    backgroundColor:'#696969',
-    display:'flex',
-    alignItems:'center',
-    justifyContent:'space-between',
-  padding: '0 20px',
-  
+export const FooterBottom = styled(Box)(({ theme }) => ({
+  height: 66,
+  backgroundColor: "#fff",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-between",
+  padding: "0 20px",
+  width: "auto",
 }));
 
-export const SocialMediaIconsList=styled(Box)({
-    display:"flex",
-    flexDirection:"column",
-    marginLeft:'30px'
-    
-})
+export const SocialMediaIconsList = styled(Box)({
+  display: "flex",
+  flexDirection: "column",
+  marginLeft: "30px",
+});
 
-export const FooterBottomCopyRight=styled(Typography)({
-    marginLeft:'',
-    fontFamily:'sans-serif'
-
-})
+export const FooterBottomCopyRight = styled(Typography)({
+  marginLeft: "",
+  fontFamily: "sans-serif",
+});

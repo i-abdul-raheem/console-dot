@@ -1,4 +1,5 @@
 import { Box, Typography, styled } from "@mui/material"
+import { useIsMobileView } from "../../utils/utils"
 
 
 
@@ -22,13 +23,22 @@ export const SectionTitleDescrip=styled(Box)({
 
 export const SectionTitle=styled(Typography)({
     fontWeight:'bold',
-    fontSize:'30px',
+    fontSize:'25px',
     alignItems:'center',
     justifyContent:'center',
     marginBottom:'10px'
 })
 
 export const SectionDescrip=styled(Typography)({
-    fontSize:'25px',
+    fontSize:'20px',
     color:'#696969'
+})
+
+export const FlexBox=styled(Box)(()=>{
+    const isMobileView= useIsMobileView();
+    return{
+    display: "flex", padding:'20px',
+    flexDirection:isMobileView? "column":'row',
+    width:"100%"
+    }
 })

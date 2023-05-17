@@ -1,12 +1,15 @@
 import { styled, Box, Button, Typography } from "@mui/material";
 import { useIsMobileView } from "../../utils/utils";
 
-export const TopHeading = styled(Box)({
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  columnGap: "10px",
-  margin:"50px 0 0 0"
+export const TopHeading = styled(Box)(() => {
+  const isMobileView = useIsMobileView();
+  return {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "auto",
+    flexDirection: isMobileView ? "column" : "row",
+  };
 });
 
 export const Singlecard = styled(Box)({
@@ -15,7 +18,7 @@ export const Singlecard = styled(Box)({
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
-  borderRadius:'30px'
+  borderRadius: "30px",
 });
 
 export const CardSection = styled(Box)({
@@ -27,6 +30,7 @@ export const CardSection = styled(Box)({
 export const StyledText = styled(Typography)({
   fontSize: "25px",
   lineHeight: "30px",
+  textAlign:"center"
 });
 export const SectionButton = styled(Box)({
   display: "flex",
@@ -40,36 +44,42 @@ export const StyledButton1 = styled(Button)({
   border: "1px solid rgb(23 , 96 , 128 )",
   backgroundColor: "rgb(23 , 96 , 128)",
   color: "white",
-  "&:hover":{
+  "&:hover": {
     backgroundColor: "rgb(23 , 96 , 200)",
-
-  }
+  },
 });
 
 export const StyledButton = styled(Button)({
   padding: "15px",
   border: "1px solid rgb(23 , 96 , 128 )",
-  backgroundColor:'whitesmoke',
-  color:"black",
-  "&:hover":{
+  backgroundColor: "whitesmoke",
+  color: "black",
+  "&:hover": {
     backgroundColor: "rgb(23 , 96 , 128)",
-    color:"white"
-  }
+    color: "white",
+  },
 });
 
-export const CardBox = styled(Box)(()=>{
+export const CardBox = styled(Box)(() => {
+  const isMobileView = useIsMobileView();
+  return {
+    display: "grid",
+    gridTemplateColumns: isMobileView ? "1fr" : "1fr 1fr 1fr",
+    gap: "20px",
+    width: "100%",
+  };
+});
+
+export const CardTitle = styled(Typography)({
+  fontSize: "30px",
+  fontWeight: "bold",
+  textAlign:"center",
+});
+
+export const CardContainer = styled(Box)(()=>{
   const isMobileView=useIsMobileView();
   return{
-  display: "grid",
-  gridTemplateColumns:isMobileView? "1fr": "1fr 1fr 1fr",
-  padding: "70px",
-  gap: "20px",
-  backgroundColor:"rgb(23,96,128,0.5)"
-}
+  padding: isMobileView? 16 : 32,
+  backgroundColor: "rgb(23,96,128,0.5)",
+  }
 });
-
-
-export const CardTitle=styled(Typography)({
-   fontSize:"30px",
-   fontWeight:'bold'
-})

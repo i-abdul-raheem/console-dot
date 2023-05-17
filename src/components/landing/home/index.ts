@@ -8,3 +8,4 @@ export * from "./ReasonWhyWeBest";
 export * from "./RemoteAgile";
 export * from "./AboutUs";
 export * from "./HomeWrapper";
+export * from "./HomePage"

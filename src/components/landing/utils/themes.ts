@@ -1,4 +1,5 @@
 import { Box, styled } from "@mui/material";
+import { useIsMobileView } from "./utils";
 
 interface Types {
   mode: string;
@@ -76,10 +77,13 @@ export const FullPage = styled(Box)({
   backgroundColor: "red",
 });
 
-export const Wrapper = styled(Box)({
-  width: "1349px",
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  position: "relative",
+export const Wrapper = styled(Box)(() => {
+  const isMobileView = useIsMobileView();
+  return {
+    width: isMobileView ? "100%" : "1349px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    position: "relative",
+  };
 });

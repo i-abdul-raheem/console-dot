@@ -5,6 +5,7 @@ import { AboutUs } from "../AboutUs";
 import { CccSection } from "../CccSection";
 import { DigitalTransformation } from "../DigitalTransformation";
 import { FortuneClients } from "../FortuneClients";
+import { HomePage } from "../HomePage";
 import { InquireSection } from "../InquireSection";
 import { ReasonWhyWeBest } from "../ReasonWhyWeBest";
 import { RemoteAgile } from "../RemoteAgile";
@@ -12,10 +13,16 @@ import { RightPanel } from "../RightPanel";
 
 export const HomeWrapper = () => {
   return (
-    <>
-      <Header />
-      <RightPanel />
-
+    <div
+      style={{
+        position: "relative",
+        width: "100%",
+        overflow: "hidden",
+      }}
+    >
+      
+      <HomePage/>
+      
       <AboutUs />
       <CccSection />
       <DigitalTransformation />
@@ -23,8 +30,6 @@ export const HomeWrapper = () => {
       <ReasonWhyWeBest />
       <RemoteAgile />
       <InquireSection />
-
-      <Footer />
-    </>
+    </div>
   );
 };

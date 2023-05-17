@@ -2,6 +2,7 @@ import { Button } from "@mui/material";
 import { React, Verizon } from "@/assets";
 
 import {
+  FlexBox,
   ReasonWhyWeContainer,
   SectionDescrip,
   SectionTitle,
@@ -13,7 +14,6 @@ import { Wrapper } from "../../utils";
 export const ReasonWhyWeBest = () => {
   return (
     <>
-    <Wrapper>
       <ReasonWhyWeContainer>
         <SectionTitleDescrip>
           <SectionTitle>Reasons why we are the best</SectionTitle>
@@ -24,8 +24,8 @@ export const ReasonWhyWeBest = () => {
         </SectionTitleDescrip>
       </ReasonWhyWeContainer>
 
-      <div style={{ display: "flex" }}>
-        <div style={{ display: "flex", padding:'20px' }}>
+      
+        <FlexBox>
           <div style={{width:'100%'}}>
             <Image src={React} alt="Image" width={150} height={50} style={{}}/>
             <h5>E-commerce</h5>
@@ -41,10 +41,10 @@ export const ReasonWhyWeBest = () => {
           <div style={{}}>
             <Image src={Verizon} alt="Image" width={307} height={378} />
           </div>
-        </div>
+        
 
         <div style={{width:"75%", padding:'20px'}}>
-          <div>
+          
             <h5>FINTECH</h5>
             <h2>Bangkok Bank DCS – Digital Channel Services</h2>
             <p>
@@ -56,9 +56,9 @@ export const ReasonWhyWeBest = () => {
             </p>
             <Button>DISCOVER</Button>
           </div>
-        </div>
-      </div>
-      </Wrapper>
+          </FlexBox>
+
+      
     </>
   );
 };

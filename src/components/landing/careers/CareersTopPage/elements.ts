@@ -1,10 +1,16 @@
 import { Box, styled } from "@mui/material";
+import { useIsMobileView } from "../../utils/utils";
 
-export const CareerContainer = styled(Box)({
+export const CareerContainer = styled(Box)(()=>{
+  const isMobileView=useIsMobileView();
+  return{
   display: "flex",
-  padding: "70px",
   columnGap: "50px",
-  
+  flexDirection:isMobileView? 'column-reverse': 'row',
+  width:isMobileView? "auto":'100%',
+  justifyContent:"center",
+  alignItems:'center'
+  }
 });
 
 export const StyledButton = styled(Box)({
@@ -33,12 +39,13 @@ export const LeftCard = styled(Box)({
 });
 
 export const LeftCardHeading = styled(Box)({
-  fontSize: "40px",
-  marginBottom: "30px",
-  lineHeight: "normal",
+  fontSize: "25px",
+  fontWeight:"bold",
+  textAlign:"center"
 });
 
 export const LeftCardParagraph = styled(Box)({
-  fontSize: "25px",
-  marginBottom: "30px",
+  fontSize: "20px",
+  padding:"32px 0 32px 62px",
+  textAlign:"center"
 });
