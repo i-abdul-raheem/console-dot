@@ -24,6 +24,7 @@ import ReviewIcon from "./reviewicon.jpg";
 import SeeOpeningTopImage from "./see opening.jpg";
 import JobsLinkedin from "./jobslinkedin.png";
 import Chess from "./chess.jpg";
+import TopTech from "./toptech.jpg"
 export {
     MainLogo,
     Pic1,
@@ -50,6 +51,7 @@ export {
     ReviewIcon,
     SeeOpeningTopImage,
     JobsLinkedin,
-    Chess
+    Chess,
+    TopTech
 
 }
