@@ -2,12 +2,13 @@ import { styled, Box } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { getTheme } from "../utils";
 import { useIsMobileView } from "../utils/utils";
+import CloseIcon from '@mui/icons-material/Close';
 export const NavBar = styled("nav")({
   display: "flex",
   position:'relative',
   alignItems: "center",
   justifyContent: "space-between",
-  borderBottom: "1px solid #000",
+  borderBottom: "1px solid #fff",
   zIndex: "3",
 });
 
@@ -49,10 +50,17 @@ export const HireDevBtn = styled("button")(({ theme }) => {
   };
 });
 
+export const MenuCloseIcon=styled(CloseIcon)({
+  fontSize: "3rem",
+  borderLeft: "1px solid",
+  padding: "4px",
+  transition:"1s"
+})
+
 export const NavMenuIcon = styled(MenuIcon)({
   fontSize: "3rem",
   borderLeft: "1px solid",
-  padding: "8px",
+  padding: "4px",
 });
 
 export const NameHeading = styled(Box)({

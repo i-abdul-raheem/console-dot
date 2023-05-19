@@ -1,10 +1,12 @@
 import { Box, ThemeProvider } from "@mui/material";
 import { MainLogo } from "@/assets";
 import Image from "next/image";
+import CloseIcon from '@mui/icons-material/Close';
 import {
   HireDevBtn,
   LeftNav,
   ListItem,
+  MenuCloseIcon,
   NameHeading,
   NavBar,
   NavMenuIcon,
@@ -12,8 +14,15 @@ import {
   StyledButton,
 } from "./elements";
 import { Wrapper, getTheme } from "../utils";
+import { useState } from "react";
+import { MenuPage } from "./MenuPage";
 
 export const Header = () => {
+  const[isMaximize, setIsMaximize]=useState(false);
+
+  const toggleAction=()=>{
+       setIsMaximize(!isMaximize)
+  }
   return (
     <ThemeProvider theme={getTheme("light")}>
       <NavBar>
@@ -63,8 +72,21 @@ export const Header = () => {
         </RightNav>
         <LeftNav>
           <HireDevBtn> Hire Developers </HireDevBtn>
+         {isMaximize?(
+          <StyledButton onClick={toggleAction}>
+            <MenuCloseIcon style={{color:"#fff"}}/>
+          </StyledButton>
+         ):(
+          <StyledButton onClick={toggleAction}>
+            <NavMenuIcon style={{color:"#fff"}}/>
+          </StyledButton>
+         )
 
-          <NavMenuIcon style={{color:"#fff"}}/>
+         }
+         {isMaximize && (
+          <MenuPage/>
+         ) }
+          
         </LeftNav>
       </NavBar>
     </ThemeProvider>
