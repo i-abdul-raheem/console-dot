@@ -4,6 +4,7 @@ import {
   SectionContainer,
   SectionContent,
   SingleIconBox,
+  SocialMediaLabel,
   TextSection,
 } from "./elements";
 
@@ -18,17 +19,17 @@ export const FollowUsOn = () => {
 
           <SingleIconBox>
             <Image src={Fb} alt="Fb Icon" width={60} height={60} />
-            <label>Facebook</label>
+            <SocialMediaLabel>Facebook</SocialMediaLabel>
           </SingleIconBox>
 
           <SingleIconBox>
             <Image src={Insta} alt="Fb Icon" width={60} height={60} />
-            <label>Instagram</label>
+            <SocialMediaLabel>Instagram</SocialMediaLabel>
           </SingleIconBox>
 
           <SingleIconBox>
             <Image src={Linkedin} alt="Fb Icon" width={60} height={60} />
-            <label>LinkedIn</label>
+            <SocialMediaLabel>LinkedIn</SocialMediaLabel>
           </SingleIconBox>
         </SectionContent>
       </SectionContainer>

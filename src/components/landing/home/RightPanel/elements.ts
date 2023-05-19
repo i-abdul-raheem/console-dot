@@ -33,30 +33,41 @@ export const ListItems = styled(Box)({
   marginBottom: 24,
 });
 
-export const Heading = styled(Box)({
+export const Heading = styled(Box)(()=>{
+  const isMobileView=useIsMobileView();
+  return{
   fontSize: "20px",
   borderTop: " 1px solid double #696969",
   borderBottom: "1px solid double #696969",
   borderStyle: "double",
   borderLeft: "none",
+  color:"#fff",
   borderRight: "none",
   marginBottom: "42px",
   padding: "12px 0px",
   fontWeight: "bold",
+  }
 });
 
-export const SubHeading = styled(Typography)({
+export const SubHeading = styled(Typography)(()=>{
+  const isMobileView=useIsMobileView();
+  return{
   fontSize: "35px",
   width: "100%",
+  color:"#fff",
   display: "block",
-  overflow: "hidden",
+  }
 });
 
-export const DynamicText = styled(Box)({
+export const DynamicText = styled(Box)(()=>{
+  const isMobileView=useIsMobileView();
+  return{
   display: "flex",
-  fontSize: "35px",
+  fontSize:"25px",
   fontWeight: "bold",
+  
   color: "rgb(23 , 96 , 128 )",
+  }
 });
 export const StaticText = styled(Typography)({});
 
@@ -68,6 +79,7 @@ export const DescripHeading = styled(Box)({
 export const DescripItems = styled(Typography)({
   margin: "50px 0px",
   padding: "10px",
+  color:"#fff",
   borderRight: "1px solid #696969",
   "&:last-child": {
     border: "none",
@@ -85,7 +97,7 @@ export const BottomPanel = styled(Box)({
 });
 
 export const BottomLink = styled(Link)({
-  color: "#000",
+  color: "#fff",
   textDecoration: "none",
   height: 72,
   display: "flex",
@@ -95,7 +107,7 @@ export const BottomLink = styled(Link)({
 
 export const ArrowBtn = styled(Link)({
   color: "#000",
-  backgroundColor: "whitesmoke",
+  backgroundColor: "transparent",
   height: 72,
   display: "flex",
   alignItems: "center",

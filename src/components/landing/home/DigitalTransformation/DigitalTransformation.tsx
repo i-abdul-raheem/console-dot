@@ -1,3 +1,4 @@
+import { Wrapper } from "../../utils";
 import { CardSection } from "../CccSection/elements";
 import {
   BoxesContainer,
@@ -12,6 +13,7 @@ import { TransformImage } from "@/assets";
 export const DigitalTransformation = () => {
   return (
     <>
+    
       <DigiContainer>
         <SectionTitleDescrip>
           <SectionTitle>Digital Transformations</SectionTitle>

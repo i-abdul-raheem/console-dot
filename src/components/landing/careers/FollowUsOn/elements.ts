@@ -21,3 +21,8 @@ export const SingleIconBox = styled(Box)({
   alignItems: "center",
   minWidth: 75,
 });
+
+
+export const SocialMediaLabel=styled('label')({
+  
+})

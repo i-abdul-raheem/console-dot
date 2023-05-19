@@ -1,15 +1,19 @@
 import { TextField, Button ,TextareaAutosize} from "@mui/material";
 import { FormSection, InputsFirstRow, InputsSecondRow, SectionContainer, SectionTitle, StyledButton } from "./elements";
+import { Wrapper } from "../../utils";
+import { ColumnInMobile } from "../CccSection/elements";
 
 export const InquireSection = () => {
   return (
     <>
+    <Wrapper>
       <SectionContainer>
         <SectionTitle>
           <h1>How Can We Help You? </h1>
         </SectionTitle>
         <FormSection>
           <InputsFirstRow>
+          <ColumnInMobile>
             <div className="name" style={{ width: "100%" }}>
               <TextField
                 id="outlined-basic"
@@ -18,6 +22,7 @@ export const InquireSection = () => {
                 variant="outlined"
               />
             </div>
+            
             <div className="email" style={{ width: "100%" }}>
               <TextField
                 id="outlined-basic"
@@ -26,6 +31,7 @@ export const InquireSection = () => {
                 variant="outlined"
               />
             </div>
+            </ColumnInMobile>
             <div className="phone_num" style={{ width: "100%" }}>
               <TextField
                 id="outlined-basic"
@@ -34,6 +40,7 @@ export const InquireSection = () => {
                 variant="outlined"
               />
             </div>
+            
             </InputsFirstRow>
 
           <InputsSecondRow>
@@ -50,7 +57,7 @@ export const InquireSection = () => {
           </div>
           </FormSection>
         </SectionContainer>
-      ;
+        </Wrapper>
     </>
   );
 };

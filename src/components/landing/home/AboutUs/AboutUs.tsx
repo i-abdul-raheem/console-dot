@@ -13,9 +13,11 @@ import {
   SectionTitleDescrip,
 } from "./elements";
 import { Pic1 } from "@/assets";
+import { Wrapper } from "../../utils";
 
 export const AboutUs = () => {
   return (
+    
     <AboutUsContainer>
       <SectionTitleDescrip>
         <SectionTitle>ABOUT US</SectionTitle>
@@ -51,7 +53,7 @@ export const AboutUs = () => {
       <PicSectionContainer>
         <PicSection>
           
-          <Image src={Pic1} alt="Image" width={560} height={560}/>
+          <Image src={Pic1} alt="Image" style={{width:"100%" , height:"auto"}}/>
 
           </PicSection>
         <PicContainerContentSection>

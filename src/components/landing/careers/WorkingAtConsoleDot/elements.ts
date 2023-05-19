@@ -3,9 +3,10 @@ import { useIsMobileView } from "../../utils/utils";
 
 export const ComponentContainer = styled(Box)({
   display: "flex",
-  padding: "70px",
   columnGap: "20px",
   flexDirection: "column",
+  justifyContent:'center',
+  alignItems:"center"
 });
 
 export const SectionButton = styled(Box)({
@@ -55,11 +56,11 @@ export const FlexContiner = styled(Box)(() => {
 });
 
 export const Singlecard = styled(Box)({
-  width: "100%",
   backgroundColor: "whitesmoke",
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
+  width:"100%"
 });
 
 export const CardSection = styled(Box)({

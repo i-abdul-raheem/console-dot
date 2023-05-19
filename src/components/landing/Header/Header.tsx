@@ -9,8 +9,9 @@ import {
   NavBar,
   NavMenuIcon,
   RightNav,
+  StyledButton,
 } from "./elements";
-import { getTheme } from "../utils";
+import { Wrapper, getTheme } from "../utils";
 
 export const Header = () => {
   return (
@@ -28,64 +29,34 @@ export const Header = () => {
           <div>
             <ul>
               <ListItem>
-                <button
-                  style={{
-                    background: "none",
-                    border: "none",
-                    fontSize: "0.8rem",
-                    padding: "0.5rem",
-                  }}
-                >
+                <StyledButton>
                   CUSTOMERS
-                </button>
+                </StyledButton>
               </ListItem>
               <ListItem>
-                <button
-                  style={{
-                    background: "none",
-                    border: "none",
-                    fontSize: "0.8rem",
-                    padding: "0.5rem",
-                  }}
-                >
+                <StyledButton>
                   WHAT WE DO
-                </button>
+                </StyledButton>
               </ListItem>
               <ListItem>
-                <button
-                  style={{
-                    background: "none",
-                    border: "none",
-                    fontSize: "0.8rem",
-                    padding: "0.5rem",
-                  }}
-                >
+                <StyledButton>
+                  WHO WE WORK WITH
+                </StyledButton>
+              </ListItem>
+              <ListItem>
+                <StyledButton>
                   ABOUT US{" "}
-                </button>
+                </StyledButton>
               </ListItem>
               <ListItem>
-                <button
-                  style={{
-                    background: "none",
-                    border: "none",
-                    fontSize: "0.8rem",
-                    padding: "0.5rem",
-                  }}
-                >
+                <StyledButton>
                   TECEHNOLOGY
-                </button>
+                </StyledButton>
               </ListItem>
               <ListItem>
-                <button
-                  style={{
-                    background: "none",
-                    border: "none",
-                    fontSize: "0.8rem",
-                    padding: "0.5rem",
-                  }}
-                >
+                <StyledButton>
                   PRODUCTS
-                </button>
+                </StyledButton>
               </ListItem>
             </ul>
           </div>
@@ -93,7 +64,7 @@ export const Header = () => {
         <LeftNav>
           <HireDevBtn> Hire Developers </HireDevBtn>
 
-          <NavMenuIcon />
+          <NavMenuIcon style={{color:"#fff"}}/>
         </LeftNav>
       </NavBar>
     </ThemeProvider>

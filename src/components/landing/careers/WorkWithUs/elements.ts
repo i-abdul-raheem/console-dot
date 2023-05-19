@@ -3,8 +3,6 @@ import { useIsMobileView } from "../../utils/utils";
 
 export const ComponentContainer = styled(Box)({
   width: "auto",
-
-  padding: "70px",
 });
 export const TitleSection = styled(Box)({
   display: "flex",

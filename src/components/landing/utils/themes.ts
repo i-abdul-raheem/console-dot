@@ -1,4 +1,5 @@
-import { orange } from "@mui/material/colors";
+import { Box, styled } from "@mui/material";
+import { useIsMobileView } from "./utils";
 
 interface Types {
   mode: string;
@@ -70,3 +71,20 @@ export const getTheme = (mode: string) => ({
   },
 });
 
+export const FullPage = styled(Box)({
+  position: "relative",
+  width: "100%",
+  backgroundColor: "red",
+});
+
+export const Wrapper = styled(Box)(() => {
+  const isMobileView = useIsMobileView();
+  return {
+    width: isMobileView ? "100%" : "1349px",
+    display: "flex",
+    flexDirection: "column",
+    flexWrap:"wrap",
+    justifyContent: "center",
+    position: "relative",
+  };
+});

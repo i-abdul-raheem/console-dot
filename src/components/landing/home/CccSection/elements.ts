@@ -1,11 +1,9 @@
 import { styled, Box, Typography } from "@mui/material";
 import { Image0, Image1, Image2, Image4, Image5, Image6 } from "@/assets";
+import { useIsMobileView } from "../../utils/utils";
 
 export const CccContainer = styled(Box)({
-  padding: "40px 10px",
-
-  width: "auto",
-  marginBottom: "10px",
+  width: "100%",
 });
 
 export const SectionTitleDescrip = styled(Box)({
@@ -13,36 +11,43 @@ export const SectionTitleDescrip = styled(Box)({
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
+  textAlign:"center",
+  paddingBottom:"20px"
 });
 
 export const SectionTitle = styled(Typography)({
   fontWeight: "bold",
-  fontSize: "30px",
+  fontSize: "25px",
   alignItems: "center",
   justifyContent: "center",
-  marginBottom: "10px",
+  textAlign:"center"
 });
 
 export const SectionDescrip = styled(Typography)({
-  fontSize: "25px",
+  fontSize: "20px",
   color: "#696969",
 });
 
 export const CardSection = styled(Box)({});
 
-export const ImageRow = styled(Box)({
+export const ImageRow = styled(Box)(()=>{
+  const isMobileView=useIsMobileView();
+  return{
   display: "flex",
   marginBottom: "10px",
+  flexDirection:isMobileView? "column":'row',
+  }
 });
 
 export const ImageSectionContainer = styled(Box)({
   backgroundColor: "whitesmoke",
 });
 
-export const ImageLarge1 = styled(Box)({
-  width: "655.5px",
+export const ImageLarge1 = styled(Box)(()=>{
+  const isMobileView=useIsMobileView();
+  return{
+  width:"100%",
   height: "300px",
-  margin: "10px 10px 0  0",
   backgroundColor: "white",
   backgroundImage: `url(${Image0.src})`,
   backgroundRepeat: "no-repeat",
@@ -67,12 +72,13 @@ export const ImageLarge1 = styled(Box)({
     content: '""',
     zIndex: 10,
   },
-});
+}});
 
-export const ImageSmall2 = styled(Box)({
-  width: "322.25px",
+export const ImageSmall2 = styled(Box)(()=>{
+  const isMobileView=useIsMobileView();
+  return{
+  width:"100%",
   height: "300px",
-  margin: "10px 10px 0  0",
   backgroundColor: "white",
   backgroundImage: `url(${Image1.src})`,
   backgroundRepeat: "no-repeat",
@@ -97,12 +103,15 @@ export const ImageSmall2 = styled(Box)({
     content: '""',
     zIndex: 10,
   },
-});
+}});
 
-export const ImageSmall3 = styled(Box)({
-  width: "322.25px",
+export const ImageSmall3 = styled(Box)(()=>{
+  
+  const isMobileView=useIsMobileView();
+  return{
+  width:"100%",
+  
   height: "300px",
-  margin: "10px 10px 0  0",
   backgroundColor: "white",
   backgroundImage: `url(${Image2.src})`,
   backgroundRepeat: "no-repeat",
@@ -127,12 +136,13 @@ export const ImageSmall3 = styled(Box)({
     content: '""',
     zIndex: 10,
   },
-});
+}});
 
-export const ImageSmall4 = styled(Box)({
-  width: "322.25px",
+export const ImageSmall4 = styled(Box)(()=>{
+  const isMobileView=useIsMobileView();
+  return{
+  width:"100%",
   height: "300px",
-  margin: "10px 10px 0  0",
   backgroundColor: "white",
   backgroundImage: `url(${Image4.src})`,
   backgroundRepeat: "no-repeat",
@@ -157,12 +167,13 @@ export const ImageSmall4 = styled(Box)({
     content: '""',
     zIndex: 10,
   },
-});
+}});
 
-export const ImageSmall5 = styled(Box)({
-  width: "322.25px",
+export const ImageSmall5 = styled(Box)(()=>{
+  const isMobileView=useIsMobileView();
+  return{
+  width:"100%",
   height: "300px",
-  margin: "10px 10px 0  0",
   backgroundColor: "white",
   backgroundImage: `url(${Image5.src})`,
   backgroundRepeat: "no-repeat",
@@ -187,12 +198,13 @@ export const ImageSmall5 = styled(Box)({
     content: '""',
     zIndex: 10,
   },
-});
+}});
 
-export const ImageLarge6 = styled(Box)({
-  width: "655.5px",
+export const ImageLarge6 = styled(Box)(()=>{
+  const isMobileView= useIsMobileView();
+  return{
+  width:"100%",
   height: "300px",
-  margin: "10px 10px 0  0",
   backgroundColor: "white",
   backgroundImage: `url(${Image6.src})`,
   backgroundRepeat: "no-repeat",
@@ -217,7 +229,7 @@ export const ImageLarge6 = styled(Box)({
     content: '""',
     zIndex: 10,
   },
-});
+}});
 
 export const ImageSectionContent = styled(Box)({
   display: "flex",
@@ -228,5 +240,19 @@ export const ImageSectionContent = styled(Box)({
 export const ImageText = styled(Typography)({
   zIndex: 15,
   color: "white",
-  fontSize: "25px",
+  fontSize: "20px",
+  textAlign:"center"
 });
+
+
+export const ColumnInMobile=styled(Box)(()=>{
+  const isMobileView=useIsMobileView();
+  return{
+  display:"flex",
+  flexDirection:isMobileView? "column":"row",
+  width:"100%",
+  columnGap:isMobileView?"20px" : "0",
+  rowGap:"20px"
+  }
+})
+
