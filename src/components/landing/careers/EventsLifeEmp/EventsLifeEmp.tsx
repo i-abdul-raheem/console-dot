@@ -17,7 +17,7 @@ export const EventsLifeEmp = () => {
         <Section1>
           <div>
           <ImageSection>
-            <Image src={Event} alt="Event Image" width={389} height={235} style={{width: "100%"}}/>
+            <Image src={Event} alt="Event Image" style={{width: "auto"}}/>
           </ImageSection>
 
           <SectionTitle>
@@ -38,7 +38,7 @@ export const EventsLifeEmp = () => {
         <Section1>
           <div>
           <ImageSection>
-            <Image src={Life} alt="Event Image" width={389} height={320} style={{width: "100%", height: "auto"}} />
+            <Image src={Life} alt="Event Image" style={{width: "auto", height: "auto"}} />
           </ImageSection>
 
           <SectionTitle>
@@ -59,7 +59,7 @@ export const EventsLifeEmp = () => {
         <Section1>
           <div style={{marginBottom:"20px"}}>
           <ImageSection>
-            <Image src={Life} alt="Event Image" width={389} height={320} style={{width:'100%',height:"auto"}}/>
+            <Image src={Life} alt="Event Image" style={{width:'auto',height:"auto"}}/>
           </ImageSection>
 
           <SectionTitle>

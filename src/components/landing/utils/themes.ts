@@ -83,6 +83,7 @@ export const Wrapper = styled(Box)(() => {
     width: isMobileView ? "100%" : "1349px",
     display: "flex",
     flexDirection: "column",
+    flexWrap:"wrap",
     justifyContent: "center",
     position: "relative",
   };

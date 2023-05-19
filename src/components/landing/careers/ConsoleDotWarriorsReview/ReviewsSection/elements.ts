@@ -21,8 +21,11 @@ export const ReviewContentFlex = styled(Box)(() => {
    const isMobileView= useIsMobileView();
   return {
     display: "flex",
+    justifyContent:"center",
+    alignItems:"center",
     flexDirection:isMobileView? "column":"row",
     columnGap: "30px",
+    flexWrap:'wrap'
     
   };
 });

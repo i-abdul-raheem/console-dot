@@ -12,16 +12,12 @@ export const TechnologiesWrapper = () => {
     <>
       <Header />
       <TechTopPage />
-      <div style={{ display: "flex" , marginBottom:"50px"}}>
-        <div style={{}}>
-          <ScrollBar />
-        </div>
-        <ScrollingControl>
+      
+        
           <WebTechs />
           <Mobile />
           <WebFrame />
-        </ScrollingControl>
-      </div>
+        
         <InquireSection/>
     </>
   );

@@ -29,74 +29,32 @@ export const Header = () => {
           <div>
             <ul>
               <ListItem>
-                <StyledButton
-                  style={{
-                    background: "none",
-                    border: "none",
-                    fontSize: "0.8rem",
-                    padding: "0.5rem",
-                  }}
-                >
+                <StyledButton>
                   CUSTOMERS
                 </StyledButton>
               </ListItem>
               <ListItem>
-                <StyledButton
-                  style={{
-                    background: "none",
-                    border: "none",
-                    fontSize: "0.8rem",
-                    padding: "0.5rem",
-                  }}
-                >
+                <StyledButton>
                   WHAT WE DO
                 </StyledButton>
               </ListItem>
               <ListItem>
-                <StyledButton
-                  style={{
-                    background: "none",
-                    border: "none",
-                    fontSize: "0.8rem",
-                    padding: "0.5rem",
-                  }}
-                >
+                <StyledButton>
                   WHO WE WORK WITH
                 </StyledButton>
               </ListItem>
               <ListItem>
-                <StyledButton
-                  style={{
-                    background: "none",
-                    border: "none",
-                    fontSize: "0.8rem",
-                    padding: "0.5rem",
-                  }}
-                >
+                <StyledButton>
                   ABOUT US{" "}
                 </StyledButton>
               </ListItem>
               <ListItem>
-                <StyledButton
-                  style={{
-                    background: "none",
-                    border: "none",
-                    fontSize: "0.8rem",
-                    padding: "0.5rem",
-                  }}
-                >
+                <StyledButton>
                   TECEHNOLOGY
                 </StyledButton>
               </ListItem>
               <ListItem>
-                <StyledButton
-                  style={{
-                    background: "none",
-                    border: "none",
-                    fontSize: "0.8rem",
-                    padding: "0.5rem",
-                  }}
-                >
+                <StyledButton>
                   PRODUCTS
                 </StyledButton>
               </ListItem>

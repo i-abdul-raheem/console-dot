@@ -18,7 +18,7 @@ export const CareersWrapper = () => {
       <ConsoleDotWarriorsReview/>
       <SignUpForNewsletter/>
       <FollowUsOn/>
-      
+     
     </>
   )
 };
