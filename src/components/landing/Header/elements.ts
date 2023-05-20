@@ -35,7 +35,6 @@ export const LeftNav = styled(Box)({
 export const HireDevBtn = styled("button")(({ theme }) => {
   const isMobileView = useIsMobileView();
   return {
-    ...theme?.typography?.button1,
     backgroundColor: "rgb(23 , 96 , 128 )",
     color: "white",
     border: "none",
@@ -44,9 +43,6 @@ export const HireDevBtn = styled("button")(({ theme }) => {
     letterSpacing: "0.2rem",
     borderRadius: "8px",
     display: isMobileView ? "none" : "block",
-    "&:hover": {
-      backgroundColor: theme?.typography?.button1?.secondary,
-    },
   };
 });
 

@@ -13,7 +13,7 @@ interface props {
   name: string;
 }
 
-export const Card = ({ logo, name }: props) => {
+export const CardSingle = ({ logo, name }: props) => {
   return (
     <SingleCard>
       <Image src={logo} alt="logo" style={{width:"70px" , height:"auto"}}/>
@@ -94,7 +94,7 @@ export const WebTechs = () => {
         
         <CardBox>
           {tech.map((i, index) => (
-            <Card key={index} logo={i.logo} name={i.name} />
+            <CardSingle key={index} logo={i.logo} name={i.name} />
           ))}
         </CardBox>
         </CardContainer>

@@ -1,7 +1,7 @@
 import { React } from "@/assets"
 import { CardBox, SingleCard } from "./elements";
 import Image from "next/image";
-import { Card } from "../WebTechs";
+import { CardSingle } from "../WebTechs";
 import { CardContainer, TechHeading } from "../WebTechs/elements";
  
 interface props{
@@ -55,7 +55,7 @@ export const Mobile=()=>{
             
             <CardBox>
           {mobiletechs.map((i, index) => (
-            <Card key={index} logo={i.logo} name={i.name} />
+            <CardSingle key={index} logo={i.logo} name={i.name} />
           ))}
         </CardBox>
         </CardContainer>

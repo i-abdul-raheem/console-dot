@@ -22,7 +22,7 @@ interface props {
   experiance: string;
   locationText: string;
 }
-export const Card = ({ image, title, experiance, locationText }: props) => {
+export const CardSquare = ({ image, title, experiance, locationText }: props) => {
   const router = useRouter();
   return (
     <Singlecard>
@@ -138,7 +138,7 @@ export const OpenJobsSection = () => {
       <CardContainer>
         <CardBox>
           {cardContent.map((i, index) => (
-            <Card
+            <CardSquare
               key={index}
               image={i.image}
               title={i.title}

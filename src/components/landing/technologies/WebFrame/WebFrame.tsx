@@ -1,6 +1,6 @@
 import { React } from "@/assets"
 import { CardBox, CardContainer, TechHeading } from "../WebTechs/elements"
-import { Card } from "../WebTechs"
+import { CardSingle } from "../WebTechs"
 
 export const webframes=[
     {
@@ -76,7 +76,7 @@ export const WebFrame=()=>{
             <TechHeading>Open Source Web Framework</TechHeading>
             <CardBox>
                 {webframes.map((i,index) =>(
-                 <Card key={index} logo={i.logo} name={i.name} />
+                 <CardSingle key={index} logo={i.logo} name={i.name} />
                 ))
 
                 }
