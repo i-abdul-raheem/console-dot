@@ -4,7 +4,8 @@ import { Box, Typography, styled } from "@mui/material";
 export const ReviewContainer = styled(Box)(()=>{
     const isMobileView= useIsMobileView();
     return{
-  
+  width:"auto",
+  overflow:"hidden",
   position: "relative",
     }
 });
@@ -31,7 +32,7 @@ export const ReviewContentFlex = styled(Box)(() => {
 });
 
 export const ParaSection = styled(Box)({
-  padding: "30px",
+  padding: "32px",
 });
 
 export const ReviewPara = styled(Typography)({});

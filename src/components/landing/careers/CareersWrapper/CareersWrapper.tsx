@@ -15,10 +15,10 @@ export const CareersWrapper = () => {
       <EventsLifeEmp />
       <WorkingAtConsoleDot/>
       <WorkWithUs/>
-      <ConsoleDotWarriorsReview/>
-      <SignUpForNewsletter/>
+      {/* <ConsoleDotWarriorsReview/> */}
+     <SignUpForNewsletter/>
       <FollowUsOn/>
-     
+      
     </>
   )
 };

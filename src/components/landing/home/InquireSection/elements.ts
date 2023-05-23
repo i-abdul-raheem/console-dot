@@ -10,38 +10,46 @@ export const StyledButton = styled(Button)({
   },
 });
 
-export const SectionContainer = styled(Box)(()=>{
-  const isMobileView=useIsMobileView();
+export const SectionContainer = styled(Box)(() => {
+  const isMobileView = useIsMobileView();
   return {
-  display: "flex",
-  flexDirection:isMobileView? 'column':'row',
-  backgroundColor: "whitesmoke",
-  padding:"20px",
-  width:"auto"}
+    display: "flex",
+    flexDirection: isMobileView ? "column" : "row",
+    backgroundColor: "white",
+    width: "100%",
+  
+  };
 });
 
-export const SectionTitle = styled(Box)(()=>{
+export const SectionTitle = styled(Box)(() => {
+  const isMobileView = useIsMobileView();
+  return {
+    display:'flex',
+    justifyContent:"center",
+    alignItems:"center",
+    padding:"32px"
+  };
+});
+
+export const FormSection = styled(Box)({
+  padding:"32px"
+});
+
+export const InputsFirstRow = styled(Box)(()=>{
   const isMobileView=useIsMobileView();
   return{
-  display: isMobileView? "flex": "block",
-  width:isMobileView? "100%" : "25%",
-  alignItems: "center",
-  justifyContent: "center",
-  padding: "20px",}
+  display: "flex",
+  flexDirection:isMobileView? 'column' : 'column',
+  
+  columnGap: "30px",
+  marginBottom: "20px",
+  }
 });
 
-export const FormSection=styled(Box)({
-    width: "100%" 
-})
+export const InputsSecondRow = styled(Box)({
+  marginBottom: "20px",
+});
 
-export const InputsFirstRow=styled(Box)({
-    display: "flex", width: "100%", columnGap: "30px" ,marginBottom:'20px'
-})
-
-export const InputsSecondRow=styled(Box)({
-    marginBottom:'20px'
-})
-
-export const ButtonSection=styled(Box)({
-    marginBottom:'20px'
-})
+export const ButtonSection = styled(Box)({
+  marginBottom: "20px",
+});

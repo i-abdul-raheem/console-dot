@@ -3,13 +3,17 @@ import { useIsMobileView } from "../../utils/utils";
 
 export const ComponentContainer = styled(Box)({
   width: "auto",
+  paddingBottom:"32px"
 });
 export const TitleSection = styled(Box)({
   display: "flex",
   justifyContent: "center",
-  fontSize: "40px",
+  fontSize: "25px",
   fontWeight: "bold",
-  marginBottom:'20px'
+  marginBottom:'20px',
+  wordWrap: "break-word",
+  overflowWrap: "break-word",
+  textAlign:"center"
 });
 
 export const DescriptionSection = styled(Box)(() => {
@@ -17,8 +21,11 @@ export const DescriptionSection = styled(Box)(() => {
   return {
     display: "flex",
     justifyContent: "center",
-    padding: isMobileView ? "0 20px" : "0 100px",
+    padding: "32px",
     lineHeight: "30px",
+    wordWrap: "break-word",
+  overflowWrap: "break-word",
+  textAlign:"center"
   };
 });
 

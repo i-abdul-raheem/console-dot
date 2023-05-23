@@ -29,6 +29,9 @@ export const SectionDescription = styled(Typography)({
   padding: "20px",
   fontSize: "20px",
   height: "120px",
+  textAlign:"center",
+  wordWrap: "break-word",
+  overflowWrap: "break-word",
 });
 
 export const SectionButton = styled(Box)({

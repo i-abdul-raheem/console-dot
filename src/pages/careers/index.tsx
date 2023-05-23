@@ -8,7 +8,6 @@ const Index=()=> {
   return (
     <>
     <Wrapper>
-     <Header/>
      <CareersWrapper/>
      </Wrapper>
      </>

@@ -5,18 +5,20 @@ export const CareerContainer = styled(Box)(()=>{
   const isMobileView=useIsMobileView();
   return{
   display: "flex",
-  columnGap: "50px",
+  columnGap: "30px",
+  rowGap:"30px",
   flexDirection:isMobileView? 'column-reverse': 'row',
   width:isMobileView? "auto":'100%',
   justifyContent:"center",
-  alignItems:'center'
+  alignItems:'center',
+  marginBottom:"32px"
   }
 });
 
 export const StyledButton = styled(Box)({
   backgroundColor: "rgb(23 , 96 , 128 )",
   border: "none",
-  padding: "15px 100px",
+  padding: "15px",
   display: "flex",
   justifyContent: "center",
   color: "white",
@@ -28,24 +30,26 @@ export const StyledButton = styled(Box)({
 });
 
 export const ImageSection = styled(Box)({
-  width: "100%",
+ 
   justifyContent: "center",
   alignItems: "center",
   display: "flex",
 });
 
 export const LeftCard = styled(Box)({
-  width: "100%",
+ 
 });
 
 export const LeftCardHeading = styled(Box)({
   fontSize: "25px",
   fontWeight:"bold",
-  textAlign:"center"
+  textAlign:"center",
 });
 
 export const LeftCardParagraph = styled(Box)({
   fontSize: "20px",
-  padding:"32px 0 32px 62px",
-  textAlign:"center"
+  padding:"32px",
+  textAlign:"center",
+  wordWrap: "break-word",
+  overflowWrap: "break-word",
 });

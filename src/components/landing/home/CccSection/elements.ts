@@ -251,8 +251,9 @@ export const ColumnInMobile=styled(Box)(()=>{
   display:"flex",
   flexDirection:isMobileView? "column":"row",
   width:"100%",
-  columnGap:isMobileView?"20px" : "0",
-  rowGap:"20px"
+  columnGap:"20px",
+  rowGap:"20px",
+  
   }
 })
 

@@ -6,7 +6,6 @@ import { ColumnInMobile } from "../CccSection/elements";
 export const InquireSection = () => {
   return (
     <>
-    <Wrapper>
       <SectionContainer>
         <SectionTitle>
           <h1>How Can We Help You? </h1>
@@ -14,7 +13,7 @@ export const InquireSection = () => {
         <FormSection>
           <InputsFirstRow>
           <ColumnInMobile>
-            <div className="name" style={{ width: "100%" }}>
+            <div className="name" style={{ width: "100%", paddingBottom:"20px" }}>
               <TextField
                 id="outlined-basic"
                 style={{ width: "100%" }}
@@ -32,7 +31,7 @@ export const InquireSection = () => {
               />
             </div>
             </ColumnInMobile>
-            <div className="phone_num" style={{ width: "100%" }}>
+            <div className="phone_num" style={{ width: "100%", paddingTop:"20px" }}>
               <TextField
                 id="outlined-basic"
                 style={{ width: "100%" }}
@@ -57,7 +56,6 @@ export const InquireSection = () => {
           </div>
           </FormSection>
         </SectionContainer>
-        </Wrapper>
     </>
   );
 };
