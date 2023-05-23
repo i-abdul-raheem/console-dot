@@ -6,7 +6,8 @@ export const ComponentContainer = styled(Box)({
   columnGap: "20px",
   flexDirection: "column",
   justifyContent:'center',
-  alignItems:"center"
+  alignItems:"center",
+  paddingBottom:"32px"
 });
 
 export const SectionButton = styled(Box)({
@@ -27,8 +28,10 @@ export const TitleAndDescripContiner = styled(Box)({
 export const TitleSection = styled(Box)({
   display: "flex",
   justifyContent: "center",
-  fontSize: "40px",
+  fontSize: "25px",
   fontWeight: "bold",
+  textAlign:"center",
+  paddingBottom:"16px"
 });
 
 export const DescriptionSection = styled(Box)(()=>{
@@ -43,6 +46,7 @@ export const DescriptionSection = styled(Box)(()=>{
 export const StyledText = styled(Typography)({
   fontSize: "21px",
   lineHeight: "30px",
+  textAlign:"center"
 });
 
 export const FlexContiner = styled(Box)(() => {

@@ -32,7 +32,7 @@ export const CareersTopPage = () => {
           </StyledButton>
         </LeftCard>
         <ImageSection>
-          <Image src={MainLogo} alt="Logo" />
+          <Image src={MainLogo} alt="Logo" width={300} />
         </ImageSection>
       </CareerContainer>
     </>

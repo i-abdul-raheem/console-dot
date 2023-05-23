@@ -29,10 +29,10 @@ export const SingleCard = styled(Box)({
 export const CardContainer=styled(Box)({
   display: "flex",
   flexDirection: "column",
-  padding: "70px",
+  padding: "32px",
   backgroundColor: "whitesmoke",
   justifyContent:'center',
-  alignItems:'center'
+  alignItems:'center',
 })
 
 export const TechHeading=styled(Typography)({

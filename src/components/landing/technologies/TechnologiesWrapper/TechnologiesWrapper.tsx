@@ -10,15 +10,16 @@ import { ScrollingControl } from "./elements";
 export const TechnologiesWrapper = () => {
   return (
     <>
-      <Header />
+      
       <TechTopPage />
       
         
           <WebTechs />
           <Mobile />
           <WebFrame />
-        
-        <InquireSection/>
+        <div style={{padding:"32px"}}>
+        <InquireSection />
+        </div>
     </>
   );
 };

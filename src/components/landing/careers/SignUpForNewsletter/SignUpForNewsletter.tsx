@@ -3,6 +3,7 @@ import {
   DescriptionSection,
   SectionContainer,
   SectionContent,
+  SubscribeSection,
   TitleSection,
 } from "./elements";
 
@@ -16,14 +17,14 @@ export const SignUpForNewsletter = () => {
             Join 70,000 subscribers & get original tips and tricks delivered to
             your inbox each month.
           </DescriptionSection>
-          <div style={{display:"flex",justifyContent:'center', columnGap:"20px"}}>
+          <SubscribeSection>
             <TextField
               id="outlined-basic"
               label="Email ID"
               variant="outlined"
             />
             <Button variant="contained" style={{color:""}}>Subscribe</Button>
-          </div>
+            </SubscribeSection>
         </SectionContent>
       </SectionContainer>
     </>

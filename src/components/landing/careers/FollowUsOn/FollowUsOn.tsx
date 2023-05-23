@@ -16,7 +16,7 @@ export const FollowUsOn = () => {
           <TextSection>
             <h2>Follow Us on</h2>
           </TextSection>
-
+            <div style={{ display:"flex"}}>
           <SingleIconBox>
             <Image src={Fb} alt="Fb Icon" width={60} height={60} />
             <SocialMediaLabel>Facebook</SocialMediaLabel>
@@ -31,6 +31,7 @@ export const FollowUsOn = () => {
             <Image src={Linkedin} alt="Fb Icon" width={60} height={60} />
             <SocialMediaLabel>LinkedIn</SocialMediaLabel>
           </SingleIconBox>
+          </div>
         </SectionContent>
       </SectionContainer>
     </>

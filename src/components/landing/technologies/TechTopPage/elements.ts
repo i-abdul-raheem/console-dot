@@ -10,16 +10,23 @@ export const TechTopSection = styled(Box)({
 });
 
 export const Heading = styled(Typography)({
-  padding: "20px 0 20px 32px",
+  padding: "32px",
   fontWeight:"bold",
-  fontsize:"25px"
+  fontsize:"25px",
+  display:"flex",
+  justifyContent:'center',
+  textAlign:"center",
+  wordWrap: "break-word",
+  overflowWrap: "break-word",
 
 });
 
 export const StyledPara = styled(Typography)({
   textAlign: "center",
-  padding: "0 32px 20px 32px",
-  fontSize:"20px"
+  padding: "32px",
+  fontSize:"20px",
+  wordWrap: "break-word",
+  overflowWrap: "break-word",
 });
 
 export const CardBox = styled(Box)(()=>{
