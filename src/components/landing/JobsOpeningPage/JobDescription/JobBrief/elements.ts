@@ -7,6 +7,9 @@ export const JobBriefContainer = styled(Box)(()=>{
   display: "flex",
   flexDirection: "column",
   padding:isMobileView? '0' : '70px',
+  "@media screen and (max-width: 320px)": {
+        width:'100vw'
+      }
     }
 });
 
@@ -25,6 +28,8 @@ export const StyledText = styled(Box)({
   paddingBottom: "10px",
   wordWrap: "break-word",
   overflowWrap: "break-word",
+  maxWidth:'100%',
+  textAlign:"center"
 });
 
 export const ListItems = styled("li")({

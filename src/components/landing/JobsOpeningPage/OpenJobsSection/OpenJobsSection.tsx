@@ -9,6 +9,7 @@ import {
   Singlecard,
   StyledButton,
   StyledButton1,
+  StyledLinkedinImg,
   StyledText,
   TopHeading,
 } from "./elements";
@@ -22,7 +23,12 @@ interface props {
   experiance: string;
   locationText: string;
 }
-export const CardSquare = ({ image, title, experiance, locationText }: props) => {
+export const CardSquare = ({
+  image,
+  title,
+  experiance,
+  locationText,
+}: props) => {
   const router = useRouter();
   return (
     <Singlecard>
@@ -48,7 +54,6 @@ export const CardSquare = ({ image, title, experiance, locationText }: props) =>
         </CardSection>
       </div>
       <SectionButton>
-        
         <StyledButton1 onClick={() => router.push("/jobs/id")}>
           APPLY NOW
         </StyledButton1>
@@ -129,9 +134,29 @@ export const OpenJobsSection = () => {
   return (
     <>
       <TopHeading>
-        <h1 style={{ fontSize: "25px" }}>Follow Us On</h1>
-        <Image src={JobsLinkedin} alt="Image" width={210} height={111} />
-        <h1 style={{ fontSize: "25px" ,alignItems:"center",justifyContent:"center"}}>For The Latest Job Opportunities</h1>
+        <h1
+          style={{
+            fontSize: "25px",
+            textAlign: "center",
+            wordWrap: "break-word",
+            overflowWrap: "break-word",
+          }}
+        >
+          Follow Us On
+        </h1>
+        <StyledLinkedinImg src={JobsLinkedin} alt="Image" />
+        <h1
+          style={{
+            fontSize: "25px",
+            alignItems: "center",
+            justifyContent: "center",
+            textAlign: "center",
+            wordWrap: "break-word",
+            overflowWrap: "break-word",
+          }}
+        >
+          For The Latest Job Opportunities
+        </h1>
       </TopHeading>
       <CardContainer>
         <CardBox>

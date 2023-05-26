@@ -8,6 +8,7 @@ import { FortuneClients } from "../FortuneClients"
 export const CaseStudyWrapper=()=>{
     return(
         <>
+        
         <CaseStudyTop/>
         <FortuneClients/>
         <CsReact/>

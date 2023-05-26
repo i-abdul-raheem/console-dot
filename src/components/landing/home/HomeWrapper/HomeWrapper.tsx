@@ -24,10 +24,10 @@ export const HomeWrapper = () => {
       <HomePage/>
       
       <AboutUs />
-      <CccSection />
+       <CccSection />
       <DigitalTransformation />
       <FortuneClients />
-      <ReasonWhyWeBest />
+       <ReasonWhyWeBest />
       <RemoteAgile />
       <InquireSection />
     </div>

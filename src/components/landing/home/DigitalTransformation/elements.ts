@@ -1,5 +1,7 @@
 import { styled, Box, Typography } from "@mui/material";
 import { TransformImage } from "@/assets";
+import { useId } from "react";
+import { useIsMobileView } from "../../utils/utils";
 export const DigiContainer = styled(Box)({
   
   width: "auto",
@@ -17,9 +19,12 @@ export const SectionTitleDescrip = styled(Box)({
 export const SectionTitle = styled(Typography)({
   fontWeight: "bold",
   fontSize: "25px",
+  display:"flex",
   alignItems: "center",
   justifyContent: "center",
   marginBottom: "10px",
+  wordWrap: "break-word",
+  overflowWrap: "break-word",
 });
 
 export const SectionDescrip = styled(Typography)({
@@ -30,14 +35,17 @@ export const SectionDescrip = styled(Typography)({
 
 export const Container = styled(Box)({width:'100%'});
 
-export const BoxesContainer = styled(Box)({
+export const BoxesContainer = styled(Box)(()=>{
+  const isMobileView=useIsMobileView();
+  return{
   display: "flex",
+  flexDirection:isMobileView? "column":"row",
   marginBottom: "10px",
   padding: "10px",
   backgroundImage: `url(${TransformImage.src})`,
   backgroundRepeat:"no-repeat",
-  width:"100%",
   backgroundSize:"cover"
+  }
 });
 
 export const SquareBox = styled(Box)({

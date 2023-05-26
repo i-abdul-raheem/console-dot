@@ -53,7 +53,7 @@ export const AboutUs = () => {
       <PicSectionContainer>
         <PicSection>
           
-          <Image src={Pic1} alt="Image" style={{width:"100%" , height:"auto"}}/>
+          <Image src={Pic1} alt="Image" style={{width:"auto" , height:"auto"}}/>
 
           </PicSection>
         <PicContainerContentSection>

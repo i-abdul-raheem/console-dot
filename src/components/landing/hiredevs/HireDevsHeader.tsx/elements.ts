@@ -13,7 +13,7 @@ export const HireHeader = styled(Box)(() => {
   const isMobileView = useIsMobileView();
   return {
     display: "flex",
-    justifyContent: isMobileView ? "flex-start" : "space-between",
+    justifyContent: "space-between",
     width: "100%",
     alignItems:"center"
   };
@@ -25,16 +25,22 @@ export const GoBackBtn = styled("button")({
   color: "#fff",
   height: "40px",
   borderRadius: "4px",
+  width:"20vw"
 });
 
 export const HeaderText = styled(Typography)({
   padding: "2px",
   fontWeight: 600,
   fontFamily: "sans-serif",
-  fontSize: "2.4rem",
+  fontSize: "2em",
   color: "#ddd",
   wordWrap: "break-word",
   overflowWrap: "break-word",
+  "@media screen and (max-width: 320px)": {
+    fontSize:'1em'
+  }
+
+
 });
 
 export const LogoImage = styled(Image)(() => {
@@ -42,5 +48,9 @@ export const LogoImage = styled(Image)(() => {
   return {
     width: isMobileView ? "40px" : "50px",
     height: isMobileView ? "40px" : "50px",
+    "@media screen and (max-width: 320px)": {
+    width:"30px",
+    height:"30px"
+  }
   };
 });

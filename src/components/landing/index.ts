@@ -6,3 +6,4 @@ export * from "./JobsOpeningPage";
 export * from "./technologies";
 export * from "./hiredevs";
 export * from "./casestudy";
+export * from "./products";

@@ -23,7 +23,7 @@ export const CardBox = ({ image, heading, details }: Props) => {
   return (
     <Singlecard>
       <div style={{padding: "20px"}}>
-        <CardSection>
+        <CardSection sx={{display:'flex', justifyContent:'center', alignItems:"center"}}>
           <Image
             src={image}
             alt="Job Openoing Badge"

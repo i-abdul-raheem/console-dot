@@ -8,6 +8,10 @@ export const JobsTopContainer = styled(Box)(() => {
     backgroundColor: "rgb(23 , 96 , 128, 0.3 )",
     flexDirection: isMobileView ? "column-reverse" : "row",
     width: "100%",
+    
+    
+    
+    
   };
 });
 
@@ -20,6 +24,9 @@ export const LeftFlex = styled(Box)({
 export const JobsTopHeading = styled(Typography)({
   textAlign:"center",
   fontSize: "50px",
+  
+  wordWrap: "break-word",
+  overflowWrap: "break-word",
 });
 
 export const JobsTopPara = styled(Typography)({

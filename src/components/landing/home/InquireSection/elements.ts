@@ -16,7 +16,9 @@ export const SectionContainer = styled(Box)(() => {
     display: "flex",
     flexDirection: isMobileView ? "column" : "row",
     backgroundColor: "white",
-    width: "100%",
+    columnGap:'20px',
+    rowGap:'20px',
+    width:"100%"
   
   };
 });
@@ -25,24 +27,26 @@ export const SectionTitle = styled(Box)(() => {
   const isMobileView = useIsMobileView();
   return {
     display:'flex',
-    justifyContent:"center",
     alignItems:"center",
-    padding:"32px"
+    justifyContent:"center"
   };
 });
 
 export const FormSection = styled(Box)({
-  padding:"32px"
+  paddingTop:"32px",
+  width:'100%',
+  display:"flex",
+  flexDirection:"column",
+  rowGap:"20px",justifyContent:'center'
 });
 
 export const InputsFirstRow = styled(Box)(()=>{
   const isMobileView=useIsMobileView();
   return{
   display: "flex",
-  flexDirection:isMobileView? 'column' : 'column',
-  
+  flexDirection:isMobileView? 'column' : 'row',
+  rowGap:'20px',
   columnGap: "30px",
-  marginBottom: "20px",
   }
 });
 
