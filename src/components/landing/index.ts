@@ -4,4 +4,5 @@ export * from "./home";
 export * from "./careers";
 export * from "./JobsOpeningPage";
 export * from "./technologies";
-export * from "./hiredevs"
+export * from "./hiredevs";
+export * from "./casestudy";

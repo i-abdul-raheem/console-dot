@@ -1,1 +1,1 @@
-export * from "./HireDevsBtnPage.tsx"
+export * from "./HireDevsWrap";

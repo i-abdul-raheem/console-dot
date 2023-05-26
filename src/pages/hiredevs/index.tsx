@@ -1,11 +1,12 @@
-import { HireDevBtnPage } from "@/components"
+
+import { HireDevsWrap } from "@/components/landing/hiredevs/HireDevsWrap";
 
 
 
 
 const Index=()=>{
     return(
-        <HireDevBtnPage/>
+        <HireDevsWrap/>
     )
 }
 

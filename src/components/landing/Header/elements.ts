@@ -39,6 +39,7 @@ export const HireDevBtn = styled("button")(({ theme }) => {
     color: "white",
     border: "none",
     fontSize: "0.6rem",
+    cursor:"pointer",
     padding: "13px",
     letterSpacing: "0.2rem",
     borderRadius: "8px",
