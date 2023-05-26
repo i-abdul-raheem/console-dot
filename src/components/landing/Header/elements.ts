@@ -82,5 +82,6 @@ export const StyledButton = styled("button")({
   border: "none",
   fontSize: "0.8rem",
   padding: "0.5rem",
-  color:"#fff"
+  color:"#fff",
+  cursor:"pointer"
 });
