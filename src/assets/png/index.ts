@@ -24,7 +24,18 @@ import ReviewIcon from "./reviewicon.jpg";
 import SeeOpeningTopImage from "./see opening.jpg";
 import JobsLinkedin from "./jobslinkedin.png";
 import Chess from "./chess.jpg";
-import TopTech from "./toptech.jpg"
+import TopTech from "./toptech.jpg";
+import America from "./america.png";
+import Germany from "./germany.png";
+import India from "./ind.png";
+import Japan from "./japan.png";
+import Linked from "./linked.png";
+import Skype from "./skype.png";
+import WhatsApp from "./whatsapp.png";
+import Pak from "./pak.png";
+import Chess2 from "./chess2.jpg";
+import FortuneClient from "./fortunecli.jpg";
+
 export {
     MainLogo,
     Pic1,
@@ -52,6 +63,10 @@ export {
     SeeOpeningTopImage,
     JobsLinkedin,
     Chess,
-    TopTech
+    TopTech,
+    America,
+    Germany,
+    India,Japan,Linked,WhatsApp, Skype, Pak,Chess2,
+    FortuneClient
 
 }

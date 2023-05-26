@@ -48,10 +48,8 @@ export const CardSquare = ({ image, title, experiance, locationText }: props) =>
         </CardSection>
       </div>
       <SectionButton>
-        <StyledButton onClick={() => router.push("./]")}>
-          READ MORE
-        </StyledButton>
-        <StyledButton1 onClick={() => router.push("./")}>
+        
+        <StyledButton1 onClick={() => router.push("/jobs/id")}>
           APPLY NOW
         </StyledButton1>
       </SectionButton>

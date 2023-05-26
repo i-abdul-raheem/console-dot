@@ -16,6 +16,7 @@ import {
 import { Wrapper, getTheme } from "../utils";
 import { useState } from "react";
 import { MenuPage } from "./MenuPage";
+import { useRouter } from "next/router";
 
 export const Header = () => {
   const[isMaximize, setIsMaximize]=useState(false);
@@ -23,6 +24,7 @@ export const Header = () => {
   const toggleAction=()=>{
        setIsMaximize(!isMaximize)
   }
+  const router=useRouter();
   return (
     <ThemeProvider theme={getTheme("light")}>
       <NavBar>
@@ -71,7 +73,7 @@ export const Header = () => {
           </div>
         </RightNav>
         <LeftNav>
-          <HireDevBtn> Hire Developers </HireDevBtn>
+          <HireDevBtn onClick={()=> router.push("/hiredevs")}> Hire Developers </HireDevBtn>
          {isMaximize?(
           <StyledButton onClick={toggleAction}>
             <MenuCloseIcon style={{color:"#fff"}}/>
