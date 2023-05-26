@@ -65,7 +65,7 @@ export const Header = () => {
                 </StyledButton>
               </ListItem>
               <ListItem>
-                <StyledButton>
+                <StyledButton onClick={()=> router.push("/products")}>
                   PRODUCTS
                 </StyledButton>
               </ListItem>

@@ -35,7 +35,8 @@ import WhatsApp from "./whatsapp.png";
 import Pak from "./pak.png";
 import Chess2 from "./chess2.jpg";
 import FortuneClient from "./fortunecli.jpg";
-
+import AcCharger from "./ACcharger.png";
+import HealthMonitor from "./healthmonitor.jpg";
 export {
     MainLogo,
     Pic1,
@@ -67,6 +68,8 @@ export {
     America,
     Germany,
     India,Japan,Linked,WhatsApp, Skype, Pak,Chess2,
-    FortuneClient
+    FortuneClient,
+    AcCharger,
+    HealthMonitor
 
 }
