@@ -20,12 +20,17 @@ export const SectionTitle = styled(Typography)({
   fontSize: "25px",
   alignItems: "center",
   justifyContent: "center",
-  textAlign:"center"
+  textAlign:"center",
+  wordWrap: "break-word",
+  overflowWrap: "break-word",
+  
 });
 
 export const SectionDescrip = styled(Typography)({
   fontSize: "20px",
   color: "#696969",
+  wordWrap: "break-word",
+  overflowWrap: "break-word",
 });
 
 export const CardSection = styled(Box)({});
@@ -249,7 +254,7 @@ export const ColumnInMobile=styled(Box)(()=>{
   const isMobileView=useIsMobileView();
   return{
   display:"flex",
-  flexDirection:isMobileView? "column":"row",
+  flexDirection:"column",
   width:"100%",
   columnGap:"20px",
   rowGap:"20px",

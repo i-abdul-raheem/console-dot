@@ -5,7 +5,7 @@ import { useIsMobileView } from "../../utils/utils"
 
 
 export const ReasonWhyWeContainer=styled(Box)({
-    padding:'70px',
+  padding:'32px',
     
     width:'auto',
     marginBottom:'10px'
@@ -24,21 +24,22 @@ export const SectionTitleDescrip=styled(Box)({
 export const SectionTitle=styled(Typography)({
     fontWeight:'bold',
     fontSize:'25px',
-    alignItems:'center',
-    justifyContent:'center',
-    marginBottom:'10px'
+    textAlign:"center",
+    marginBottom:'10px',
+  wordWrap: "break-word",
+  overflowWrap: "break-word",
 })
 
 export const SectionDescrip=styled(Typography)({
     fontSize:'20px',
-    color:'#696969'
+    color:'#696969', 
+    textAlign:"center"
 })
 
 export const FlexBox=styled(Box)(()=>{
     const isMobileView= useIsMobileView();
     return{
-    display: "flex", padding:'20px',
+    display: "flex", padding:'32px',
     flexDirection:isMobileView? "column":'row',
-    width:"100%"
     }
 })

@@ -1,5 +1,6 @@
 import { styled, Box, Button, Typography } from "@mui/material";
 import { useIsMobileView } from "../../utils/utils";
+import Image from "next/image";
 
 export const TopHeading = styled(Box)(() => {
   const isMobileView = useIsMobileView();
@@ -9,6 +10,8 @@ export const TopHeading = styled(Box)(() => {
     alignItems: "center",
     width: "auto",
     flexDirection: isMobileView ? "column" : "row",
+    
+    
   };
 });
 
@@ -37,6 +40,7 @@ export const SectionButton = styled(Box)({
   justifyContent: "center",
   marginBottom: "50px",
   columnGap: "30px",
+  
 });
 
 export const StyledButton1 = styled(Button)({
@@ -81,5 +85,18 @@ export const CardContainer = styled(Box)(()=>{
   return{
   padding: isMobileView? 16 : 32,
   backgroundColor: "rgb(23,96,128,0.5)",
+  
+    
+  
   }
 });
+
+
+export const StyledLinkedinImg=styled(Image)({
+  width:"200px",
+  height:"100px",
+  "@media screen and (max-width: 240px)": {
+    width:"100px",
+    height:"50px",
+  }
+})

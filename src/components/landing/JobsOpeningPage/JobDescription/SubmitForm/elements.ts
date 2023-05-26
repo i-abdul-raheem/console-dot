@@ -9,11 +9,15 @@ export const FormContainer=styled(Box)(()=>{
 const isMobileView=useIsMobileView();
     return{
         
-    padding:isMobileView? '0' : '70px',
+    
     display:"flex",
     flexDirection:"column",
-    justifyContent:isMobileView? "center":"flex-start"
-
+    justifyContent:isMobileView? "center":"flex-start",
+   
+    "@media screen and (max-width: 320px)": {
+        width:'100vw'
+      }
+    
 }
 
     

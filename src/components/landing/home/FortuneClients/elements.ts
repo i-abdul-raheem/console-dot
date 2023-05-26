@@ -1,11 +1,12 @@
 import styled from "@emotion/styled";
 import { Box, Button, Typography } from "@mui/material";
+import { useIsMobileView } from "../../utils/utils";
 
 export const FortuneContainer = styled(Box)({
   backgroundColor: "whitesmoke",
   display: "flex",
   flexDirection: "column",
-  padding: "70px",
+  padding: "32px",
   width:"auto"
 });
 
@@ -13,13 +14,17 @@ export const Heading = styled(Typography)({
   fontWeight: "bold",
   fontSize: "25px",
   color: "black",
-  textAlign:"center"
+  textAlign:"center",
+  wordWrap: "break-word",
+  overflowWrap: "break-word",
 });
 
 export const DescriptionSection = styled(Typography)({
   fontSize: "20px",
   padding: "20px",
-  textAlign:"center"
+  textAlign:"center",
+  wordWrap: "break-word",
+  overflowWrap: "break-word",
 });
 
 export const FortuneButton = styled(Button)({
@@ -29,18 +34,27 @@ export const FortuneButton = styled(Button)({
   "&:hover": {
     color: "black",
   },
+  wordWrap: "break-word",
+  overflowWrap: "break-word",
 });
 
-export const ClientListSection = styled(Button)({
+export const ClientListSection = styled(Button)(()=>{
+  const isMobileView=useIsMobileView();
+  return{
   display: "flex",
+  flexDirection:isMobileView? "column": "row",
   maxWidth: "100%",
-  padding: "50px",
+  }
 });
 
-export const ClientListDivs = styled(Box)({
+export const ClientListDivs = styled(Box)(()=>{
+  const isMobileView=useIsMobileView();
+  return{
   width: "100%",
-  borderRight: "1px solid #696969",
+  borderRight:isMobileView? "none" : "1px solid #696969",
+  borderBottom:isMobileView? "1px solid #696969" : "none",
   height: "350px",
   display: "flex",
   justifyContent: "center",
+  }
 });

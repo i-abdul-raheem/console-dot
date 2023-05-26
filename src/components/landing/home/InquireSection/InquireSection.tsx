@@ -1,5 +1,12 @@
-import { TextField, Button ,TextareaAutosize} from "@mui/material";
-import { FormSection, InputsFirstRow, InputsSecondRow, SectionContainer, SectionTitle, StyledButton } from "./elements";
+import { TextField, Button, TextareaAutosize } from "@mui/material";
+import {
+  FormSection,
+  InputsFirstRow,
+  InputsSecondRow,
+  SectionContainer,
+  SectionTitle,
+  StyledButton,
+} from "./elements";
 import { Wrapper } from "../../utils";
 import { ColumnInMobile } from "../CccSection/elements";
 
@@ -8,54 +15,49 @@ export const InquireSection = () => {
     <>
       <SectionContainer>
         <SectionTitle>
-          <h1>How Can We Help You? </h1>
+          <h1
+            style={{
+              wordWrap: "break-word",
+              overflowWrap: "break-word",
+            }}
+          >
+            How Can We Help You?{" "}
+          </h1>
         </SectionTitle>
         <FormSection>
           <InputsFirstRow>
-          <ColumnInMobile>
-            <div className="name" style={{ width: "100%", paddingBottom:"20px" }}>
-              <TextField
-                id="outlined-basic"
-                style={{ width: "100%" }}
-                label="Your Name"
-                variant="outlined"
-              />
-            </div>
-            
-            <div className="email" style={{ width: "100%" }}>
-              <TextField
-                id="outlined-basic"
-                style={{ width: "100%" }}
-                label="Email Address"
-                variant="outlined"
-              />
-            </div>
-            </ColumnInMobile>
-            <div className="phone_num" style={{ width: "100%", paddingTop:"20px" }}>
-              <TextField
-                id="outlined-basic"
-                style={{ width: "100%" }}
-                label="Phone Number"
-                variant="outlined"
-              />
-            </div>
-            
-            </InputsFirstRow>
-
-          <InputsSecondRow>
-            <TextareaAutosize
+            <TextField
               id="outlined-basic"
-              placeholder="Your Message"
-              minRows={7} 
-              
-              style={{width:'100%',fontSize:'20px'}}
+              style={{ width: "100%" }}
+              label="Your Name"
+              variant="outlined"
             />
-          </InputsSecondRow>
-          <div style={{display:"flex",justifyContent:"flex-end"}}>
-            <StyledButton >Inquire Now</StyledButton>
+
+            <TextField
+              id="outlined-basic"
+              style={{ width: "100%" }}
+              label="Email Address"
+              variant="outlined"
+            />
+          </InputsFirstRow>
+          <TextField
+            id="outlined-basic"
+            style={{ width: "100%" }}
+            label="Phone Number"
+            variant="outlined"
+          />
+
+          <TextareaAutosize
+            id="outlined-basic"
+            placeholder="Your Message"
+            minRows={7}
+            style={{ fontSize: "20px" }}
+          />
+          <div style={{ display: "flex", justifyContent: "flex-end" }}>
+            <StyledButton>Inquire Now</StyledButton>
           </div>
-          </FormSection>
-        </SectionContainer>
+        </FormSection>
+      </SectionContainer>
     </>
   );
 };
