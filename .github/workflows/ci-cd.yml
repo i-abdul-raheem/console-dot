@@ -1,0 +1,43 @@
+name: CI/CD Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+          
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Build project
+        run: npm run build
+      
+      - name: Run tests
+        run: npm run test
+
+  deploy:
+    needs: build
+    runs-on: windows-latest
+    if: success()
+
+    steps:
+      - name: Deploy to server
+        # Add your deployment steps here, such as copying files to a server or deploying to a cloud platform
+        
+      - name: Notify deployment
+        # Add a notification step here, such as sending a notification to Slack or an email to inform about successful deployment
