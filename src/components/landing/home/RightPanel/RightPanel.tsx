@@ -20,8 +20,16 @@ import {
 import Link from "next/link";
 import { useIsMobileView } from "../../utils/utils";
 import { Wrapper } from "../../utils";
+import { useRouter } from "next/router";
+import { AboutUs } from "../AboutUs";
+import { useState } from "react";
 export const RightPanel = () => {
   const isMobileView = useIsMobileView();
+
+
+  
+  const router=useRouter();
+  
   return (
     <div
       style={{
@@ -30,7 +38,6 @@ export const RightPanel = () => {
         alignItems: "flex-start",
         justifyContent: "center",
         width: "100%",
-        flexDirection: isMobileView ? "column" : "row",
         zIndex: 3,
       }}
     >
@@ -77,7 +84,8 @@ export const RightPanel = () => {
           </DescripHeading>
         </div>
         <BottomPanel>
-          <BottomLink href="#">LEARN MORE</BottomLink>
+          
+          <button style={{backgroundColor:"transparent", border:"none", fontSize:"16px", color:"white"}}>LEARN MORE</button>
           <ArrowBtn href="#">
             <KeyboardArrowDownIcon style={{color:"#fff"}} />{" "}
           </ArrowBtn>
@@ -99,4 +107,5 @@ export const RightPanel = () => {
       </RightBox>
     </div>
   );
-};
+
+            }

@@ -4,6 +4,7 @@ import { useIsMobileView } from "../../utils/utils";
 
 export const CccContainer = styled(Box)({
   width: "100%",
+  paddingBottom:"64px"
 });
 
 export const SectionTitleDescrip = styled(Box)({
@@ -41,6 +42,7 @@ export const ImageRow = styled(Box)(()=>{
   display: "flex",
   marginBottom: "10px",
   flexDirection:isMobileView? "column":'row',
+  width:"100%",columnGap:'10px', rowGap:'10px',
   }
 });
 
@@ -254,10 +256,9 @@ export const ColumnInMobile=styled(Box)(()=>{
   const isMobileView=useIsMobileView();
   return{
   display:"flex",
-  flexDirection:"column",
   width:"100%",
-  columnGap:"20px",
-  rowGap:"20px",
+  columnGap:"10px",
+  rowGap:"10px",
   
   }
 })

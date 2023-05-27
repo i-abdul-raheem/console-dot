@@ -3,13 +3,14 @@ import { useIsMobileView } from "../../utils/utils";
 
 export const AboutUsContainer = styled(Box)({
   width: "auto",
-  marginBottom: "10px",
+  padding:"64px 0"
 });
 
 export const SectionTitleDescrip = styled(Box)({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
+  paddingBottom:"32px",
   justifyContent: "center",
 });
 
@@ -46,6 +47,7 @@ export const DetailRow = styled(Box)(() => {
     flexDirection: isMobileView ? "column" : "row",
     justifyContent: "center",
     columnGap: "30px",
+    paddingBottom:"32px"
   };
 });
 
