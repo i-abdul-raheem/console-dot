@@ -63,7 +63,7 @@ export const DynamicText = styled(Box)(()=>{
   const isMobileView=useIsMobileView();
   return{
   display: "flex",
-  fontSize:"25px",
+  fontSize:"35px",
   fontWeight: "bold",
   
   color: "rgb(23 , 96 , 128 )",
