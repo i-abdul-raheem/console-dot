@@ -5,7 +5,11 @@ import { StyledText } from "../../careers/WorkingAtConsoleDot/elements";
 
 export const CaseStudyTop = () => {
   useEffect(() => {
-    document.getElementById("__next").style.width = "100%";
+   const element= document.getElementById("__next")
+   if(element)
+   {
+    element.style.width="100%";
+   }
   }, []);
   return (
     <>
