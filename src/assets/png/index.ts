@@ -37,6 +37,7 @@ import Chess2 from "./chess2.jpg";
 import FortuneClient from "./fortunecli.jpg";
 import AcCharger from "./ACcharger.png";
 import HealthMonitor from "./healthmonitor.jpg";
+import PausedVideo from "./videopause.jpg";
 export {
     MainLogo,
     Pic1,
@@ -70,6 +71,7 @@ export {
     India,Japan,Linked,WhatsApp, Skype, Pak,Chess2,
     FortuneClient,
     AcCharger,
-    HealthMonitor
+    HealthMonitor,
+    PausedVideo
 
 }

@@ -12,17 +12,24 @@ export const ContactExperts = () => {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          
         }}
       >
-        <div style={{padding:"32px"}}>
+        <div style={{ padding: "32px" }}>
           <TextTop>
             Working with Bacancy means your need for a UI/UX expert, full stack
             developer and infrastructure expert will be met at one place.
-            </TextTop>
+          </TextTop>
         </div>
         <div>
-            <button style={{fontSize:"20px", color: "rgb(23 , 96 , 128 )",padding:"10px"}}>Contact With Our Experts</button>
+          <button
+            style={{
+              fontSize: "20px",
+              color: "rgb(23 , 96 , 128 )",
+              padding: "10px",
+            }}
+          >
+            Contact With Our Experts
+          </button>
         </div>
       </div>
     </>
