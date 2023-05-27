@@ -85,3 +85,8 @@ export const StyledButton = styled("button")({
   color:"#fff",
   cursor:"pointer"
 });
+
+
+export const TransitionOnBtn=styled(Box)({
+  width:'0px', height:"0px", transition:"2s", "&:hover":{}
+})

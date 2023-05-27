@@ -36,6 +36,12 @@ export const CardContainer=styled(Box)({
 })
 
 export const TechHeading=styled(Typography)({
-  fontSize:"25px",
-  fontWeight:"bold"
+  fontSize:"35px",
+  fontWeight:"bold",
+  paddingBottom:"64px",
+  wordWrap:"break-word",
+  overflowWrap:"break-word",
+  "@media screen and (max-width:225px)":{
+    fontSize:"1.5rem"
+  }
 })

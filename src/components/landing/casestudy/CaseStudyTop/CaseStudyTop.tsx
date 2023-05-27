@@ -4,13 +4,7 @@ import { CaseStudyContainer } from "./elements";
 import { StyledText } from "../../careers/WorkingAtConsoleDot/elements";
 
 export const CaseStudyTop = () => {
-  useEffect(() => {
-   const element= document.getElementById("__next")
-   if(element)
-   {
-    element.style.width="100%";
-   }
-  }, []);
+  
   return (
     <>
       <div style={{marginBottom:'64px'}}>

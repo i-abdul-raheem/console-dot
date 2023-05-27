@@ -12,6 +12,7 @@ import {
   NavMenuIcon,
   RightNav,
   StyledButton,
+  TransitionOnBtn,
 } from "./elements";
 import { Wrapper, getTheme } from "../utils";
 import { useState } from "react";
@@ -41,11 +42,15 @@ export const Header = () => {
             <ul>
               <ListItem>
                 <StyledButton>
+                  
+
                   CUSTOMERS
                 </StyledButton>
+
               </ListItem>
+               
               <ListItem>
-                <StyledButton>
+                <StyledButton onClick={()=> router.push('/casestudy')}>
                   WHAT WE DO
                 </StyledButton>
               </ListItem>
@@ -60,7 +65,7 @@ export const Header = () => {
                 </StyledButton>
               </ListItem>
               <ListItem>
-                <StyledButton>
+                <StyledButton onClick={()=> router.push("/technologies")}>
                   TECEHNOLOGY
                 </StyledButton>
               </ListItem>

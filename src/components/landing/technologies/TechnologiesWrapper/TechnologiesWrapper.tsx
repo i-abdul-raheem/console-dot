@@ -1,5 +1,6 @@
 import { Header } from "../../Header";
 import { InquireSection } from "../../home";
+import { MobResWrap } from "../../utils/utils";
 import { Mobile } from "../Mobile";
 import { ScrollBar } from "../ScrollBar";
 import { TechTopPage } from "../TechTopPage";
@@ -10,7 +11,7 @@ import { ScrollingControl } from "./elements";
 export const TechnologiesWrapper = () => {
   return (
     <>
-      
+      <MobResWrap>
       <TechTopPage />
       
         
@@ -20,6 +21,7 @@ export const TechnologiesWrapper = () => {
         <div style={{padding:"32px"}}>
         <InquireSection />
         </div>
+        </MobResWrap>
     </>
   );
 };

@@ -33,8 +33,9 @@ export const CccSection = () => {
       </SectionTitleDescrip>
       <ImageSectionContainer>
         <ImageRow>
-          
+        
           <ImageLarge1>
+          
             <ImageSectionContent>
               <ImageText> ConsoleDot Tech Agility</ImageText>
               <ArrowRightAltIcon />
@@ -48,6 +49,8 @@ export const CccSection = () => {
                 <ArrowRightAltIcon />
               </ImageSectionContent>
               </ImageSmall2>
+           
+              
               <ImageSmall3>
               <ImageSectionContent>
                 <ImageText> ConsoleDot Tech Agility</ImageText>
@@ -57,7 +60,7 @@ export const CccSection = () => {
             </ColumnInMobile>
         </ImageRow>
         <ImageRow>
-          <ColumnInMobile>
+        <ColumnInMobile>
           <ImageSmall4>
             <ImageSectionContent>
               <ImageText>ConsoleDot Tech Agility</ImageText>
@@ -71,6 +74,8 @@ export const CccSection = () => {
             </ImageSectionContent>
           </ImageSmall5>
           </ColumnInMobile>
+          
+          
           <ImageLarge6>
             <ImageSectionContent>
               <ImageText>ConsoleDot Tech Agility</ImageText>
