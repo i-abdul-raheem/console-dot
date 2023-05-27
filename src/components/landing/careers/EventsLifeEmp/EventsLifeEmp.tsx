@@ -17,7 +17,7 @@ export const EventsLifeEmp = () => {
         <Section1>
           <div>
           <ImageSection>
-            <Image src={Event} alt="Event Image" style={{width: "auto"}}/>
+            <Image src={Event} alt="Event Image" style={{maxWidth: "100%", height:'auto'}}/>
           </ImageSection>
 
           <SectionTitle>
@@ -42,7 +42,7 @@ export const EventsLifeEmp = () => {
           </ImageSection>
 
           <SectionTitle>
-            <h2 >Life@ConsoleDot</h2>
+            <h2 style={{wordWrap:"break-word", overflowWrap:"break-word"}}>Life @ ConsoleDot</h2>
           </SectionTitle>
           <SectionDescription>
             With a perfect mix of life and work, our employees understand the

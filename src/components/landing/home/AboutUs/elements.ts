@@ -47,7 +47,7 @@ export const DetailRow = styled(Box)(() => {
     flexDirection: isMobileView ? "column" : "row",
     justifyContent: "center",
     columnGap: "30px",
-    paddingBottom:"32px"
+    paddingBottom:"64px"
   };
 });
 

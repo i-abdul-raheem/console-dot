@@ -43,30 +43,16 @@ export const BoxesContainer = styled(Box)(()=>{
   flexDirection:isMobileView? "column":"row",
   marginBottom: "10px",
   padding: "10px",
-  columnGap:"10px",
   backgroundImage: `url(${TransformImage.src})`,
   backgroundRepeat:"no-repeat",
-  backgroundSize:"cover",
-  height:"400px",
-  "&:before": {
-    position: "absolute",
-    left: 0,
-    width: "100%",
-    height: "400px",
-    backgroundColor: "rgba(0,0,0,0.6)",
-    content: '""',
-    zIndex: 10,
-  },
-  
- }
+  backgroundSize:"cover"
+  }
 });
 
 export const SquareBox = styled(Box)({
-  backgroundSize: "cover",
-  "&:hover": {
-    transition: "0.6s",
-    backgroundSize: "110%",
-  },
-  
-  
+  width: "100%",
+  height: "300px",
+  margin: "10px 4px 0  0",
+  backgroundColor: "transparent",
+  border:'1px solid #fff'
 });

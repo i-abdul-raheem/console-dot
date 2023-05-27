@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Fb, Insta, Linkedin } from "@/assets";
 import {
+  IconsList,
   SectionContainer,
   SectionContent,
   SingleIconBox,
@@ -16,22 +17,22 @@ export const FollowUsOn = () => {
           <TextSection>
             <h2>Follow Us on</h2>
           </TextSection>
-            <div style={{ display:"flex"}}>
+           <IconsList>
           <SingleIconBox>
-            <Image src={Fb} alt="Fb Icon" width={60} height={60} />
+            <Image src={Fb} alt="Fb Icon" style={{maxWidth:"60px", height:"60px"}} />
             <SocialMediaLabel>Facebook</SocialMediaLabel>
           </SingleIconBox>
 
           <SingleIconBox>
-            <Image src={Insta} alt="Fb Icon" width={60} height={60} />
+            <Image src={Insta} alt="Fb Icon" style={{maxWidth:"60px", height:"60px"}} />
             <SocialMediaLabel>Instagram</SocialMediaLabel>
           </SingleIconBox>
 
           <SingleIconBox>
-            <Image src={Linkedin} alt="Fb Icon" width={60} height={60} />
+            <Image src={Linkedin} alt="Fb Icon" style={{maxWidth:"60px", height:"60px"}} />
             <SocialMediaLabel>LinkedIn</SocialMediaLabel>
           </SingleIconBox>
-          </div>
+          </IconsList>
         </SectionContent>
       </SectionContainer>
     </>

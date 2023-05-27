@@ -7,3 +7,4 @@ export * from "./technologies";
 export * from "./hiredevs";
 export * from "./casestudy";
 export * from "./products";
+export * from "./testimonials"

@@ -1,6 +1,7 @@
 import { Footer } from "../../Footer";
 import { Header } from "../../Header";
 import { Wrapper } from "../../utils";
+import { MobResWrap } from "../../utils/utils";
 import { AboutUs } from "../AboutUs";
 import { CccSection } from "../CccSection";
 import { DigitalTransformation } from "../DigitalTransformation";
@@ -13,23 +14,25 @@ import { RightPanel } from "../RightPanel";
 
 export const HomeWrapper = () => {
   return (
-    <div
-      style={{
-        position: "relative",
-        width: "100%",
-        overflow: "hidden",
-      }}
-    >
-      
-      <HomePage/>
-      
-      <AboutUs />
-       <CccSection />
-      <DigitalTransformation />
-      <FortuneClients />
-       <ReasonWhyWeBest />
-      <RemoteAgile />
-      <InquireSection />
-    </div>
+    <MobResWrap>
+      {" "}
+      <div
+        style={{
+          position: "relative",
+          width: "100%",
+          overflow: "hidden",
+        }}
+      >
+        <HomePage />
+
+        <AboutUs />
+        <CccSection />
+        <DigitalTransformation />
+        <FortuneClients />
+        <ReasonWhyWeBest />
+        <RemoteAgile />
+        <InquireSection />
+      </div>
+    </MobResWrap>
   );
 };

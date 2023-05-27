@@ -32,7 +32,7 @@ export const CareersTopPage = () => {
           </StyledButton>
         </LeftCard>
         <ImageSection>
-          <Image src={MainLogo} alt="Logo" width={300} />
+          <Image src={MainLogo} alt="Logo" style={{maxWidth:"100%", height:"auto"}} />
         </ImageSection>
       </CareerContainer>
     </>

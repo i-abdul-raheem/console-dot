@@ -27,25 +27,25 @@ export const AboutUs = () => {
       </SectionTitleDescrip>
       <DetailRow>
         <DetailRowBox>
-          <BoxLabel>12+</BoxLabel>
+          <BoxLabel style={{fontSize:"32px", fontWeight:"bold"}}>12+</BoxLabel>
           <BoxText >
             Countries Where We Have Happy Customers
           </BoxText>
         </DetailRowBox>
         <DetailRowBox>
-          <BoxLabel>1050+</BoxLabel>
+          <BoxLabel style={{fontSize:"32px", fontWeight:"bold"}}>1050+</BoxLabel>
           <BoxText >Agile Enabled Employees</BoxText>
           </DetailRowBox>
         <DetailRowBox>
-          <BoxLabel>06</BoxLabel>
+          <BoxLabel style={{fontSize:"32px", fontWeight:"bold"}}>06</BoxLabel>
           <BoxText >Worldwide Office</BoxText>
           </DetailRowBox>
         <DetailRowBox>
-          <BoxLabel>05</BoxLabel>
+          <BoxLabel style={{fontSize:"32px", fontWeight:"bold"}}>05</BoxLabel>
           <BoxText >Agile Coaches</BoxText>
           </DetailRowBox>
           <DetailRowBox>
-          <BoxLabel>14</BoxLabel>
+          <BoxLabel style={{fontSize:"32px", fontWeight:"bold"}}>14</BoxLabel>
           <BoxText >Certified Scrum Masters</BoxText>
           </DetailRowBox>
         </DetailRow>

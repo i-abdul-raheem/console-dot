@@ -4,9 +4,14 @@ import { useIsMobileView } from "../../utils/utils";
 
 
 
-export const RightContainer=()=>{
-  width: "100%" 
-}
+export const RightContainer=styled(Box)({
+  position:"relative",
+  display: "flex",
+  alignItems: "flex-start",
+  justifyContent: "center",
+  width: "100%",
+  zIndex: 3,
+})
 export const RightBox = styled(Box)(()=>{
   const isMobileView=useIsMobileView();
   return {
@@ -46,6 +51,8 @@ export const Heading = styled(Box)(()=>{
   marginBottom: "42px",
   padding: "12px 0px",
   fontWeight: "bold",
+  wordWrap:"break-word",
+  overflowWrap:"break-word"
   }
 });
 
@@ -63,9 +70,11 @@ export const DynamicText = styled(Box)(()=>{
   const isMobileView=useIsMobileView();
   return{
   display: "flex",
+  flexDirection:isMobileView? "column": "row",
   fontSize:"35px",
   fontWeight: "bold",
-  
+  wordWrap:'break-word',
+  overflowWrap:"break-word",
   color: "rgb(23 , 96 , 128 )",
   }
 });
@@ -113,3 +122,19 @@ export const ArrowBtn = styled(Link)({
   alignItems: "center",
   padding: "0 24px",
 });
+
+
+
+export const CenterSection =styled(Box)(()=>{
+  const isMobileView=useIsMobileView();
+  return{
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  width: "calc(100% - 65px)",
+  height:isMobileView? 'auto' : "calc(100vh - 64px - 73px - 64px)",
+  textAlign: "center",
+  padding: 32,
+  }
+})

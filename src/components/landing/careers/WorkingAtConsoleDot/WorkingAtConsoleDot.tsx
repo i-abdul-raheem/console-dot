@@ -27,8 +27,7 @@ export const CardBox = ({ image, heading, details }: Props) => {
           <Image
             src={image}
             alt="Job Openoing Badge"
-            width={100}
-            height={100}
+            style={{maxWidth:"100%", height:"auto"}}
           />
         </CardSection>
         <CardSection>

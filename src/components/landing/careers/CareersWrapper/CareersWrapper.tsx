@@ -1,4 +1,6 @@
+import { Header } from "../../Header";
 import { Wrapper } from "../../utils";
+import { MobResWrap } from "../../utils/utils";
 import { CareersTopPage } from "../CareersTopPage";
 import { ConsoleDotWarriorsReview } from "../ConsoleDotWarriorsReview";
 import { EventsLifeEmp } from "../EventsLifeEmp";
@@ -10,15 +12,16 @@ import { WorkingAtConsoleDot } from "../WorkingAtConsoleDot";
 export const CareersWrapper = () => {
   return (
     <>
-    
-      <CareersTopPage />
-      <EventsLifeEmp />
-      <WorkingAtConsoleDot/>
-      <WorkWithUs/>
-      {/* <ConsoleDotWarriorsReview/> */}
-     <SignUpForNewsletter/>
-      <FollowUsOn/>
-      
+      <MobResWrap>
+        {/* <Header /> */}
+        <CareersTopPage />
+        <EventsLifeEmp />
+        <WorkingAtConsoleDot />
+        <WorkWithUs />
+        <ConsoleDotWarriorsReview />
+        <SignUpForNewsletter />
+        <FollowUsOn />
+      </MobResWrap>
     </>
-  )
+  );
 };

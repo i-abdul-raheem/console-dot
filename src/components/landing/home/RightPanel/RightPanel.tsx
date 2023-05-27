@@ -16,6 +16,7 @@ import {
   BottomLink,
   ArrowBtn,
   RightContainer,
+  CenterSection,
 } from "./elements";
 import Link from "next/link";
 import { useIsMobileView } from "../../utils/utils";
@@ -26,34 +27,12 @@ import { useState } from "react";
 export const RightPanel = () => {
   const isMobileView = useIsMobileView();
 
+  const router = useRouter();
 
-  
-  const router=useRouter();
-  
   return (
-    <div
-      style={{
-        position:"relative",
-        display: "flex",
-        alignItems: "flex-start",
-        justifyContent: "center",
-        width: "100%",
-        zIndex: 3,
-      }}
-    >
+    <RightContainer>
       <div style={{ width: "100%" }}>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            width: "calc(100% - 65px)",
-            height: "calc(100vh - 64px - 73px - 64px)",
-            textAlign: "center",
-            padding: 32,
-          }}
-        >
+        <CenterSection>
           <Heading>DEDICATED TO INNOVATION </Heading>
           <SubHeading>
             A LEADER IN{" "}
@@ -82,12 +61,20 @@ export const RightPanel = () => {
             <DescripItems>TIME ZONE ALIGNED</DescripItems>
             <DescripItems>EXPERIENCED TEAM</DescripItems>
           </DescripHeading>
-        </div>
+        </CenterSection>
         <BottomPanel>
-          
-          <button style={{backgroundColor:"transparent", border:"none", fontSize:"16px", color:"white"}}>LEARN MORE</button>
+          <button
+            style={{
+              backgroundColor: "transparent",
+              border: "none",
+              fontSize: "16px",
+              color: "white",
+            }}
+          >
+            LEARN MORE
+          </button>
           <ArrowBtn href="#">
-            <KeyboardArrowDownIcon style={{color:"#fff"}} />{" "}
+            <KeyboardArrowDownIcon style={{ color: "#fff" }} />{" "}
           </ArrowBtn>
         </BottomPanel>
       </div>
@@ -95,17 +82,16 @@ export const RightPanel = () => {
       <RightBox>
         <IconsList>
           <ListItems>
-            <FacebookIcon style={{color:"#fff"}}/>
+            <FacebookIcon style={{ color: "#fff" }} />
           </ListItems>
           <ListItems>
-            <LinkedInIcon style={{color:"#fff"}}/>
+            <LinkedInIcon style={{ color: "#fff" }} />
           </ListItems>
           <ListItems>
-            <TwitterIcon style={{color:"#fff"}}/>
+            <TwitterIcon style={{ color: "#fff" }} />
           </ListItems>
         </IconsList>
       </RightBox>
-    </div>
+    </RightContainer>
   );
-
-            }
+};

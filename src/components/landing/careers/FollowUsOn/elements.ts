@@ -31,3 +31,11 @@ export const SingleIconBox = styled(Box)({
 export const SocialMediaLabel=styled('label')({
   
 })
+
+export const IconsList=styled(Box)(()=>{
+   const isMobileView=useIsMobileView();
+  return{
+  display:"flex",
+  flexDirection:isMobileView? 'column' : 'row'
+  }
+})
