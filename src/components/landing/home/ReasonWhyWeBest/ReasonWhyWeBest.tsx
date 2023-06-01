@@ -1,4 +1,4 @@
-import { Button } from "@mui/material";
+import { Box, Button, Container } from "@mui/material";
 import { React, Verizon } from "@/assets";
 
 import {
@@ -24,47 +24,171 @@ export const ReasonWhyWeBest = () => {
           </SectionDescrip>
         </SectionTitleDescrip>
       </ReasonWhyWeContainer>
-
-      <FlexBox>
-        <div style={{ width: "100%" }}>
-          <Image src={React} alt="Image" width={150} height={50} style={{}} />
-          <h5>{`E-commerce`}</h5>
-          <h2>{`Verizon Express Store`}</h2>
-          <StyledText
-            style={{
-              wordWrap: "break-word",
-              overflowWrap: "break-word",
+      <Container>
+        <Box
+          sx={{
+            maxWidth: "1400px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: { xl: "row", lg: "row", md: "column", sm: "column" },
+          }}
+        >
+          <Box
+            sx={{
+              width: { xl: "40%", lg: "40%", md: "100%", sm: "100%" },
+              display: "flex",
+              flexDirection: "column",
             }}
           >
-            Verizon is America&#39;s biggest wireless network operator company.
-            The Express store is a commerce project where any user in America
-            can purchase mobile, tablets, connected devices and transfer his
-            device to Verizon.
-          </StyledText>
-          <Button>{`DISCOVER`}</Button>
-        </div>
-        <div style={{}}>
-          <Image src={Verizon} alt="Image"  />
-        </div>
-
-        <div style={{ width: "75%", padding: "20px" }}>
-          <h5>{`FINTECH`}</h5>
-          <h2>Bangkok Bank DCS &ndash; Digital Channel Services</h2>
-          <StyledText
-            style={{
-              wordWrap: "break-word",
-              overflowWrap: "break-word",
+            <div style={{ width: "100%" }}>
+              <Box
+                sx={{
+                  maxWidth: "100px",
+                  maxHeight: "100px",
+                  display: { xl: "flex", lg: "flex", md: "none", sm: "none" },
+                }}
+              >
+                <Image
+                  src={React}
+                  alt="Image"
+                  style={{ width: "100%", height: "100%" }}
+                />
+              </Box>
+              <h5>{`E-commerce`}</h5>
+              <h2>{`Verizon Express Store`}</h2>
+              <StyledText
+                style={{
+                  wordWrap: "break-word",
+                  overflowWrap: "break-word",
+                  textAlign: "left",
+                }}
+              >
+                Verizon is America&#39;s biggest wireless network operator
+                company. The Express store is a commerce project where any user
+                in America can purchase mobile, tablets, connected devices and
+                transfer his device to Verizon.
+              </StyledText>
+              <div style={{ width: "100%" }}>
+                <Image
+                  src={Verizon}
+                  alt="Image"
+                  style={{ height: "100%", width: "100%" }}
+                />
+              </div>
+              <Button>{`DISCOVER`}</Button>
+            </div>
+          </Box>
+          <Box
+            sx={{
+              width: { xl: "60%", lg: "60%", md: "100%", sm: "100%" },
+              display: "flex",
+              flexDirection: "column",
+              gap: "2rem",
             }}
           >
-            Bangkok Bank wanted to prepare a new solution using &lsquo;New Relic
-            One&rsquo; which can replace all the modules of the DCS portal. New
-            Relic One (Telemetry Platform) has been used to resolve the business
-            challenges of physical and digital assets. challenges of physical
-            and digital assets.
-          </StyledText>
-          <Button>{`DISCOVER`}</Button>
-        </div>
-      </FlexBox>
+            <Box
+              sx={{
+                width: "100%",
+                display: "flex",
+                flexDirection: {
+                  lg: "row",
+                  md: "column-reverse",
+                  sm: "column-reverse",
+                },
+              }}
+            >
+              <Box sx={{ width: { lg: "50%", md: "100%", sm: "100%" } }}>
+                <Box
+                  sx={{
+                    maxWidth: "100px",
+                    maxHeight: "100px",
+                    display: { xl: "flex", lg: "flex", md: "none", sm: "none" },
+                  }}
+                >
+                  <Image
+                    src={React}
+                    alt="Image"
+                    style={{ width: "100%", height: "100%" }}
+                  />
+                </Box>
+                <h5>{`E-commerce`}</h5>
+                <h2>{`Verizon Express Store`}</h2>
+                <StyledText
+                  style={{
+                    wordWrap: "break-word",
+                    overflowWrap: "break-word",
+                    textAlign: "left",
+                  }}
+                >
+                  Verizon is America&#39;s biggest wireless network operator
+                  company. The Express store is a commerce project where any
+                  user in America can purchase mobile, tablets, connected
+                  devices and transfer his device to Verizon.
+                </StyledText>
+                <Button>{`DISCOVER`}</Button>
+              </Box>
+              <Box sx={{ width: { lg: "50%", md: "100%", sm: "100%" } }}>
+                <Image
+                  src={Verizon}
+                  alt="Image"
+                  style={{ height: "100%", width: "100%" }}
+                />
+              </Box>
+            </Box>
+
+            <Box
+              sx={{
+                width: "100%",
+                display: "flex",
+                flexDirection: {
+                  lg: "row",
+                  md: "column-reverse",
+                  sm: "column-reverse",
+                },
+              }}
+            >
+              <Box sx={{ width: { lg: "50%", md: "100%", sm: "100%" } }}>
+                <Box
+                  sx={{
+                    maxWidth: "100px",
+                    maxHeight: "100px",
+                    display: { xl: "flex", lg: "flex", md: "none", sm: "none" },
+                  }}
+                >
+                  <Image
+                    src={React}
+                    alt="Image"
+                    style={{ width: "100%", height: "100%" }}
+                  />
+                </Box>
+                <h5>{`E-commerce`}</h5>
+                <h2>{`Verizon Express Store`}</h2>
+                <StyledText
+                  style={{
+                    wordWrap: "break-word",
+                    overflowWrap: "break-word",
+                    textAlign: "left",
+                  }}
+                >
+                  Verizon is America&#39;s biggest wireless network operator
+                  company. The Express store is a commerce project where any
+                  user in America can purchase mobile, tablets, connected
+                  devices and transfer his device to Verizon.
+                </StyledText>
+                <Button>{`DISCOVER`}</Button>
+              </Box>
+              <Box sx={{ width: { lg: "50%", md: "100%", sm: "100%" } }}>
+                <Image
+                  src={Verizon}
+                  alt="Image"
+                  style={{ height: "100%", width: "100%" }}
+                />
+              </Box>
+            </Box>
+          </Box>
+        </Box>
+      </Container>
     </>
   );
 };

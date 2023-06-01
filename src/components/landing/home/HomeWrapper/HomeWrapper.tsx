@@ -15,19 +15,16 @@ export const HomeWrapper = () => {
   return (
     <div
       style={{
-        position: "relative",
         width: "100%",
-        overflow: "hidden",
       }}
     >
-      
-      <HomePage/>
-      
+      <HomePage />
+
       <AboutUs />
-       <CccSection />
+      <CccSection />
       <DigitalTransformation />
       <FortuneClients />
-       <ReasonWhyWeBest />
+      <ReasonWhyWeBest />
       <RemoteAgile />
       <InquireSection />
     </div>

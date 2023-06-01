@@ -1,20 +1,20 @@
 import styled from "@emotion/styled";
 import { Box, Button, Typography } from "@mui/material";
-import { useIsMobileView } from "../../utils/utils";
+import { useIsMobileView, useDeskView } from "../../utils/utils";
 
 export const FortuneContainer = styled(Box)({
   backgroundColor: "whitesmoke",
   display: "flex",
   flexDirection: "column",
-  padding: "32px",
-  width:"auto"
+  // padding: "32px",
+  width: "100%",
 });
 
 export const Heading = styled(Typography)({
   fontWeight: "bold",
   fontSize: "25px",
   color: "black",
-  textAlign:"center",
+  textAlign: "center",
   wordWrap: "break-word",
   overflowWrap: "break-word",
 });
@@ -22,7 +22,7 @@ export const Heading = styled(Typography)({
 export const DescriptionSection = styled(Typography)({
   fontSize: "20px",
   padding: "20px",
-  textAlign:"center",
+  textAlign: "center",
   wordWrap: "break-word",
   overflowWrap: "break-word",
 });
@@ -38,23 +38,27 @@ export const FortuneButton = styled(Button)({
   overflowWrap: "break-word",
 });
 
-export const ClientListSection = styled(Button)(()=>{
-  const isMobileView=useIsMobileView();
-  return{
-  display: "flex",
-  flexDirection:isMobileView? "column": "row",
-  maxWidth: "100%",
-  }
+export const ClientListSection = styled(Button)(() => {
+  // const isMobileView = useIsMobileView();
+  const isDeskView = useDeskView();
+
+  return {
+    display: "flex",
+    flexDirection: isDeskView ? "column" : "row",
+    maxWidth: "100%",
+  };
 });
 
-export const ClientListDivs = styled(Box)(()=>{
-  const isMobileView=useIsMobileView();
-  return{
-  width: "100%",
-  borderRight:isMobileView? "none" : "1px solid #696969",
-  borderBottom:isMobileView? "1px solid #696969" : "none",
-  height: "350px",
-  display: "flex",
-  justifyContent: "center",
-  }
+export const ClientListDivs = styled(Box)(() => {
+  const isMobileView = useIsMobileView();
+  const isDeskView = useDeskView();
+
+  return {
+    width: "100%",
+    borderRight: isMobileView ? "none" : "1px solid #696969",
+    borderBottom: isMobileView ? "1px solid #696969" : "none",
+    height: "350px",
+    display: "flex",
+    justifyContent: "center",
+  };
 });

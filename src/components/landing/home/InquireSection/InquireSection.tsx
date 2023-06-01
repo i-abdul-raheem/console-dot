@@ -1,4 +1,4 @@
-import { TextField, Button, TextareaAutosize } from "@mui/material";
+import { TextField, Button, TextareaAutosize, Container } from "@mui/material";
 import {
   FormSection,
   InputsFirstRow,
@@ -12,7 +12,7 @@ import { ColumnInMobile } from "../CccSection/elements";
 
 export const InquireSection = () => {
   return (
-    <>
+    <Container>
       <SectionContainer>
         <SectionTitle>
           <h1
@@ -58,6 +58,6 @@ export const InquireSection = () => {
           </div>
         </FormSection>
       </SectionContainer>
-    </>
+    </Container>
   );
 };
