@@ -64,7 +64,7 @@ export const NameHeading = styled(Box)({
   padding: "2px",
   fontWeight: 600,
   fontFamily: "sans-serif",
-  fontSize: "2.4rem",
+  // fontSize: "2.4rem",
   color:'#fff'
 });
 

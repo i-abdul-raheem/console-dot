@@ -23,6 +23,7 @@ import { Wrapper } from "../../utils";
 import { useRouter } from "next/router";
 import { AboutUs } from "../AboutUs";
 import { useState } from "react";
+import { Box, Container } from "@mui/material";
 export const RightPanel = () => {
   const isMobileView = useIsMobileView();
 
@@ -31,16 +32,17 @@ export const RightPanel = () => {
   return (
     <HeroImageContainer>
       <div style={{ width: "100%" }}>
-        <div
+        <Container
           style={{
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
             width: "calc(100% - 65px)",
-            height: "calc(100vh - 64px - 73px - 64px)",
+            minHeight: "calc(100vh - 64px - 73px - 64px)",
             textAlign: "center",
             padding: "32px",
+            position: "relative",
           }}
         >
           <Heading>DEDICATED TO INNOVATION </Heading>
@@ -66,12 +68,17 @@ export const RightPanel = () => {
             <span style={{ color: "#fff" }}>DEVELOPMENT</span>
           </DynamicText>
 
-          <DescripHeading>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: { xl: "row", lg: "row", md: "row", sm: "column", xs: "column" },
+            }}
+          >
             <DescripItems>TOP 1% IT TALENT</DescripItems>
             <DescripItems>TIME ZONE ALIGNED</DescripItems>
             <DescripItems>EXPERIENCED TEAM</DescripItems>
-          </DescripHeading>
-        </div>
+          </Box>
+        </Container>
         <BottomPanel>
           <button
             style={{

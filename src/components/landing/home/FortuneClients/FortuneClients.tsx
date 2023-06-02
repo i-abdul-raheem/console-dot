@@ -1,4 +1,4 @@
-import { Container } from "@mui/material";
+import { Container, Button } from "@mui/material";
 import { FullPage, Wrapper } from "../../utils";
 import {
   ClientListDivs,
@@ -18,7 +18,10 @@ export const FortuneClients = () => {
           The path to empower startups and serial entrepreneurs with 360°actions
           start here. We are trusted by the world’s greatest leaders since 2011.
         </DescriptionSection>
-        <FortuneButton>CLIENTELE</FortuneButton>
+
+        <Button variant="outlined" sx={{ width: "auto" }}>
+          CLIENTELE
+        </Button>
 
         <ClientListSection>
           <ClientListDivs>

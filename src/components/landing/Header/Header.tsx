@@ -1,7 +1,7 @@
 import { Box, ThemeProvider } from "@mui/material";
 import { MainLogo } from "@/assets";
 import Image from "next/image";
-import CloseIcon from '@mui/icons-material/Close';
+import CloseIcon from "@mui/icons-material/Close";
 import {
   HireDevBtn,
   LeftNav,
@@ -20,57 +20,55 @@ import { MenuPage } from "./MenuPage";
 import { useRouter } from "next/router";
 
 export const Header = () => {
-  const[isMaximize, setIsMaximize]=useState(false);
+  const [isMaximize, setIsMaximize] = useState(false);
 
-  const toggleAction=()=>{
-       setIsMaximize(!isMaximize)
-  }
-  const router=useRouter();
+  const toggleAction = () => {
+    setIsMaximize(!isMaximize);
+  };
+  const router = useRouter();
   return (
     <ThemeProvider theme={getTheme("light")}>
       <NavBar>
         <RightNav>
-          <Image
-            src={MainLogo}
-            alt="Main Logo"
-            width={50}
-            height={50}
-          />
-          <NameHeading>Console<span style={{color: "rgb(23 , 96 , 128 )"}}>Dot</span></NameHeading>
+          <Image src={MainLogo} alt="Main Logo" width={50} height={50} />
+          <NameHeading
+            sx={{
+              fontSize: {
+                xl: "2.8rem",
+                lg: "2rem",
+                md: "2rem",
+                sm: "2rem",
+           
+              },
+            }}
+          >
+            Console<span style={{ color: "rgb(23 , 96 , 128 )" }}>Dot</span>
+          </NameHeading>
 
           <div>
             <ul>
               <ListItem>
-                <StyledButton>
-                  
-
-                  CUSTOMERS
-                </StyledButton>
-
+                <StyledButton>CUSTOMERS</StyledButton>
               </ListItem>
-               
+
               <ListItem>
-                <StyledButton onClick={()=> router.push('/casestudy')}>
+                <StyledButton onClick={() => router.push("/casestudy")}>
                   WHAT WE DO
                 </StyledButton>
               </ListItem>
               <ListItem>
-                <StyledButton>
-                  WHO WE WORK WITH
-                </StyledButton>
+                <StyledButton>WHO WE WORK WITH</StyledButton>
               </ListItem>
               <ListItem>
-                <StyledButton>
-                  ABOUT US{" "}
-                </StyledButton>
+                <StyledButton>ABOUT US </StyledButton>
               </ListItem>
               <ListItem>
-                <StyledButton onClick={()=> router.push("/technologies")}>
+                <StyledButton onClick={() => router.push("/technologies")}>
                   TECEHNOLOGY
                 </StyledButton>
               </ListItem>
               <ListItem>
-                <StyledButton onClick={()=> router.push("/products")}>
+                <StyledButton onClick={() => router.push("/products")}>
                   PRODUCTS
                 </StyledButton>
               </ListItem>
@@ -78,22 +76,20 @@ export const Header = () => {
           </div>
         </RightNav>
         <LeftNav>
-          <HireDevBtn onClick={()=> router.push("/hiredevs")}> Hire Developers </HireDevBtn>
-         {isMaximize?(
-          <StyledButton onClick={toggleAction}>
-            <MenuCloseIcon style={{color:"#fff"}}/>
-          </StyledButton>
-         ):(
-          <StyledButton onClick={toggleAction}>
-            <NavMenuIcon style={{color:"#fff"}}/>
-          </StyledButton>
-         )
-
-         }
-         {isMaximize && (
-          <MenuPage/>
-         ) }
-          
+          <HireDevBtn onClick={() => router.push("/hiredevs")}>
+            {" "}
+            Hire Developers{" "}
+          </HireDevBtn>
+          {isMaximize ? (
+            <StyledButton onClick={toggleAction}>
+              <MenuCloseIcon style={{ color: "#fff" }} />
+            </StyledButton>
+          ) : (
+            <StyledButton onClick={toggleAction}>
+              <NavMenuIcon style={{ color: "#fff" }} />
+            </StyledButton>
+          )}
+          {isMaximize && <MenuPage />}
         </LeftNav>
       </NavBar>
     </ThemeProvider>

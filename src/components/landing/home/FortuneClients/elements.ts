@@ -3,7 +3,7 @@ import { Box, Button, Typography } from "@mui/material";
 import { useIsMobileView, useDeskView } from "../../utils/utils";
 
 export const FortuneContainer = styled(Box)({
-  backgroundColor: "whitesmoke",
+  backgroundColor: "#3b3b3b",
   display: "flex",
   flexDirection: "column",
   // padding: "32px",
@@ -25,11 +25,14 @@ export const DescriptionSection = styled(Typography)({
   textAlign: "center",
   wordWrap: "break-word",
   overflowWrap: "break-word",
+  color:'white'
 });
 
 export const FortuneButton = styled(Button)({
+  display:'flex',
+  alignItems:'start',
+  justifyContent:'start',
   marginBottom: "30px",
-  backgroundColor: "rgb(23 , 96 , 128 )",
   color: "white",
   "&:hover": {
     color: "black",
@@ -46,6 +49,7 @@ export const ClientListSection = styled(Button)(() => {
     display: "flex",
     flexDirection: isDeskView ? "column" : "row",
     maxWidth: "100%",
+    backgroundColor:'#1b1b1b'
   };
 });
 

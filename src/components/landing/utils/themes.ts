@@ -1,4 +1,4 @@
-import { Box, styled } from "@mui/material";
+import { Box, styled, Avatar } from "@mui/material";
 import { useIsMobileView } from "./utils";
 
 interface Types {
@@ -83,8 +83,28 @@ export const Wrapper = styled(Box)(() => {
     width: isMobileView ? "100%" : "1349px",
     display: "flex",
     flexDirection: "column",
-    flexWrap:"wrap",
+    flexWrap: "wrap",
     justifyContent: "center",
     position: "relative",
   };
 });
+export const MainFlexColumnWrapper = styled(Box)(() => {
+  return {
+    width: "100%",
+    display: "flex",
+    flexDirection: "column",
+    height: "auto",
+    boxSizing: "border-box",
+    margin: "0",
+    padding: "0",
+  };
+});
+
+export const ImageContainer = styled(Avatar)(() => {
+  return {
+    maxWidth: "100px",
+    maxHeight: "100px",
+  };
+});
+
+

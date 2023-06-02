@@ -10,7 +10,6 @@ import {
 } from "./elements";
 import Image from "next/image";
 import { Wrapper } from "../../utils";
-import { StyledText } from "../../careers/WorkingAtConsoleDot/elements";
 
 export const ReasonWhyWeBest = () => {
   return (
@@ -27,61 +26,84 @@ export const ReasonWhyWeBest = () => {
       <Container>
         <Box
           sx={{
-            maxWidth: "1400px",
+            height: "auto",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            flexDirection: { xl: "row", lg: "row", md: "column", sm: "column" },
+            gap: { xl: "4rem", lg: "3rem", md: "2rem", sm: "1rem" },
+            paddingBottom: { xl: "5rem", lg: "4rem", md: "4rem", sm: "2rem" },
+            flexDirection: {
+              xl: "row",
+              lg: "row",
+              md: "row",
+              sm: "column",
+              xs: "column",
+            },
           }}
         >
           <Box
             sx={{
-              width: { xl: "40%", lg: "40%", md: "100%", sm: "100%" },
+              width: { xl: "40%", lg: "40%", md: "40%", sm: "100%" },
               display: "flex",
               flexDirection: "column",
             }}
           >
             <div style={{ width: "100%" }}>
+              <Box sx={{}}>
+                <Box
+                  sx={{
+                    maxWidth: "100px",
+                    maxHeight: "100px",
+                    display: {
+                      xl: "flex",
+                      lg: "flex",
+                      md: "flex",
+                      sm: "none",
+                      xs: "none",
+                    },
+                  }}
+                >
+                  <Image
+                    src={React}
+                    alt="Image"
+                    style={{ width: "100%", height: "100%" }}
+                  />
+                </Box>
+
+                <Box
+                  style={{
+                    wordWrap: "break-word",
+                    overflowWrap: "break-word",
+                    textAlign: "left",
+                  }}
+                >
+                  <h5>{`E-Studies`}</h5>
+                  <h2>{`Verizon Express Store`}</h2>
+                  Verizon is America&#39;s biggest wireless network operator
+                  company. The Express store is a commerce project where any
+                  user in America can purchase mobile, tablets, connected
+                  devices and transfer his device to Verizon.
+                </Box>
+                <Button variant="contained">{`DISCOVER`}</Button>
+              </Box>
+
               <Box
                 sx={{
-                  maxWidth: "100px",
-                  maxHeight: "100px",
-                  display: { xl: "flex", lg: "flex", md: "none", sm: "none" },
+                  width: "100%",
+                  height: { xl: "45rem", lg: "40rem", md: "30rem" },
                 }}
               >
-                <Image
-                  src={React}
-                  alt="Image"
-                  style={{ width: "100%", height: "100%" }}
-                />
-              </Box>
-              <h5>{`E-commerce`}</h5>
-              <h2>{`Verizon Express Store`}</h2>
-              <StyledText
-                style={{
-                  wordWrap: "break-word",
-                  overflowWrap: "break-word",
-                  textAlign: "left",
-                }}
-              >
-                Verizon is America&#39;s biggest wireless network operator
-                company. The Express store is a commerce project where any user
-                in America can purchase mobile, tablets, connected devices and
-                transfer his device to Verizon.
-              </StyledText>
-              <div style={{ width: "100%" }}>
                 <Image
                   src={Verizon}
                   alt="Image"
                   style={{ height: "100%", width: "100%" }}
                 />
-              </div>
-              <Button>{`DISCOVER`}</Button>
+              </Box>
             </div>
           </Box>
           <Box
             sx={{
-              width: { xl: "60%", lg: "60%", md: "100%", sm: "100%" },
+              width: { xl: "60%", lg: "70%", md: "50%", sm: "100%" },
               display: "flex",
               flexDirection: "column",
               gap: "2rem",
@@ -93,17 +115,30 @@ export const ReasonWhyWeBest = () => {
                 display: "flex",
                 flexDirection: {
                   lg: "row",
-                  md: "column-reverse",
+                  md: "row",
                   sm: "column-reverse",
+                  xs: "column-reverse",
                 },
               }}
             >
-              <Box sx={{ width: { lg: "50%", md: "100%", sm: "100%" } }}>
+              <Box
+                style={{
+                  wordWrap: "break-word",
+                  overflowWrap: "break-word",
+                  textAlign: "left",
+                }}
+              >
                 <Box
                   sx={{
                     maxWidth: "100px",
                     maxHeight: "100px",
-                    display: { xl: "flex", lg: "flex", md: "none", sm: "none" },
+                    display: {
+                      xl: "flex",
+                      lg: "flex",
+                      md: "flex",
+                      sm: "none",
+                      xs: "none",
+                    },
                   }}
                 >
                   <Image
@@ -112,23 +147,23 @@ export const ReasonWhyWeBest = () => {
                     style={{ width: "100%", height: "100%" }}
                   />
                 </Box>
-                <h5>{`E-commerce`}</h5>
+                <h5>{`E-Commerce`}</h5>
                 <h2>{`Verizon Express Store`}</h2>
-                <StyledText
-                  style={{
-                    wordWrap: "break-word",
-                    overflowWrap: "break-word",
-                    textAlign: "left",
-                  }}
-                >
-                  Verizon is America&#39;s biggest wireless network operator
-                  company. The Express store is a commerce project where any
-                  user in America can purchase mobile, tablets, connected
-                  devices and transfer his device to Verizon.
-                </StyledText>
-                <Button>{`DISCOVER`}</Button>
+                Verizon is America&#39;s biggest wireless network operator
+                company. The Express store is a commerce project where any user
+                in America can purchase mobile, tablets, connected devices and
+                transfer his device to Verizon.
+                <div>
+                  <Button variant="contained">{`DISCOVER`}</Button>
+                </div>
               </Box>
-              <Box sx={{ width: { lg: "50%", md: "100%", sm: "100%" } }}>
+
+              <Box
+                sx={{
+                  width: { xl: "100%", lg: "100%", md: "100%", sm: "100%" },
+                  height: { xl: "45rem", lg: "40rem", md: "auto", sm: "auto" },
+                }}
+              >
                 <Image
                   src={Verizon}
                   alt="Image"
@@ -143,17 +178,30 @@ export const ReasonWhyWeBest = () => {
                 display: "flex",
                 flexDirection: {
                   lg: "row",
-                  md: "column-reverse",
+                  md: "row",
                   sm: "column-reverse",
+                  xs: "column-reverse",
                 },
               }}
             >
-              <Box sx={{ width: { lg: "50%", md: "100%", sm: "100%" } }}>
+              <Box
+                style={{
+                  wordWrap: "break-word",
+                  overflowWrap: "break-word",
+                  textAlign: "left",
+                }}
+              >
                 <Box
                   sx={{
                     maxWidth: "100px",
                     maxHeight: "100px",
-                    display: { xl: "flex", lg: "flex", md: "none", sm: "none" },
+                    display: {
+                      xl: "flex",
+                      lg: "flex",
+                      md: "flex",
+                      sm: "none",
+                      xs: "none",
+                    },
                   }}
                 >
                   <Image
@@ -162,23 +210,23 @@ export const ReasonWhyWeBest = () => {
                     style={{ width: "100%", height: "100%" }}
                   />
                 </Box>
-                <h5>{`E-commerce`}</h5>
+                <h5>{`E-Commerce`}</h5>
                 <h2>{`Verizon Express Store`}</h2>
-                <StyledText
-                  style={{
-                    wordWrap: "break-word",
-                    overflowWrap: "break-word",
-                    textAlign: "left",
-                  }}
-                >
-                  Verizon is America&#39;s biggest wireless network operator
-                  company. The Express store is a commerce project where any
-                  user in America can purchase mobile, tablets, connected
-                  devices and transfer his device to Verizon.
-                </StyledText>
-                <Button>{`DISCOVER`}</Button>
+                Verizon is America&#39;s biggest wireless network operator
+                company. The Express store is a commerce project where any user
+                in America can purchase mobile, tablets, connected devices and
+                transfer his device to Verizon.
+                <div>
+                  <Button variant="contained">{`DISCOVER`}</Button>
+                </div>
               </Box>
-              <Box sx={{ width: { lg: "50%", md: "100%", sm: "100%" } }}>
+
+              <Box
+                sx={{
+                  width: { xl: "100%", lg: "100%", md: "100%", sm: "100%" },
+                  height: { xl: "45rem", lg: "40rem", md: "auto", sm: "auto" },
+                }}
+              >
                 <Image
                   src={Verizon}
                   alt="Image"

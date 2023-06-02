@@ -7,3 +7,6 @@ export * from "./technologies";
 export * from "./hiredevs";
 export * from "./casestudy";
 export * from "./products";
+export * from "./CardWithImage";
+export * from "./MediaCard";
+export * from "./CardWithBackground";

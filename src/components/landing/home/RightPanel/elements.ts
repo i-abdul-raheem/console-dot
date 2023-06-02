@@ -9,7 +9,7 @@ export const HeroImageContainer = styled(Box)(() => {
     alignItems: "flex-start",
     justifyContent: "center",
     width: "100%",
-    zIndex: 3,
+    zIndex: 2,
   };
 });
 export const RightBox = styled(Box)(() => {
@@ -60,13 +60,12 @@ export const SubHeading = styled(Typography)(() => {
     fontSize: isMobileView ? "20px" : "35px",
     width: "100%",
     color: "#fff",
-
   };
 });
 
 export const DynamicText = styled(Box)(() => {
   // const isMobileView = useIsMobileView();
-  const isDeskView = useDeskView()
+  const isDeskView = useDeskView();
 
   return {
     display: "flex",
@@ -74,6 +73,7 @@ export const DynamicText = styled(Box)(() => {
     fontSize: isDeskView ? "20px" : "35px",
     fontWeight: "bold",
     color: "rgb(23 , 96 , 128 )",
+    // position: "absolute",
   };
 });
 export const StaticText = styled(Typography)({});
@@ -83,14 +83,19 @@ export const DescripHeading = styled(Box)({
   display: "flex",
 });
 
-export const DescripItems = styled(Typography)({
-  margin: "50px 0px",
-  padding: "10px",
-  color: "#fff",
-  borderRight: "1px solid #696969",
-  "&:last-child": {
-    border: "none",
-  },
+export const DescripItems = styled(Typography)(() => {
+  const isDeskView = useDeskView();
+  return {
+    margin: "50px 0px",
+    padding: "10px",
+    color: "#fff",
+    borderBottom: isDeskView ? "1px solid #696969" : "no-border",
+    borderRight: isDeskView ? "none" : "1px solid #696969",
+    "&:last-child": {
+      borderBottom: isDeskView ? "1px solid #696969":'none',
+      borderRight: isDeskView ? "1px solid #696969":'none',
+    },
+  };
 });
 
 export const BottomPanel = styled(Box)({
