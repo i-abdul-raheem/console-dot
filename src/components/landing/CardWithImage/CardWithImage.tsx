@@ -5,7 +5,11 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions, Box } from "@mui/material";
 
-export default function CardWithImage() {
+interface Types {
+  image: string
+}
+
+export default function CardWithImage({image}:Types) {
   return (
     <Card
       sx={{
@@ -23,7 +27,7 @@ export default function CardWithImage() {
         <CardMedia
           component="img"
           height="300"
-          image="/static/images/cards/contemplative-reptile.jpg"
+          image={image}
           alt="green iguana"
         />
         <CardContent>

@@ -1,4 +1,4 @@
-import { Box, styled, Avatar } from "@mui/material";
+import { Box, styled, Avatar, Typography } from "@mui/material";
 import { useIsMobileView } from "./utils";
 
 interface Types {
@@ -107,4 +107,26 @@ export const ImageContainer = styled(Avatar)(() => {
   };
 });
 
+export const Padding = {
+  xl: "2rem",
+  lg: "1.8rem",
+  md: "1.7rem",
+  sm: "1.5rem",
+  xs: "0rem",
+};
 
+export const SubFont = {
+  xl: "2rem",
+  lg: "1.8rem",
+  md: "1.3rem",
+  sm: "1rem",
+  xs: "1rem",
+};
+
+export const HeadFont = {
+  xl: "4rem",
+  lg: "4rem",
+  md: "2.3rem",
+  sm: "1rem",
+  xs: "1rem",
+};

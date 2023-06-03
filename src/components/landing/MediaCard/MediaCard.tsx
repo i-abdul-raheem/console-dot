@@ -11,7 +11,7 @@ export default function MediaCard() {
     <Card sx={{ maxWidth: 250 }}>
       <CardMedia
         sx={{ height: 140 }}
-        image="/static/images/cards/contemplative-reptile.jpg"
+        image="https://images.unsplash.com/photo-1503437313881-503a91226402?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80s"
         title="green iguana"
       />
       <CardContent>
@@ -24,8 +24,8 @@ export default function MediaCard() {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+        <Button variant="contained" size="small">Share</Button>
+
       </CardActions>
     </Card>
   );

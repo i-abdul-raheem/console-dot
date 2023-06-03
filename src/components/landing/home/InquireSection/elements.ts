@@ -15,39 +15,39 @@ export const SectionContainer = styled(Box)(() => {
   return {
     display: "flex",
     flexDirection: isMobileView ? "column" : "row",
-    backgroundColor: "white",
-    columnGap:'20px',
-    rowGap:'20px',
-    width:"100%"
-  
+    backgroundColor: "transparent",
+    columnGap: "20px",
+    rowGap: "20px",
+    width: "100%",
   };
 });
 
 export const SectionTitle = styled(Box)(() => {
   const isMobileView = useIsMobileView();
   return {
-    display:'flex',
-    alignItems:"center",
-    justifyContent:"center"
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   };
 });
 
 export const FormSection = styled(Box)({
-  paddingTop:"32px",
-  width:'100%',
-  display:"flex",
-  flexDirection:"column",
-  rowGap:"20px",justifyContent:'center'
+  paddingTop: "32px",
+  width: "100%",
+  display: "flex",
+  flexDirection: "column",
+  rowGap: "20px",
+  justifyContent: "center",
 });
 
-export const InputsFirstRow = styled(Box)(()=>{
-  const isMobileView=useIsMobileView();
-  return{
-  display: "flex",
-  flexDirection:isMobileView? 'column' : 'row',
-  rowGap:'20px',
-  columnGap: "30px",
-  }
+export const InputsFirstRow = styled(Box)(() => {
+  const isMobileView = useIsMobileView();
+  return {
+    display: "flex",
+    flexDirection: isMobileView ? "column" : "row",
+    rowGap: "20px",
+    columnGap: "30px",
+  };
 });
 
 export const InputsSecondRow = styled(Box)({

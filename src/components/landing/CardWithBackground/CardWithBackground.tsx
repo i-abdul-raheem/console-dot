@@ -33,7 +33,7 @@ export const CardWithBackground = () => {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button variant="contained" size="small" color="primary">
           Share
         </Button>
       </CardActions>

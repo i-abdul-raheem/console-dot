@@ -1,15 +1,7 @@
-import Image from "next/image";
-import NotListedLocationIcon from "@mui/icons-material/NotListedLocation";
 import { AcCharger, HealthMonitor } from "@/assets";
 import { StyledButton } from "../../Header/elements";
 import { Box, styled, Container, Button } from "@mui/material";
 
-import {
-  LiWithIcon,
-  Product1Container,
-  TextDescrip,
-  TextHeading,
-} from "../Product1/elements";
 import { Product2Container } from "./elements";
 
 import { ImageContainer, MainFlexColumnWrapper } from "../../utils";
@@ -17,7 +9,15 @@ import CardWithImage from "../../CardWithImage/CardWithImage";
 import { InquireSection } from "../../home";
 import MediaCard from "../../MediaCard/MediaCard";
 import { CardWithBackground } from "../../CardWithBackground";
+
 export const Product2 = () => {
+  const mediaCardImageUrl =
+    "https://images.unsplash.com/photo-1503437313881-503a91226402?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80s";
+  const cardWithImageUrl =
+    "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80";
+  const CardWithBackgroundUrl =
+    "https://images.unsplash.com/photo-1484807352052-23338990c6c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80";
+
   return (
     <>
       <Container>
@@ -26,6 +26,7 @@ export const Product2 = () => {
             sx={{
               display: "flex",
               justifyContent: "space-around",
+              backgroundColor: "#f9f9f9",
               padding: {
                 xl: "2rem 0rem",
                 lg: "1.8rem 0rem",
@@ -36,7 +37,7 @@ export const Product2 = () => {
             }}
           >
             <ImageContainer>
-              <img src={AcCharger} />
+              <img src={AcCharger} alt="test" />
             </ImageContainer>
             <ImageContainer></ImageContainer>
             <ImageContainer></ImageContainer>
@@ -90,17 +91,39 @@ export const Product2 = () => {
               </ol>
             </Box>
             <Box>
-              <Button>{`DRIVE YOUR EV MORE `}</Button>
+              <Button variant="contained">{`DRIVE YOUR EV MORE `}</Button>
             </Box>
           </Box>
-          <Box>
-            <CardWithImage />
+          <Box
+            sx={{
+              backgroundColor: "#f9f9f9",
+              padding: {
+                xl: "2rem 0rem",
+                lg: "1.8rem 0rem",
+                md: "1.5rem 0rem",
+                sm: "1.2rem 0rem",
+                xs: "1rem 0rem",
+              },
+            }}
+          >
+            <CardWithImage image={cardWithImageUrl} />
           </Box>
           <Box>
             <InquireSection />
           </Box>
-          <Box>
-            <CardWithImage />
+          <Box
+            sx={{
+              backgroundColor: "#f9f9f9",
+              padding: {
+                xl: "2rem 0rem",
+                lg: "1.8rem 0rem",
+                md: "1.5rem 0rem",
+                sm: "1.2rem 0rem",
+                xs: "1rem 0rem",
+              },
+            }}
+          >
+            <CardWithImage image={cardWithImageUrl} />
           </Box>
           <Box
             sx={{
@@ -124,11 +147,11 @@ export const Product2 = () => {
               },
             }}
           >
-            <MediaCard />
-            <MediaCard />
-            <MediaCard />
-            <MediaCard />
-            <MediaCard />
+            <MediaCard mediaCardImageUrl={mediaCardImageUrl} />
+            <MediaCard mediaCardImageUrl={mediaCardImageUrl} />
+            <MediaCard mediaCardImageUrl={mediaCardImageUrl} />
+            <MediaCard mediaCardImageUrl={mediaCardImageUrl} />
+            <MediaCard mediaCardImageUrl={mediaCardImageUrl} />
           </Box>
 
           <Box
@@ -143,76 +166,21 @@ export const Product2 = () => {
                 sm: "column",
                 xs: "column",
               },
+              backgroundColor: "#f9f9f9",
+              padding: {
+                xl: "2rem 0rem",
+                lg: "1.8rem 0rem",
+                md: "1.5rem 0rem",
+                sm: "1.2rem 0rem",
+                xs: "1rem 0rem",
+              },
             }}
           >
-            <CardWithBackground />
-            <CardWithBackground />
-            <CardWithBackground />
+            <CardWithBackground CardWithBackgroundUrl={CardWithBackgroundUrl} />
+            <CardWithBackground CardWithBackgroundUrl={CardWithBackgroundUrl} />
+            <CardWithBackground CardWithBackgroundUrl={CardWithBackgroundUrl} />
           </Box>
-          {/* <TextHeading
-            style={{
-              fontSize: "36px",
-              display: "flex",
-              justifyContent: "center",
-            }}
-          >
-            AC Charge Controller
-          </TextHeading>
-          <TextDescrip
-            style={{
-              paddingBottom: "20px",
-              paddingLeft: "32px",
-              textAlign: "center",
-            }}
-          >
-            With the green EV revolution outburst, consumers have become even
-            more conscious towards the environment and invested in electric
-            vehicles. However, the concern for recharging their EVs hasn’t
-            diminished yet. Bacancy brings in a top-notch solution to your
-            consumers’ troubles.
-          </TextDescrip>
-
-          <TextDescrip style={{ fontWeight: "bold", paddingLeft: "24px" }}>
-            Types of BMS
-          </TextDescrip>
-
-          <LiWithIcon>
-            <NotListedLocationIcon />
-            <TextDescrip>Types of AC Controllers</TextDescrip>
-          </LiWithIcon>
-          <LiWithIcon>
-            <NotListedLocationIcon />
-            <TextDescrip>AC Single Gun Type 2 (7.4Kw Controller)</TextDescrip>
-          </LiWithIcon>
-          <LiWithIcon>
-            <NotListedLocationIcon />
-            <TextDescrip>AC Dual Gun Type 2 Controller</TextDescrip>
-          </LiWithIcon>
-          <LiWithIcon>
-            <NotListedLocationIcon />
-            <TextDescrip>AC Single Gun Type 2 (22KW)</TextDescrip>
-          </LiWithIcon>
-          <LiWithIcon>
-            <NotListedLocationIcon />
-            <TextDescrip>Bharat AC001 Controller</TextDescrip>
-          </LiWithIcon>
-
-          <StyledButton>Explore More</StyledButton> */}
         </MainFlexColumnWrapper>
-        {/* <div
-          style={{
-            width: "100%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <Image
-            src={HealthMonitor}
-            alt="Ac Charger"
-            style={{ maxWidth: "100%", height: "" }}
-          />
-        </div> */}
       </Container>
     </>
   );
