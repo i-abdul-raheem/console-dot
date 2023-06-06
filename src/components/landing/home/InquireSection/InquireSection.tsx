@@ -18,7 +18,7 @@ import { HeadFont, Padding, SubFont } from "../../utils";
 
 export const InquireSection = () => {
   return (
-    <Box sx={{ background: "#e2f1ff" }}>
+    <Box sx={{ background: "#113f67" }}>
       <Container sx={{ background: "transparent" }}>
         <SectionContainer>
           <Box>

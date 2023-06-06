@@ -36,20 +36,26 @@ export const ReasonWhyWeBest = () => {
               xl: "row",
               lg: "row",
               md: "row",
-              sm: "column",
-              xs: "column",
+              sm: "column-reverse",
+              xs: "column-reverse",
             },
           }}
         >
           <Box
             sx={{
-              width: { xl: "40%", lg: "40%", md: "40%", sm: "100%" },
+              width: {
+                xl: "40%",
+                lg: "40%",
+                md: "40%",
+                sm: "100%",
+                xs: "100%",
+              },
               display: "flex",
               flexDirection: "column",
             }}
           >
             <div style={{ width: "100%" }}>
-              <Box sx={{}}>
+              <Box>
                 <Box
                   sx={{
                     maxWidth: "100px",
@@ -90,7 +96,7 @@ export const ReasonWhyWeBest = () => {
               <Box
                 sx={{
                   width: "100%",
-                  height: { xl: "45rem", lg: "40rem", md: "30rem" },
+                  minHeight: "200px",
                 }}
               >
                 <Image
@@ -103,7 +109,13 @@ export const ReasonWhyWeBest = () => {
           </Box>
           <Box
             sx={{
-              width: { xl: "60%", lg: "70%", md: "50%", sm: "100%" },
+              width: {
+                xl: "60%",
+                lg: "70%",
+                md: "50%",
+                sm: "100%",
+                xs: "100%",
+              },
               display: "flex",
               flexDirection: "column",
               gap: "2rem",
@@ -114,6 +126,7 @@ export const ReasonWhyWeBest = () => {
                 width: "100%",
                 display: "flex",
                 flexDirection: {
+                  xl: "row",
                   lg: "row",
                   md: "row",
                   sm: "column-reverse",
@@ -122,12 +135,20 @@ export const ReasonWhyWeBest = () => {
               }}
             >
               <Box
-                style={{
+                sx={{
                   wordWrap: "break-word",
                   overflowWrap: "break-word",
                   textAlign: "left",
+                  width: {
+                    xl: "50%",
+                    lg: "50%",
+                    md: "50%",
+                    sm: "100%",
+                    xs: "100%",
+                  },
                 }}
               >
+                {/* spec logos */}
                 <Box
                   sx={{
                     maxWidth: "100px",
@@ -147,7 +168,7 @@ export const ReasonWhyWeBest = () => {
                     style={{ width: "100%", height: "100%" }}
                   />
                 </Box>
-                <h5>{`E-Commerce`}</h5>
+                <h5>{`E-Studies`}</h5>
                 <h2>{`Verizon Express Store`}</h2>
                 Verizon is America&#39;s biggest wireless network operator
                 company. The Express store is a commerce project where any user
@@ -157,26 +178,37 @@ export const ReasonWhyWeBest = () => {
                   <Button variant="contained">{`DISCOVER`}</Button>
                 </div>
               </Box>
-
               <Box
                 sx={{
-                  width: { xl: "100%", lg: "100%", md: "100%", sm: "100%" },
-                  height: { xl: "45rem", lg: "40rem", md: "auto", sm: "auto" },
+                  width: {
+                    xl: "50%",
+                    lg: "50%",
+                    md: "50%",
+                    sm: "100%",
+                    xs: "100%",
+                  },
                 }}
               >
-                <Image
-                  src={Verizon}
-                  alt="Image"
-                  style={{ height: "100%", width: "100%" }}
-                />
+                <Box
+                  sx={{
+                    width: { xl: "100%", lg: "100%", md: "100%", sm: "100%" },
+                    minHeight: "300px",
+                  }}
+                >
+                  <Image
+                    src={Verizon}
+                    alt="Image"
+                    style={{ height: "100%", width: "100%" }}
+                  />
+                </Box>
               </Box>
             </Box>
-
             <Box
               sx={{
                 width: "100%",
                 display: "flex",
                 flexDirection: {
+                  xl: "row",
                   lg: "row",
                   md: "row",
                   sm: "column-reverse",
@@ -185,12 +217,20 @@ export const ReasonWhyWeBest = () => {
               }}
             >
               <Box
-                style={{
+                sx={{
                   wordWrap: "break-word",
                   overflowWrap: "break-word",
                   textAlign: "left",
+                  width: {
+                    xl: "50%",
+                    lg: "50%",
+                    md: "50%",
+                    sm: "100%",
+                    xs: "100%",
+                  },
                 }}
               >
+                {/* spec logos */}
                 <Box
                   sx={{
                     maxWidth: "100px",
@@ -220,18 +260,29 @@ export const ReasonWhyWeBest = () => {
                   <Button variant="contained">{`DISCOVER`}</Button>
                 </div>
               </Box>
-
               <Box
                 sx={{
-                  width: { xl: "100%", lg: "100%", md: "100%", sm: "100%" },
-                  height: { xl: "45rem", lg: "40rem", md: "auto", sm: "auto" },
+                  width: {
+                    xl: "50%",
+                    lg: "50%",
+                    md: "50%",
+                    sm: "100%",
+                    xs: "100%",
+                  },
                 }}
               >
-                <Image
-                  src={Verizon}
-                  alt="Image"
-                  style={{ height: "100%", width: "100%" }}
-                />
+                <Box
+                  sx={{
+                    width: { xl: "100%", lg: "100%", md: "100%", sm: "100%" },
+                    minHeight: "300px",
+                  }}
+                >
+                  <Image
+                    src={Verizon}
+                    alt="Image"
+                    style={{ height: "100%", width: "100%" }}
+                  />
+                </Box>
               </Box>
             </Box>
           </Box>

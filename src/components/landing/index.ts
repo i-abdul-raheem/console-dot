@@ -10,3 +10,4 @@ export * from "./products";
 export * from "./CardWithImage";
 export * from "./MediaCard";
 export * from "./CardWithBackground";
+export * from "./Services";

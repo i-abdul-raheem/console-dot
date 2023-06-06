@@ -19,6 +19,8 @@ export const SingleCard = styled(Box)({
   padding: "25px 15px",
   justifyContent: "center",
   alignItems: "center",
+  marginBottom: "10px",
+  "&:last-child": "0",
   "&:hover": {
     boxShadow: "0px 0px 20px 2px rgba(0, 0, 0, 0.2)",
   },

@@ -1,11 +1,11 @@
-import { Button, Container } from "@mui/material";
-import { Wrapper } from "../../utils";
+import { Box, Button, Container } from "@mui/material";
+import { Body, Padding, Wrapper } from "../../utils";
 import { ContentContainer, TitleSection, TopContent } from "./elements";
 import { StyledText } from "../../careers/WorkingAtConsoleDot/elements";
 
 export const RemoteAgile = () => {
   return (
-    <>
+    <Box sx={{ backgroundColor: Body, padding: Padding, color: "black" }}>
       <Container style={{}}>
         <TopContent>
           <TitleSection style={{ fontSize: "25px", fontWeight: "bold" }}>
@@ -66,6 +66,6 @@ export const RemoteAgile = () => {
           </div>
         </ContentContainer>
       </Container>
-    </>
+    </Box>
   );
 };

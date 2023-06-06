@@ -28,7 +28,7 @@ export const Header = () => {
   const router = useRouter();
   return (
     <ThemeProvider theme={getTheme("light")}>
-      <NavBar>
+      <NavBar sx={{ backgroundColor: "black" }}>
         <RightNav>
           <Image src={MainLogo} alt="Main Logo" width={50} height={50} />
           <NameHeading
@@ -38,7 +38,6 @@ export const Header = () => {
                 lg: "2rem",
                 md: "2rem",
                 sm: "2rem",
-           
               },
             }}
           >
@@ -63,7 +62,9 @@ export const Header = () => {
                 <StyledButton>ABOUT US </StyledButton>
               </ListItem>
               <ListItem>
-                <StyledButton onClick={() => router.push("/technologies")}>
+                <StyledButton
+                  onClick={() => router.push("/exploreTechnologies")}
+                >
                   TECEHNOLOGY
                 </StyledButton>
               </ListItem>

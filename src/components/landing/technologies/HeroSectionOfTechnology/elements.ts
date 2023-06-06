@@ -22,7 +22,7 @@ export const Heading = styled(Typography)({
 });
 
 export const StyledPara = styled(Typography)({
-  textAlign: "center",
+  textAlign: "left",
   padding: "32px",
   fontSize:"20px",
   wordWrap: "break-word",

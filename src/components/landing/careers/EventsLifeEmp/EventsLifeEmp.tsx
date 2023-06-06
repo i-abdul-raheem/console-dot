@@ -9,76 +9,39 @@ import {
   SectionTitle,
   StyledButton,
 } from "./elements";
+import { Box, Container } from "@mui/material";
+import MediaCard from "../../MediaCard/MediaCard";
 
 export const EventsLifeEmp = () => {
   return (
-    <>
-      <ComponentContainer>
+    <Container>
+      <ComponentContainer sx={{ backgroundColor: "#f3f9fb" }}>
         <Section1>
-          <div>
-          <ImageSection>
-            <Image src={Event} alt="Event Image" style={{width: "auto"}}/>
-          </ImageSection>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: {
+                xl: "row",
+                lg: "row",
+                md: "row",
+                sm: "column",
+                xs: "column",
+              },
+              justifyContent: "space-around",
+              alignItems: "center",
+              flexWrap: "wrap",
+            }}
+          >
+            <MediaCard title="Events" placeholder="View More"></MediaCard>
+            <MediaCard
+              title="Life of Condole."
+              placeholder="View More"
+            ></MediaCard>
 
-          <SectionTitle>
-            <h2 >Events</h2>
-          </SectionTitle>
-          <SectionDescription>
-            Whether it is birthdays, culture, festivals, or seasons- we
-            celebrate every occasion with enthusiasm and joy.
-          </SectionDescription>
-          </div>
-          <SectionButton>
-            <StyledButton>
-              VIEW MORE
-              </StyledButton>
-            </SectionButton>
-            
-        </Section1>
-        <Section1>
-          <div>
-          <ImageSection>
-            <Image src={Life} alt="Event Image" style={{width: "auto", height: "auto"}} />
-          </ImageSection>
-
-          <SectionTitle>
-            <h2 >Life@ConsoleDot</h2>
-          </SectionTitle>
-          <SectionDescription>
-            With a perfect mix of life and work, our employees understand the
-            responsibility and resonate the same.
-          </SectionDescription>
-          </div>
-          <SectionButton>
-            <StyledButton>
-              VIEW MORE
-              </StyledButton>
-            </SectionButton>
-            
-        </Section1>
-        <Section1>
-          <div style={{marginBottom:"20px"}}>
-          <ImageSection>
-            <Image src={Life} alt="Event Image" style={{width:'auto',height:"auto"}}/>
-          </ImageSection>
-
-          <SectionTitle>
-            <h2>Employee Feedback</h2>
-          </SectionTitle>
-          <SectionDescription>
-            It’s not we but you who affirm our unique work culture. All ears to
-            your unsaid needs and ensure to avail you a fertile work
-            environment.
-          </SectionDescription>
-          </div>
-          <SectionButton>
-            <StyledButton>
-              VIEW MORE
-              </StyledButton>
-            </SectionButton>
-            
+            <MediaCard title="Employee" placeholder="View More"></MediaCard>
+          </Box>
         </Section1>
       </ComponentContainer>
-    </>
+    </Container>
   );
 };

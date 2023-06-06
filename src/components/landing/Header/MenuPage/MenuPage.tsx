@@ -7,9 +7,11 @@ import {
   DetailRow,
   DetailRowBox,
 } from "../../home/AboutUs/elements";
+import { useRouter } from "next/router";
 import { Container, Box, Divider } from "@mui/material";
 
 export const MenuPage = () => {
+  const router = useRouter();
   return (
     <>
       <MenuPageContainer
@@ -20,7 +22,7 @@ export const MenuPage = () => {
         <Box
           sx={{
             width: { xl: "100%" },
-            display: 'flex',
+            display: "flex",
             flexDirection: {
               xl: "row",
               lg: "row",
@@ -170,6 +172,20 @@ export const MenuPage = () => {
                 }}
               >
                 Contact
+              </StyledMenuList>
+              <StyledMenuList
+                onClick={() => router.push("/services")}
+                sx={{
+                  fontSize: {
+                    xl: "2.8rem",
+                    lg: "2.5rem",
+                    md: "2.3rem",
+                    sm: "2rem",
+                    xs: "1rem",
+                  },
+                }}
+              >
+                Services
               </StyledMenuList>
             </ul>
           </div>

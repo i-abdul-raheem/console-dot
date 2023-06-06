@@ -1,11 +1,12 @@
 import { React } from "@/assets";
-
 import { Box, Container, Button, Typography } from "@mui/material";
 import { HeadFont, ImageContainer, Padding, SubFont } from "../../utils";
 import { ProductsTop } from "../../products/ProductsTop.tsx/ProductsTop";
 import { InquireSection } from "../../home";
 import { TechnicalExcellence } from "../TechnicalExcellence";
-
+import { Steppers } from "../Steppers/Stepper";
+import { CardWithBackground } from "../../CardWithBackground";
+import { FrequentQuestions } from "../../FrequentQuestions";
 interface props {
   logo: any;
   name: string;
@@ -244,6 +245,23 @@ export const Mobile = () => {
           <InquireSection />
           <TechnicalExcellence />
 
+          <Box>
+            <Steppers />
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "space-around",
+            }}
+          >
+            <CardWithBackground></CardWithBackground>
+            <CardWithBackground></CardWithBackground>
+            <CardWithBackground></CardWithBackground>
+          </Box>
+          <Box>
+            <FrequentQuestions />
+          </Box>
           
         </Box>
       </Container>

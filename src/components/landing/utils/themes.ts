@@ -80,12 +80,11 @@ export const FullPage = styled(Box)({
 export const Wrapper = styled(Box)(() => {
   const isMobileView = useIsMobileView();
   return {
-    width: isMobileView ? "100%" : "1349px",
     display: "flex",
     flexDirection: "column",
     flexWrap: "wrap",
     justifyContent: "center",
-    position: "relative",
+    backgroundColor: "#f3f9fb",
   };
 });
 export const MainFlexColumnWrapper = styled(Box)(() => {
@@ -118,15 +117,28 @@ export const Padding = {
 export const SubFont = {
   xl: "2rem",
   lg: "1.8rem",
-  md: "1.3rem",
-  sm: "1rem",
-  xs: "1rem",
+  md: "14px",
+  sm: "11px",
+  xs: "10px",
 };
 
 export const HeadFont = {
   xl: "4rem",
-  lg: "4rem",
-  md: "2.3rem",
+  lg: "2.7rem",
+  md: "2rem",
   sm: "1rem",
   xs: "1rem",
+};
+
+export const Primary = {
+  color: "#226597",
+};
+export const Secondary = {
+  color: "#87c0cd",
+};
+export const Dark = {
+  color: "#113f67",
+};
+export const Body = {
+  color: "#f3f9fb",
 };

@@ -1,14 +1,6 @@
 import { Box, Button, Typography, styled } from "@mui/material";
 import { useIsMobileView } from "../../utils/utils";
 
-export const ComponentContainer = styled(Box)({
-  display: "flex",
-  columnGap: "20px",
-  flexDirection: "column",
-  justifyContent:'center',
-  alignItems:"center",
-  paddingBottom:"32px"
-});
 
 export const SectionButton = styled(Box)({
   display: "flex",
