@@ -10,9 +10,9 @@ export const CaseStudyWrapper=()=>{
         <>
         
         <CaseStudyTop/>
-        <FortuneClients/>
+        {/* <FortuneClients/>
         <CsReact/>
-        <CsNode/>
+        <CsNode/> */}
         </>
     )
 }

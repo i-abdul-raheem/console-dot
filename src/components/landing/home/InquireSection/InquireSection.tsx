@@ -14,12 +14,12 @@ import {
   SectionTitle,
   StyledButton,
 } from "./elements";
-import { HeadFont, Padding, SubFont } from "../../utils";
+import { HeadFont, Padding, Secondary, SubFont } from "../../utils";
 
 export const InquireSection = () => {
   return (
-    <Box sx={{ background: "#113f67" }}>
-      <Container sx={{ background: "transparent" }}>
+    <Container sx={{ background: "transparent", padding: Padding }}>
+      <Box sx={{ background: "#113f67" }}>
         <SectionContainer>
           <Box>
             <Typography
@@ -46,7 +46,7 @@ export const InquireSection = () => {
               your requirement.
             </Typography>
           </Box>
-          <FormSection>
+          <FormSection sx={{padding:Padding}}>
             <InputsFirstRow>
               <TextField
                 sx={{ backgroundColor: "white" }}
@@ -96,7 +96,7 @@ export const InquireSection = () => {
             </Box>
           </FormSection>
         </SectionContainer>
-      </Container>
-    </Box>
+      </Box>
+    </Container>
   );
 };

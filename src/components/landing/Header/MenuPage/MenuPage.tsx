@@ -9,6 +9,7 @@ import {
 } from "../../home/AboutUs/elements";
 import { useRouter } from "next/router";
 import { Container, Box, Divider } from "@mui/material";
+import { Padding } from "../../utils";
 
 export const MenuPage = () => {
   const router = useRouter();
@@ -32,9 +33,25 @@ export const MenuPage = () => {
             },
           }}
         >
+          {/* intro of the company */}
           <Box
             sx={{
-              padding: 3,
+              display: "flex",
+              flexDirection: {
+                xl: "row",
+                lg: "row",
+                md: "row",
+                sm: "column-reverse",
+                xs: "column-reverse",
+              },
+              width: {
+                xl: "50%",
+                lg: "50%",
+                md: "100%",
+                sm: "10%",
+                xs: "100%",
+              },
+              padding: "1rem",
             }}
           >
             <Box
@@ -65,7 +82,6 @@ export const MenuPage = () => {
               <DetailRow
                 sx={{
                   paddingTop: "32px",
-                  alignItems: { xl: "left", le: "left", md: "left" },
                 }}
               >
                 <DetailRowBox>
@@ -91,12 +107,13 @@ export const MenuPage = () => {
               </DetailRow>
             </Box>
           </Box>
-          <div
-            style={{ padding: "32px", backgroundColor: "rgb(23 , 96 , 128 )" }}
-          >
+          {/* Side Nav of header */}
+          <Box sx={{ padding: "32px", backgroundColor: "rgb(23 , 96 , 128 )" }}>
             <ul>
               <StyledMenuList
+                onClick={() => router.push("/careers")}
                 sx={{
+                  cursor: "pointer",
                   fontSize: {
                     xl: "2.8rem",
                     lg: "2.5rem",
@@ -110,6 +127,7 @@ export const MenuPage = () => {
               </StyledMenuList>
               <StyledMenuList
                 sx={{
+                  cursor: "pointer",
                   fontSize: {
                     xl: "2.8rem",
                     lg: "2.5rem",
@@ -123,6 +141,7 @@ export const MenuPage = () => {
               </StyledMenuList>
               <StyledMenuList
                 sx={{
+                  cursor: "pointer",
                   fontSize: {
                     xl: "2.8rem",
                     lg: "2.5rem",
@@ -136,6 +155,7 @@ export const MenuPage = () => {
               </StyledMenuList>
               <StyledMenuList
                 sx={{
+                  cursor: "pointer",
                   fontSize: {
                     xl: "2.8rem",
                     lg: "2.5rem",
@@ -149,6 +169,7 @@ export const MenuPage = () => {
               </StyledMenuList>
               <StyledMenuList
                 sx={{
+                  cursor: "pointer",
                   fontSize: {
                     xl: "2.8rem",
                     lg: "2.5rem",
@@ -163,6 +184,7 @@ export const MenuPage = () => {
               <StyledMenuList
                 sx={{
                   fontSize: {
+                    cursor: "pointer",
                     xl: "2.8rem",
                     lg: "2.5rem",
                     md: "2.3rem",
@@ -176,6 +198,7 @@ export const MenuPage = () => {
               <StyledMenuList
                 onClick={() => router.push("/services")}
                 sx={{
+                  cursor: "pointer",
                   fontSize: {
                     xl: "2.8rem",
                     lg: "2.5rem",
@@ -188,7 +211,7 @@ export const MenuPage = () => {
                 Services
               </StyledMenuList>
             </ul>
-          </div>
+          </Box>
         </Box>
       </MenuPageContainer>
     </>

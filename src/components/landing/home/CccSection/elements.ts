@@ -55,7 +55,6 @@ export const ImageSectionContainer = styled(Box)({
 });
 
 export const ImageLarge1 = styled(Box)(() => {
-  const isMobileView = useIsMobileView();
   return {
     width: "100%",
     height: "300px",
@@ -92,13 +91,13 @@ export const ImageSmall2 = styled(Box)(() => {
   return {
     width: "100%",
     height: "300px",
+    overflow: "hidden",
     backgroundColor: "white",
-    backgroundImage: `url(${Image1.src})`,
+    backgroundImage: `url(${Image0.src})`,
     backgroundRepeat: "no-repeat",
-    backgroundSize: "100%",
+    backgroundSize: "contain",
     backgroundPosition: "center",
     display: "flex",
-    backgroundSize: "contain",
     alignItems: "flex-end",
     justifyContent: "center",
     transition: "0.6s",
@@ -124,20 +123,20 @@ export const ImageSmall3 = styled(Box)(() => {
   const isMobileView = useIsMobileView();
   return {
     width: "100%",
-
     height: "300px",
+    overflow: "hidden",
     backgroundColor: "white",
-    backgroundImage: `url(${Image2.src})`,
+    backgroundImage: `url(${Image0.src})`,
     backgroundRepeat: "no-repeat",
-    backgroundSize: "100%",
+    backgroundSize: "contain",
     backgroundPosition: "center",
     display: "flex",
     alignItems: "flex-end",
     justifyContent: "center",
-    transition: "0.6s",
     position: "relative",
+    transition: " all 0.3s ease",
     "&:hover": {
-      transition: "0.6s",
+
       backgroundSize: "110%",
     },
     "&:before": {
@@ -233,7 +232,7 @@ export const ImageLarge6 = styled(Box)(() => {
     transition: "0.6s",
     position: "relative",
     "&:hover": {
-      transition: "0.6s",
+      transition: "0.3s",
       backgroundSize: "110%",
     },
     "&:before": {

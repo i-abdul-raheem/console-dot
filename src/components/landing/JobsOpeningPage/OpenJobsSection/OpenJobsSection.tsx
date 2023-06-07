@@ -14,8 +14,11 @@ import {
   TopHeading,
 } from "./elements";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import { Typography, Container, Box } from "@mui/material";
+
 import { MainLogo } from "@/assets";
 import { useRouter } from "next/router";
+import { SubFont } from "../../utils";
 
 interface props {
   image: any;
@@ -33,22 +36,13 @@ export const CardSquare = ({
   return (
     <Singlecard>
       <div style={{ padding: "20px" }}>
-        <CardSection
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            marginBottom: "20px",
-          }}
-        >
-          <Image src={image} alt="Job Openoing Badge" width={40} height={40} />
-        </CardSection>
         <CardSection>
           <CardTitle>{title}</CardTitle>
         </CardSection>
-        <CardSection style={{ marginBottom: "50px" }}>
+        <CardSection style={{ marginBottom: "30px" }}>
           <StyledText>Experiance: {experiance}</StyledText>
         </CardSection>
-        <CardSection style={{ marginBottom: "50px" }}>
+        <CardSection style={{ marginBottom: "30px" }}>
           <LocationOnIcon />
           <StyledText>{locationText}</StyledText>
         </CardSection>
@@ -132,45 +126,39 @@ export const OpenJobsSection = () => {
     },
   ];
   return (
-    <>
-      <TopHeading>
-        <h1
-          style={{
-            fontSize: "25px",
-            textAlign: "center",
-            wordWrap: "break-word",
-            overflowWrap: "break-word",
-          }}
-        >
-          Follow Us On
-        </h1>
-        <StyledLinkedinImg src={JobsLinkedin} alt="Image" />
-        <h1
-          style={{
-            fontSize: "25px",
-            alignItems: "center",
-            justifyContent: "center",
-            textAlign: "center",
-            wordWrap: "break-word",
-            overflowWrap: "break-word",
-          }}
-        >
-          For The Latest Job Opportunities
-        </h1>
-      </TopHeading>
-      <CardContainer>
-        <CardBox>
-          {cardContent.map((i, index) => (
-            <CardSquare
-              key={index}
-              image={i.image}
-              title={i.title}
-              experiance={i.experiance}
-              locationText={i.locationText}
-            />
-          ))}
-        </CardBox>
-      </CardContainer>
-    </>
+    <Box sx={{ backgroundColor: "#F3F9FB" }}>
+      <Container>
+        <TopHeading>
+          <Typography
+            sx={{
+              fontSize: SubFont,
+            }}
+          >
+            Follow Us On
+          </Typography>
+          <StyledLinkedinImg src={JobsLinkedin} alt="Image" />
+          <Typography
+            sx={{
+              fontSize: SubFont,
+            }}
+          >
+            For The Latest Job Opportunities
+          </Typography>
+        </TopHeading>
+
+        <CardContainer>
+          <CardBox>
+            {cardContent.map((i, index) => (
+              <CardSquare
+                key={index}
+                title={i.title}
+                experiance={i.experiance}
+                locationText={i.locationText}
+              />
+            ))}
+          </CardBox>
+        </CardContainer>
+      </Container>
+    </Box>
   );
 };

@@ -57,7 +57,9 @@ export const WorkingAtConsoleDot = () => {
     <Box sx={{ width: "100%", backgroundColor: Body, color: "black" }}>
       <Container>
         <Box sx={{ textAlign: "center" }}>
-          <Typography sx={{ padding: Padding, fontSize: HeadFont }}>
+          <Typography
+            sx={{ padding: Padding, fontSize: HeadFont, color: "#226597" }}
+          >
             Working @ ConsoleDot
           </Typography>
           <Typography sx={{ padding: Padding, fontSize: SubFont }}>

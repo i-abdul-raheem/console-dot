@@ -35,7 +35,7 @@ export const LeftNav = styled(Box)({
 export const HireDevBtn = styled("button")(({ theme }) => {
   const isMobileView = useIsMobileView();
   return {
-    backgroundColor: "rgb(23 , 96 , 128 )",
+    backgroundColor: "#226597",
     color: "white",
     border: "none",
     fontSize: "0.6rem",

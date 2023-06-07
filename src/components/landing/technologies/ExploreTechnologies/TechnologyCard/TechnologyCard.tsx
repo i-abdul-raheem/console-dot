@@ -3,9 +3,11 @@ import { Box, Container, Typography, Avatar } from "@mui/material";
 interface props {
   title: string;
   image: string;
+  member: number;
+  time: string;
 }
 
-export const TechnologyCard = ({ title, image }: props) => {
+export const TechnologyCard = ({ title, image, member , time}: props) => {
   return (
     <>
       <Box
@@ -42,7 +44,31 @@ export const TechnologyCard = ({ title, image }: props) => {
           />
         </Avatar>
         <Box>
-          <Typography sx={{ paddingTop: "9px" }}>{title}</Typography>
+          <Typography
+            sx={{ paddingTop: "9px", color: "white", fontWeight: "bold" }}
+          >
+            {title}
+          </Typography>
+          <Typography
+            sx={{
+              paddingTop: "5px",
+              color: "white",
+              fontWeight: "bold",
+              textAlign: "center",
+            }}
+          >
+            {member}
+          </Typography>
+          <Typography
+            sx={{
+              paddingTop: "5px",
+              color: "white",
+              fontWeight: "bold",
+              textAlign: "center",
+            }}
+          >
+            {time}
+          </Typography>
         </Box>
       </Box>
     </>

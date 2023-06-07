@@ -7,26 +7,35 @@ import {
   TitleSection,
 } from "./elements";
 import { Box, Container, Typography } from "@mui/material";
-import { Body, HeadFont, Padding, SubFont } from "../../utils";
+import { Body, HeadFont, Margin, Padding, Para, SubFont } from "../../utils";
 import { Workwithus1, Workwithus2, Workwithus3, Workwithus4 } from "@/assets";
 export const WorkWithUs = () => {
   return (
     <Box sx={{ backgroundColor: Body, padding: Padding }}>
       <Container>
         <Box sx={{ color: "black" }}>
-          <TitleSection>Work With Us, Grow With Us</TitleSection>
-          <DescriptionSection>
+          <Typography
+            sx={{
+              padding: Padding,
+              fontSize: HeadFont,
+              color: "#226597",
+              textAlign: "center",
+            }}
+          >
+            Work With Us Grow With Us
+          </Typography>
+          <Typography sx={{ margin: Margin, fontSize: Para }}>
             We are a mixed group of like-minded professionals who firmly believe
             in leading rather than following. ConsoleDot is a place where young
             aspirants enter and emerge out as enthusiastic leaders. We have
             formed a workplace where things get done right, and accomplishments
             get privileged accolades.
-          </DescriptionSection>
-          <DescriptionSection style={{ marginBottom: "50px" }}>
+          </Typography>
+          <Typography sx={{ margin: Margin, fontSize: Para }}>
             ConsoleDot is thriving on strong systems and being an exemplary
             organization, and we are striving for new development opportunities
             to add weight to your resume.
-          </DescriptionSection>
+          </Typography>
         </Box>
         <FlexContainer>
           <FlexCard>

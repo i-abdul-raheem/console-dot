@@ -111,7 +111,7 @@ export const Padding = {
   lg: "1.8rem",
   md: "1.7rem",
   sm: "1.5rem",
-  xs: "0rem",
+  xs: "1rem",
 };
 
 export const SubFont = {
@@ -128,6 +128,21 @@ export const HeadFont = {
   md: "2rem",
   sm: "1rem",
   xs: "1rem",
+};
+
+export const Para = {
+  xl: "20px",
+  lg: "19px",
+  md: "14px",
+  sm: "11px",
+  xs: "10px",
+};
+export const Margin = {
+  xl: "2rem",
+  lg: "1.8rem",
+  md: "1.7rem",
+  sm: "1.5rem",
+  xs: "0rem",
 };
 
 export const Primary = {

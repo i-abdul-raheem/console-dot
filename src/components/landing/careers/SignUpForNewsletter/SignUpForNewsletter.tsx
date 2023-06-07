@@ -1,4 +1,4 @@
-import { Button, TextField, Container, Box } from "@mui/material";
+import { Button, TextField, Container, Box, Typography } from "@mui/material";
 import {
   DescriptionSection,
   SectionContainer,
@@ -6,20 +6,34 @@ import {
   SubscribeSection,
   TitleSection,
 } from "./elements";
-import { Body, Dark, Primary } from "../../utils";
+import { Body, Dark, HeadFont, Margin, Primary, SubFont } from "../../utils";
 
 export const SignUpForNewsletter = () => {
   return (
-    <Box sx={{ widt: "100%", backgroundColor: Body, color: "black" }}>
+    <Box sx={{ widt: "100%", backgroundColor: "#f3f9fb" }}>
       <Container>
         <SectionContent>
-          <TitleSection style={{ marginBottom: "20px" }}>
+          <Typography
+            sx={{
+              margin: Margin,
+              fontSize: HeadFont,
+              color: "#226597",
+              textAlign: "center",
+            }}
+          >
             Sign Up for Newsletter
-          </TitleSection>
-          <DescriptionSection style={{ marginBottom: "20px" }}>
+          </Typography>
+          <Typography
+            sx={{
+              margin: Margin,
+              fontSize: SubFont,
+
+              textAlign: "center",
+            }}
+          >
             Join 70,000 subscribers & get original tips and tricks delivered to
             your inbox each month.
-          </DescriptionSection>
+          </Typography>
           <SubscribeSection>
             <TextField
               id="outlined-basic"

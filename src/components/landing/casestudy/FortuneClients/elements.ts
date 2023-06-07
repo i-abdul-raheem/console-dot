@@ -31,6 +31,7 @@ export const ClientCardsSection = styled(Box)(() => {
 export const ClientCard = styled(Box)({
   backgroundSize: "cover",
   height: "500px",
+  position: "relative",
   "&:hover": {
     transition: "0.6s",
     backgroundSize: "110%",
@@ -43,9 +44,7 @@ export const ClientCard = styled(Box)({
     height: "100%",
     backgroundColor: "rgba(0,0,0,0.4)",
     content: '""',
-    zIndex: 10,
   },
-
 });
 export const CardContent = styled(Box)({
   position: "absolute",

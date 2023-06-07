@@ -61,7 +61,7 @@ export const CsNode = () => {
       <CsNodeContainer>
         <ClientCardHeading>
           <CardHeading>Case Study - Node.js</CardHeading>
-          <ArrowForwardIcon style={{ color: "rgb(23 , 96 , 128 )" }} />
+          {/* <ArrowForwardIcon style={{ color: "rgb(23 , 96 , 128 )" }} /> */}
         </ClientCardHeading>
         <ClientCardsSection>
           {data.map((i, index) => (

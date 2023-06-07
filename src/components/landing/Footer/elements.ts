@@ -83,11 +83,9 @@ export const FooterBottom = styled(Box)(({ theme }) => ({
   height: 66,
   // backgroundColor: "#fff",
   display: "flex",
-  alignItems: "center",
   justifyContent: "space-between",
-  padding: "0 20px",
+
   width: "100%",
-  flexWrap: "wrap",
 }));
 
 export const SocialMediaIconsList = styled(Box)({

@@ -10,18 +10,17 @@ export const TopHeading = styled(Box)(() => {
     alignItems: "center",
     width: "auto",
     flexDirection: isMobileView ? "column" : "row",
-    
-    
   };
 });
 
 export const Singlecard = styled(Box)({
   width: "100%",
-  backgroundColor: "whitesmoke",
+  backgroundColor: "#87c0cd",
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
   borderRadius: "30px",
+
 });
 
 export const CardSection = styled(Box)({
@@ -33,14 +32,13 @@ export const CardSection = styled(Box)({
 export const StyledText = styled(Typography)({
   fontSize: "25px",
   lineHeight: "30px",
-  textAlign:"center"
+  textAlign: "center",
 });
 export const SectionButton = styled(Box)({
   display: "flex",
   justifyContent: "center",
-  marginBottom: "50px",
-  columnGap: "30px",
-  
+  marginBottom: "30px",
+  columnGap: "20px",
 });
 
 export const StyledButton1 = styled(Button)({
@@ -75,28 +73,24 @@ export const CardBox = styled(Box)(() => {
 });
 
 export const CardTitle = styled(Typography)({
-  fontSize: "30px",
+  fontSize: "25px",
+  color: "#113f67",
   fontWeight: "bold",
-  textAlign:"center",
+  textAlign: "center",
 });
 
-export const CardContainer = styled(Box)(()=>{
-  const isMobileView=useIsMobileView();
-  return{
-  padding: isMobileView? 16 : 32,
-  backgroundColor: "rgb(23,96,128,0.5)",
-  
-    
-  
-  }
+export const CardContainer = styled(Box)(() => {
+  const isMobileView = useIsMobileView();
+  return {
+    padding: isMobileView ? 16 : 32,
+  };
 });
 
-
-export const StyledLinkedinImg=styled(Image)({
-  width:"200px",
-  height:"100px",
+export const StyledLinkedinImg = styled(Image)({
+  width: "200px",
+  height: "100px",
   "@media screen and (max-width: 240px)": {
-    width:"100px",
-    height:"50px",
-  }
-})
+    width: "100px",
+    height: "50px",
+  },
+});

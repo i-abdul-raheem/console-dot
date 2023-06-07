@@ -4,14 +4,8 @@ import { useIsMobileView } from "../../utils/utils";
 export const JobsTopContainer = styled(Box)(() => {
   const isMobileView = useIsMobileView();
   return {
-    display: "flex",
-    backgroundColor: "rgb(23 , 96 , 128, 0.3 )",
-    flexDirection: isMobileView ? "column-reverse" : "row",
-    width: "100%",
-    
-    
-    
-    
+
+    backgroundColor: "#87c0cd",
   };
 });
 

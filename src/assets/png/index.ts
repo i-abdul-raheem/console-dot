@@ -38,6 +38,9 @@ import FortuneClient from "./fortunecli.jpg";
 import AcCharger from "./ACcharger.png";
 import HealthMonitor from "./healthmonitor.jpg";
 import BackImage from "./shubham-dhage-JlijbOtSWuw-unsplash.jpg";
+import Black from "./black.jpg";
+import Tech from "./tech.jpg";
+import DigitalTransmission from "./digitalTransmission.jpg";
 export {
   MainLogo,
   Pic1,
@@ -79,4 +82,7 @@ export {
   AcCharger,
   HealthMonitor,
   BackImage,
+  Black,
+  Tech,
+  DigitalTransmission,
 };

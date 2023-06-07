@@ -8,11 +8,8 @@ const Index = () => {
   return (
     <>
       <Layout>
-    
         <Wrapper>
-          <MobResWrap>
-            <CareersWrapper />
-          </MobResWrap>
+          <CareersWrapper />
         </Wrapper>
       </Layout>
     </>

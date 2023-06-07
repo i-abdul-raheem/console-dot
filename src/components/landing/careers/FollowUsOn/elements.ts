@@ -5,15 +5,14 @@ export const SectionContainer = styled(Box)({
   marginBottom: "50px",
 });
 
-export const SectionContent = styled(Box)(()=>{
-  const isMobileView=useIsMobileView();
-  return{
-  display: "flex",
-  flexDirection:isMobileView? "column" : "row",
-  justifyContent: "center",
-  alignItems: "center",
-  columnGap: "40px",
-  }
+export const SectionContent = styled(Box)(() => {
+  const isMobileView = useIsMobileView();
+  return {
+    display: "flex",
+    flexDirection: isMobileView ? "column" : "row",
+    justifyContent: "space-around",
+    alignItems: "center",
+  };
 });
 
 export const TextSection = styled(Box)({
@@ -27,7 +26,4 @@ export const SingleIconBox = styled(Box)({
   minWidth: 75,
 });
 
-
-export const SocialMediaLabel=styled('label')({
-  
-})
+export const SocialMediaLabel = styled("label")({});

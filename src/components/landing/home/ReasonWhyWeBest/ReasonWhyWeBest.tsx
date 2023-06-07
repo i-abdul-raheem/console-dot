@@ -1,4 +1,4 @@
-import { Box, Button, Container } from "@mui/material";
+import { Box, Button, Container, Typography } from "@mui/material";
 import { React, Verizon } from "@/assets";
 
 import {
@@ -9,7 +9,7 @@ import {
   SectionTitleDescrip,
 } from "./elements";
 import Image from "next/image";
-import { Wrapper } from "../../utils";
+import { Margin, Wrapper } from "../../utils";
 
 export const ReasonWhyWeBest = () => {
   return (
@@ -52,9 +52,10 @@ export const ReasonWhyWeBest = () => {
               },
               display: "flex",
               flexDirection: "column",
+              padding: "1rem 2rem",
             }}
           >
-            <div style={{ width: "100%" }}>
+            <div style={{ width: "100%", background: "#f3f9fb" }}>
               <Box>
                 <Box
                   sx={{
@@ -83,14 +84,22 @@ export const ReasonWhyWeBest = () => {
                     textAlign: "left",
                   }}
                 >
-                  <h5>{`E-Studies`}</h5>
-                  <h2>{`Verizon Express Store`}</h2>
-                  Verizon is America&#39;s biggest wireless network operator
-                  company. The Express store is a commerce project where any
-                  user in America can purchase mobile, tablets, connected
-                  devices and transfer his device to Verizon.
+                  <h5 style={{ paddingLeft: "10px" }}>{`E-Studies`}</h5>
+                  <h2 style={{ paddingLeft: "10px" }}>{`LEFT SIDE`}</h2>
+                  <Typography sx={{ paddingLeft: "10px" }}>
+                    Verizon is America&#39;s biggest wireless network operator
+                    company. The Express store is a commerce project where any
+                    user in America can purchase mobile, tablets, connected
+                    devices and transfer his device to Verizon.
+                  </Typography>
+                  .
                 </Box>
-                <Button variant="contained">{`DISCOVER`}</Button>
+                <div>
+                  <Button
+                    variant="contained"
+                    sx={{ margin: Margin }}
+                  >{`DISCOVER`}</Button>
+                </div>
               </Box>
 
               <Box
@@ -119,6 +128,7 @@ export const ReasonWhyWeBest = () => {
               display: "flex",
               flexDirection: "column",
               gap: "2rem",
+              padding: "1rem 2rem",
             }}
           >
             <Box
@@ -136,6 +146,8 @@ export const ReasonWhyWeBest = () => {
             >
               <Box
                 sx={{
+                  background: "#f3f9fb",
+
                   wordWrap: "break-word",
                   overflowWrap: "break-word",
                   textAlign: "left",
@@ -168,18 +180,26 @@ export const ReasonWhyWeBest = () => {
                     style={{ width: "100%", height: "100%" }}
                   />
                 </Box>
-                <h5>{`E-Studies`}</h5>
-                <h2>{`Verizon Express Store`}</h2>
-                Verizon is America&#39;s biggest wireless network operator
-                company. The Express store is a commerce project where any user
-                in America can purchase mobile, tablets, connected devices and
-                transfer his device to Verizon.
+                <h5 style={{ paddingLeft: "10px" }}>{`E-Studies`}</h5>
+                <h2
+                  style={{ paddingLeft: "10px" }}
+                >{`Verizon Express Store`}</h2>
+                <Typography sx={{ paddingLeft: "10px" }}>
+                  Verizon is America&#39;s biggest wireless network operator
+                  company. The Express store is a commerce project where any
+                  user in America can purchase mobile, tablets, connected
+                  devices and transfer his device to Verizon.
+                </Typography>
                 <div>
-                  <Button variant="contained">{`DISCOVER`}</Button>
+                  <Button
+                    variant="contained"
+                    sx={{ margin: Margin }}
+                  >{`DISCOVER`}</Button>
                 </div>
               </Box>
               <Box
                 sx={{
+                  background: "#f3f9fb",
                   width: {
                     xl: "50%",
                     lg: "50%",
@@ -214,6 +234,8 @@ export const ReasonWhyWeBest = () => {
                   sm: "column-reverse",
                   xs: "column-reverse",
                 },
+
+                background: "#f3f9fb",
               }}
             >
               <Box
@@ -250,14 +272,21 @@ export const ReasonWhyWeBest = () => {
                     style={{ width: "100%", height: "100%" }}
                   />
                 </Box>
-                <h5>{`E-Commerce`}</h5>
-                <h2>{`Verizon Express Store`}</h2>
-                Verizon is America&#39;s biggest wireless network operator
-                company. The Express store is a commerce project where any user
-                in America can purchase mobile, tablets, connected devices and
-                transfer his device to Verizon.
+                <h5 style={{ paddingLeft: "10px" }}>{`E-Commerce`}</h5>
+                <h2
+                  style={{ paddingLeft: "10px" }}
+                >{`Verizon Express Store`}</h2>
+                <Typography sx={{ paddingLeft: "10px" }}>
+                  Verizon is America&#39;s biggest wireless network operator
+                  company. The Express store is a commerce project where any
+                  user in America can purchase mobile, tablets, connected
+                  devices and transfer his device to Verizon.
+                </Typography>
                 <div>
-                  <Button variant="contained">{`DISCOVER`}</Button>
+                  <Button
+                    variant="contained"
+                    sx={{ margin: Margin }}
+                  >{`DISCOVER`}</Button>
                 </div>
               </Box>
               <Box

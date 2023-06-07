@@ -13,8 +13,8 @@ import {
   SectionTitleDescrip,
 } from "./elements";
 import { Pic1 } from "@/assets";
-import { Wrapper } from "../../utils";
-import { Box, Container } from "@mui/material";
+import { HeadFont, Wrapper } from "../../utils";
+import { Box, Container, Typography } from "@mui/material";
 
 export const AboutUs = () => {
   return (
@@ -73,9 +73,9 @@ export const AboutUs = () => {
             />
           </PicSection>
           <PicContainerContentSection>
-            <h2 style={{ margin: "10px 0 " }}>
-              Agile, A Process Delivering Values & Successful Products
-            </h2>
+            <Typography sx={{ fontSize: HeadFont, color: "#226597" }}>
+              Connect, Collaborate and Create
+            </Typography>
             <h4
               style={{
                 margin: "0",

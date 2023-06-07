@@ -77,9 +77,9 @@ export const Header = () => {
           </div>
         </RightNav>
         <LeftNav>
-          <HireDevBtn onClick={() => router.push("/hiredevs")}>
-            {" "}
-            Hire Developers{" "}
+          <HireDevBtn onClick={() => router.push("/hiredevs")} >
+          
+            Hire
           </HireDevBtn>
           {isMaximize ? (
             <StyledButton onClick={toggleAction}>

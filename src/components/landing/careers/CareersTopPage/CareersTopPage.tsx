@@ -1,8 +1,7 @@
 import Image from "next/image";
 
 import { MainLogo } from "@/assets";
-import { Header } from "@/components/landing/Header";
-import { Footer } from "@/components/landing/Footer";
+
 import {
   CareerContainer,
   ImageSection,
@@ -12,9 +11,9 @@ import {
   StyledButton,
 } from "./elements";
 import { useRouter } from "next/router";
-import { Container, Box } from "@mui/material";
+import { Container, Box, Typography } from "@mui/material";
 import { Layout } from "../../Layout/Layout";
-import { Body } from "../../utils";
+import { Body, HeadFont, Margin, SubFont } from "../../utils";
 export const CareersTopPage = () => {
   const router = useRouter();
   return (
@@ -32,15 +31,26 @@ export const CareersTopPage = () => {
               },
             }}
           >
-            <LeftCardHeading>
+            <Typography
+              sx={{
+                fontSize: HeadFont,
+
+                color: "#226597",
+              }}
+            >
               Plunge into your Vocational Excellence with ConsoleDot and bag
               Skills for a Lifetime
-            </LeftCardHeading>
-            <LeftCardParagraph>
+            </Typography>
+            <Typography
+              sx={{
+                fontSize: SubFont,
+                margin: Margin,
+              }}
+            >
               ConsoleDot lives through its people’s emotions & we never miss a
               beat of Life. Cater to the fortune 500 clients and radiate your
               tech-spark worldwide.
-            </LeftCardParagraph>
+            </Typography>
             <StyledButton onClick={() => router.push("/jobs")}>
               SEE OPENING
             </StyledButton>

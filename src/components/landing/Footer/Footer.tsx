@@ -30,7 +30,7 @@ import { Dark, Padding } from "../utils";
 export const Footer = () => {
   return (
     <>
-      <FooterSection sx={{ padding: Padding }}>
+      <FooterSection>
         <Container
           sx={{
             zIndex: "1",
@@ -62,12 +62,12 @@ export const Footer = () => {
           <NavSection sx={{}}>
             <FooterHeading>Navigation</FooterHeading>
             <NavItemList>
-              <NavItem sx={{ padding: Padding }}>About</NavItem>
-              <NavItem sx={{ padding: Padding }}>Contact us</NavItem>
-              <NavItem sx={{ padding: Padding }}>AdaptaPass</NavItem>
-              <NavItem sx={{ padding: Padding }}>Our Partners</NavItem>
-              <NavItem sx={{ padding: Padding }}>Privacy Policycy</NavItem>
-              <NavItem sx={{ padding: Padding }}>Reviews</NavItem>
+              <NavItem sx={{ padding: "7px" }}>About</NavItem>
+              <NavItem sx={{ padding: "7px" }}>Contact us</NavItem>
+              <NavItem sx={{ padding: "7px" }}>AdaptaPass</NavItem>
+              <NavItem sx={{ padding: "7px" }}>Our Partners</NavItem>
+              <NavItem sx={{ padding: "7px" }}>Privacy Policycy</NavItem>
+              <NavItem sx={{ padding: "7px" }}>Reviews</NavItem>
             </NavItemList>
           </NavSection>
           <ContactSection>
@@ -78,7 +78,7 @@ export const Footer = () => {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "start",
-                  padding: Padding,
+                  padding: "7px",
                 }}
               >
                 <BusinessIcon />
@@ -89,7 +89,7 @@ export const Footer = () => {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "start",
-                  padding: Padding,
+                  padding: "7px",
                 }}
               >
                 <WhatsAppIcon />
@@ -101,7 +101,7 @@ export const Footer = () => {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "start",
-                  padding: Padding,
+                  padding: "7px",
                 }}
               >
                 <EmailIcon />
@@ -123,7 +123,14 @@ export const Footer = () => {
             <FooterBottomCopyRight>
               Copyright © 2023 Yaeger CPA Review
             </FooterBottomCopyRight>
-            <div style={{ display: "flex", width: "100%", flexWrap: "wrap" }}>
+            <div
+              style={{
+                display: "flex",
+                width: "100%",
+                flexWrap: "wrap",
+                justifyContent: "flex-end",
+              }}
+            >
               <SocialMediaIconsList>
                 <FacebookIcon />
               </SocialMediaIconsList>

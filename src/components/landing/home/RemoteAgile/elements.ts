@@ -16,7 +16,7 @@ export const TopContent = styled(Box)(() => {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    backgroundColor: "whitesmoke",
+
     padding: "30px 0",
   };
 });

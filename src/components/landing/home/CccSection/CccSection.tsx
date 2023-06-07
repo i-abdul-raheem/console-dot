@@ -1,4 +1,4 @@
-import Box from "@mui/material/Box";
+import { Box, Typography } from "@mui/material";
 import {
   CardSection,
   CccContainer,
@@ -20,35 +20,37 @@ import {
 import { Image0, Image1, Image2, Image4, Image5, Image6, Pic1 } from "@/assets";
 import { url } from "inspector";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
-import { Wrapper } from "../../utils";
+import { HeadFont, SubFont, Wrapper } from "../../utils";
 import { Container } from "@mui/material";
 export const CccSection = () => {
   return (
     <Container>
       <CccContainer>
         <SectionTitleDescrip>
-          <SectionTitle>Connect, Collaborate and Create</SectionTitle>
-          <SectionDescrip>
+          <Typography sx={{ fontSize: HeadFont, color: "#226597" }}>
+            Connect, Collaborate and Create
+          </Typography>
+          <Typography sx={{ fontSize: SubFont, color: "black" }}>
             Partner with us to work with on-demand Agile product team. We are
             always committed to your growth.
-          </SectionDescrip>
+          </Typography>
         </SectionTitleDescrip>
         <ImageSectionContainer>
           <ImageRow>
-            <ImageLarge1>
+            <ImageLarge6>
               <ImageSectionContent>
-                <ImageText> ConsoleDot Tech Agility</ImageText>
+                <ImageText>ConsoleDot Tech Agility</ImageText>
                 <ArrowRightAltIcon />
               </ImageSectionContent>
-            </ImageLarge1>
+            </ImageLarge6>
 
             <ColumnInMobile>
-              <ImageSmall2>
+            <ImageSmall3>
                 <ImageSectionContent>
                   <ImageText> ConsoleDot Tech Agility</ImageText>
                   <ArrowRightAltIcon />
                 </ImageSectionContent>
-              </ImageSmall2>
+              </ImageSmall3>
 
               <ImageSmall3>
                 <ImageSectionContent>
