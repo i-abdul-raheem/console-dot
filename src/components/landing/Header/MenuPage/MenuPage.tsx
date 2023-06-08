@@ -108,7 +108,12 @@ export const MenuPage = () => {
             </Box>
           </Box>
           {/* Side Nav of header */}
-          <Box sx={{ padding: "32px", backgroundColor: "rgb(23 , 96 , 128 )" }}>
+          <Box
+            sx={{
+              padding: "32px",
+              background: "linear-gradient(to bottom left, #226597, #5D8AA8)",
+            }}
+          >
             <ul>
               <StyledMenuList
                 onClick={() => router.push("/careers")}
@@ -139,7 +144,7 @@ export const MenuPage = () => {
               >
                 Work@ ConsoleDot
               </StyledMenuList>
-              <StyledMenuList
+              {/* <StyledMenuList
                 sx={{
                   cursor: "pointer",
                   fontSize: {
@@ -152,8 +157,8 @@ export const MenuPage = () => {
                 }}
               >
                 Blogs
-              </StyledMenuList>
-              <StyledMenuList
+              </StyledMenuList> */}
+              {/* <StyledMenuList
                 sx={{
                   cursor: "pointer",
                   fontSize: {
@@ -166,8 +171,8 @@ export const MenuPage = () => {
                 }}
               >
                 Resources
-              </StyledMenuList>
-              <StyledMenuList
+              </StyledMenuList> */}
+              {/* <StyledMenuList
                 sx={{
                   cursor: "pointer",
                   fontSize: {
@@ -180,7 +185,7 @@ export const MenuPage = () => {
                 }}
               >
                 Customer Reviews
-              </StyledMenuList>
+              </StyledMenuList> */}
               <StyledMenuList
                 sx={{
                   fontSize: {

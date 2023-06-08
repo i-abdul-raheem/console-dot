@@ -1,5 +1,5 @@
 import { styled, Box, Typography } from "@mui/material";
-import { Image0, Image1, Image2, Image4, Image5, Image6 } from "@/assets";
+import { Image0, Image1, Image3, Image4, Image5, Image6 } from "@/assets";
 import { useIsMobileView, useDeskView } from "../../utils/utils";
 
 export const CccContainer = styled(Box)({
@@ -67,10 +67,10 @@ export const ImageLarge1 = styled(Box)(() => {
     display: "flex",
     alignItems: "flex-end",
     justifyContent: "center",
-    transition: "0.6s",
+    transition: "1s",
     position: "relative",
     "&:hover": {
-      transition: "0.6s",
+      transition: "0.3s",
       backgroundSize: "110%",
     },
     "&:before": {
@@ -95,15 +95,15 @@ export const ImageSmall2 = styled(Box)(() => {
     backgroundColor: "white",
     backgroundImage: `url(${Image0.src})`,
     backgroundRepeat: "no-repeat",
-    backgroundSize: "contain",
+    backgroundSize: "100%",
     backgroundPosition: "center",
     display: "flex",
     alignItems: "flex-end",
     justifyContent: "center",
-    transition: "0.6s",
+    transition: "1s",
     position: "relative",
     "&:hover": {
-      transition: "0.6s",
+      transition: "0.3s",
       backgroundSize: "110%",
     },
     "&:before": {
@@ -126,9 +126,9 @@ export const ImageSmall3 = styled(Box)(() => {
     height: "300px",
     overflow: "hidden",
     backgroundColor: "white",
-    backgroundImage: `url(${Image0.src})`,
+    backgroundImage: `url(${Image3.src})`,
     backgroundRepeat: "no-repeat",
-    backgroundSize: "contain",
+    backgroundSize: "100%",
     backgroundPosition: "center",
     display: "flex",
     alignItems: "flex-end",
@@ -136,7 +136,6 @@ export const ImageSmall3 = styled(Box)(() => {
     position: "relative",
     transition: " all 0.3s ease",
     "&:hover": {
-
       backgroundSize: "110%",
     },
     "&:before": {
@@ -158,17 +157,17 @@ export const ImageSmall4 = styled(Box)(() => {
     width: "100%",
     height: "300px",
     backgroundColor: "white",
-    backgroundImage: `url(${Image4.src})`,
+    backgroundImage: `url(${Image3.src})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "100%",
     backgroundPosition: "center",
     display: "flex",
     alignItems: "flex-end",
     justifyContent: "center",
-    transition: "0.6s",
+    transition: "0.3s",
     position: "relative",
     "&:hover": {
-      transition: "0.6s",
+      transition: "0.3s",
       backgroundSize: "110%",
     },
     "&:before": {
@@ -190,17 +189,16 @@ export const ImageSmall5 = styled(Box)(() => {
     width: "100%",
     height: "300px",
     backgroundColor: "white",
-    backgroundImage: `url(${Image5.src})`,
+    backgroundImage: `url(${Image3.src})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "100%",
     backgroundPosition: "center",
     display: "flex",
     alignItems: "flex-end",
     justifyContent: "center",
-    transition: "0.6s",
+    transition: " all 0.3s ease-in-out",
     position: "relative",
     "&:hover": {
-      transition: "0.6s",
       backgroundSize: "110%",
     },
     "&:before": {
@@ -229,10 +227,10 @@ export const ImageLarge6 = styled(Box)(() => {
     display: "flex",
     alignItems: "flex-end",
     justifyContent: "center",
-    transition: "0.6s",
+    transition: "0.3s",
     position: "relative",
     "&:hover": {
-      transition: "0.3s",
+
       backgroundSize: "110%",
     },
     "&:before": {

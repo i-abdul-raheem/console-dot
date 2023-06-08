@@ -7,20 +7,20 @@ import {
   SocialMediaLabel,
   TextSection,
 } from "./elements";
-import { Typography, Box } from "@mui/material";
-import { HeadFont, Margin } from "../../utils";
+import { Typography, Box, Container } from "@mui/material";
+import { Body, HeadFont, Margin, Padding, Primary } from "../../utils";
 
 export const FollowUsOn = () => {
   return (
-    <>
-      <SectionContainer>
+    <Box sx={{ backgroundColor: Body, margin: Margin, padding: Padding }}>
+      <Container>
         <SectionContent>
           <Box>
             <Typography
               sx={{
                 margin: Margin,
                 fontSize: HeadFont,
-                color: "#226597",
+                color: Primary,
                 textAlign: "center",
               }}
             >
@@ -51,7 +51,7 @@ export const FollowUsOn = () => {
             </SingleIconBox>
           </div>
         </SectionContent>
-      </SectionContainer>
-    </>
+      </Container>
+    </Box>
   );
 };

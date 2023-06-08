@@ -1,6 +1,13 @@
 import { React } from "@/assets";
 import { Box, Container, Button, Typography } from "@mui/material";
-import { HeadFont, ImageContainer, Padding, SubFont } from "../../utils";
+import {
+  HeadFont,
+  ImageContainer,
+  Margin,
+  Padding,
+  Para,
+  SubFont,
+} from "../../utils";
 import { ProductsTop } from "../../products/ProductsTop.tsx/ProductsTop";
 import { InquireSection } from "../../home";
 import { TechnicalExcellence } from "../TechnicalExcellence";
@@ -49,222 +56,256 @@ export const mobiletechs = [
 
 export const Mobile = () => {
   return (
-    <Box sx={{ backgroundColor: "#f9f9f9" }}>
+    <Box sx={{ width: "100%" }}>
       <ProductsTop />
-      <Container>
-        <Box sx={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-around",
-              backgroundColor: "#f9f9f9",
-              padding: Padding,
-            }}
-          >
-            <ImageContainer>
-              <img alt="test" />
-            </ImageContainer>
-            <ImageContainer></ImageContainer>
-            <ImageContainer></ImageContainer>
-          </Box>
-          <Box
-            sx={{
-              display: "flex",
-              backgroundColor: "white",
-              flexDirection: {
-                xl: "row",
-                lg: "row",
-                md: "row",
-                sm: "column",
-                xs: "column",
-              },
-            }}
-          >
-            <Box
-              sx={{
-                width: {
-                  xl: "50%",
-                  lg: "50%",
-                  md: "50%",
-                  sm: "100%",
-                  sx: "100%",
-                },
-                padding: {
-                  xl: "2rem 0rem",
-                  lg: "1.8rem 0rem",
-                  md: "1.5rem 0rem",
-                  sm: "1.2rem 0rem",
-                  xs: "1rem 0rem",
-                },
-              }}
-            >
-              <Typography
-                sx={{
-                  fontSize: HeadFont,
-                  textAlign: "left",
-                  padding: Padding,
-                  fontWeight: "bold",
-                }}
-              >
-                Continuously and Systematically Evolve Your Product With Our
-                Vetted Angular Developers
-              </Typography>
-              <Typography
-                sx={{
-                  fontSize: SubFont,
-                  padding: Padding,
-                  textAlign: "left",
-                }}
-              >
-                We have the best Angular minds with top-of-the-line expertise
-                and profound knowledge of core Java patterns and J2EE design
-                patterns like Adapters, Business Objects, Delegates, Service
-                Locator, Singleton, DAO, and DTO. Our Full stack angular
-                developers are responsible for all phases of the SDLC- Software
-                Development Life Cycle that includes analysis of business
-                requirements, technical specifications, product development,
-                third-party software implementation, and testing to build
-                complex and business-critical applications. Hire Angularjs
-                developer from us to accelerate your front-end architecture.
-              </Typography>
-              <Box sx={{ display: "flex" }}>
-                <Button
-                  sx={{
-                    backgroundColor: "#156380",
-                    color: "white",
-                    fontWeight: "bold",
-                    borderLeft: "none",
-                    borderTopLeftRadius: "none",
-                    borderBottomLeftRadius: "none",
-                  }}
-                >
-                  Hire React Developer
-                </Button>
-              </Box>
-              <Box
-                sx={{
-                  width: {
-                    xl: "50%",
-                    lg: "50%",
-                    md: "50%",
-                    sm: "100%",
-                    sx: "100%",
-                  },
-                  padding: {
-                    xl: "2rem 0rem",
-                    lg: "1.8rem 0rem",
-                    md: "1.5rem 0rem",
-                    sm: "1.2rem 0rem",
-                    xs: "1rem 0rem",
-                  },
-                }}
-              ></Box>
-            </Box>
-            <Box
-              sx={{
-                width: {
-                  xl: "50%",
-                  lg: "50%",
-                  md: "50%",
-                  sm: "100%",
-                  sx: "100%",
-                },
-                padding: {
-                  xl: "2rem 0rem",
-                  lg: "1.8rem 0rem",
-                  md: "1.5rem 0rem",
-                  sm: "1.2rem 0rem",
-                  xs: "1rem 0rem",
-                },
-                border: "1px solid gray",
-              }}
-            >
-              <Typography
-                sx={{
-                  fontSize: HeadFont,
-                  textAlign: "left",
-                  padding: Padding,
-                  fontWeight: "bold",
-                }}
-              >
-                Continuously and Systematically Evolve Your Product With Our
-                Vetted Angular Developers
-              </Typography>
-              <Typography
-                sx={{
-                  fontSize: SubFont,
-                  padding: Padding,
-                  textAlign: "left",
-                }}
-              >
-                We have the best Angular minds with top-of-the-line expertise
-                and profound knowledge of core Java patterns and J2EE design
-                patterns like Adapters, Business Objects, Delegates, Service
-                Locator, Singleton, DAO, and DTO. Our Full stack angular
-                developers are responsible for all phases of the SDLC- Software
-                Development Life Cycle that includes analysis of business
-                requirements, technical specifications, product development,
-                third-party software implementation, and testing to build
-                complex and business-critical applications. Hire Angularjs
-                developer from us to accelerate your front-end architecture.
-              </Typography>
-              <Box sx={{ display: "flex" }}>
-                <Button
-                  sx={{
-                    backgroundColor: "#156380",
-                    color: "white",
-                    fontWeight: "bold",
-                    borderLeft: "none",
-                    borderTopLeftRadius: "none",
-                    borderBottomLeftRadius: "none",
-                  }}
-                >
-                  Hire React Developer
-                </Button>
-              </Box>
-              <Box
-                sx={{
-                  width: {
-                    xl: "50%",
-                    lg: "50%",
-                    md: "50%",
-                    sm: "100%",
-                    sx: "100%",
-                  },
-                  padding: {
-                    xl: "2rem 0rem",
-                    lg: "1.8rem 0rem",
-                    md: "1.5rem 0rem",
-                    sm: "1.2rem 0rem",
-                    xs: "1rem 0rem",
-                  },
-                }}
-              ></Box>
-            </Box>
-          </Box>
-          <InquireSection />
-          <TechnicalExcellence />
 
-          <Box>
-            <Steppers />
-          </Box>
-          <Box
-            sx={{
-              display: "flex",
-              flexWrap: "wrap",
-              justifyContent: "space-around",
-            }}
-          >
-            <CardWithBackground></CardWithBackground>
-            <CardWithBackground></CardWithBackground>
-            <CardWithBackground></CardWithBackground>
-          </Box>
-          <Box>
-            <FrequentQuestions />
-          </Box>
-          
+      <Box sx={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+        <Box sx={{ backgroundColor: "#f3f9fb", margin: Margin }}>
+          <Container>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "space-around",
+                backgroundColor: "#f9f9f9",
+                padding: Padding,
+              }}
+            >
+              <ImageContainer>
+                <img alt="test" />
+              </ImageContainer>
+              <ImageContainer></ImageContainer>
+              <ImageContainer></ImageContainer>
+            </Box>
+          </Container>
         </Box>
-      </Container>
+        <Box>
+          <Container>
+            <Box
+              sx={{
+                display: "flex",
+                backgroundColor: "white",
+                flexDirection: {
+                  xl: "row",
+                  lg: "row",
+                  md: "row",
+                  sm: "column",
+                  xs: "column",
+                },
+              }}
+            >
+              <Box
+                sx={{
+                  width: {
+                    xl: "50%",
+                    lg: "50%",
+                    md: "50%",
+                    sm: "100%",
+                    sx: "100%",
+                  },
+                  padding: Padding,
+                  color: "white",
+                  backgroundColor: "#87c0cd",
+                }}
+              >
+                <Typography
+                  sx={{
+                    fontSize: HeadFont,
+                    textAlign: "left",
+                    padding: Padding,
+                    fontWeight: "bold",
+                  }}
+                >
+                  Continuously and Systematically Evolve Your Product With Our
+                  Vetted Angular Developers
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: Para,
+                    padding: Padding,
+                    textAlign: "left",
+                  }}
+                >
+                  Our remote React developers are proficient in developing
+                  visually appealing UI and UX possibilities coupled with
+                  high-end solutions and efficient performance. Whether you are
+                  looking to hire ReactJS developer to upscale your product
+                  development capability or planning to hire dedicated React
+                  team with top-of-the-line expertise in HTML + CSS, JSX,
+                  JavaScript Fundamentals + ES6, DOM manipulation, Redux, Node +
+                  NPM, connect with us to turbocharge your entrepreneur journey.
+                  Work with the industry's top 1% react developers to extract
+                  the best output combining React with Redux, Redux-Saga, Flow,
+                  and React DnD.
+                </Typography>
+                <Box sx={{ display: "flex" }}>
+                  <Button
+                    sx={{
+                      backgroundColor: "#113f67",
+                      color: "white",
+                      fontWeight: "bold",
+                      borderLeft: "none",
+                      borderTopLeftRadius: "none",
+                      borderBottomLeftRadius: "none",
+                      "&:hover":{
+                        color: "#113f67",
+                        backgroundColor: "#87c0cd",
+                      }
+                    }}
+                  >
+                    Hire React Developer
+                  </Button>
+                </Box>
+                <Box
+                  sx={{
+                    width: {
+                      xl: "50%",
+                      lg: "50%",
+                      md: "50%",
+                      sm: "100%",
+                      sx: "100%",
+                    },
+                    padding: Padding,
+                  }}
+                ></Box>
+              </Box>
+              <Box
+                sx={{
+                  width: {
+                    xl: "50%",
+                    lg: "50%",
+                    md: "50%",
+                    sm: "100%",
+                    sx: "100%",
+                  },
+                  padding: {
+                    xl: "2rem 0rem",
+                    lg: "1.8rem 0rem",
+                    md: "1.5rem 0rem",
+                    sm: "1.2rem 0rem",
+                    xs: "1rem 0rem",
+                  },
+                  border: "1px solid gray",
+                }}
+              >
+                <Typography
+                  sx={{
+                    fontSize: SubFont,
+                    textAlign: "left",
+                    padding: Padding,
+                    fontWeight: "bold",
+                    color:'#226597'
+                  }}
+                >
+                  Benefits of Hiring ReactJS developers from Bacancy
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: Para,
+                    padding: Padding,
+                    textAlign: "left",
+                  }}
+                >
+                  <ol>
+                    <li>
+                      Highly skilled at front-end engineering using
+                      Object-Oriented JavaScript (ES5, ES6), top JavaScript
+                      libraries and frameworks (ReactJS), HTML, and CSS.
+                    </li>
+                    <li>
+                      Well-versed with programming languages like, NodeJS,
+                      ReactJS, Redux, React Native, HTML, CSS3, JSON-API, REST
+                      Services
+                    </li>
+                    <li>
+                      Skilled in Typescript, Jest, Swagger, Typeorm, Node-cache,
+                      Json-rules-engine, Elastic search engine, Pdfkit
+                    </li>
+                    <li>
+                      Sound knowledge of testing applications through unit and
+                      integration tests, and experience with React Testing
+                      Library / Enzyme.
+                    </li>
+                    <li>
+                      Experience with relational database (SQL Server) design
+                      and implementation
+                    </li>
+                  </ol>
+                </Typography>
+                <Box sx={{ display: "flex" }}>
+                  <Button
+                    sx={{
+                      backgroundColor: "#113f67",
+                      color: "white",
+                      fontWeight: "bold",
+                      borderLeft: "none",
+                      borderTopLeftRadius: "none",
+                      borderBottomLeftRadius: "none",
+                      color:'white',
+                      "&:hover":{
+                        color: "#113f67",
+                        backgroundColor: "#87c0cd",
+                      }
+                    }}
+                  >
+                    Hire React Developer
+                  </Button>
+                </Box>
+                <Box
+                  sx={{
+                    width: {
+                      xl: "50%",
+                      lg: "50%",
+                      md: "50%",
+                      sm: "100%",
+                      sx: "100%",
+                    },
+                    padding: {
+                      xl: "2rem 0rem",
+                      lg: "1.8rem 0rem",
+                      md: "1.5rem 0rem",
+                      sm: "1.2rem 0rem",
+                      xs: "1rem 0rem",
+                    },
+                  }}
+                ></Box>
+              </Box>
+            </Box>
+          </Container>
+        </Box>
+        <Box sx={{ backgroundColor: "#f3f9fb", margin: Margin }}>
+          <InquireSection />
+        </Box>
+        <Box>
+          <Container>
+            <TechnicalExcellence />
+          </Container>
+        </Box>
+        <Box sx={{ backgroundColor: "#f3f9fb", margin: Margin }}>
+          <Container>
+            <Steppers />
+          </Container>
+        </Box>
+        <Box>
+          <Container>
+            <Box
+              sx={{
+                display: "flex",
+                flexWrap: "wrap",
+                justifyContent: "space-around",
+              }}
+            >
+              <CardWithBackground></CardWithBackground>
+              <CardWithBackground></CardWithBackground>
+              <CardWithBackground></CardWithBackground>
+            </Box>
+          </Container>
+        </Box>
+        <Box sx={{ backgroundColor: "#f3f9fb", margin: Margin }}>
+          <Container>
+            <FrequentQuestions />
+          </Container>
+        </Box>
+      </Box>
     </Box>
   );
 };

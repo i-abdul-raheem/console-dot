@@ -6,18 +6,32 @@ import {
   SubscribeSection,
   TitleSection,
 } from "./elements";
-import { Body, Dark, HeadFont, Margin, Primary, SubFont } from "../../utils";
+import {
+  Body,
+  Dark,
+  HeadFont,
+  Margin,
+  Padding,
+  Primary,
+  SubFont,
+} from "../../utils";
 
 export const SignUpForNewsletter = () => {
   return (
-    <Box sx={{ widt: "100%", backgroundColor: "#f3f9fb" }}>
+    <Box
+      sx={{
+        widt: "100%",
+        margin: Margin,
+        padding: Padding,
+      }}
+    >
       <Container>
         <SectionContent>
           <Typography
             sx={{
               margin: Margin,
               fontSize: HeadFont,
-              color: "#226597",
+              color: Primary,
               textAlign: "center",
             }}
           >

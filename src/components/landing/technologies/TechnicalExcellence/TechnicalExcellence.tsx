@@ -52,7 +52,7 @@ export const TechnicalExcellence = ({ head, specs }: props) => {
   return (
     <Box
       sx={{
-        backgroundColor: "#e2f1ff",
+  
         padding: Padding,
       }}
     >

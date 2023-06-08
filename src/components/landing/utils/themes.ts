@@ -123,19 +123,19 @@ export const SubFont = {
 };
 
 export const HeadFont = {
-  xl: "4rem",
-  lg: "2.7rem",
-  md: "2rem",
+  xl: "3rem",
+  lg: "2.2rem",
+  md: "1.5rem",
   sm: "1rem",
   xs: "1rem",
 };
 
 export const Para = {
-  xl: "20px",
-  lg: "19px",
-  md: "14px",
-  sm: "11px",
-  xs: "10px",
+  xl: "24px",
+  lg: "20px",
+  md: "18px",
+  sm: "16px",
+  xs: "14px",
 };
 export const Margin = {
   xl: "2rem",
@@ -145,15 +145,9 @@ export const Margin = {
   xs: "0rem",
 };
 
-export const Primary = {
-  color: "#226597",
-};
-export const Secondary = {
-  color: "#87c0cd",
-};
-export const Dark = {
-  color: "#113f67",
-};
-export const Body = {
-  color: "#f3f9fb",
-};
+export const Primary = "#226597";
+export const Secondary = "#87c0cd";
+
+export const Dark = "#113f67";
+
+export const Body = "#f3f9fb";

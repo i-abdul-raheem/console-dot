@@ -1,12 +1,13 @@
 import { styled, Box, Typography } from "@mui/material";
 import { BackImage } from "@/assets";
+import { Primary } from "../utils";
 
 export const FooterSection = styled(Box)({
   position: "relative",
   display: "flex",
   alignItems: "flex-start",
   justifyContent: "center",
-  backgroundColor: "#226597",
+  backgroundColor: Primary,
   color: "white",
   width: "100%",
   backgroundSize: "cover",

@@ -14,9 +14,18 @@ import {
   SectionTitle,
   StyledButton,
 } from "./elements";
-import { HeadFont, Padding, Secondary, SubFont } from "../../utils";
+import { HeadFont, Padding, Primary, Secondary, SubFont } from "../../utils";
 
 export const InquireSection = () => {
+  const labelStyle = {
+    color: "white",
+
+    "& .MuiOutlinedInput-root": {
+      "& fieldset": {
+        borderColor: "white",
+      },
+    },
+  };
   return (
     <Container sx={{ background: "transparent", padding: Padding }}>
       <Box sx={{ background: "#113f67" }}>
@@ -46,37 +55,59 @@ export const InquireSection = () => {
               your requirement.
             </Typography>
           </Box>
-          <FormSection sx={{padding:Padding}}>
+          <FormSection sx={{ padding: Padding }}>
             <InputsFirstRow>
               <TextField
-                sx={{ backgroundColor: "white" }}
                 id="outlined-basic"
-                style={{ width: "100%" }}
+                InputLabelProps={{
+                  style: labelStyle,
+                }}
+                inputProps={{
+                  style: labelStyle,
+                }}
+                sx={{
+                  width: "100%",
+                }}
                 label="Your Name"
-                variant="outlined"
+                size="small"
               />
 
               <TextField
-                sx={{ backgroundColor: "white" }}
-                id="outlined-basic"
-                style={{ width: "100%" }}
+                InputLabelProps={{
+                  style: labelStyle,
+                }}
+                inputProps={{
+                  style: labelStyle,
+                }}
+                sx={{
+                  color: "sucess.main",
+                  width: "100%",
+                }}
                 label="Email Address"
-                variant="outlined"
+                size="small"
               />
             </InputsFirstRow>
             <TextField
-              sx={{ backgroundColor: "white" }}
               id="outlined-basic"
-              style={{ width: "100%" }}
+              InputLabelProps={{
+                style: labelStyle,
+              }}
+              inputProps={{
+                style: labelStyle,
+              }}
+              sx={{
+                width: "100%",
+              }}
               label="Phone Number"
               variant="outlined"
+              size="small"
             />
 
             <TextareaAutosize
               id="outlined-basic"
               placeholder="Your Message"
               minRows={7}
-              style={{ fontSize: "20px" }}
+              style={{ fontSize: "20px", marginTop: "20px" }}
             />
             <Box
               sx={{
@@ -87,7 +118,7 @@ export const InquireSection = () => {
             >
               <Button
                 sx={{
-                  backgroundColor: "#156380",
+                  backgroundColor: Primary,
                   color: "white",
                 }}
               >

@@ -1,16 +1,14 @@
-import { Header } from "../../Header"
-import { RightPanel } from "../RightPanel"
-import { ContainerBox } from "./elements"
+import { Header } from "../../Header";
+import { Layout } from "../../Layout/Layout";
+import { RightPanel } from "../RightPanel";
+import { ContainerBox } from "./elements";
 
-
-
-export const HomePage=()=>{
-    return(
-        <>
-        <ContainerBox>
-        <Header/>
-        <RightPanel/>
-        </ContainerBox>
-        </>
-    )
-}
+export const HomePage = () => {
+  return (
+    <>
+      <ContainerBox>
+        <RightPanel />
+      </ContainerBox>
+    </>
+  );
+};

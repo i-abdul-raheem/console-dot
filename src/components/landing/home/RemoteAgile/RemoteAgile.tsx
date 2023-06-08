@@ -1,5 +1,5 @@
 import { Box, Button, Container, Typography } from "@mui/material";
-import { Body, HeadFont, Padding, Wrapper } from "../../utils";
+import { Body, Dark, HeadFont, Padding, Primary, Wrapper } from "../../utils";
 import { ContentContainer, TitleSection, TopContent } from "./elements";
 import { StyledText } from "../../careers/WorkingAtConsoleDot/elements";
 
@@ -8,7 +8,7 @@ export const RemoteAgile = () => {
     <Box sx={{ backgroundColor: "#f3f9fb", padding: Padding, color: "black" }}>
       <Container style={{}}>
         <TopContent>
-          <Typography sx={{ fontSize: HeadFont, color: "#226597" }}>
+          <Typography sx={{ fontSize: HeadFont, color: Primary }}>
             The Convenience of Offshoring is the Flexibility of Remote Agile.
           </Typography>
 
@@ -18,9 +18,9 @@ export const RemoteAgile = () => {
           </TitleSection>
         </TopContent>
         <ContentContainer sx={{ paddingTop: "2rem" }}>
-          <div style={{ padding: "1rem 2rem", border: "1px solid #226597" }}>
-            <h5 style={{ color: "rgb(23 , 96 , 128 )" }}>EXPERIENCES</h5>
-            <Typography sx={{ fontSize: HeadFont, color: "#226597" }}>
+          <div style={{ padding: "1rem 2rem", border: "1px solid Primary" }}>
+            <h5 style={{ color: Dark }}>EXPERIENCES</h5>
+            <Typography sx={{ fontSize: HeadFont, color: Primary }}>
               Agile Mindset
             </Typography>
             <StyledText style={{ textAlign: "start", paddingBottom: "10px" }}>
@@ -30,7 +30,7 @@ export const RemoteAgile = () => {
             </StyledText>
             <Button
               style={{
-                backgroundColor: "rgb(23 , 96 , 128 )",
+                backgroundColor: Dark,
                 color: "white",
                 display: "flex",
               }}
@@ -38,9 +38,9 @@ export const RemoteAgile = () => {
               DISCOVER
             </Button>
           </div>
-          <div style={{ padding: "1rem 2rem", border: "1px solid #226597" }}>
-            <h5 style={{ color: "rgb(23 , 96 , 128 )" }}>IMPORTANCE</h5>
-            <Typography sx={{ fontSize: HeadFont, color: "#226597" }}>
+          <div style={{ padding: "1rem 2rem", border: "1px solid Primary "}}>
+            <h5 style={{ color: Dark }}>IMPORTANCE</h5>
+            <Typography sx={{ fontSize: HeadFont, color: Primary }}>
               Consoledot Values
             </Typography>
             <StyledText style={{ textAlign: "start", paddingBottom: "10px" }}>
@@ -49,14 +49,14 @@ export const RemoteAgile = () => {
               designed specifically to solve their problem.
             </StyledText>
             <Button
-              style={{ backgroundColor: "rgb(23 , 96 , 128 )", color: "white" }}
+              style={{ backgroundColor: Dark, color: "white" }}
             >
               DISCOVER
             </Button>
           </div>
-          <div style={{ padding: "1rem 2rem", border: "1px solid #226597" }}>
-            <h5 style={{ color: "rgb(23 , 96 , 128 )" }}>MINDSET</h5>
-            <Typography sx={{ fontSize: HeadFont, color: "#226597" }}>
+          <div style={{ padding: "1rem 2rem", border: "1px solid Primary" }}>
+            <h5 style={{ color: Dark }}>MINDSET</h5>
+            <Typography sx={{ fontSize: HeadFont, color: Primary }}>
               Consoledot Culture
             </Typography>
             <StyledText style={{ textAlign: "start", paddingBottom: "10px" }}>
@@ -65,7 +65,7 @@ export const RemoteAgile = () => {
               project management prospective.
             </StyledText>
             <Button
-              style={{ backgroundColor: "rgb(23 , 96 , 128 )", color: "white" }}
+              style={{ backgroundColor: Dark, color: "white" }}
             >
               DISCOVER
             </Button>

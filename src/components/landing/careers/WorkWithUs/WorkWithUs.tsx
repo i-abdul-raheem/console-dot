@@ -7,7 +7,7 @@ import {
   TitleSection,
 } from "./elements";
 import { Box, Container, Typography } from "@mui/material";
-import { Body, HeadFont, Margin, Padding, Para, SubFont } from "../../utils";
+import { Body, HeadFont, Margin, Padding, Para, Primary, SubFont } from "../../utils";
 import { Workwithus1, Workwithus2, Workwithus3, Workwithus4 } from "@/assets";
 export const WorkWithUs = () => {
   return (
@@ -18,7 +18,7 @@ export const WorkWithUs = () => {
             sx={{
               padding: Padding,
               fontSize: HeadFont,
-              color: "#226597",
+              color: Primary,
               textAlign: "center",
             }}
           >

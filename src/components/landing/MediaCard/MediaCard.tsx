@@ -5,6 +5,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import { Primary } from "../utils";
 
 interface props {
   title: string;
@@ -27,7 +28,12 @@ export default function MediaCard({
         title="green iguana"
       />
       <CardContent>
-        <Typography gutterBottom variant="h6" component="div">
+        <Typography
+          gutterBottom
+          variant="h6"
+          component="div"
+          sx={{ color: Primary }}
+        >
           {title}
         </Typography>
         <Typography variant="body2" color="text.secondary">
@@ -35,7 +41,11 @@ export default function MediaCard({
         </Typography>
       </CardContent>
       <CardActions>
-        <Button variant="contained" size="small">
+        <Button
+          variant="contained"
+          size="small"
+          sx={{ backgroundColor: Primary }}
+        >
           {placeholder}
         </Button>
       </CardActions>

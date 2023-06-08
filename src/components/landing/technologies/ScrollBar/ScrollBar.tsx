@@ -1,5 +1,5 @@
 import { List, ListItem, ScrollBarContainer } from "./elements";
-import * as Scroll from "react-scroll";
+
 import {
   Link,
   Button,
@@ -9,75 +9,30 @@ import {
   scrollSpy,
   scroller,
 } from "react-scroll";
+interface props {
+  heading: string[];
+}
 
-export const ScrollBar = () => {
+export const ScrollBar = ({ heading }: props) => {
+  console.log(heading, "these are the heads");
   return (
     <>
       <ScrollBarContainer>
         <List>
-          <ListItem>
-            <Link
-              to="Frontend"
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={500}
-            >
-              FrontEnd
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link
-              to="Backend"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={800}
-            >
-              Backend
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link
-              to="javaScript"
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={500}
-            >
-              Javascript
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link
-              to="javaScript"
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={500}
-            >
-              Javascript
-            </Link>
-          </ListItem>
-
-          <ListItem>
-            <Link>Data Analytics & Data Science</Link>{" "}
-          </ListItem>
-          <ListItem>
-            <Link>NoSQL DB</Link>{" "}
-          </ListItem>
-          <ListItem>
-            <Link>Big Data</Link>{" "}
-          </ListItem>
-          <ListItem>
-            <Link>Data Base</Link>{" "}
-          </ListItem>
-          <ListItem>
-            <Link>Cloud</Link>{" "}
-          </ListItem>
-          <ListItem>
-            <Link>SalesForce</Link>{" "}
-          </ListItem>
+          {heading.map((head, index) => (
+            <ListItem>
+              <Link
+                to={head}
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+                key={index}
+              >
+                {head}
+              </Link>
+            </ListItem>
+          ))}
         </List>
       </ScrollBarContainer>
     </>

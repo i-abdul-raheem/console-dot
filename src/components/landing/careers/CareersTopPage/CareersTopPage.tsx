@@ -13,11 +13,11 @@ import {
 import { useRouter } from "next/router";
 import { Container, Box, Typography } from "@mui/material";
 import { Layout } from "../../Layout/Layout";
-import { Body, HeadFont, Margin, SubFont } from "../../utils";
+import { Body, HeadFont, Margin, Padding, Primary, SubFont } from "../../utils";
 export const CareersTopPage = () => {
   const router = useRouter();
   return (
-    <Box sx={{ backgroundColor: Body, color: "black" }}>
+    <Box sx={{  color: "black" }}>
       <Container>
         <CareerContainer>
           <LeftCard
@@ -35,7 +35,8 @@ export const CareersTopPage = () => {
               sx={{
                 fontSize: HeadFont,
 
-                color: "#226597",
+                color: Primary,
+                padding: Padding,
               }}
             >
               Plunge into your Vocational Excellence with ConsoleDot and bag

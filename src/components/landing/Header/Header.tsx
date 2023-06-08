@@ -1,6 +1,7 @@
 import { Box, ThemeProvider } from "@mui/material";
 import { MainLogo } from "@/assets";
 import Image from "next/image";
+
 import CloseIcon from "@mui/icons-material/Close";
 import {
   HireDevBtn,
@@ -15,22 +16,68 @@ import {
   TransitionOnBtn,
 } from "./elements";
 import { Wrapper, getTheme } from "../utils";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { MenuPage } from "./MenuPage";
 import { useRouter } from "next/router";
 
 export const Header = () => {
+  // scroll function
+
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset;
+      console.log(scrollTop, "this is scroll");
+      setIsScrolled(scrollTop > 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  const NavStyles = {
+    position: "sticky",
+    top: 0,
+    width: "100%",
+    zIndex: 999,
+
+    backgroundColor: isScrolled ? "black" : "transparent",
+    transition: "background-color 0.3s ease-in-out",
+  };
+
   const [isMaximize, setIsMaximize] = useState(false);
 
   const toggleAction = () => {
     setIsMaximize(!isMaximize);
   };
   const router = useRouter();
+
   return (
     <ThemeProvider theme={getTheme("light")}>
-      <NavBar sx={{ backgroundColor: "black" }}>
+      <NavBar
+        // sx={{
+        //   position: "sticky",
+        //   top: 0,
+        //   width: "100%",
+        //   zIndex: 999,
+        //   background: "linear-gradient(to right, #5D8AA8, #226597)",
+        //   // background: "transparent",
+        // }}
+        sx={NavStyles}
+      >
         <RightNav>
-          <Image src={MainLogo} alt="Main Logo" width={50} height={50} />
+          <div style={{ width: "50px", height: "50px" }}>
+            <Image
+              src={MainLogo}
+              alt="Main Logo"
+              // width={50}
+              // height={50}
+              style={{ borderRadius: "10px", width: "100%", height: "100%" }}
+            />
+          </div>
           <NameHeading
             sx={{
               fontSize: {
@@ -77,10 +124,7 @@ export const Header = () => {
           </div>
         </RightNav>
         <LeftNav>
-          <HireDevBtn onClick={() => router.push("/hiredevs")} >
-          
-            Hire
-          </HireDevBtn>
+          <HireDevBtn onClick={() => router.push("/hiredevs")}>Hire</HireDevBtn>
           {isMaximize ? (
             <StyledButton onClick={toggleAction}>
               <MenuCloseIcon style={{ color: "#fff" }} />

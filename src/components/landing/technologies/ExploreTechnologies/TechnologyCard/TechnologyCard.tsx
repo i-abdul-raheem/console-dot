@@ -1,3 +1,4 @@
+import { Primary, Secondary } from "@/components/landing/utils";
 import { Box, Container, Typography, Avatar } from "@mui/material";
 
 interface props {
@@ -7,7 +8,7 @@ interface props {
   time: string;
 }
 
-export const TechnologyCard = ({ title, image, member , time}: props) => {
+export const TechnologyCard = ({ title, image, member, time }: props) => {
   return (
     <>
       <Box
@@ -22,13 +23,13 @@ export const TechnologyCard = ({ title, image, member , time}: props) => {
           marginBottom: "10px",
           border: "1px solid gray",
           borderRadius: "5px",
-          backgroundColor: "#226597",
+          backgroundColor: Primary,
           transition: "box-shadow 0.3s",
           cursor: "pointer",
 
           "&:hover": {
             boxShadow: "0px 3px 3px 2px rgba(0, 0, 0, 0.5)",
-            backgroundColor: "#87c0cd",
+            backgroundColor: Secondary,
           },
         }}
       >

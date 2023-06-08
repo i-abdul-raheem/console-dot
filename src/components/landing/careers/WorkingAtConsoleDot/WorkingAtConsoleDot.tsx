@@ -8,7 +8,7 @@ import { JobOpening } from "@/assets";
 import { TitleAndDescripContiner } from "./elements";
 import MediaCard from "../../MediaCard/MediaCard";
 import { Box, Container, Typography } from "@mui/material";
-import { Body, HeadFont, Padding, SubFont } from "../../utils";
+import { Body, HeadFont, Margin, Padding, SubFont } from "../../utils";
 interface Props {
   image: any;
   heading: String;
@@ -54,7 +54,7 @@ export const WorkingAtConsoleDot = () => {
     },
   ];
   return (
-    <Box sx={{ width: "100%", backgroundColor: Body, color: "black" }}>
+    <Box sx={{ width: "100%" }}>
       <Container>
         <Box sx={{ textAlign: "center" }}>
           <Typography
@@ -72,6 +72,8 @@ export const WorkingAtConsoleDot = () => {
             display: "flex",
             justifyContent: "space-around",
             flexWrap: "wrap",
+            margin: Margin,
+            rowGap: Margin,
           }}
         >
           {cards.map((i, index) => (

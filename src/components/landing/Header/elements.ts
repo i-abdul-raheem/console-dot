@@ -1,6 +1,6 @@
 import { styled, Box } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import { getTheme } from "../utils";
+import { Primary, getTheme } from "../utils";
 import { useIsMobileView } from "../utils/utils";
 import CloseIcon from '@mui/icons-material/Close';
 export const NavBar = styled("nav")({
@@ -35,7 +35,7 @@ export const LeftNav = styled(Box)({
 export const HireDevBtn = styled("button")(({ theme }) => {
   const isMobileView = useIsMobileView();
   return {
-    backgroundColor: "#226597",
+    backgroundColor:Primary ,
     color: "white",
     border: "none",
     fontSize: "0.6rem",
@@ -90,3 +90,4 @@ export const StyledButton = styled("button")({
 export const TransitionOnBtn=styled(Box)({
   width:'0px', height:"0px", transition:"2s", "&:hover":{}
 })
+

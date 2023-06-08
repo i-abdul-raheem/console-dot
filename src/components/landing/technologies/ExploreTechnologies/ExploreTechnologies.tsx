@@ -1,6 +1,6 @@
 import { TopTech } from "@/assets";
-import { Box, Container, Card, Typography } from "@mui/material";
-import { HeadFont, Padding } from "../../utils";
+import { Box, Container, Card, Typography, Divider } from "@mui/material";
+import { Dark, HeadFont, Margin, Padding, Primary } from "../../utils";
 import { TechnologyHeroSection } from "../HeroSectionOfTechnology";
 import React, { useEffect, useState } from "react";
 import { TechnologyCard } from "./TechnologyCard";
@@ -9,6 +9,7 @@ import Link from "next/link";
 import { InquireSection } from "../../home";
 import { Footer } from "../../Footer";
 import { Layout } from "../../Layout/Layout";
+import { StyledDivider } from "./elements";
 
 // data of the array
 interface props {
@@ -178,10 +179,12 @@ export const ExploreTechnologies = () => {
 
   return (
     <Layout>
-      <Box sx={{ width: "100%", backgroundColor: "#f3f9fb" }}>
+      <Box sx={{ width: "100%", backgroundColor: "white" }}>
+        <TechnologyHeroSection heroImage={topImage} />
         <Container>
-          <TechnologyHeroSection heroImage={topImage} />
-          <Box sx={{ width: "100%", display: "flex" }}>
+          <Box
+            sx={{ width: "100%", display: "flex", backgroundColor: "white" }}
+          >
             <Box
               sx={{
                 width: {
@@ -196,10 +199,17 @@ export const ExploreTechnologies = () => {
               {heading.map((head: String, index: Number) => (
                 <Box key={index.toString()}>
                   <Box
-                    sx={{ fontSize: HeadFont, textAlign: "center" }}
+                    sx={{
+                      fontSize: HeadFont,
+                      textAlign: "center",
+                      color: Primary,
+                      margin: Margin,
+                      fontWeight: "bold",
+                    }}
                     id={head.toString()}
                   >
                     {head}
+                    <StyledDivider></StyledDivider>
                   </Box>
                   <Box
                     sx={{
@@ -247,13 +257,15 @@ export const ExploreTechnologies = () => {
                 },
               }}
             >
-              <ScrollBar />
+              <ScrollBar heading={heading} />
             </Box>
           </Box>
-          <Box>
-            <InquireSection />
-          </Box>
         </Container>
+        <Box sx={{ backgroundColor: "#f3f9fb" }}>
+          <Container>
+            <InquireSection />
+          </Container>
+        </Box>
       </Box>
     </Layout>
   );

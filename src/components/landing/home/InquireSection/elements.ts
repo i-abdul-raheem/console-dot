@@ -1,11 +1,12 @@
 import { styled, Button, Box } from "@mui/material";
 import { useIsMobileView } from "../../utils/utils";
+import { Primary } from "../../utils";
 
 export const StyledButton = styled(Button)({
   color: "#113f67",
   border: "1px solid #113f67",
   "&:hover": {
-    backgroundColor: "#226597",
+    backgroundColor: Primary,
     color: "white",
   },
 });

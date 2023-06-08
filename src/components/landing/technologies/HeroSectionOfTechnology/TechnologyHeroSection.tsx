@@ -1,19 +1,21 @@
 import { React, TopTech } from "@/assets";
 import { Heading, StyledPara, TechTopSection } from "./elements";
 import { Box, Container } from "@mui/material";
-import { Padding } from "../../utils";
+import { Dark, HeadFont, Padding, Primary } from "../../utils";
 
 interface props {
   heroImage: string;
 }
 
 export const TechnologyHeroSection = ({ heroImage }: props) => {
- return (
-    <Box>
+  return (
+    <Box sx={{ backgroundColor: "#f3f9fb" }}>
       <Container>
         <Heading>
           Let&#39;s discuss
-          <span style={{ color: "dodgerblue", fontWeight: "bold" }}>
+          <span
+            style={{ color: Primary, fontWeight: "bold", fontSize: HeadFont }}
+          >
             &lt;/code&gt;
           </span>
         </Heading>

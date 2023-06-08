@@ -17,7 +17,7 @@ export const CareerContainer = styled(Box)(() => {
 });
 
 export const StyledButton = styled(Box)({
-  backgroundColor: "#226597",
+  backgroundColor: "",
   border: "none",
   padding: "15px",
   display: "flex",

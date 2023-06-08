@@ -1,6 +1,7 @@
 import { Chess, Chess2 } from "@/assets";
 import { Box, styled } from "@mui/material";
 import { Black, Tech } from "@/assets";
+import { Primary } from "../../utils";
 
 export const CasestudyTop = styled(Box)({
   width: "100%",
@@ -16,7 +17,7 @@ export const TopInnerBox = styled(Box)({
   top: "80%",
   alignItems: "flex-start",
   justifyContent: "center",
-  backgroundColor: "#226597",
+  backgroundColor:Primary,
   color: "white",
   height: "500px",
   width: "80%",

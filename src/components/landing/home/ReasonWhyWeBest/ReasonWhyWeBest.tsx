@@ -9,7 +9,7 @@ import {
   SectionTitleDescrip,
 } from "./elements";
 import Image from "next/image";
-import { Margin, Wrapper } from "../../utils";
+import { Body, Dark, Margin, Wrapper } from "../../utils";
 
 export const ReasonWhyWeBest = () => {
   return (
@@ -55,7 +55,7 @@ export const ReasonWhyWeBest = () => {
               padding: "1rem 2rem",
             }}
           >
-            <div style={{ width: "100%", background: "#f3f9fb" }}>
+            <div style={{ width: "100%", background: Body }}>
               <Box>
                 <Box
                   sx={{
@@ -97,7 +97,7 @@ export const ReasonWhyWeBest = () => {
                 <div>
                   <Button
                     variant="contained"
-                    sx={{ margin: Margin }}
+                    sx={{ margin: Margin , backgroundColor:Dark }}
                   >{`DISCOVER`}</Button>
                 </div>
               </Box>
@@ -146,7 +146,7 @@ export const ReasonWhyWeBest = () => {
             >
               <Box
                 sx={{
-                  background: "#f3f9fb",
+                  background: Body,
 
                   wordWrap: "break-word",
                   overflowWrap: "break-word",
@@ -193,13 +193,13 @@ export const ReasonWhyWeBest = () => {
                 <div>
                   <Button
                     variant="contained"
-                    sx={{ margin: Margin }}
+                    sx={{ margin: Margin, backgroundColor:Dark }}
                   >{`DISCOVER`}</Button>
                 </div>
               </Box>
               <Box
                 sx={{
-                  background: "#f3f9fb",
+                  background: Body,
                   width: {
                     xl: "50%",
                     lg: "50%",
@@ -235,7 +235,7 @@ export const ReasonWhyWeBest = () => {
                   xs: "column-reverse",
                 },
 
-                background: "#f3f9fb",
+                background: Body,
               }}
             >
               <Box
@@ -285,7 +285,7 @@ export const ReasonWhyWeBest = () => {
                 <div>
                   <Button
                     variant="contained"
-                    sx={{ margin: Margin }}
+                    sx={{ margin: Margin, backgroundColor:Dark }}
                   >{`DISCOVER`}</Button>
                 </div>
               </Box>

@@ -8,7 +8,7 @@ import {
   RightFlex,
 } from "./elements";
 import { Container, Box, Typography } from "@mui/material";
-import { HeadFont, Para } from "../../utils";
+import { HeadFont, Para, Primary } from "../../utils";
 export const JobsOpeningTop = () => {
   return (
     <>
@@ -30,7 +30,7 @@ export const JobsOpeningTop = () => {
             <LeftFlex>
               <Typography
                 sx={{
-                  color: "#226597",
+                  color: Primary,
                   fontSize: HeadFont,
                   lineHeight: "50px",
                 }}

@@ -9,14 +9,26 @@ import {
   SectionTitle,
   StyledButton,
 } from "./elements";
-import { Box, Container } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import MediaCard from "../../MediaCard/MediaCard";
+import { HeadFont, Margin, Padding, Primary } from "../../utils";
 
 export const EventsLifeEmp = () => {
   return (
     <Container>
-      <ComponentContainer sx={{ backgroundColor: "#f3f9fb" }}>
-        <Section1>
+      <Typography
+        sx={{
+          margin: Margin,
+          padding: Padding,
+          fontSize: HeadFont,
+          color: Primary,
+          textAlign: "center",
+        }}
+      >
+        Life Of ConsoleDot
+      </Typography>
+      <ComponentContainer>
+        <Section1 sx={{ margin: Margin, padding: Padding }}>
           <Box
             sx={{
               display: "flex",
