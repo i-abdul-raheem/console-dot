@@ -1,6 +1,6 @@
 import { Chess2 } from "@/assets";
 import { Box, Typography, styled } from "@mui/material";
-import { useIsMobileView } from "../../utils/utils";
+import { useIsMobileView } from "../utils/utils";
 
 export const FortuneClientsContainer = styled(Box)({ paddingBottom: "62px" });
 

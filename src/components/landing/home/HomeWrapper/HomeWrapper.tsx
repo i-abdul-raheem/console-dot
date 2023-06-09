@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import { Footer } from "../../Footer";
 import { Header } from "../../Header";
 import { Layout } from "../../Layout/Layout";
@@ -12,9 +13,6 @@ import { RemoteAgile } from "../RemoteAgile";
 import { RightPanel } from "../RightPanel";
 
 export const HomeWrapper = () => {
-
-
-  
   return (
     <div
       style={{
@@ -32,11 +30,20 @@ export const HomeWrapper = () => {
           zIndex: 999,
         }}
       >
-        <div
-          style={{ position: "fixed", width: "100%" }}
+        <Box
+          sx={{
+            position: "fixed",
+            width: {
+              xl: "100%",
+              lg: "100%",
+              md: "100%",
+              sm: "auto",
+              xs: "auto",
+            },
+          }}
         >
           {<Header />}
-        </div>
+        </Box>
       </div>
 
       <HomePage />

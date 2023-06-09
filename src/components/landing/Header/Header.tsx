@@ -42,7 +42,7 @@ export const Header = () => {
     position: "sticky",
     top: 0,
     width: "100%",
-    zIndex: 999,
+    // zIndex: 999,
 
     backgroundColor: isScrolled ? "black" : "transparent",
     transition: "background-color 0.3s ease-in-out",
@@ -94,7 +94,7 @@ export const Header = () => {
           <div>
             <ul>
               <ListItem>
-                <StyledButton>CUSTOMERS</StyledButton>
+                <StyledButton onClick={()=> router.push("/exploreCaseStudies")}>CUSTOMERS</StyledButton>
               </ListItem>
 
               <ListItem>

@@ -9,14 +9,29 @@ import {
   SectionTitleDescrip,
 } from "./elements";
 import Image from "next/image";
-import { Body, Dark, Margin, Wrapper } from "../../utils";
+import {
+  Body,
+  Dark,
+  HeadFont,
+  Margin,
+  Padding,
+  Primary,
+  Wrapper,
+} from "../../utils";
 
 export const ReasonWhyWeBest = () => {
   return (
     <>
       <ReasonWhyWeContainer>
         <SectionTitleDescrip>
-          <SectionTitle>{`Reasons why we are the best`}</SectionTitle>
+          <Typography
+            sx={{
+              fontSize: HeadFont,
+              margin: Margin,
+              padding: Padding,
+              color: Primary,
+            }}
+          >{`Reasons why we are the best`}</Typography>
           <SectionDescrip>
             We&#39;ve helped out various clients across several industries, and
             you could be next!
@@ -97,7 +112,7 @@ export const ReasonWhyWeBest = () => {
                 <div>
                   <Button
                     variant="contained"
-                    sx={{ margin: Margin , backgroundColor:Dark }}
+                    sx={{ margin: Margin, backgroundColor: Dark }}
                   >{`DISCOVER`}</Button>
                 </div>
               </Box>
@@ -193,7 +208,7 @@ export const ReasonWhyWeBest = () => {
                 <div>
                   <Button
                     variant="contained"
-                    sx={{ margin: Margin, backgroundColor:Dark }}
+                    sx={{ margin: Margin, backgroundColor: Dark }}
                   >{`DISCOVER`}</Button>
                 </div>
               </Box>
@@ -285,7 +300,7 @@ export const ReasonWhyWeBest = () => {
                 <div>
                   <Button
                     variant="contained"
-                    sx={{ margin: Margin, backgroundColor:Dark }}
+                    sx={{ margin: Margin, backgroundColor: Dark }}
                   >{`DISCOVER`}</Button>
                 </div>
               </Box>

@@ -6,7 +6,7 @@ import {
   ClientCard,
   ClientCardHeading,
   ClientCardsSection,
-} from "../FortuneClients/elements";
+} from "../../ExploreCaseStudies/elements";
 import { Chess2 } from "@/assets";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { CsNodeContainer } from "./elements";

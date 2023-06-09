@@ -1,7 +1,7 @@
 import { CaseStudyTop } from "../CaseStudyTop/CaseStudyTop"
 import { CsNode } from "../CsNode"
 import { CsReact } from "../CsReact"
-import { FortuneClients } from "../FortuneClients"
+import { ExploreCaseStudies } from "../../ExploreCaseStudies"
 
 
 
@@ -10,8 +10,8 @@ export const CaseStudyWrapper=()=>{
         <>
         
         <CaseStudyTop/>
-        {/* <FortuneClients/>
-        <CsReact/>
+
+        {/* <CsReact/>
         <CsNode/> */}
         </>
     )
