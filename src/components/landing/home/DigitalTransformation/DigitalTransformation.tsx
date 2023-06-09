@@ -9,11 +9,13 @@ export const DigitalTransformation = () => {
       <Background sx={{ width: "100%" }}>
         <Box
           sx={{
-            display: "grid",
-            position: "absolute",
-            width: "100%",
-            gridTemplateColumns: "1fr 1fr 1fr 1fr",
+            display: "flex",
+            position: "relative",
+            // gridTemplateColumns: "1fr 1fr 1fr 1fr",
             boxSizing: "border-box",
+            width: "100%",
+            maxWidth: "100%",
+            overflow: "hidden"
           }}
         >
           <SingleBox>

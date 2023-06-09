@@ -20,9 +20,9 @@ export const RightBox = styled(Box)(() => {
     justifyContent: "flex-end",
     alignItems: "center",
     width: "67px",
-    height: "calc(100vh - 64px)",
+    height: "calc(100vh - 40px)",
     position: isMobileView ? "fixed" : "relative",
-    borderLeft: "1px solid #fff",
+    borderLeft: "0.8px solid #4d4d4d",
     borderBottom: "1px solid #696969",
   };
 });
@@ -99,8 +99,8 @@ export const DescripItems = styled(Typography)(() => {
 });
 
 export const BottomPanel = styled(Box)({
-  borderTop: "1px solid #fff",
-  borderBottom: "1px solid #696969",
+  borderTop: "1px solid #4d4d4d",
+  borderBottom: "1px solid #4d4d4d",
   margin: "0px",
   padding: 0,
   display: "flex",

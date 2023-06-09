@@ -14,7 +14,7 @@ interface props {
 }
 
 export const ScrollBar = ({ heading }: props) => {
-  console.log(heading, "these are the heads");
+
   return (
     <>
       <ScrollBarContainer>

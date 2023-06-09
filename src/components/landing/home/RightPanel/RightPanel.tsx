@@ -31,7 +31,7 @@ export const RightPanel = () => {
 
   return (
     <HeroImageContainer>
-      <div style={{ width: "100%" }}>
+      <div style={{ width: "100%", margin: "5vh 0" }}>
         <Container
           style={{
             display: "flex",

@@ -1,4 +1,4 @@
-import { styled, Button, Box } from "@mui/material";
+import { styled, Button, Box, TextareaAutosize } from "@mui/material";
 import { useIsMobileView } from "../../utils/utils";
 import { Primary } from "../../utils";
 
@@ -58,3 +58,33 @@ export const InputsSecondRow = styled(Box)({
 export const ButtonSection = styled(Box)({
   marginBottom: "20px",
 });
+
+
+export const StyledTextarea = styled(TextareaAutosize)(
+  ({ theme }) => `
+  width: 50;
+  font-family: IBM Plex Sans, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 12px;
+  border-radius: 5px 5px 0 5px;
+  color: ${'white'};
+  background: ${"#226597"};
+  border: 1px solid ${'white'};
+
+  &:hover {
+    border-color: ${"white"};
+  }
+
+  &:focus {
+    border: 2px solid ${'white'};
+  }
+
+  // firefox
+  &:focus-visible {
+    outline: 0;
+  }
+  
+`
+);

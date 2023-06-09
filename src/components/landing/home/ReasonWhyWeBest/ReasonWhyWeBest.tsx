@@ -67,7 +67,6 @@ export const ReasonWhyWeBest = () => {
               },
               display: "flex",
               flexDirection: "column",
-              padding: "1rem 2rem",
             }}
           >
             <div style={{ width: "100%", background: Body }}>
@@ -143,7 +142,6 @@ export const ReasonWhyWeBest = () => {
               display: "flex",
               flexDirection: "column",
               gap: "2rem",
-              padding: "1rem 2rem",
             }}
           >
             <Box

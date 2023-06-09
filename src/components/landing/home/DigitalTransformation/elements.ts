@@ -1,5 +1,4 @@
 import { transform } from "typescript";
-import { BoxesContainer } from "./elements";
 import { styled, Box, Typography } from "@mui/material";
 import { DigitalTransmission } from "@/assets";
 import { useId } from "react";
@@ -33,15 +32,11 @@ export const Background = styled(Box)({
   objectFit: "contain",
   backgroundImage: `url(${DigitalTransmission.src})`,
   backgroundSize: "cover",
-  height: "500px",
+  minHeight: "500px",
   backgroundPosition: "center",
 });
 export const SingleBox = styled(Box)(() => {
   return {
-    flex: 1,
-    left: 0,
-    width: "100%",
-    height: "500px",
     position: "relative",
     alignItems: "flex-end",
     borderRight: "1px dotted white",
@@ -50,13 +45,13 @@ export const SingleBox = styled(Box)(() => {
     flexDirection: "column",
     justifyContent: "flex-end",
     padding: "1rem 2rem",
+    width: "100%",
     boxSizing: "border-box",
     zIndex: 99,
     "&:before": {
       position: "absolute",
       content: '""',
       backgroundColor: "transparent",
-
       width: "100%",
       height: "100%",
       top: 0,

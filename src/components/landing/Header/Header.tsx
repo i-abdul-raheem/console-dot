@@ -20,6 +20,8 @@ import React, { useState, useEffect } from "react";
 import { MenuPage } from "./MenuPage";
 import { useRouter } from "next/router";
 
+// style of nav bar
+
 export const Header = () => {
   // scroll function
 
@@ -44,10 +46,19 @@ export const Header = () => {
     width: "100%",
     // zIndex: 999,
 
-    backgroundColor: isScrolled ? "black" : "transparent",
+    backgroundColor: isScrolled ? "white" : "transparent",
     transition: "background-color 0.3s ease-in-out",
   };
 
+  const navLogoStyle = {
+    color: isScrolled ? "black" : "white",
+    fontSize: {
+      xl: "2.8rem",
+      lg: "2rem",
+      md: "2rem",
+      sm: "2rem",
+    },
+  };
   const [isMaximize, setIsMaximize] = useState(false);
 
   const toggleAction = () => {
@@ -78,23 +89,18 @@ export const Header = () => {
               style={{ borderRadius: "10px", width: "100%", height: "100%" }}
             />
           </div>
-          <NameHeading
-            sx={{
-              fontSize: {
-                xl: "2.8rem",
-                lg: "2rem",
-                md: "2rem",
-                sm: "2rem",
-              },
-            }}
-          >
+          <NameHeading sx={navLogoStyle}>
             Console<span style={{ color: "rgb(23 , 96 , 128 )" }}>Dot</span>
           </NameHeading>
 
           <div>
             <ul>
               <ListItem>
-                <StyledButton onClick={()=> router.push("/exploreCaseStudies")}>CUSTOMERS</StyledButton>
+                <StyledButton
+                  onClick={() => router.push("/exploreCaseStudies")}
+                >
+                  CUSTOMERS
+                </StyledButton>
               </ListItem>
 
               <ListItem>
@@ -127,11 +133,15 @@ export const Header = () => {
           <HireDevBtn onClick={() => router.push("/hiredevs")}>Hire</HireDevBtn>
           {isMaximize ? (
             <StyledButton onClick={toggleAction}>
-              <MenuCloseIcon style={{ color: "#fff" }} />
+              <MenuCloseIcon
+                style={isScrolled ? { color: " black" } : { color: "white" }}
+              />
             </StyledButton>
           ) : (
             <StyledButton onClick={toggleAction}>
-              <NavMenuIcon style={{ color: "#fff" }} />
+              <NavMenuIcon
+                style={isScrolled ? { color: " black" } : { color: "white" }}
+              />
             </StyledButton>
           )}
           {isMaximize && <MenuPage />}

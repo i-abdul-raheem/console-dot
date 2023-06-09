@@ -33,13 +33,7 @@ export const HomeWrapper = () => {
         <Box
           sx={{
             position: "fixed",
-            width: {
-              xl: "100%",
-              lg: "100%",
-              md: "100%",
-              sm: "auto",
-              xs: "auto",
-            },
+            width: "100%",
           }}
         >
           {<Header />}
