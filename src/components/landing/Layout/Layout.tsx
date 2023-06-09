@@ -9,7 +9,7 @@ type DefaultLayoutProps = {
 export const Layout = ({ children }: DefaultLayoutProps) => {
   return (
     <Box>
-      <Header />
+      <Header inverse={false} />
       {children}
       <Footer />
     </Box>

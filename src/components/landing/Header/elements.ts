@@ -130,7 +130,11 @@ export const ListItem = styled("li")(() => {
   };
 });
 
-export const StyledButton = styled("button")(() => {
+interface Types {
+  inverse: Boolean
+}
+
+export const StyledButton = styled("button")(({inverse} : Types) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -151,7 +155,7 @@ export const StyledButton = styled("button")(() => {
     border: "none",
     fontSize: "0.8rem",
     padding: "0.5rem",
-    color: isScrolled ? "black" : "white",
+    color: !inverse ? "black" : isScrolled ? "black" : "white",
     cursor: "pointer",
   };
 });

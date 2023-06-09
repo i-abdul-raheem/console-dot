@@ -21,8 +21,11 @@ import { MenuPage } from "./MenuPage";
 import { useRouter } from "next/router";
 
 // style of nav bar
+interface Types {
+  inverse: Boolean;
+}
 
-export const Header = () => {
+export const Header = ({ inverse }: Types) => {
   // scroll function
 
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,24 +43,32 @@ export const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  const NavStyles = {
-    position: "sticky",
-    top: 0,
-    width: "100%",
-    // zIndex: 999,
+  const NavStyles = (inverse: Boolean) => {
+    return {
+      position: "sticky",
+      top: 0,
+      width: "100%",
+      // zIndex: 999,
 
-    backgroundColor: isScrolled ? "white" : "transparent",
-    transition: "background-color 0.3s ease-in-out",
+      backgroundColor: !inverse
+        ? "white"
+        : isScrolled
+        ? "white"
+        : "transparent",
+      transition: "background-color 0.3s ease-in-out",
+    };
   };
 
-  const navLogoStyle = {
-    color: isScrolled ? "black" : "white",
-    fontSize: {
-      xl: "2.8rem",
-      lg: "2rem",
-      md: "2rem",
-      sm: "2rem",
-    },
+  const navLogoStyle = (inverse: Boolean) => {
+    return {
+      color: !inverse ? "black" : isScrolled ? "black" : "white",
+      fontSize: {
+        xl: "2.8rem",
+        lg: "2rem",
+        md: "2rem",
+        sm: "2rem",
+      },
+    };
   };
   const [isMaximize, setIsMaximize] = useState(false);
 
@@ -68,17 +79,7 @@ export const Header = () => {
 
   return (
     <ThemeProvider theme={getTheme("light")}>
-      <NavBar
-        // sx={{
-        //   position: "sticky",
-        //   top: 0,
-        //   width: "100%",
-        //   zIndex: 999,
-        //   background: "linear-gradient(to right, #5D8AA8, #226597)",
-        //   // background: "transparent",
-        // }}
-        sx={NavStyles}
-      >
+      <NavBar sx={NavStyles(inverse)}>
         <RightNav>
           <div style={{ width: "50px", height: "50px" }}>
             <Image
@@ -89,7 +90,7 @@ export const Header = () => {
               style={{ borderRadius: "10px", width: "100%", height: "100%" }}
             />
           </div>
-          <NameHeading sx={navLogoStyle}>
+          <NameHeading sx={navLogoStyle(inverse)}>
             Console<span style={{ color: "rgb(23 , 96 , 128 )" }}>Dot</span>
           </NameHeading>
 
@@ -97,6 +98,7 @@ export const Header = () => {
             <ul>
               <ListItem>
                 <StyledButton
+                  inverse={inverse}
                   onClick={() => router.push("/exploreCaseStudies")}
                 >
                   CUSTOMERS
@@ -104,25 +106,32 @@ export const Header = () => {
               </ListItem>
 
               <ListItem>
-                <StyledButton onClick={() => router.push("/casestudy")}>
+                <StyledButton
+                  inverse={inverse}
+                  onClick={() => router.push("/casestudy")}
+                >
                   WHAT WE DO
                 </StyledButton>
               </ListItem>
               <ListItem>
-                <StyledButton>WHO WE WORK WITH</StyledButton>
+                <StyledButton inverse={inverse}>WHO WE WORK WITH</StyledButton>
               </ListItem>
               <ListItem>
-                <StyledButton>ABOUT US </StyledButton>
+                <StyledButton inverse={inverse}>ABOUT US </StyledButton>
               </ListItem>
               <ListItem>
                 <StyledButton
+                  inverse={inverse}
                   onClick={() => router.push("/exploreTechnologies")}
                 >
                   TECEHNOLOGY
                 </StyledButton>
               </ListItem>
               <ListItem>
-                <StyledButton onClick={() => router.push("/products")}>
+                <StyledButton
+                  inverse={inverse}
+                  onClick={() => router.push("/products")}
+                >
                   PRODUCTS
                 </StyledButton>
               </ListItem>
@@ -132,15 +141,27 @@ export const Header = () => {
         <LeftNav>
           <HireDevBtn onClick={() => router.push("/hiredevs")}>Hire</HireDevBtn>
           {isMaximize ? (
-            <StyledButton onClick={toggleAction}>
+            <StyledButton inverse={inverse} onClick={toggleAction}>
               <MenuCloseIcon
-                style={isScrolled ? { color: " black" } : { color: "white" }}
+                style={
+                  !inverse
+                    ? { color: "black" }
+                    : isScrolled
+                    ? { color: " black" }
+                    : { color: "white" }
+                }
               />
             </StyledButton>
           ) : (
-            <StyledButton onClick={toggleAction}>
+            <StyledButton inverse={inverse} onClick={toggleAction}>
               <NavMenuIcon
-                style={isScrolled ? { color: " black" } : { color: "white" }}
+                style={
+                  !inverse
+                    ? { color: "black" }
+                    : isScrolled
+                    ? { color: " black" }
+                    : { color: "white" }
+                }
               />
             </StyledButton>
           )}

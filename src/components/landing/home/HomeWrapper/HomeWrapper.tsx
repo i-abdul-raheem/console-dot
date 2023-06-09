@@ -36,7 +36,7 @@ export const HomeWrapper = () => {
             width: "100%",
           }}
         >
-          {<Header />}
+          {<Header inverse={true} />}
         </Box>
       </div>
 

@@ -7,7 +7,6 @@ import { TechnologyCard } from "./TechnologyCard";
 import { ScrollBar } from "../ScrollBar";
 import Link from "next/link";
 import { InquireSection } from "../../home";
-import { Footer } from "../../Footer";
 import { Layout } from "../../Layout/Layout";
 import { StyledDivider } from "./elements";
 

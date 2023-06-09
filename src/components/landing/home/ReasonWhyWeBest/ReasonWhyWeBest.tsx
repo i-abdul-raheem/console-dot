@@ -15,7 +15,9 @@ import {
   HeadFont,
   Margin,
   Padding,
+  Para,
   Primary,
+  SubFont,
   Wrapper,
 } from "../../utils";
 
@@ -43,16 +45,17 @@ export const ReasonWhyWeBest = () => {
           sx={{
             height: "auto",
             display: "flex",
-            alignItems: "center",
+            alignItems: "flex-start",
             justifyContent: "center",
             gap: { xl: "4rem", lg: "3rem", md: "2rem", sm: "1rem" },
             paddingBottom: { xl: "5rem", lg: "4rem", md: "4rem", sm: "2rem" },
+            rowGap: 4,
             flexDirection: {
               xl: "row",
               lg: "row",
               md: "row",
-              sm: "column-reverse",
-              xs: "column-reverse",
+              sm: "column",
+              xs: "column",
             },
           }}
         >
@@ -66,10 +69,16 @@ export const ReasonWhyWeBest = () => {
                 xs: "100%",
               },
               display: "flex",
-              flexDirection: "column",
+              flexDirection: {
+                xl: "column",
+                lg: "column",
+                md: "column",
+                sm: "column-reverse",
+                xs: "column-reverse",
+              },
             }}
           >
-            <div style={{ width: "100%", background: Body }}>
+            <div style={{ width: "100%", background: Body, height: "auto" }}>
               <Box>
                 <Box
                   sx={{
@@ -98,37 +107,42 @@ export const ReasonWhyWeBest = () => {
                     textAlign: "left",
                   }}
                 >
-                  <h5 style={{ paddingLeft: "10px" }}>{`E-Studies`}</h5>
-                  <h2 style={{ paddingLeft: "10px" }}>{`LEFT SIDE`}</h2>
-                  <Typography sx={{ paddingLeft: "10px" }}>
+                  <Typography
+                    sx={{ margin: Margin, fontSize: Para, color: Primary }}
+                  >{`leFT sIDE`}</Typography>
+                  <Typography
+                    sx={{ margin: Margin, fontSize: SubFont }}
+                  >{`CONSOLEDOT`}</Typography>
+                  <Typography sx={{ margin: Margin }}>
                     Verizon is America&#39;s biggest wireless network operator
                     company. The Express store is a commerce project where any
                     user in America can purchase mobile, tablets, connected
                     devices and transfer his device to Verizon.
                   </Typography>
-                  .
                 </Box>
                 <div>
                   <Button
                     variant="contained"
-                    sx={{ margin: Margin, backgroundColor: Dark }}
+                    sx={{
+                      margin: Margin,
+                      backgroundColor: Dark,
+                    }}
                   >{`DISCOVER`}</Button>
                 </div>
               </Box>
-
-              <Box
-                sx={{
-                  width: "100%",
-                  minHeight: "200px",
-                }}
-              >
-                <Image
-                  src={Verizon}
-                  alt="Image"
-                  style={{ height: "100%", width: "100%" }}
-                />
-              </Box>
             </div>
+            <Box
+              sx={{
+                width: "100%",
+                minHeight: "200px",
+              }}
+            >
+              <Image
+                src={Verizon}
+                alt="Image"
+                style={{ height: "100%", width: "100%" }}
+              />
+            </Box>
           </Box>
           <Box
             sx={{
@@ -193,11 +207,13 @@ export const ReasonWhyWeBest = () => {
                     style={{ width: "100%", height: "100%" }}
                   />
                 </Box>
-                <h5 style={{ paddingLeft: "10px" }}>{`E-Studies`}</h5>
-                <h2
-                  style={{ paddingLeft: "10px" }}
-                >{`Verizon Express Store`}</h2>
-                <Typography sx={{ paddingLeft: "10px" }}>
+                <Typography
+                  sx={{ margin: Margin, fontSize: Para, color: Primary }}
+                >{`E-Studies`}</Typography>
+                <Typography
+                  sx={{ margin: Margin, fontSize: SubFont }}
+                >{`E-Studies`}</Typography>
+                <Typography sx={{ margin: Margin }}>
                   Verizon is America&#39;s biggest wireless network operator
                   company. The Express store is a commerce project where any
                   user in America can purchase mobile, tablets, connected
@@ -285,22 +301,35 @@ export const ReasonWhyWeBest = () => {
                     style={{ width: "100%", height: "100%" }}
                   />
                 </Box>
-                <h5 style={{ paddingLeft: "10px" }}>{`E-Commerce`}</h5>
-                <h2
-                  style={{ paddingLeft: "10px" }}
-                >{`Verizon Express Store`}</h2>
-                <Typography sx={{ paddingLeft: "10px" }}>
-                  Verizon is America&#39;s biggest wireless network operator
-                  company. The Express store is a commerce project where any
-                  user in America can purchase mobile, tablets, connected
-                  devices and transfer his device to Verizon.
-                </Typography>
-                <div>
-                  <Button
-                    variant="contained"
-                    sx={{ margin: Margin, backgroundColor: Dark }}
-                  >{`DISCOVER`}</Button>
-                </div>
+                <Box
+                  sx={{
+                    padding: Padding,
+                    display: "flex",
+                    alignItems: "flex-start",
+                    justifyContent: "flex-start",
+                    rowGap: "10px",
+                    flexDirection: "column",
+                  }}
+                >
+                  <Typography
+                    sx={{ fontSize: Para, color: Primary }}
+                  >{`E-Studies`}</Typography>
+                  <Typography
+                    sx={{ fontSize: SubFont }}
+                  >{`E-Studies`}</Typography>
+                  <Typography>
+                    Verizon is America&#39;s biggest wireless network operator
+                    company. The Express store is a commerce project where any
+                    user in America can purchase mobile, tablets, connected
+                    devices and transfer his device to Verizon.
+                  </Typography>
+                  <div>
+                    <Button
+                      variant="contained"
+                      sx={{ backgroundColor: Dark }}
+                    >{`DISCOVER`}</Button>
+                  </div>
+                </Box>
               </Box>
               <Box
                 sx={{
