@@ -15,23 +15,18 @@ import {
 } from "./elements";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { Typography, Container, Box } from "@mui/material";
-
-import { MainLogo } from "@/assets";
 import { useRouter } from "next/router";
-import { SubFont } from "../../utils";
+import { Dark, Primary, SubFont } from "../../utils";
+import { getCareers } from "@/apis/careers";
+import { useState, useEffect } from "react";
 
 interface props {
-  image: any;
   title: string;
   experiance: string;
   locationText: string;
+  id: string;
 }
-export const CardSquare = ({
-  image,
-  title,
-  experiance,
-  locationText,
-}: props) => {
+export const CardSquare = ({ id, title, experiance, locationText }: props) => {
   const router = useRouter();
   return (
     <Singlecard>
@@ -48,7 +43,17 @@ export const CardSquare = ({
         </CardSection>
       </div>
       <SectionButton>
-        <StyledButton1 onClick={() => router.push("/jobs/id")}>
+        <StyledButton1
+          onClick={() => router.push(`/jobs/${id}`)}
+          sx={{
+            marginTop: "10px",
+            color: "white",
+            backgroundColor: Primary,
+            "&:hover": {
+              backgroundColor: Dark,
+            },
+          }}
+        >
           APPLY NOW
         </StyledButton1>
       </SectionButton>
@@ -57,74 +62,22 @@ export const CardSquare = ({
 };
 
 export const OpenJobsSection = () => {
-  const cardContent = [
-    {
-      image: MainLogo,
-      title: "Laravel Developer",
-      experiance: "3 To 5 Years",
-      locationText: "Work From Office",
-    },
+  const [data, setData] = useState<any[]>([]);
+  const router = useRouter();
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await getCareers();
+        setData([...res]);
+        console.log(data, "debug jobs");
+      } catch (error) {
+        console.error(error);
+      }
+    };
 
-    {
-      image: MainLogo,
-      title: "Business Development Executive",
-      experiance: "1 To 4 Years",
-      locationText: "Work From Office",
-    },
+    fetchData();
+  }, []);
 
-    {
-      image: MainLogo,
-      title: ".Net core and Angular",
-      experiance: " 2+ Years",
-      locationText: "Work From Office",
-    },
-
-    {
-      image: MainLogo,
-      title: "UI/UX Designer",
-      experiance: " 2+ Years",
-      locationText: "Work From Office",
-    },
-
-    {
-      image: MainLogo,
-      title: "Embedded Software Engineer",
-      experiance: "1 To 4 Years",
-      locationText: "Work From Office",
-    },
-
-    {
-      image: MainLogo,
-      title: "Talent Acquisition Lead",
-      experiance: "1 To 4 Years",
-
-      locationText: "Work From Office",
-    },
-
-    {
-      image: MainLogo,
-      title: "Ruby on Rails",
-      experiance: "1 To 4 Years",
-
-      locationText: "Work From Office",
-    },
-
-    {
-      image: MainLogo,
-      title: "Devops",
-      experiance: "1 To 4 Years",
-
-      locationText: "Work From Office",
-    },
-
-    {
-      image: MainLogo,
-      title: "Salesforce",
-      experiance: "1 To 4 Years",
-
-      locationText: "Work From Office",
-    },
-  ];
   return (
     <Box sx={{ backgroundColor: "#F3F9FB" }}>
       <Container>
@@ -132,6 +85,7 @@ export const OpenJobsSection = () => {
           <Typography
             sx={{
               fontSize: SubFont,
+              marginRight: "5px",
             }}
           >
             Follow Us On
@@ -148,12 +102,13 @@ export const OpenJobsSection = () => {
 
         <CardContainer>
           <CardBox>
-            {cardContent.map((i, index) => (
+            {data?.map((i: any, index: string) => (
               <CardSquare
                 key={index}
                 title={i.title}
                 experiance={i.experiance}
                 locationText={i.locationText}
+                id={i._id}
               />
             ))}
           </CardBox>

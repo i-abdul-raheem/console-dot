@@ -9,5 +9,6 @@ export * from "./casestudy";
 export * from "./products";
 export * from "./CardWithImage";
 export * from "./MediaCard";
-export * from "./CardWithBackground";
+export * from "./BasicCard";
 export * from "./Services";
+export * from "./AboutConsoleDot";

@@ -33,7 +33,7 @@ export const Header = ({ inverse }: Types) => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset;
-      console.log(scrollTop, "this is scroll");
+      // console.log(scrollTop, "this is scroll");
       setIsScrolled(scrollTop > 100);
     };
 
@@ -99,7 +99,7 @@ export const Header = ({ inverse }: Types) => {
               <ListItem>
                 <StyledButton
                   inverse={inverse}
-                  onClick={() => router.push("/exploreCaseStudies")}
+                  onClick={() => router.push("/customers")}
                 >
                   CUSTOMERS
                 </StyledButton>
@@ -117,7 +117,7 @@ export const Header = ({ inverse }: Types) => {
                 <StyledButton inverse={inverse}>WHO WE WORK WITH</StyledButton>
               </ListItem>
               <ListItem>
-                <StyledButton inverse={inverse}>ABOUT US </StyledButton>
+                <StyledButton inverse={inverse}   onClick={() => router.push("/aboutUs")}>ABOUT US </StyledButton>
               </ListItem>
               <ListItem>
                 <StyledButton

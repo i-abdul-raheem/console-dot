@@ -1,14 +1,7 @@
-import {
-  DescriptionSection,
-  FlexContiner,
-  StyledText,
-  TitleSection,
-} from "./elements";
 import { JobOpening } from "@/assets";
-import { TitleAndDescripContiner } from "./elements";
 import MediaCard from "../../MediaCard/MediaCard";
 import { Box, Container, Typography } from "@mui/material";
-import { Body, HeadFont, Margin, Padding, SubFont } from "../../utils";
+import { HeadFont, Margin, Padding, SubFont } from "../../utils";
 interface Props {
   image: any;
   heading: String;

@@ -69,7 +69,7 @@ export const TechnologyCard = ({ title, image, member, time }: props) => {
           }}
         >
           <img
-            src={image}
+            src={`https://api.consoledot.com/file/${image}`}
             alt={`${title} image`}
             style={{
               width: "100%",

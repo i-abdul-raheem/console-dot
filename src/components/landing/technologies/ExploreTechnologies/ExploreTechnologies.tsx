@@ -9,6 +9,7 @@ import Link from "next/link";
 import { InquireSection } from "../../home";
 import { Layout } from "../../Layout/Layout";
 import { StyledDivider } from "./elements";
+import { getTechnologies } from "@/apis/technologies";
 
 // data of the array
 interface props {
@@ -164,17 +165,21 @@ export const ExploreTechnologies = () => {
       id: "frontend",
     },
   ]);
+
   const [heading, setHeading] = useState<any>([]);
   const topImage =
     "https://images.unsplash.com/photo-1568952433726-3896e3881c65?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80";
+  const [technologies, setTechnologies] = useState([]);
 
-  useEffect(() => {
-    data.map((item: any) => {
-      if (!heading.includes(item?.category)) {
-        setHeading([...heading, item?.category]);
-      }
+  const fetchData = () => {
+    getTechnologies().then((res) => {
+      setTechnologies(res?.data);
+      console.log(technologies);
     });
-  });
+  };
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <Layout>
@@ -195,54 +200,53 @@ export const ExploreTechnologies = () => {
                 },
               }}
             >
-              {heading.map((head: String, index: Number) => (
-                <Box key={index.toString()}>
-                  <Box
-                    sx={{
-                      fontSize: HeadFont,
-                      textAlign: "center",
-                      color: Primary,
-                      margin: Margin,
-                      fontWeight: "bold",
-                    }}
-                    id={head.toString()}
-                  >
-                    {head}
-                    <StyledDivider></StyledDivider>
-                  </Box>
-                  <Box
-                    sx={{
-                      display: "flex",
-                      flexWrap: "wrap",
-                      justifyContent: "space-around",
-                      margin: "10px",
-                    }}
-                  >
-                    {data
-                      .filter((i) => i?.category === head)
-                      .map((myData, index1) => {
-                        return (
-                          <Link
-                            style={{
-                              textDecoration: "none",
-                              color: "white",
-                              fontWeight: "bold",
-                            }}
-                            href={`/exploreTechnologies/${myData.category}`}
-                            passHref
-                          >
-                            <Box key={index1}>
-                              <TechnologyCard
-                                title={myData.title}
-                                image={topImage}
-                              />
-                            </Box>
-                          </Link>
-                        );
-                      })}
-                  </Box>
+              {/* {heading.map((head: String, index: Number) => ( */}
+              <Box >
+                <Box
+                  sx={{
+                    fontSize: HeadFont,
+                    textAlign: "center",
+                    color: Primary,
+                    margin: Margin,
+                    fontWeight: "bold",
+                  }}
+                  // id={head.toString()}
+                >
+                  {/* {head} */}
+                  <StyledDivider></StyledDivider>
                 </Box>
-              ))}
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    justifyContent: "space-around",
+                    margin: "10px",
+                  }}
+                >
+                  {technologies.map((myData, index1) => {
+                    const temp = {};
+                    return (
+                      <Link
+                        style={{
+                          textDecoration: "none",
+                          color: "white",
+                          fontWeight: "bold",
+                        }}
+                        href={`/exploreTechnologies/${myData.category}`}
+                        passHref
+                      >
+                        <Box key={index1}>
+                          <TechnologyCard
+                            title={myData?.title}
+                            image={myData?.hero}
+                          />
+                        </Box>
+                      </Link>
+                    );
+                  })}
+                </Box>
+              </Box>
+              {/* ))} */}
             </Box>
             <Box
               sx={{

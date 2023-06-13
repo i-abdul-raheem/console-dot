@@ -5,13 +5,14 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { Primary } from "../utils";
+import { Dark, Primary } from "../utils";
 
 interface props {
   title: string;
   image: string;
   explanation: string;
   placeholder: string;
+  onClick: any;
 }
 
 export default function MediaCard({
@@ -19,13 +20,14 @@ export default function MediaCard({
   image,
   explanation,
   placeholder,
+  onClick,
 }: props) {
   return (
     <Card sx={{ width: 300 }}>
-      <CardMedia
-        sx={{ height: 140 }}
-        image="https://images.unsplash.com/photo-1503437313881-503a91226402?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80s"
-        title="green iguana"
+      <img
+        src={`https://api.consoledot.com/file/${image}`}
+        alt="image"
+        style={{ width: "150px", height: "140px", borderRadius: "10px" }}
       />
       <CardContent>
         <Typography
@@ -44,7 +46,15 @@ export default function MediaCard({
         <Button
           variant="contained"
           size="small"
-          sx={{ backgroundColor: Primary }}
+          sx={{
+            marginTop: "10px",
+            color: "white",
+            backgroundColor: Primary,
+            "&:hover": {
+              backgroundColor: Dark,
+            },
+          }}
+          onClick={onClick}
         >
           {placeholder}
         </Button>

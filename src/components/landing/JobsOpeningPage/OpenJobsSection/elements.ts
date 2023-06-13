@@ -1,6 +1,8 @@
+import { transform } from "typescript";
 import { styled, Box, Button, Typography } from "@mui/material";
 import { useIsMobileView } from "../../utils/utils";
 import Image from "next/image";
+import { Dark, Primary } from "../../utils";
 
 export const TopHeading = styled(Box)(() => {
   const isMobileView = useIsMobileView();
@@ -15,12 +17,31 @@ export const TopHeading = styled(Box)(() => {
 
 export const Singlecard = styled(Box)({
   width: "100%",
-  backgroundColor: "#87c0cd",
+  height:'100%',
+  backgroundColor: "white",
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
-  borderRadius: "30px",
+  borderRadius: "10px",
+  transition: "transform 0.3s ease",
+  boxShadow: "2px 2px 2px #aaa",
+  "&:hover": {
+    backgroundColor: Primary,
+    boxShadow: "4px 2px 4px #aaa",
+    transform: "scale(1.1)",
+    color: "white",
+    "&:hover > .MuiAvatar-root": {
+      width: "100%",
+      height: "100%",
+      transition: "0.6s",
+    },
 
+    "&:hover p": {
+      transition: "0.6s",
+      color: "white",
+
+    },
+  },
 });
 
 export const CardSection = styled(Box)({
@@ -46,8 +67,10 @@ export const StyledButton1 = styled(Button)({
   border: "1px solid rgb(23 , 96 , 128 )",
   backgroundColor: "rgb(23 , 96 , 128)",
   color: "white",
+
   "&:hover": {
-    backgroundColor: "rgb(23 , 96 , 200)",
+    color: "white",
+    border: "1px solid white",
   },
 });
 
@@ -74,9 +97,11 @@ export const CardBox = styled(Box)(() => {
 
 export const CardTitle = styled(Typography)({
   fontSize: "25px",
-  color: "#113f67",
+  color: Primary,
   fontWeight: "bold",
   textAlign: "center",
+  transition: "transform 0.3s ease",
+  "&:hover": {},
 });
 
 export const CardContainer = styled(Box)(() => {

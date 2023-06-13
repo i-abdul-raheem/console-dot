@@ -7,7 +7,7 @@ import {
 } from "./elements";
 import { Typography } from "@mui/material";
 import { StyledButton } from "./elements";
-import { HeadFont } from "@/components/landing/utils";
+import { Dark, HeadFont, Primary } from "@/components/landing/utils";
 
 export const SubmitForm = () => {
   return (
@@ -73,7 +73,18 @@ export const SubmitForm = () => {
             alignItems: "center",
           }}
         >
-          <StyledButton>Submit</StyledButton>
+          <StyledButton
+            sx={{
+              marginTop: "10px",
+              color: "white",
+              backgroundColor: Primary,
+              "&:hover": {
+                backgroundColor: Dark,
+              },
+            }}
+          >
+            Submit
+          </StyledButton>
         </div>
       </FormContainer>
     </>

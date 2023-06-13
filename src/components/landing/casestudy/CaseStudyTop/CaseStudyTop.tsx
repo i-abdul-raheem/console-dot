@@ -1,5 +1,5 @@
 import { url } from "inspector";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { CasestudyTop, ChallangesSolutions, TopInnerBox } from "./elements";
 import { StyledText } from "../../careers/WorkingAtConsoleDot/elements";
 import { Box, Container, Typography, Avatar } from "@mui/material";
@@ -12,18 +12,27 @@ import {
   Primary,
   SubFont,
 } from "../../utils";
+import { useRouter } from "next/router";
 import { Black, Tech } from "@/assets";
 import { TechnologyCard } from "../../technologies/ExploreTechnologies/TechnologyCard";
 import { InquireSection } from "../../home";
 import { Layout } from "../../Layout/Layout";
+import { getCaseStudy } from "@/apis/caseStudy";
+import { getSingleTechnology } from "@/apis/technologies";
 export const TechStackCard = ({ image }: any) => {
+  const [img, setImg] = useState("");
+  useEffect(() => {
+    getSingleTechnology(image).then((res) => {
+      setImg(res?.data?.hero);
+    });
+  }, [image]);
   return (
     <>
       <Box sx={{ width: "70px", height: "70px" }}>
-        <Avatar
-          src={image}
+        <img
+          src={`https://api.consoledot.com/file/${img}`}
           alt="image"
-          sx={{ width: "70px", height: "70px", borderRadius: "10px" }}
+          style={{ width: "70px", height: "70px", borderRadius: "10px" }}
         />
       </Box>
     </>
@@ -39,15 +48,31 @@ export const TechStacks = [
 ];
 
 export const CaseStudyTop = () => {
+  const router = useRouter();
+  const id = router.query;
+  // console.log(id, "debug");
+
+  const [data, setData] = useState(null);
+
+  const fetchData = () => {
+    getCaseStudy(id?.id)
+      .then((result) => {
+        setData(result);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
     <Layout>
       <Box>
-        <CasestudyTop>
-          {/* <Container sx={{ position: "absolute", top: "80%" }}>
-          <TopInnerBox></TopInnerBox>
-        </Container> */}
-        </CasestudyTop>
-        <Box>
+        <CasestudyTop />
+        <Box sx={{ backgroundColor: "white" }}>
           <Container>
             <Box sx={{ width: "100%", display: "flex" }}>
               <Box
@@ -67,22 +92,24 @@ export const CaseStudyTop = () => {
                     padding: Padding,
                   }}
                 >
-                  Syed Brothers. is a multinational corporation that operates in
-                  multiple countries. They have a complex procurement process
-                  with multiple stakeholders involved. The company wants to
-                  streamline their procurement system to reduce costs, improve
-                  efficiency, and increase transparency.
+                  {data?.overview}
                 </Typography>
               </Box>
               <Box
                 sx={{
                   width: "50%",
-                  backgroundColor: Body,
+                  backgroundColor: "white",
                   color: Body,
                   padding: Padding,
                 }}
               >
-                <Typography sx={{ fontSize: HeadFont, textAlign: "center" }}>
+                <Typography
+                  sx={{
+                    fontSize: HeadFont,
+                    textAlign: "center",
+                    color: Primary,
+                  }}
+                >
                   TECHNICAL STACK
                 </Typography>
                 <Box
@@ -92,8 +119,8 @@ export const CaseStudyTop = () => {
                     justifyContent: "space-around",
                   }}
                 >
-                  {TechStacks.map((tech, index) => (
-                    <TechStackCard image={tech.img} key={index} />
+                  {data?.technologies?.map((tech: any, index: string) => (
+                    <TechStackCard image={tech} key={index} />
                   ))}
                 </Box>
               </Box>
@@ -103,7 +130,6 @@ export const CaseStudyTop = () => {
 
         <Box sx={{ backgroundColor: Body }}>
           <Container>
-            {" "}
             <Typography
               sx={{
                 fontSize: HeadFont,
@@ -127,11 +153,7 @@ export const CaseStudyTop = () => {
                   Overview
                 </Typography>
                 <Typography sx={{ fontSize: Para }}>
-                  Syed Brothers. is a multinational corporation that operates in
-                  multiple countries. They have a complex procurement process
-                  with multiple stakeholders involved. The company wants to
-                  streamline their procurement system to reduce costs, improve
-                  efficiency, and increase transparency.
+                  {data?.challenge_short}
                 </Typography>
               </ChallangesSolutions>
               <ChallangesSolutions>
@@ -139,35 +161,7 @@ export const CaseStudyTop = () => {
                   Overview
                 </Typography>
                 <Typography sx={{ fontSize: Para }}>
-                  Syed Brothers. is a multinational corporation that operates in
-                  multiple countries. They have a complex procurement process
-                  with multiple stakeholders involved. The company wants to
-                  streamline their procurement system to reduce costs, improve
-                  efficiency, and increase transparency.
-                </Typography>
-              </ChallangesSolutions>
-              <ChallangesSolutions>
-                <Typography sx={{ fontSize: HeadFont, color: Primary }}>
-                  Overview
-                </Typography>
-                <Typography sx={{ fontSize: Para }}>
-                  Syed Brothers. is a multinational corporation that operates in
-                  multiple countries. They have a complex procurement process
-                  with multiple stakeholders involved. The company wants to
-                  streamline their procurement system to reduce costs, improve
-                  efficiency, and increase transparency.
-                </Typography>
-              </ChallangesSolutions>
-              <ChallangesSolutions>
-                <Typography sx={{ fontSize: HeadFont, color: Primary }}>
-                  Overview
-                </Typography>
-                <Typography sx={{ fontSize: Para }}>
-                  Syed Brothers. is a multinational corporation that operates in
-                  multiple countries. They have a complex procurement process
-                  with multiple stakeholders involved. The company wants to
-                  streamline their procurement system to reduce costs, improve
-                  efficiency, and increase transparency.
+                  {data?.challenge_long}
                 </Typography>
               </ChallangesSolutions>
             </Box>
@@ -195,11 +189,35 @@ export const CaseStudyTop = () => {
                 margin: Margin,
               }}
             >
-              {TechStacks.map((tech, index) => (
-                <ol key={index}>
-                  <Typography sx={{ fontSize: Para }}>
-                    {tech.feature}
-                  </Typography>
+              {data?.core_features.map((tech: any, index: any) => (
+                <ol key={index} style={{ color: "black" }}>
+                  <Typography sx={{ fontSize: Para }}>{tech}</Typography>
+                </ol>
+              ))}
+            </Box>
+            <Typography
+              sx={{
+                fontSize: HeadFont,
+                color: Primary,
+                textAlign: "center",
+                margin: Margin,
+              }}
+            >
+              How It Works
+            </Typography>
+            <Box
+              sx={{
+                display: "flex",
+                flexWrap: "wrap",
+                justifyContent: "center",
+                width: "60%",
+                alignItems: "center",
+                margin: Margin,
+              }}
+            >
+              {data?.how_it_work.map((tech: any, index: any) => (
+                <ol key={index} style={{ color: "black" }}>
+                  <Typography sx={{ fontSize: Para }}>{tech}</Typography>
                 </ol>
               ))}
             </Box>
@@ -233,6 +251,7 @@ export const CaseStudyTop = () => {
                     borderRight: "1px solid gray",
                     display: "flex",
                     justifyContent: "center",
+                    color: "black",
                     width: {
                       xl: "50%",
                       lg: "50%",
@@ -242,7 +261,9 @@ export const CaseStudyTop = () => {
                     },
                   }}
                 >
-                  <TechnologyCard title="Developers" image={""} member={12} />
+                  {/* <TechnologyCard title="Developers" image={""} member={12} />
+                   */}
+                  {data?.team_members}
                 </Box>
                 <Box
                   sx={{

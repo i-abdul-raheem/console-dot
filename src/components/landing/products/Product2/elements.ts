@@ -1,6 +1,9 @@
 import { Box, styled, Avatar } from "@mui/material";
 import { useIsMobileView } from "../../utils/utils";
 
+
+
+
 export const Product2Container = styled(Box)(() => {
   const isMobileView = useIsMobileView();
   return {
@@ -12,4 +15,5 @@ export const Product2Container = styled(Box)(() => {
     flexDirection: isMobileView ? "column-reverse" : "row-reverse",
   };
 });
+
 

@@ -1,6 +1,6 @@
 import { Box, styled } from "@mui/material";
 import { useIsMobileView } from "../../utils/utils";
-import { Primary } from "../../utils";
+import { Dark, Primary } from "../../utils";
 
 export const CareerContainer = styled(Box)(() => {
   const isMobileView = useIsMobileView();
@@ -17,7 +17,7 @@ export const CareerContainer = styled(Box)(() => {
 });
 
 export const StyledButton = styled(Box)({
-  backgroundColor: "",
+  backgroundColor: Primary,
   border: "none",
   padding: "15px",
   display: "flex",
@@ -26,7 +26,7 @@ export const StyledButton = styled(Box)({
   fontSize: "25px",
   borderRadius: "10px",
   "&:hover": {
-    backgroundColor: "#87c0cd",
+    backgroundColor: Dark,
   },
 });
 

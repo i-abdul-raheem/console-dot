@@ -1,7 +1,8 @@
+import { Background } from './../../home/DigitalTransformation/elements';
 import { Box, Button, Typography, styled } from "@mui/material";
 import { useIsMobileView } from "../../utils/utils";
-
-
+import { transform } from "typescript";
+import { Image4 } from "@/assets";
 export const SectionButton = styled(Box)({
   display: "flex",
   justifyContent: "center",
@@ -22,23 +23,24 @@ export const TitleSection = styled(Box)({
   justifyContent: "center",
   fontSize: "25px",
   fontWeight: "bold",
-  textAlign:"center",
-  paddingBottom:"16px"
+  textAlign: "center",
+  paddingBottom: "16px",
 });
 
-export const DescriptionSection = styled(Box)(()=>{
-  const isMobileView=useIsMobileView();
-  return{
-  display: "flex",
-  justifyContent: "center",
-  padding: isMobileView? "0 20px" : "0 100px",
-  lineHeight: "40px",}
+export const DescriptionSection = styled(Box)(() => {
+  const isMobileView = useIsMobileView();
+  return {
+    display: "flex",
+    justifyContent: "center",
+    padding: isMobileView ? "0 20px" : "0 100px",
+    lineHeight: "40px",
+  };
 });
 
 export const StyledText = styled(Typography)({
   fontSize: "21px",
   lineHeight: "30px",
-  textAlign:"center"
+  textAlign: "center",
 });
 
 export const FlexContiner = styled(Box)(() => {
@@ -56,7 +58,7 @@ export const Singlecard = styled(Box)({
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
-  width:"100%"
+  width: "100%",
 });
 
 export const CardSection = styled(Box)({

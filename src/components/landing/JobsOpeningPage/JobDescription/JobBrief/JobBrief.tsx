@@ -6,9 +6,24 @@ import {
   PageTitle,
   StyledText,
 } from "./elements";
-import { HeadFont } from "@/components/landing/utils";
+import { useState, useEffect } from "react";
+import { Dark, HeadFont, Primary } from "@/components/landing/utils";
+import { useRouter } from "next/router";
+import { getSingleCareer } from "@/apis/careers";
 
 export const JobBrief = () => {
+  const router = useRouter();
+  const query = router.query;
+  const [data, setData] = useState<any>({});
+  useEffect(() => {
+    getSingleCareer(query?.job_id).then((res) => setData(res));
+  }, []);
+
+
+  useEffect(() => {
+    console.log(data);
+  }, [data]);
+
   return (
     <Box>
       <Container>
@@ -19,42 +34,30 @@ export const JobBrief = () => {
             <Typography
               sx={{ fontSize: HeadFont, color: "#226597", textAlign: "center" }}
             >
-              {" "}
-              Laravel Developer
+          
+             {data.title}
             </Typography>
             <StyledText style={{ fontWeight: "bold", paddingBottom: "10px" }}>
               Job Brief:
             </StyledText>
             <StyledText>
-              Bacancy is an Agile-based offshore web Development Company
-              providing excellent service and solutions in India, the USA,
-              Australia, and Canada. We have currently got the strength of
-              Employees. We specialize in software product development and have
-              successfully executed numerous projects in software development,
-              Web Designing & Development, Mobile Technologies, Microsoft
-              Technologies and open-source as well for Internet Marketing.
+              {data?.summary}
             </StyledText>
             <StyledText sx={{ textAlign: "left" }}>
-              <b>Role:</b>Developer
+              <b>Role:</b> {data?.title}
             </StyledText>
             <StyledText sx={{ textAlign: "left" }}>
-              <b>Experience:</b>3 to 5 Years
+              <b>Experience:</b> {data?.experience}
             </StyledText>
             <StyledText sx={{ textAlign: "left" }}>
-              <b>Position Open:</b>1
+              <b>Position Open:</b> {data?.positions}
             </StyledText>
             <StyledText sx={{ textAlign: "left" }}>
               <b>Job Location:</b>Work From Office
             </StyledText>
-            <StyledText sx={{ textAlign: "left" }}>
-              <b>Work from Home Available:</b>NO
-            </StyledText>
-            <StyledText sx={{ textAlign: "left" }}>
-              <b>Salary:</b>Not a constraint for the right candidate
-            </StyledText>
           </div>
 
-          <div style={{ borderBottom: "1px solid #ddd" }}>
+          {/* <div style={{ borderBottom: "1px solid #ddd" }}>
             <Typography
               sx={{ fontSize: HeadFont, color: "#226597", textAlign: "center" }}
             >
@@ -104,20 +107,20 @@ export const JobBrief = () => {
               <ListItems>Good to have knowledge of Advanced laravel</ListItems>
               <ListItems>Good to have knowledge of Vue/React.</ListItems>
             </ul>
-          </div>
+          </div> */}
 
           <div style={{ borderBottom: "1px solid #ddd", padding: "24px 0" }}>
             <StyledText sx={{ textAlign: "left" }}>
-              <b>Qualification :</b> B.Tech/B.E/MCA{" "}
+              <b>Qualification :</b> {data?.qualification}
             </StyledText>
           </div>
-          <div style={{ borderBottom: "1px solid #ddd", padding: "24px 0" }}>
+          {/* <div style={{ borderBottom: "1px solid #ddd", padding: "24px 0" }}>
             <StyledText sx={{ textAlign: "left" }}>
               <b>Office Timings:</b> 10.00 AM to 7.00 PM
             </StyledText>
-          </div>
+          </div> */}
 
-          <div style={{ borderBottom: "1px solid #ddd" }}>
+          {/* <div style={{ borderBottom: "1px solid #ddd" }}>
             <Typography
               sx={{ fontSize: HeadFont, color: "#226597", textAlign: "center" }}
             >
@@ -140,10 +143,22 @@ export const JobBrief = () => {
               <ListItems>Work From Anywhere</ListItems>
               <ListItems>Onsite opportunity</ListItems>
             </ul>
-          </div>
+          </div> */}
 
           <ButtonContainer>
-            <StyledButton>Go Back</StyledButton>
+            <StyledButton
+              sx={{
+                marginTop: "10px",
+                color: "white",
+                backgroundColor: Primary,
+                "&:hover": {
+                  backgroundColor: Dark,
+                },
+              }}
+              onClick={() => router.push("/jobs")}
+            >
+              Go Back
+            </StyledButton>
           </ButtonContainer>
         </JobBriefContainer>
       </Container>

@@ -1,6 +1,6 @@
 import { Chess2 } from "@/assets";
 import { Box, Typography, styled } from "@mui/material";
-import { useIsMobileView } from "../utils/utils";
+
 
 export const FortuneClientsContainer = styled(Box)({ paddingBottom: "62px" });
 
@@ -19,10 +19,9 @@ export const CardHeading = styled(Typography)({
 });
 
 export const ClientCardsSection = styled(Box)(() => {
-  const isMobileView = useIsMobileView();
   return {
     display: "flex",
-    flexDirection: isMobileView ? "column" : "row",
+
     columnGap: "20px",
     rowGap: "20px",
   };

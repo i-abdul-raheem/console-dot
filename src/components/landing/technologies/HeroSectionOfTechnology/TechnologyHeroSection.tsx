@@ -23,11 +23,11 @@ export const TechnologyHeroSection = ({ heroImage }: props) => {
         <Box sx={{ padding: Padding, margin: Margin }}>
           <Typography sx={{ fontSize: SubFont }}>
             Let&#39;s discuss
-            <Typography
-              sx={{ color: Primary, fontWeight: "bold", fontSize: HeadFont }}
+            <span
+              style={{ color: Primary, fontWeight: "bold", fontSize: HeadFont }}
             >
               &lt;/code&gt;
-            </Typography>
+            </span>
           </Typography>
           <Typography sx={{ padding: Padding, fontSize: Para }}>
             Whether it&rsquo;s about turning your ideas into profitable software

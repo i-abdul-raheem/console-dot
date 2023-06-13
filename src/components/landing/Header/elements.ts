@@ -11,7 +11,7 @@ export const NavBar = styled("nav")(() => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset;
-      console.log(scrollTop, "this is scroll");
+      // console.log(scrollTop, "this is scroll");
       setIsScrolled(scrollTop > 100);
     };
 
@@ -72,7 +72,7 @@ export const MenuCloseIcon = styled(CloseIcon)(() => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset;
-      console.log(scrollTop, "this is scroll");
+      // console.log(scrollTop, "this is scroll");
       setIsScrolled(scrollTop > 100);
     };
 
@@ -96,7 +96,7 @@ export const NavMenuIcon = styled(MenuIcon)(() => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset;
-      console.log(scrollTop, "this is scroll");
+      // console.log(scrollTop, "this is scroll");
       setIsScrolled(scrollTop > 100);
     };
 
@@ -140,7 +140,7 @@ export const StyledButton = styled("button")(({inverse} : Types) => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset;
-      console.log(scrollTop, "this is scroll");
+      // console.log(scrollTop, "this is scroll");
       setIsScrolled(scrollTop > 100);
     };
 

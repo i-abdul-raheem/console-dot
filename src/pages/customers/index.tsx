@@ -1,7 +1,7 @@
-import { ExploreCaseStudies } from "@/components/landing/ExploreCaseStudies";
+
+import { AllCustomers } from "@/components/landing/AllCustomers";
 import { Layout } from "@/components/landing/Layout/Layout";
-import { CaseStudyTop } from "@/components/landing/casestudy/CaseStudyTop/CaseStudyTop";
-import { TechnologyHeroSection } from "@/components/landing/technologies/HeroSectionOfTechnology";
+
 
 const Index = () => {
   const topImage =
@@ -10,8 +10,8 @@ const Index = () => {
   return (
     <>
       <Layout>
-        <TechnologyHeroSection heroImage={topImage} />
-        <ExploreCaseStudies />
+        {/* <TechnologyHeroSection heroImage={topImage} /> */}
+        <AllCustomers />
       </Layout>
     </>
   );

@@ -12,7 +12,7 @@ import { ProductsTop } from "../../products/ProductsTop.tsx/ProductsTop";
 import { InquireSection } from "../../home";
 import { TechnicalExcellence } from "../TechnicalExcellence";
 import { Steppers } from "../Steppers/Stepper";
-import { CardWithBackground } from "../../CardWithBackground";
+import { CardWithBackground } from "../../BasicCard";
 import { FrequentQuestions } from "../../FrequentQuestions";
 interface props {
   logo: any;
