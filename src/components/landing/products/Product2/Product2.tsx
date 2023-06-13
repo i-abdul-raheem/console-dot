@@ -36,7 +36,7 @@ export const Product2 = () => {
     fetchData();
   }, []);
   useEffect(() => {
-    console.log(Array.isArray(data), "debug data");
+    console.log(data?.[0].team_members , "debug data");
   }, [data]);
 
   return (
@@ -202,7 +202,7 @@ export const Product2 = () => {
             <Box sx={{ padding: Padding }}>
               <Container>
                 <Box>
-                  <BasicCard members={i?.team_members}/>
+                  <BasicCard members={i?.team_members.lenght()}/>
                 </Box>
               </Container>
             </Box>
