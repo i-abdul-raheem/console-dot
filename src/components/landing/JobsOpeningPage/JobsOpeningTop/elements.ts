@@ -1,11 +1,11 @@
 import { styled, Box, Button, Typography } from "@mui/material";
 import { useIsMobileView } from "../../utils/utils";
+import { Dark, Primary } from "../../utils";
 
 export const JobsTopContainer = styled(Box)(() => {
   const isMobileView = useIsMobileView();
   return {
-
-    backgroundColor: "#87c0cd",
+    backgroundColor: Primary,
   };
 });
 
@@ -16,16 +16,16 @@ export const LeftFlex = styled(Box)({
 });
 
 export const JobsTopHeading = styled(Typography)({
-  textAlign:"center",
+  textAlign: "center",
   fontSize: "50px",
-  
+
   wordWrap: "break-word",
   overflowWrap: "break-word",
 });
 
 export const JobsTopPara = styled(Typography)({
   fontSize: "20px",
-  textAlign:"center",
+  textAlign: "center",
 });
 
 export const RightFlex = styled(Box)({

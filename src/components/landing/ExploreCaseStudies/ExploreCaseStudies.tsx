@@ -1,29 +1,29 @@
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import {
   CardContent,
   CardText,
   ClientCard,
-  ClientCardHeading,
   ClientCardsSection,
   FortuneClientsContainer,
 } from "./elements";
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import Link from "next/link";
-import { HeadFont, Margin, Padding, Primary } from "../utils";
+
 import { useState, useEffect } from "react";
-import { getCustomers } from "@/apis/customers";
+
 import { getCaseStudy } from "@/apis/caseStudy";
+import Image from "next/image";
 interface props {
   heading: string;
   description: string;
   image: any;
 }
 const ClientSingleCard = ({ heading, description, image }: props) => {
-
   return (
     <ClientCard>
       <div style={{ position: "relative" }}>
-        <img
+        <Image
+        width={500}
+        height={500}
           src={`https://api.consoledot.com/file/${image}`}
           alt="Image"
           style={{ height: "500px", width: "100%" }}
@@ -57,8 +57,6 @@ export const ExploreCaseStudies = () => {
     <Box>
       <Container>
         <FortuneClientsContainer>
-         
-
           <ClientCardsSection
             sx={{
               flexDirection: {
@@ -73,6 +71,7 @@ export const ExploreCaseStudies = () => {
             {data &&
               data.map((i: any, index: any) => (
                 <Link
+                key={index}
                   style={{
                     textDecoration: "none",
                     color: "white",

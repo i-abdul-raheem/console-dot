@@ -14,17 +14,11 @@ export const CareersWrapper = () => {
       <Box sx={{ backgroundColor: "white" }}>
         <CareersTopPage />
       </Box>
+
       <Box sx={{ backgroundColor: Body }}>
-        <EventsLifeEmp />
-      </Box>
-      <Box sx={{ backgroundColor: "white" }}>
-        <WorkingAtConsoleDot />
-      </Box>
-      <WorkWithUs />
-      <Box sx={{ backgroundColor: 'white' }}>
         <SignUpForNewsletter />
       </Box>
-      <Box sx={{ backgroundColor: Body }}>
+      <Box sx={{ backgroundColor: "white" }}>
         <FollowUsOn />
       </Box>
     </>

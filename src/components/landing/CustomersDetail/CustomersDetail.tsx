@@ -21,14 +21,14 @@ export const CustomersDetail = () => {
     return () => {
       window.removeEventListener("popstate", handlePopState);
     };
-  }, []);
-
-  const getCustomers = () => {
-    getAllProjects(details?._id).then((res) => setProjects([...res]));
-  };
+  }, [router]);
 
   useEffect(() => {
+    const getCustomers = () => {
+      getAllProjects(details?._id).then((res) => setProjects([...res]));
+    };
     getCustomers();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleClick = (customer: any) => {
@@ -82,6 +82,7 @@ export const CustomersDetail = () => {
                 image={project?.hero}
                 placeholder="View Details"
                 onClick={() => handleClick(project?._id)}
+                key={index}
               />
             ))}
         </Box>

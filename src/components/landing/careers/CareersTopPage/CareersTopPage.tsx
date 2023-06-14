@@ -10,13 +10,23 @@ import {
 } from "./elements";
 
 import { Container, Box, Typography } from "@mui/material";
-import { Body, HeadFont, Margin, Padding, Primary, SubFont } from "../../utils";
+import {
+  Body,
+  ContainerPadding,
+  H1,
+  H2,
+  HeadFont,
+  Margin,
+  Padding,
+  Primary,
+  SubFont,
+} from "../../utils";
 export const CareersTopPage = () => {
   const router = useRouter();
 
   return (
     <Box sx={{ color: "black" }}>
-      <Container>
+      <Container sx={{ padding: ContainerPadding }}>
         <CareerContainer>
           <LeftCard
             sx={{
@@ -29,27 +39,21 @@ export const CareersTopPage = () => {
               },
             }}
           >
-            <Typography
+            <H1
+              variant="h1"
               sx={{
-                fontSize: HeadFont,
-
                 color: Primary,
-                padding: Padding,
               }}
+              mb={2}
             >
               Plunge into your Vocational Excellence with ConsoleDot and bag
               Skills for a Lifetime
-            </Typography>
-            <Typography
-              sx={{
-                fontSize: SubFont,
-                margin: Margin,
-              }}
-            >
+            </H1>
+            <H2 variant="h2" mb={2}>
               ConsoleDot lives through its people’s emotions & we never miss a
               beat of Life. Cater to the fortune 500 clients and radiate your
               tech-spark worldwide.
-            </Typography>
+            </H2>
             <StyledButton onClick={() => router.push("/jobs")}>
               SEE OPENING
             </StyledButton>

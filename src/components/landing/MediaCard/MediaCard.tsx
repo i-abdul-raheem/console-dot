@@ -5,7 +5,8 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { Dark, Primary } from "../utils";
+import { ButtonPadding, Dark, H1, H2, H3, Primary } from "../utils";
+import Image from "next/image";
 
 interface props {
   title: string;
@@ -23,32 +24,31 @@ export default function MediaCard({
   onClick,
 }: props) {
   return (
-    <Card sx={{ width: 300 }}>
-      <img
-        src={`https://api.consoledot.com/file/${image}`}
-        alt="image"
-        style={{ width: "150px", height: "140px", borderRadius: "10px" }}
+    <Card sx={{ width: 300, height: "auto", mb: 3 }}>
+      <CardMedia
+        sx={{
+          height: 140,
+          width: "100%",
+        }}
+        image={`https://api.consoledot.com/file/${image}`}
+        title={image}
       />
       <CardContent>
-        <Typography
-          gutterBottom
-          variant="h6"
-          component="div"
-          sx={{ color: Primary }}
-        >
+        <H2 gutterBottom variant="h2" sx={{ color: Primary }}>
           {title}
-        </Typography>
+        </H2>
         <Typography variant="body2" color="text.secondary">
           {explanation}
         </Typography>
       </CardContent>
-      <CardActions>
+      <CardActions sx={{ padding: "16px" }}>
         <Button
           variant="contained"
           size="small"
           sx={{
             marginTop: "10px",
             color: "white",
+            padding: ButtonPadding,
             backgroundColor: Primary,
             "&:hover": {
               backgroundColor: Dark,

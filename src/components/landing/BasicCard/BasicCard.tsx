@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import { Primary, SubFont } from "../utils";
+import { H2, Para, Primary, SubFont } from "../utils";
 
 const bull = (
   <Box
@@ -16,15 +16,19 @@ const bull = (
 
 export const BasicCard = ({ members }: any) => {
   return (
-    <Card sx={{ width: 200 }}>
-      <CardContent>
-        <Typography sx={{ color: Primary, fontSize: SubFont }}>
-          Total Team Members
-        </Typography>
-        <Typography variant="body2">
-          <li>
-            {bull} {members}
-          </li>
+    <Card
+      sx={{
+        width: 200,
+        boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)",
+        border: "1px solid #ddd",
+      }}
+    >
+      <CardContent sx={{ textAlign: "center" }}>
+        <H2 variant="h2" sx={{ color: Primary, mb: 3 }}>
+          Team Members
+        </H2>
+        <Typography variant="h3">
+          <li style={{ listStyle: "none", fontSize: 40 }}>{members}</li>
         </Typography>
       </CardContent>
     </Card>

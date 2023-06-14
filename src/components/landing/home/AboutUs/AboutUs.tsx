@@ -13,39 +13,59 @@ import {
   SectionTitleDescrip,
 } from "./elements";
 import { Pic1 } from "@/assets";
-import { HeadFont, Wrapper } from "../../utils";
+import { ContainerPadding, H1, H2, H3, HeadFont, Wrapper } from "../../utils";
 import { Box, Container, Typography } from "@mui/material";
 
 export const AboutUs = () => {
   return (
-    <Container>
+    <Container id="about" sx={{ padding: ContainerPadding }}>
       <AboutUsContainer>
         <SectionTitleDescrip>
-          <SectionTitle>ABOUT US</SectionTitle>
-          <SectionDescrip>
+          <H1 variant="h1">ABOUT US</H1>
+          <H2 variant="h2">
             A global leader in next-generation digital services and consulting
-          </SectionDescrip>
+          </H2>
         </SectionTitleDescrip>
         <DetailRow>
           <DetailRowBox>
-            <BoxLabel>12+</BoxLabel>
-            <BoxText>Countries Where We Have Happy Customers</BoxText>
+            <H2 variant="h2" sx={{ fontWeight: "bold", textAlign: "center" }}>
+              12+
+            </H2>
+            <H3 variant="h3" sx={{ textAlign: "center" }}>
+              Countries Where We Have Happy Customers
+            </H3>
           </DetailRowBox>
           <DetailRowBox>
-            <BoxLabel>1050+</BoxLabel>
-            <BoxText>Agile Enabled Employees</BoxText>
+            <H2 variant="h2" sx={{ fontWeight: "bold", textAlign: "center" }}>
+              1050+
+            </H2>
+            <H3 variant="h3" sx={{ textAlign: "center" }}>
+              Agile Enabled Employees
+            </H3>
           </DetailRowBox>
           <DetailRowBox>
-            <BoxLabel>06</BoxLabel>
-            <BoxText>Worldwide Office</BoxText>
+            <H2 variant="h2" sx={{ fontWeight: "bold", textAlign: "center" }}>
+              06
+            </H2>
+            <H3 variant="h3" sx={{ textAlign: "center" }}>
+              Worldwide Office
+            </H3>
           </DetailRowBox>
           <DetailRowBox>
-            <BoxLabel>05</BoxLabel>
-            <BoxText>Agile Coaches</BoxText>
+            <H2 variant="h2" sx={{ fontWeight: "bold", textAlign: "center" }}>
+              05
+            </H2>
+            <H3 variant="h3" sx={{ textAlign: "center" }}>
+              Agile Coaches
+            </H3>
           </DetailRowBox>
           <DetailRowBox>
-            <BoxLabel>14</BoxLabel>
-            <BoxText>Certified Scrum Masters</BoxText>
+            <H2 variant="h2" sx={{ fontWeight: "bold", textAlign: "center" }}>
+              14
+            </H2>
+            <H3 variant="h3" sx={{ textAlign: "center" }}>
+              Certified Scrum Masters
+            </H3>
           </DetailRowBox>
         </DetailRow>
 
@@ -73,22 +93,17 @@ export const AboutUs = () => {
             />
           </PicSection>
           <PicContainerContentSection>
-            <Typography sx={{ fontSize: HeadFont, color: "#226597" }}>
+            <H1 variant="h1" sx={{ color: "#226597" }} mb={2}>
               Connect, Collaborate and Create
-            </Typography>
-            <h4
-              style={{
-                margin: "0",
-                // margin: { xl: "19px", lg: "15px", md: "10px", sm: "5px", xs: "3px" },
-              }}
-            >
+            </H1>
+            <H2 variant="h2" mb={2} sx={{}}>
               Knowledge @Insights Success Magazine
-            </h4>
-            <p style={{ margin: "0" }}>
+            </H2>
+            <H3 variant="h3" sx={{color:'#555'}}>
               Bacancy represents the connected world, offering innovative and
               customer-centric information technology experiences, enabling
               Enterprises, Associates and the Society to Rise™.
-            </p>
+            </H3>
           </PicContainerContentSection>
         </Box>
       </AboutUsContainer>

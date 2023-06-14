@@ -16,7 +16,11 @@ import {
   StyledTextarea,
 } from "./elements";
 import {
+  ButtonPadding,
+  ContainerPadding,
   Dark,
+  H1,
+  H2,
   HeadFont,
   Padding,
   Primary,
@@ -34,7 +38,7 @@ export const InquireSection = () => {
     },
   };
   return (
-    <Container sx={{ background: Primary, padding: Padding }}>
+    <Container sx={{ background: Primary, padding: ContainerPadding }}>
       <Box
         sx={{
           display: "flex",
@@ -47,30 +51,29 @@ export const InquireSection = () => {
           },
         }}
       >
-        <Box>
-          <Typography
+        <Box sx={{ padding: Padding }}>
+          <H1
+            variant="h1"
             sx={{
-              fontSize: HeadFont,
               textAlign: "center",
-              padding: Padding,
-              fontWeight: "bold",
               color: "white",
             }}
+            mb={5}
           >
             Continuously and Systematically Evolve Your Product With Our Vetted
             Angular Developers
-          </Typography>
-          <Typography
+          </H1>
+          <H2
+            variant="h2"
+            mb={2}
             sx={{
-              fontSize: SubFont,
-              padding: Padding,
               textAlign: "center",
               color: "white",
             }}
           >
             We ensure you’re matched with the right talent resource based on
             your requirement.
-          </Typography>
+          </H2>
         </Box>
         <FormSection>
           <TextField
@@ -185,13 +188,14 @@ export const InquireSection = () => {
           >
             <Button
               sx={{
+                padding: ButtonPadding,
                 backgroundColor: "white",
-                color:Dark,
-                '&:hover':{
+                fontWeight: "bold",
+                color: Dark,
+                "&:hover": {
                   backgroundColor: Dark,
-                color: "white",
-                }
-                
+                  color: "white",
+                },
               }}
             >
               Inquire Now

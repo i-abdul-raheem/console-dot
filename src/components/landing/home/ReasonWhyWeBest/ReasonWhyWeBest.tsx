@@ -11,7 +11,12 @@ import {
 import Image from "next/image";
 import {
   Body,
+  ButtonPadding,
+  ContainerPadding,
   Dark,
+  H1,
+  H2,
+  H3,
   HeadFont,
   Margin,
   Padding,
@@ -26,21 +31,20 @@ export const ReasonWhyWeBest = () => {
     <>
       <ReasonWhyWeContainer>
         <SectionTitleDescrip>
-          <Typography
+          <H1
+            variant="h1"
             sx={{
-              fontSize: HeadFont,
-              margin: Margin,
-              padding: Padding,
               color: Primary,
             }}
-          >{`Reasons why we are the best`}</Typography>
-          <SectionDescrip>
+            mb={2}
+          >{`Reasons why we are the best`}</H1>
+          <H2 variant="h2" sx={{ color: "#696969" }}>
             We&#39;ve helped out various clients across several industries, and
             you could be next!
-          </SectionDescrip>
+          </H2>
         </SectionTitleDescrip>
       </ReasonWhyWeContainer>
-      <Container>
+      <Container sx={{ padding: ContainerPadding }}>
         <Box
           sx={{
             height: "auto",
@@ -48,7 +52,7 @@ export const ReasonWhyWeBest = () => {
             alignItems: "flex-start",
             justifyContent: "center",
             gap: { xl: "4rem", lg: "3rem", md: "2rem", sm: "1rem" },
-            paddingBottom: { xl: "5rem", lg: "4rem", md: "4rem", sm: "2rem" },
+
             rowGap: 4,
             flexDirection: {
               xl: "row",
@@ -107,18 +111,17 @@ export const ReasonWhyWeBest = () => {
                     textAlign: "left",
                   }}
                 >
-                  <Typography
-                    sx={{ margin: Margin, fontSize: Para, color: Primary }}
-                  >{`leFT sIDE`}</Typography>
-                  <Typography
-                    sx={{ margin: Margin, fontSize: SubFont }}
-                  >{`CONSOLEDOT`}</Typography>
-                  <Typography sx={{ margin: Margin }}>
+                  <H2
+                    variant="h2"
+                    sx={{ margin: Margin, color: Primary }}
+                  >{`leFT sIDE`}</H2>
+                  <H1 variant="h1" sx={{ margin: Margin }}>{`CONSOLEDOT`}</H1>
+                  <H3 variant="h3" sx={{ margin: Margin }}>
                     Verizon is America&#39;s biggest wireless network operator
                     company. The Express store is a commerce project where any
                     user in America can purchase mobile, tablets, connected
                     devices and transfer his device to Verizon.
-                  </Typography>
+                  </H3>
                 </Box>
                 <div>
                   <Button
@@ -126,6 +129,7 @@ export const ReasonWhyWeBest = () => {
                     sx={{
                       margin: Margin,
                       backgroundColor: Dark,
+                      padding: ButtonPadding,
                     }}
                   >{`DISCOVER`}</Button>
                 </div>
@@ -207,22 +211,25 @@ export const ReasonWhyWeBest = () => {
                     style={{ width: "100%", height: "100%" }}
                   />
                 </Box>
-                <Typography
-                  sx={{ margin: Margin, fontSize: Para, color: Primary }}
-                >{`E-Studies`}</Typography>
-                <Typography
-                  sx={{ margin: Margin, fontSize: SubFont }}
-                >{`E-Studies`}</Typography>
-                <Typography sx={{ margin: Margin }}>
+                <H2
+                  variant="h2"
+                  sx={{ margin: Margin, color: Primary }}
+                >{`leFT sIDE`}</H2>
+                <H1 variant="h1" sx={{ margin: Margin }}>{`CONSOLEDOT`}</H1>
+                <H3 variant="h3" sx={{ margin: Margin }}>
                   Verizon is America&#39;s biggest wireless network operator
                   company. The Express store is a commerce project where any
                   user in America can purchase mobile, tablets, connected
                   devices and transfer his device to Verizon.
-                </Typography>
+                </H3>
                 <div>
                   <Button
                     variant="contained"
-                    sx={{ margin: Margin, backgroundColor: Dark }}
+                    sx={{
+                      margin: Margin,
+                      backgroundColor: Dark,
+                      padding: ButtonPadding,
+                    }}
                   >{`DISCOVER`}</Button>
                 </div>
               </Box>
@@ -311,22 +318,22 @@ export const ReasonWhyWeBest = () => {
                     flexDirection: "column",
                   }}
                 >
-                  <Typography
-                    sx={{ fontSize: Para, color: Primary }}
-                  >{`E-Studies`}</Typography>
-                  <Typography
-                    sx={{ fontSize: SubFont }}
-                  >{`E-Studies`}</Typography>
-                  <Typography>
+                  <H2
+                    variant="h2"
+                    sx={{ color: Primary }}
+                    mb={2}
+                  >{`E-Studies`}</H2>
+                  <H1 variant="h1" mb={2}>{`E-Studies`}</H1>
+                  <H3 variant="h3" mb={2}>
                     Verizon is America&#39;s biggest wireless network operator
                     company. The Express store is a commerce project where any
                     user in America can purchase mobile, tablets, connected
                     devices and transfer his device to Verizon.
-                  </Typography>
+                  </H3>
                   <div>
                     <Button
                       variant="contained"
-                      sx={{ backgroundColor: Dark }}
+                      sx={{ backgroundColor: Dark, padding: ButtonPadding }}
                     >{`DISCOVER`}</Button>
                   </div>
                 </Box>

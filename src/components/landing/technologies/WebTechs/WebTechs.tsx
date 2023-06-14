@@ -189,7 +189,7 @@ export const WebTechs = () => {
               We are pioneers in building high-octane web applications with
               proven skills in React JS development services. Hire React
               developers with versatile skills aligning with your business
-              requirements. We thrive on fulfilling our clients' core
+              requirements. We thrive on fulfilling our clients`&apos; core
               objectives, and it has always been our firm endeavor to deliver
               the most prudent React development solutions best suited for your
               business.

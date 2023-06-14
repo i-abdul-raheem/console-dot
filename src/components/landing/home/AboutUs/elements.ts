@@ -15,11 +15,9 @@ export const SectionTitleDescrip = styled(Box)({
 });
 
 export const SectionTitle = styled(Typography)({
-  fontWeight: "bold",
-  fontSize: "25px",
   alignItems: "center",
   justifyContent: "center",
-  marginBottom: "10px",
+
   wordWrap: "break-word",
   overflowWrap: "break-word",
 });

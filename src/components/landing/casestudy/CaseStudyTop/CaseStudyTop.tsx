@@ -2,9 +2,11 @@ import { url } from "inspector";
 import { useEffect, useState } from "react";
 import { CasestudyTop, ChallangesSolutions, TopInnerBox } from "./elements";
 import { StyledText } from "../../careers/WorkingAtConsoleDot/elements";
-import { Box, Container, Typography, Avatar } from "@mui/material";
+import { Box, Container, Typography, Avatar, Grid } from "@mui/material";
+import CheckIcon from "@mui/icons-material/Check";
 import {
   Body,
+  ContainerPadding,
   HeadFont,
   Margin,
   Padding,
@@ -19,6 +21,8 @@ import { InquireSection } from "../../home";
 import { Layout } from "../../Layout/Layout";
 import { getCaseStudy } from "@/apis/caseStudy";
 import { getSingleTechnology } from "@/apis/technologies";
+import Image from "next/image";
+import { BasicCard } from "../../BasicCard";
 export const TechStackCard = ({ image }: any) => {
   const [img, setImg] = useState("");
   useEffect(() => {
@@ -29,10 +33,12 @@ export const TechStackCard = ({ image }: any) => {
   return (
     <>
       <Box sx={{ width: "70px", height: "70px" }}>
-        <img
+        <Image
+          width={80}
+          height={80}
           src={`https://api.consoledot.com/file/${img}`}
           alt="image"
-          style={{ width: "70px", height: "70px", borderRadius: "10px" }}
+          style={{ width: "70px", height: "70px", borderRadius: "10px", border:'1px solid #ddd' }}
         />
       </Box>
     </>
@@ -54,19 +60,25 @@ export const CaseStudyTop = () => {
 
   const [data, setData] = useState(null);
 
-  const fetchData = () => {
-    getCaseStudy(id?.id)
-      .then((result) => {
-        setData(result);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-
   useEffect(() => {
+    const fetchData = () => {
+      getCaseStudy(id?.id)
+        .then((result) => {
+          setData(result);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
     fetchData();
-  }, []);
+  }, [id?.id]);
+
+  console.log(data);
+
+  const coreFeature = data?.core_features.length;
+  const howItWorks = data?.how_it_work.length;
+
+  console.log(howItWorks);
 
   return (
     <Layout>
@@ -129,7 +141,7 @@ export const CaseStudyTop = () => {
         </Box>
 
         <Box sx={{ backgroundColor: Body }}>
-          <Container>
+          <Container sx={{ padding: ContainerPadding }}>
             <Typography
               sx={{
                 fontSize: HeadFont,
@@ -149,16 +161,16 @@ export const CaseStudyTop = () => {
               }}
             >
               <ChallangesSolutions>
-                <Typography sx={{ fontSize: HeadFont, color: Primary }}>
-                  Overview
+                <Typography sx={{ fontSize: HeadFont, color: Primary, mb: 3 }}>
+                  Summary
                 </Typography>
                 <Typography sx={{ fontSize: Para }}>
                   {data?.challenge_short}
                 </Typography>
               </ChallangesSolutions>
               <ChallangesSolutions>
-                <Typography sx={{ fontSize: HeadFont, color: Primary }}>
-                  Overview
+                <Typography sx={{ fontSize: HeadFont, color: Primary, mb: 3 }}>
+                  Details
                 </Typography>
                 <Typography sx={{ fontSize: Para }}>
                   {data?.challenge_long}
@@ -169,58 +181,87 @@ export const CaseStudyTop = () => {
         </Box>
         <Box>
           <Container>
-            <Typography
-              sx={{
-                fontSize: HeadFont,
-                color: Primary,
-                textAlign: "center",
-                margin: Margin,
-              }}
-            >
-              Core Features
-            </Typography>
-            <Box
-              sx={{
-                display: "flex",
-                flexWrap: "wrap",
-                justifyContent: "center",
-                width: "60%",
-                alignItems: "center",
-                margin: Margin,
-              }}
-            >
-              {data?.core_features.map((tech: any, index: any) => (
-                <ol key={index} style={{ color: "black" }}>
-                  <Typography sx={{ fontSize: Para }}>{tech}</Typography>
-                </ol>
-              ))}
-            </Box>
-            <Typography
-              sx={{
-                fontSize: HeadFont,
-                color: Primary,
-                textAlign: "center",
-                margin: Margin,
-              }}
-            >
-              How It Works
-            </Typography>
-            <Box
-              sx={{
-                display: "flex",
-                flexWrap: "wrap",
-                justifyContent: "center",
-                width: "60%",
-                alignItems: "center",
-                margin: Margin,
-              }}
-            >
-              {data?.how_it_work.map((tech: any, index: any) => (
-                <ol key={index} style={{ color: "black" }}>
-                  <Typography sx={{ fontSize: Para }}>{tech}</Typography>
-                </ol>
-              ))}
-            </Box>
+            {coreFeature > 0 && (
+              <Box>
+                <Typography
+                  sx={{
+                    fontSize: HeadFont,
+                    color: Primary,
+                    textAlign: "center",
+                    margin: Margin,
+                  }}
+                >
+                  Core Features
+                </Typography>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    margin: Margin,
+                  }}
+                >
+                  <Grid container sx={{ width: "100%" }}>
+                    {data?.core_features.map((tech: any, index: any) => (
+                      <Grid
+                        lg={6}
+                        sm={12}
+                        item
+                        key={index}
+                        style={{
+                          color: "black",
+                          width: "100%",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "flex-start",
+                          columnGap: "20px",
+                        }}
+                      >
+                        <CheckIcon />
+                        <Typography
+                          component={"p"}
+                          variant={"p"}
+                          sx={{ fontSize: Para }}
+                        >
+                          {tech}
+                        </Typography>
+                      </Grid>
+                    ))}
+                  </Grid>
+                </Box>
+              </Box>
+            )}
+            {howItWorks > 0 && (
+              <Box>
+                <Typography
+                  sx={{
+                    fontSize: HeadFont,
+                    color: Primary,
+                    textAlign: "center",
+                    margin: Margin,
+                  }}
+                >
+                  How It Works
+                </Typography>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    justifyContent: "center",
+                    width: "60%",
+                    alignItems: "center",
+                    margin: Margin,
+                  }}
+                >
+                  {data?.how_it_work.map((tech: any, index: any) => (
+                    <ol key={index} style={{ color: "black" }}>
+                      <Typography sx={{ fontSize: Para }}>{tech}</Typography>
+                    </ol>
+                  ))}
+                </Box>
+              </Box>
+            )}
             <Box>
               <Typography
                 sx={{
@@ -244,6 +285,7 @@ export const CaseStudyTop = () => {
                     sm: "column",
                     xs: "column-reverse",
                   },
+                  mb: 5,
                 }}
               >
                 <Box
@@ -261,9 +303,7 @@ export const CaseStudyTop = () => {
                     },
                   }}
                 >
-                  {/* <TechnologyCard title="Developers" image={""} member={12} />
-                   */}
-                  {data?.team_members}
+                  <BasicCard members={data?.team_members.length} />
                 </Box>
                 <Box
                   sx={{

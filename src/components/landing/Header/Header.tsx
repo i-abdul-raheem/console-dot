@@ -61,7 +61,7 @@ export const Header = ({ inverse }: Types) => {
 
   const navLogoStyle = (inverse: Boolean) => {
     return {
-      color: !inverse ? "black" : isScrolled ? "black" : "white",
+      color: "#0D7789",
       fontSize: {
         xl: "2.8rem",
         lg: "2rem",
@@ -79,9 +79,12 @@ export const Header = ({ inverse }: Types) => {
 
   return (
     <ThemeProvider theme={getTheme("light")}>
-      <NavBar sx={NavStyles(inverse)}>
-        <RightNav>
-          <div style={{ width: "50px", height: "50px" }}>
+      <NavBar id="nav" sx={NavStyles(inverse)}>
+        <RightNav sx={{ padding: "10px" }}>
+          <div
+            style={{ width: "50px", height: "50px", cursor: "pointer" }}
+            onClick={() => router.push("/")}
+          >
             <Image
               src={MainLogo}
               alt="Main Logo"
@@ -91,7 +94,7 @@ export const Header = ({ inverse }: Types) => {
             />
           </div>
           <NameHeading sx={navLogoStyle(inverse)}>
-            Console<span style={{ color: "rgb(23 , 96 , 128 )" }}>Dot</span>
+            Console<span style={{ color: "#224575" }}>Dot</span>
           </NameHeading>
 
           <div>
@@ -106,18 +109,15 @@ export const Header = ({ inverse }: Types) => {
               </ListItem>
 
               <ListItem>
-                <StyledButton
-                  inverse={inverse}
-                  onClick={() => router.push("/casestudy")}
-                >
-                  WHAT WE DO
-                </StyledButton>
-              </ListItem>
-              <ListItem>
                 <StyledButton inverse={inverse}>WHO WE WORK WITH</StyledButton>
               </ListItem>
               <ListItem>
-                <StyledButton inverse={inverse}   onClick={() => router.push("/aboutUs")}>ABOUT US </StyledButton>
+                <StyledButton
+                  inverse={inverse}
+                  onClick={() => router.push("/aboutUs")}
+                >
+                  ABOUT US{" "}
+                </StyledButton>
               </ListItem>
               <ListItem>
                 <StyledButton
@@ -139,7 +139,6 @@ export const Header = ({ inverse }: Types) => {
           </div>
         </RightNav>
         <LeftNav>
-          <HireDevBtn onClick={() => router.push("/hiredevs")}>Hire</HireDevBtn>
           {isMaximize ? (
             <StyledButton inverse={inverse} onClick={toggleAction}>
               <MenuCloseIcon

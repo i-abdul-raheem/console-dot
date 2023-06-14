@@ -12,6 +12,18 @@ import Link from "next/link";
 // import { HeadFont, Margin, Padding, Primary } from "../utils";
 import { useState, useEffect } from "react";
 import { getAllCustomers } from "@/apis/customers";
+import {
+  Body,
+  ContainerPadding,
+  H1,
+  HeadFont,
+  Padding,
+  Primary,
+} from "../utils";
+import { CasestudyTop } from "../casestudy/CaseStudyTop/elements";
+import MediaCard from "../MediaCard/MediaCard";
+import Image from "next/image";
+import { FrequentQuestions } from "../FrequentQuestions";
 
 interface props {
   heading: string; //title
@@ -23,7 +35,7 @@ const ClientSingleCard = ({ heading, description, image, onClick }: props) => {
   return (
     <ClientCard>
       <div style={{ position: "relative" }} onClick={onClick}>
-        <img
+        <Image
           src={`https://api.consoledot.com/file/${image}`}
           alt="Image"
           style={{ height: "200px", width: "200px" }}
@@ -37,14 +49,6 @@ const ClientSingleCard = ({ heading, description, image, onClick }: props) => {
   );
 };
 
-// {
-//   "_id": "63fc75df9f66b36fe2afc366",
-//   "name": "Syed Brothers",
-//   "address": "DHA Phase 5",
-//   "logo": "63fc75de9f66b36fe2afc364",
-//   "contact_info": "03004871213",
-//   "__v": 0
-// },
 export const AllCustomers = () => {
   const router = useRouter();
   const [data, setData] = useState<any[]>([]);
@@ -57,24 +61,27 @@ export const AllCustomers = () => {
     });
   };
 
-  // useEffect(() => {
-  //   if (window) {
-  //     params = new URL(document.location).searchParams;
-  //   }
-  // });
-
   useEffect(() => {
     getAllCustomers().then((res) => setData([...res]));
   }, []);
 
   return (
-    <Box>
-      <h1>All Customers</h1>
-      <Container>
-        <FortuneClientsContainer>
-       
-          <ClientCardsSection
+    <Box sx={{ backgroundColor: Body }}>
+      <CasestudyTop />
+      <Box>
+        <Container sx={{ padding: ContainerPadding }}>
+          <Box>
+            <H1 sx={{ color: Primary, textAlign: "center" }} mb={2} variant="h1">
+              Products From ConsoleDot
+            </H1>
+          </Box>
+          <Box
             sx={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "flex-start",
+              alignItems: "center",
+              gap: "1rem",
               flexDirection: {
                 xl: "row",
                 lg: "row",
@@ -82,23 +89,48 @@ export const AllCustomers = () => {
                 sm: "column",
                 xs: "column",
               },
+              marginTop: {
+                xl: "15px",
+                lg: "13px",
+                md: "11px",
+                sm: "8px",
+                xs: "6px",
+              },
+              paddingBottom: {
+                xl: "15px",
+                lg: "13px",
+                md: "11px",
+                sm: "8px",
+                xs: "6px",
+              },
             }}
           >
             {data &&
               data.map((i: any, index: any) => (
-                <Link href={`/customersDetail`} passHref>
-                  <ClientSingleCard
+                <Link
+                  href={`/customersDetail`}
+                  passHref
+                  style={{ textDecoration: "none" }}
+                  key={index}
+                >
+                  <MediaCard
                     onClick={() => handleClick(i)}
                     key={index}
-                    heading={i?.name}
-                    description={i?.address}
+                    title={i?.name}
+                    placeholder="View CaseStudy"
                     image={i?.logo}
+                    explanation=""
                   />
                 </Link>
               ))}
-          </ClientCardsSection>
-        </FortuneClientsContainer>
-      </Container>
+          </Box>
+        </Container>
+        <Box sx={{ bgcolor: "white" }}>
+          <Container>
+            <FrequentQuestions />
+          </Container>
+        </Box>
+      </Box>
     </Box>
   );
 };

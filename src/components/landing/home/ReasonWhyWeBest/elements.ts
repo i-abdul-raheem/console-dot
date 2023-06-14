@@ -1,10 +1,9 @@
 import { Box, Typography, styled } from "@mui/material";
 import { useIsMobileView, useDeskView } from "../../utils/utils";
+import { ContainerPadding } from "../../utils";
 
 export const ReasonWhyWeContainer = styled(Box)({
-  // padding:'32px',
-  width: "100%",
-  marginBottom: "10px",
+  padding: ContainerPadding,
 });
 
 export const SectionTitleDescrip = styled(Box)({

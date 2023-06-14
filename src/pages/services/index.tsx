@@ -1,4 +1,6 @@
 import {
+  ContainerPadding,
+  H1,
   HeadFont,
   Margin,
   Padding,
@@ -110,20 +112,19 @@ export const tech = [
 const Index = () => {
   return (
     <Layout>
-      <Box sx={{ backgroundColor: "white", margin: Margin, padding: Padding }}>
-        <Container>
+      <Box sx={{ backgroundColor: "white" }}>
+        <Container sx={{ padding: ContainerPadding }}>
           <Box>
-            <Typography
+            <H1
+              variant="h1"
               sx={{
-                fontSize: HeadFont,
-                margin: Margin,
-                padding: Padding,
                 color: Primary,
                 textAlign: "center",
               }}
+              mb={5}
             >
               Services We Provide
-            </Typography>
+            </H1>
             <Box
               sx={{
                 display: "flex",

@@ -20,30 +20,38 @@ import {
 import { Image0, Image1, Image2, Image4, Image5, Image6, Pic1 } from "@/assets";
 import { url } from "inspector";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
-import { HeadFont, Margin, Primary, SubFont, Wrapper } from "../../utils";
+import {
+  Body,
+  ContainerPadding,
+  H1,
+  H2,
+  HeadFont,
+  Margin,
+  Primary,
+  SubFont,
+  Wrapper,
+} from "../../utils";
 import { Container } from "@mui/material";
 export const CccSection = () => {
   return (
-    <Box sx={{ backgroundColor: "#f3f9fb" }}>
-      <Container>
+    <Box sx={{ backgroundColor: Body }}>
+      <Container sx={{ padding: ContainerPadding }}>
         <CccContainer>
           <SectionTitleDescrip>
-            <Typography
-              sx={{ fontSize: HeadFont, color: Primary, margin: Margin }}
-            >
+            <H1 variant="h1" sx={{ color: Primary }} mb={2}>
               Connect, Collaborate and Create
-            </Typography>
-            <Typography sx={{ fontSize: SubFont, color: "black" }}>
+            </H1>
+            <H2 variant="h2" sx={{ color: "black" }}>
               Partner with us to work with on-demand Agile product team. We are
               always committed to your growth.
-            </Typography>
+            </H2>
           </SectionTitleDescrip>
           <ImageSectionContainer>
             <ImageRow>
               <ImageLarge6>
                 <ImageSectionContent>
                   <ImageText>ConsoleDot Tech Agility</ImageText>
-                  <ArrowRightAltIcon />
+                  <ArrowRightAltIcon sx={{ color: "white", zIndex: "999" }} />
                 </ImageSectionContent>
               </ImageLarge6>
 
@@ -51,14 +59,14 @@ export const CccSection = () => {
                 <ImageSmall3>
                   <ImageSectionContent>
                     <ImageText> ConsoleDot Tech Agility</ImageText>
-                    <ArrowRightAltIcon />
+                    <ArrowRightAltIcon sx={{ color: "white", zIndex: "999" }} />
                   </ImageSectionContent>
                 </ImageSmall3>
 
                 <ImageSmall3>
                   <ImageSectionContent>
                     <ImageText> ConsoleDot Tech Agility</ImageText>
-                    <ArrowRightAltIcon />
+                    <ArrowRightAltIcon sx={{ color: "white", zIndex: "999" }} />
                   </ImageSectionContent>
                 </ImageSmall3>
               </ColumnInMobile>
@@ -68,13 +76,13 @@ export const CccSection = () => {
                 <ImageSmall4>
                   <ImageSectionContent>
                     <ImageText>ConsoleDot Tech Agility</ImageText>
-                    <ArrowRightAltIcon />
+                    <ArrowRightAltIcon sx={{ color: "white", zIndex: "999" }} />
                   </ImageSectionContent>
                 </ImageSmall4>
                 <ImageSmall5>
                   <ImageSectionContent>
                     <ImageText>ConsoleDot Tech Agility</ImageText>
-                    <ArrowRightAltIcon />
+                    <ArrowRightAltIcon sx={{ color: "white", zIndex: "999" }} />
                   </ImageSectionContent>
                 </ImageSmall5>
               </ColumnInMobile>
@@ -82,7 +90,7 @@ export const CccSection = () => {
               <ImageLarge6>
                 <ImageSectionContent>
                   <ImageText>ConsoleDot Tech Agility</ImageText>
-                  <ArrowRightAltIcon />
+                  <ArrowRightAltIcon sx={{ color: "white", zIndex: "999" }} />
                 </ImageSectionContent>
               </ImageLarge6>
             </ImageRow>

@@ -7,7 +7,7 @@ export const MainContainer=styled(Box)(()=>{
     display:"flex",
     flexDirection:isMobileView? 'column' : 'row',
     justifyContent:'center',
-    padding:isMobileView? "32px 0" :"70px 32px"
+  
     }
     
 

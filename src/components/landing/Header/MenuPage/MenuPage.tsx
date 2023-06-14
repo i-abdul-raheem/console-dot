@@ -24,13 +24,7 @@ export const MenuPage = () => {
           sx={{
             width: { xl: "100%" },
             display: "flex",
-            flexDirection: {
-              xl: "row",
-              lg: "row",
-              md: "row",
-              sm: "column-reverse",
-              xs: "column-reverse",
-            },
+            flexDirection: window.innerWidth > 720 ? "row" : "column-reverse",
           }}
         >
           {/* intro of the company */}
@@ -130,20 +124,7 @@ export const MenuPage = () => {
               >
                 Careers
               </StyledMenuList>
-              <StyledMenuList
-                sx={{
-                  cursor: "pointer",
-                  fontSize: {
-                    xl: "2.8rem",
-                    lg: "2.5rem",
-                    md: "2.3rem",
-                    sm: "2rem",
-                    xs: "1rem",
-                  },
-                }}
-              >
-                Work@ ConsoleDot
-              </StyledMenuList>
+            
               {/* <StyledMenuList
                 sx={{
                   cursor: "pointer",

@@ -4,7 +4,7 @@ import { useIsMobileView, useDeskView } from "../../utils/utils";
 
 export const CccContainer = styled(Box)({
   width: "100%",
-  paddingBottom: "64px",
+
 });
 
 export const SectionTitleDescrip = styled(Box)({
@@ -250,6 +250,7 @@ export const ImageSectionContent = styled(Box)({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
+  padding: '1.2rem 1rem'
 });
 
 export const ImageText = styled(Typography)({

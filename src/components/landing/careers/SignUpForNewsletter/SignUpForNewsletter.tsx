@@ -8,6 +8,7 @@ import {
 } from "./elements";
 import {
   Body,
+  ContainerPadding,
   Dark,
   HeadFont,
   Margin,
@@ -21,29 +22,27 @@ export const SignUpForNewsletter = () => {
     <Box
       sx={{
         widt: "100%",
-        margin: Margin,
-        padding: Padding,
       }}
     >
-      <Container>
+      <Container sx={{ padding: ContainerPadding }}>
         <SectionContent>
           <Typography
             sx={{
-              margin: Margin,
               fontSize: HeadFont,
               color: Primary,
               textAlign: "center",
             }}
+            mb={2}
           >
             Sign Up for Newsletter
           </Typography>
           <Typography
             sx={{
-              margin: Margin,
               fontSize: SubFont,
 
               textAlign: "center",
             }}
+            mb={2}
           >
             Join 70,000 subscribers & get original tips and tricks delivered to
             your inbox each month.

@@ -16,8 +16,6 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,200;1,300&display=swap"
             rel="stylesheet"
           />
-          <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css" />
-          <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css" />
         </Head>
         <body
           style={{
@@ -33,8 +31,6 @@ class MyDocument extends Document {
         >
           <Main />
           <NextScript />
-          <script src="jquery.min.js"></script>
-          <script src="owlcarousel/owl.carousel.min.js"></script>
         </body>
       </Html>
     );

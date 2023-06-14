@@ -78,7 +78,7 @@ export const StyledTextarea = styled(TextareaAutosize)(
   }
 
   &:focus {
-    border: 2px solid ${'white'};
+    border: 1px solid ${'white'};
   }
 
   // firefox

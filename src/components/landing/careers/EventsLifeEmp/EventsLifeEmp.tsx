@@ -11,15 +11,20 @@ import {
 } from "./elements";
 import { Box, Container, Typography } from "@mui/material";
 import MediaCard from "../../MediaCard/MediaCard";
-import { HeadFont, Margin, Padding, Primary } from "../../utils";
+import {
+  ContainerPadding,
+  HeadFont,
+  Margin,
+  Padding,
+  Primary,
+} from "../../utils";
 
 export const EventsLifeEmp = () => {
   return (
-    <Container>
+    <Container sx={{ padding: ContainerPadding }}>
       <Typography
         sx={{
-          margin: Margin,
-          padding: Padding,
+    
           fontSize: HeadFont,
           color: Primary,
           textAlign: "center",
@@ -28,7 +33,7 @@ export const EventsLifeEmp = () => {
         Life Of ConsoleDot
       </Typography>
       <ComponentContainer>
-        <Section1 sx={{ margin: Margin, padding: Padding }}>
+        <Box sx={{ margin: Margin, padding: Padding }}>
           <Box
             sx={{
               display: "flex",
@@ -39,7 +44,8 @@ export const EventsLifeEmp = () => {
                 sm: "column",
                 xs: "column",
               },
-              justifyContent: "space-around",
+              gap: "1rem",
+              justifyContent: "space-between",
               alignItems: "center",
               flexWrap: "wrap",
             }}
@@ -52,7 +58,7 @@ export const EventsLifeEmp = () => {
 
             <MediaCard title="Employee" placeholder="View More"></MediaCard>
           </Box>
-        </Section1>
+        </Box>
       </ComponentContainer>
     </Container>
   );

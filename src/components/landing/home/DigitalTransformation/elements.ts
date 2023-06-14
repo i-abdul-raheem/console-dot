@@ -3,6 +3,7 @@ import { styled, Box, Typography } from "@mui/material";
 import { DigitalTransmission } from "@/assets";
 import { useId } from "react";
 import { useIsMobileView } from "../../utils/utils";
+import { ContainerPadding } from "../../utils";
 export const DigiContainer = styled(Box)({
   width: "auto",
   marginBottom: "10px",
@@ -28,7 +29,6 @@ export const SquareBox = styled(Box)({
 export const Background = styled(Box)({
   position: "relative",
   display: "flex",
-  marginBottom: "10px",
   objectFit: "contain",
   backgroundImage: `url(${DigitalTransmission.src})`,
   backgroundSize: "cover",

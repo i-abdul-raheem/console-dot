@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { Box, Container, Typography, Avatar } from "@mui/material";
 
 import { ServiceCard } from "./elements";
-import { HeadFont, Para, Primary, SubFont } from "../utils";
+import { H2, H3, HeadFont, Para, Primary, SubFont } from "../utils";
 import { ImageProps, StaticImageData } from "next/image";
 import { Layout } from "../Layout/Layout";
 
@@ -25,24 +25,22 @@ export const Services = ({ heading, details, key, image }: props) => {
           justifyContent: "space-between",
         }}
       >
-        <Typography
-          sx={{ fontSize: SubFont, color: Primary, textAlign: "left" }}
-        >
+        <H2 variant="h2" sx={{ color: Primary, textAlign: "left" }} mb={2}>
           {heading}
-        </Typography>
+        </H2>
         <Avatar
           src={image}
           alt={`${image} image`}
           key={key}
           sx={{
-            width: "40px",
-            height: "40px",
+            width: "70px",
+            height: "70px",
             borderRadius: "0",
             border: "none",
           }}
         ></Avatar>
       </Box>
-      <Typography sx={{ fontSize: Para }}>{details}</Typography>
+      <H3 variant="h3">{details}</H3>
     </ServiceCard>
   );
 };

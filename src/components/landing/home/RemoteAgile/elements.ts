@@ -29,8 +29,8 @@ export const TitleSection = styled(Typography)({
   fontSize: "20px",
   wordWrap: "break-word",
   overflowWrap: "break-word",
-  paddingBottom: "20px",
-  padding: "32px",
+
+
 });
 
 export const FlexHeading = styled(Typography)({

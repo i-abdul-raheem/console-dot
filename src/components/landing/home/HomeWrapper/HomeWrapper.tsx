@@ -11,6 +11,7 @@ import { InquireSection } from "../InquireSection";
 import { ReasonWhyWeBest } from "../ReasonWhyWeBest";
 import { RemoteAgile } from "../RemoteAgile";
 import { RightPanel } from "../RightPanel";
+import { ContainerPadding } from "../../utils";
 
 export const HomeWrapper = () => {
   return (
@@ -42,11 +43,13 @@ export const HomeWrapper = () => {
 
       <HomePage />
       <AboutUs />
-      <CccSection />
+      {/* <CccSection /> */}
       <DigitalTransformation />
-      <ReasonWhyWeBest />
+      {/* <ReasonWhyWeBest /> */}
       <RemoteAgile />
-      <InquireSection />
+      <Box sx={{ padding: ContainerPadding }}>
+        <InquireSection />
+      </Box>
       <Footer />
     </div>
   );

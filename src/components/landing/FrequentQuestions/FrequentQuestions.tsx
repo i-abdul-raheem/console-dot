@@ -5,8 +5,18 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Box, Container } from "@mui/material";
-import { HeadFont, Padding } from "../utils";
+import {
+  ContainerPadding,
+  Dark,
+  H1,
+  H2,
+  H3,
+  HeadFont,
+  Padding,
+  Primary,
+} from "../utils";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import { useRouter } from "next/router";
 interface Question {
   id: number;
   question: string;
@@ -33,9 +43,10 @@ const questions: Question[] = [
   },
 ];
 export const FrequentQuestions = () => {
+  const router = useRouter();
   return (
     <Box>
-      <Container sx={{ padding: Padding }}>
+      <Container sx={{ padding: ContainerPadding }}>
         <Box
           sx={{
             width: "100%",
@@ -54,17 +65,20 @@ export const FrequentQuestions = () => {
               padding: Padding,
             }}
           >
-            <Typography sx={{ fontSize: HeadFont }}>
+            <H1 variant="h1" mb={2}>
               Frequently Asked Question
-            </Typography>
-            <Typography>Still Have Quetions?</Typography>
-            <Box sx={{ display: "flex", justifyContent: "center" }}>
-              <span style={{ color: "dodgerblue", fontWeight: "bol" }}>
-                Let's Talk
-              </span>
-              <span>
-                <ArrowRightAltIcon />
-              </span>
+            </H1>
+            <H2 variant="h2" mb={2}>
+              Still Have Quetions?
+            </H2>
+            <Box sx={{ display: "flex", justifyContent: "flex-start" }}>
+              <H3
+                onClick={() => router.push("/")}
+                variant="h3"
+                style={{ color: Primary }}
+              >
+                Let&apos;s Talk
+              </H3>
             </Box>
           </Box>
           <Box
@@ -89,12 +103,12 @@ export const FrequentQuestions = () => {
                   aria-controls="panel1a-content"
                   id="panel1a-header"
                 >
-                  <Typography sx={{ fontWeight: "bold", color: "dodgerblue" }}>
+                  <Typography sx={{ fontWeight: "bold", color: Dark }}>
                     {question.question}
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <Typography sx={{ color: "lightblue" }}>
+                  <Typography sx={{ color: "#555" }}>
                     {question.answer}
                   </Typography>
                 </AccordionDetails>
@@ -106,83 +120,3 @@ export const FrequentQuestions = () => {
     </Box>
   );
 };
-
-// import { Box, Container, Button, Typography } from "@mui/material";
-// import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-// import { HeadFont } from "../utils";
-// import React, { useState } from "react";
-// interface Question {
-//   id: number;
-//   question: string;
-//   answer: string;
-// }
-// export const FrequentQuestions: React.FC = () => {
-//   const [selectedQuestion, setSelectedQuestion] = useState<number | null>(null);
-
-//   const questions: Question[] = [
-//     {
-//       id: 1,
-//       question: "Question 1",
-//       answer: "Answer 1",
-//     },
-//     {
-//       id: 2,
-//       question: "Question 2",
-//       answer: "Answer 2",
-//     },
-//     {
-//       id: 3,
-//       question: "Question 3",
-//       answer: "Answer 3",
-//     },
-//     // Add more questions and answers as needed
-//   ];
-
-//   const handleQuestionClick = (questionId: number) => {
-//     setSelectedQuestion(questionId === selectedQuestion ? null : questionId);
-//   };
-
-//   return (
-//     <Box className="question-answer-container">
-//       <Box sx={{ display: "flex", flexDirection: "column" }}>
-//         {questions.map((question) => (
-//           <Box
-//             key={question.id}
-//             sx={{
-//               fontWeight: question.id === selectedQuestion ? "bold" : "normal",
-//             }}
-//           >
-//             <Box
-//               sx={{
-//                 display: "flex",
-//                 justifyContentL: "space-between",
-//               }}
-//             >
-//               <Box>{question.question}</Box>
-//               <Box>
-//                 <Button onClick={() => handleQuestionClick(question.id)}>
-//                   <ArrowDropDownIcon />
-//                 </Button>
-//               </Box>
-//             </Box>
-
-//             {question.id === selectedQuestion && (
-//               <Box
-//                 sx={{
-//                   backgroundColor: "lightgray",
-//                   transition: selectedQuestion ? "width 0.3s, height 0.3s" : "",
-//                   width: "100%",
-//                   height: "auto",
-//                   padding: "10px",
-//                   marginTop: "10px",
-//                 }}
-//               >
-//                 {question.answer}
-//               </Box>
-//             )}
-//           </Box>
-//         ))}
-//       </Box>
-//     </Box>
-//   );
-// };

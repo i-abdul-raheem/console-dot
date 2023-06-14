@@ -6,9 +6,9 @@ export const HeroImageContainer = styled(Box)(() => {
   return {
     position: "relative",
     display: "flex",
+
     alignItems: "flex-start",
     justifyContent: "center",
-    width: "100%",
     zIndex: 2,
   };
 });
@@ -20,7 +20,7 @@ export const RightBox = styled(Box)(() => {
     justifyContent: "flex-end",
     alignItems: "center",
     width: "67px",
-    height: "calc(100vh - 40px)",
+    height: "calc(100vh)",
     position: isMobileView ? "fixed" : "relative",
     borderLeft: "0.8px solid #4d4d4d",
     borderBottom: "1px solid #696969",
@@ -86,14 +86,14 @@ export const DescripHeading = styled(Box)({
 export const DescripItems = styled(Typography)(() => {
   const isDeskView = useDeskView();
   return {
-    margin: "50px 0px",
+    margin: "20px 0px",
     padding: "10px",
     color: "#fff",
     borderBottom: isDeskView ? "1px solid #696969" : "no-border",
     borderRight: isDeskView ? "none" : "1px solid #696969",
     "&:last-child": {
-      borderBottom: isDeskView ? "1px solid #696969":'none',
-      borderRight: isDeskView ? "1px solid #696969":'none',
+      borderBottom: isDeskView ? "1px solid #696969" : "none",
+      borderRight: isDeskView ? "1px solid #696969" : "none",
     },
   };
 });
@@ -106,6 +106,10 @@ export const BottomPanel = styled(Box)({
   display: "flex",
   alignItems: "center",
   height: 72,
+  position: "absolute",
+  bottom: 0,
+  left: 0,
+  width: "100%",
 });
 
 export const BottomLink = styled(Link)({

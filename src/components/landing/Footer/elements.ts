@@ -29,7 +29,7 @@ export const ReviewSection = styled(Box)({
   width: "100%",
   alignItems: "flex-start",
   justifyContent: "flex-start",
-  marginBottom: "20px",
+
   zIndex: "1",
 });
 
@@ -85,7 +85,7 @@ export const FooterBottom = styled(Box)(({ theme }) => ({
   // backgroundColor: "#fff",
   display: "flex",
   justifyContent: "space-between",
-
+  alignItems: 'center',
   width: "100%",
 }));
 
@@ -96,6 +96,6 @@ export const SocialMediaIconsList = styled(Box)({
 });
 
 export const FooterBottomCopyRight = styled(Typography)({
-  marginLeft: "",
+
   fontFamily: "sans-serif",
 });

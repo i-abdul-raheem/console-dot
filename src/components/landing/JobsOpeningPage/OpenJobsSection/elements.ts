@@ -17,7 +17,7 @@ export const TopHeading = styled(Box)(() => {
 
 export const Singlecard = styled(Box)({
   width: "100%",
-  height:'100%',
+  height: "100%",
   backgroundColor: "white",
   display: "flex",
   flexDirection: "column",
@@ -39,22 +39,28 @@ export const Singlecard = styled(Box)({
     "&:hover p": {
       transition: "0.6s",
       color: "white",
-
     },
   },
 });
 
 export const CardSection = styled(Box)({
   marginBottom: "10px",
-  display: "flex",
-  justifyContent: "center",
 });
 
-export const StyledText = styled(Typography)({
-  fontSize: "25px",
-  lineHeight: "30px",
-  textAlign: "center",
-});
+interface PropType {
+  fontSize: string | null;
+  center: boolean | false;
+}
+
+export const StyledText = styled(Typography)(
+  ({ fontSize, center }: PropType) => {
+    return {
+      fontSize: fontSize ? fontSize : "20px",
+      lineHeight: "30px",
+      textAlign: center ? "center" : "left",
+    };
+  }
+);
 export const SectionButton = styled(Box)({
   display: "flex",
   justifyContent: "center",

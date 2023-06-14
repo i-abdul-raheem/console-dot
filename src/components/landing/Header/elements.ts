@@ -40,6 +40,7 @@ export const RightNav = styled(Box)(() => {
     columnGap: 5,
     paddingLeft: 12,
     width: "100%",
+
   };
 });
 export const LeftNav = styled(Box)({
@@ -131,10 +132,10 @@ export const ListItem = styled("li")(() => {
 });
 
 interface Types {
-  inverse: Boolean
+  inverse: Boolean;
 }
 
-export const StyledButton = styled("button")(({inverse} : Types) => {
+export const StyledButton = styled("button")(({ inverse }: Types) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {

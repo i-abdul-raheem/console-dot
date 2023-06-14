@@ -1,6 +1,13 @@
-import { TopTech } from "@/assets";
-import { Box, Container, Card, Typography, Divider } from "@mui/material";
-import { Dark, HeadFont, Margin, Padding, Primary } from "../../utils";
+import { TopTech, heroImage } from "@/assets";
+import { Box, Container, Card, Typography,  } from "@mui/material";
+import {
+  ContainerPadding,
+  Dark,
+  HeadFont,
+  Margin,
+  Padding,
+  Primary,
+} from "../../utils";
 import { TechnologyHeroSection } from "../HeroSectionOfTechnology";
 import React, { useEffect, useState } from "react";
 import { TechnologyCard } from "./TechnologyCard";
@@ -18,174 +25,27 @@ interface props {
   category: string;
   id: string;
 }
+const topImage = heroImage;
 export const ExploreTechnologies = () => {
-  const [data, setData] = useState([
-    {
-      title: "React",
-      image: "",
-      category: "Frontend",
-      id: "frontend",
-    },
-    {
-      title: "React",
-      image: "",
-      category: "Frontend",
-      id: "frontend",
-    },
-    {
-      title: "React",
-      image: "",
-      category: "Frontend",
-      id: "frontend",
-    },
-    {
-      title: "React",
-      image: "",
-      category: "Frontend",
-      id: "frontend",
-    },
-    {
-      title: "React",
-      image: "",
-      category: "Frontend",
-      id: "frontend",
-    },
-    {
-      title: "MySQL",
-      image: "",
-      category: "Backend",
-      id: "backend",
-    },
-    {
-      title: "Vue",
-      image: "",
-      category: "Frontend",
-      id: "frontend",
-    },
-    {
-      title: "SQLite",
-      image: "",
-      category: "Backend",
-      id: "backend",
-    },
-    {
-      title: "Bootstrap",
-      image: "",
-      category: "Frontend",
-      id: "frontend",
-    },
-    {
-      title: "MongoDB",
-      image: "",
-      category: "Backend",
-      id: "backend",
-    },
-    {
-      title: "Javascrip",
-      image: "",
-      category: "Frontend",
-      id: "frontend",
-    },
-    {
-      title: "Javascrip",
-      image: "",
-      category: "Frontend",
-      id: "frontend",
-    },
-    {
-      title: "Javascrip",
-      image: "",
-      category: "Frontend",
-      id: "frontend",
-    },
-    {
-      title: "Javascrip",
-      image: "",
-      category: "Frontend",
-      id: "frontend",
-    },
-    {
-      title: "Javascrip",
-      image: "",
-      category: "Frontend",
-      id: "frontend",
-    },
-    {
-      title: "Javascrip",
-      image: "",
-      category: "Frontend",
-      id: "frontend",
-    },
-    {
-      title: "Javascrip",
-      image: "",
-      category: "Frontend",
-      id: "frontend",
-    },
-    {
-      title: "Javascrip",
-      image: "",
-      category: "Frontend",
-      id: "frontend",
-    },
-    {
-      title: "Javascrip",
-      image: "",
-      category: "Frontend",
-      id: "frontend",
-    },
-    {
-      title: "Javascrip",
-      image: "",
-      category: "Frontend",
-      id: "frontend",
-    },
-    {
-      title: "Javascrip",
-      image: "",
-      category: "Frontend",
-      id: "frontend",
-    },
-    {
-      title: "Javascrip",
-      image: "",
-      category: "Frontend",
-      id: "frontend",
-    },
-    {
-      title: "Javascrip",
-      image: "",
-      category: "Frontend",
-      id: "frontend",
-    },
-    {
-      title: "Javascrip",
-      image: "",
-      category: "Frontend",
-      id: "frontend",
-    },
-  ]);
-
   const [heading, setHeading] = useState<any>([]);
-  const topImage =
-    "https://images.unsplash.com/photo-1568952433726-3896e3881c65?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80";
+
   const [technologies, setTechnologies] = useState([]);
 
-  const fetchData = () => {
-    getTechnologies().then((res) => {
-      setTechnologies(res?.data);
-      console.log(technologies);
-    });
-  };
   useEffect(() => {
+    const fetchData = () => {
+      getTechnologies().then((res) => {
+        setTechnologies(res?.data);
+        console.log(technologies);
+      });
+    };
     fetchData();
-  }, []);
+  }, [technologies]);
 
   return (
     <Layout>
       <Box sx={{ width: "100%", backgroundColor: "white" }}>
         <TechnologyHeroSection heroImage={topImage} />
-        <Container>
+        <Container sx={{ padding: ContainerPadding }}>
           <Box
             sx={{ width: "100%", display: "flex", backgroundColor: "white" }}
           >
@@ -201,7 +61,7 @@ export const ExploreTechnologies = () => {
               }}
             >
               {/* {heading.map((head: String, index: Number) => ( */}
-              <Box >
+              <Box>
                 <Box
                   sx={{
                     fontSize: HeadFont,
@@ -220,7 +80,7 @@ export const ExploreTechnologies = () => {
                     display: "flex",
                     flexWrap: "wrap",
                     justifyContent: "space-around",
-                    margin: "10px",
+                    padding: Padding,
                   }}
                 >
                   {technologies.map((myData, index1) => {
@@ -232,6 +92,7 @@ export const ExploreTechnologies = () => {
                           color: "white",
                           fontWeight: "bold",
                         }}
+                        key={index1}
                         href={`/exploreTechnologies/${myData.category}`}
                         passHref
                       >
@@ -265,7 +126,7 @@ export const ExploreTechnologies = () => {
           </Box>
         </Container>
         <Box sx={{ backgroundColor: "#f3f9fb" }}>
-          <Container>
+          <Container sx={{ padding: ContainerPadding }}>
             <InquireSection />
           </Container>
         </Box>

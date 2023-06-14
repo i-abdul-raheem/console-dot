@@ -25,7 +25,7 @@ import {
   SocialMediaIconsList,
   FooterBottomCopyRight,
 } from "./elements";
-import { Dark, Padding } from "../utils";
+import { ContainerPadding, Dark, Padding } from "../utils";
 
 export const Footer = () => {
   return (
@@ -34,7 +34,7 @@ export const Footer = () => {
         <Container
           sx={{
             zIndex: "1",
-            padding: Padding,
+            padding: ContainerPadding,
             display: "flex",
             justifyContent: "space-around",
             flexDirection: {
@@ -44,17 +44,13 @@ export const Footer = () => {
               sm: "column",
               xs: "column",
             },
+            rowGap: "32px",
+            columnGap: "32px",
           }}
         >
           <ReviewSection>
-            <FooterHeading
-              sx={{
-                padding: Padding,
-              }}
-            >
-              About ConsoleDot Review
-            </FooterHeading>
-            <Typography sx={{ display: "flex", padding: "5px" }}>
+            <FooterHeading mb={5}>About ConsoleDot Review</FooterHeading>
+            <Typography sx={{ display: "flex" }}>
               We strive to get to the heart of what CPA candidates really need
               to know to sit for the exam with confidence - and earn their CPA
             </Typography>
@@ -79,10 +75,15 @@ export const Footer = () => {
                   alignItems: "center",
                   justifyContent: "start",
                   padding: "7px",
+                  gap: "1rem",
                 }}
               >
                 <BusinessIcon />
-                <span>Address </span>
+                <span>
+             
+                  Ahmed Arcade, Suite 9, 1st Floor, Ferozpur Rd, Muslim Town Mor
+                  Flyover, Lahore, 54600{" "}
+                </span>
               </AddressInfo>
               <WhatsAppInfo
                 sx={{
@@ -90,6 +91,7 @@ export const Footer = () => {
                   alignItems: "center",
                   justifyContent: "start",
                   padding: "7px",
+                  gap: "1rem",
                 }}
               >
                 <WhatsAppIcon />
@@ -102,6 +104,7 @@ export const Footer = () => {
                   alignItems: "center",
                   justifyContent: "start",
                   padding: "7px",
+                  gap: "1rem",
                 }}
               >
                 <EmailIcon />
@@ -120,9 +123,11 @@ export const Footer = () => {
       >
         <Container>
           <FooterBottom>
-            <FooterBottomCopyRight>
-              Copyright © 2023 Yaeger CPA Review
-            </FooterBottomCopyRight>
+            <Box sx={{ width: "50%" }}>
+              <FooterBottomCopyRight>
+                Copyright © 2023 Yaeger CPA Review
+              </FooterBottomCopyRight>
+            </Box>
             <div
               style={{
                 display: "flex",

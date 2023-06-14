@@ -1,7 +1,14 @@
 import { JobOpening } from "@/assets";
 import MediaCard from "../../MediaCard/MediaCard";
 import { Box, Container, Typography } from "@mui/material";
-import { HeadFont, Margin, Padding, SubFont } from "../../utils";
+import {
+  Body,
+  ContainerPadding,
+  HeadFont,
+  Margin,
+  Padding,
+  SubFont,
+} from "../../utils";
 interface Props {
   image: any;
   heading: String;
@@ -47,16 +54,16 @@ export const WorkingAtConsoleDot = () => {
     },
   ];
   return (
-    <Box sx={{ width: "100%" }}>
-      <Container>
+    <Box sx={{ width: "100%", bgcolor: Body }}>
+      <Container sx={{ padding: ContainerPadding }}>
         <Box sx={{ textAlign: "center" }}>
           <Typography
-            sx={{ padding: Padding, fontSize: HeadFont, color: "#226597" }}
+            sx={{fontSize: HeadFont, color: "#226597" }}
           >
             Working @ ConsoleDot
           </Typography>
           <Typography sx={{ padding: Padding, fontSize: SubFont }}>
-            Here is what Bacancyer’s job looks like. Take a dive into the setup
+            Here is what ConsoleDot job looks like. Take a dive into the setup
             and realize what have you been missing until now in your career.
           </Typography>
         </Box>
@@ -65,8 +72,7 @@ export const WorkingAtConsoleDot = () => {
             display: "flex",
             justifyContent: "space-around",
             flexWrap: "wrap",
-            margin: Margin,
-            rowGap: Margin,
+         
           }}
         >
           {cards.map((i, index) => (

@@ -3,7 +3,7 @@ import MediaCard from "../MediaCard/MediaCard";
 import { useEffect, useState } from "react";
 import { Box, Container, Typography } from "@mui/material";
 import { CasestudyTop } from "../casestudy/CaseStudyTop/elements";
-import { Body, HeadFont, Primary } from "../utils";
+import { Body, ContainerPadding, H1, HeadFont, Primary } from "../utils";
 import { useRouter } from "next/router";
 export const AllProducts = () => {
   const router = useRouter();
@@ -38,13 +38,15 @@ export const AllProducts = () => {
       <Box sx={{ backgroundColor: Body }}>
         <CasestudyTop />
         <Box>
-          <Container>
+          <Container sx={{ padding: ContainerPadding }}>
             <Box>
-              <Typography
-                sx={{ fontSize: HeadFont, color: Primary, textAlign: "center" }}
+              <H1
+                variant="h1"
+                mb={2}
+                sx={{ color: Primary, textAlign: "center" }}
               >
                 Products From ConsoleDot
-              </Typography>
+              </H1>
             </Box>
             <Box
               sx={{

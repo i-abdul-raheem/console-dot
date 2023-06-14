@@ -1,9 +1,11 @@
+import { clock } from "@/assets";
 import { Dark, Primary, Secondary } from "@/components/landing/utils";
 import { Box, Container, Typography, Avatar } from "@mui/material";
+import Image from "next/image";
 import React, { useState } from "react";
 interface props {
   title: string;
-  image: string;
+  image: string | null;
   member: number;
   time: string;
 }
@@ -36,6 +38,7 @@ export const TechnologyCard = ({ title, image, member, time }: props) => {
           transition: "box-shadow 0.3s",
           cursor: "pointer",
           position: "relative",
+          
 
           "&:hover": {
             // boxShadow: "0px 3px 3px 2px rgba(0, 0, 0, 0.5)",
@@ -68,8 +71,12 @@ export const TechnologyCard = ({ title, image, member, time }: props) => {
             "&:hover": { width: "100%", height: "100%", transition: "0.6s" },
           }}
         >
-          <img
-            src={`https://api.consoledot.com/file/${image}`}
+          <Image
+            width={150}
+            height={150}
+            src={`${
+              image ? `https://api.consoledot.com/file/${image}` : clock.src
+            }`}
             alt={`${title} image`}
             style={{
               width: "100%",
@@ -110,8 +117,8 @@ export const TechnologyCard = ({ title, image, member, time }: props) => {
           </Typography>
           <Typography
             sx={{
-              paddingTop: "5px",
-              color: "white",
+              paddingTop: "10px",
+              color: "black",
               fontWeight: "bold",
               textAlign: "center",
             }}

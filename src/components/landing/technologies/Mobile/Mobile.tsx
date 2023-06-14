@@ -1,6 +1,9 @@
 import { React } from "@/assets";
 import { Box, Container, Button, Typography } from "@mui/material";
 import {
+  Body,
+  ButtonPadding,
+  ContainerPadding,
   HeadFont,
   ImageContainer,
   Margin,
@@ -12,7 +15,7 @@ import { ProductsTop } from "../../products/ProductsTop.tsx/ProductsTop";
 import { InquireSection } from "../../home";
 import { TechnicalExcellence } from "../TechnicalExcellence";
 import { Steppers } from "../Steppers/Stepper";
-import { CardWithBackground } from "../../BasicCard";
+// import { CardWithBackground } from "../../BasicCard";
 import { FrequentQuestions } from "../../FrequentQuestions";
 interface props {
   logo: any;
@@ -60,26 +63,8 @@ export const Mobile = () => {
       <ProductsTop />
 
       <Box sx={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-        <Box sx={{ backgroundColor: "#f3f9fb", margin: Margin }}>
-          <Container>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "space-around",
-                backgroundColor: "#f9f9f9",
-                padding: Padding,
-              }}
-            >
-              <ImageContainer>
-                <img alt="test" />
-              </ImageContainer>
-              <ImageContainer></ImageContainer>
-              <ImageContainer></ImageContainer>
-            </Box>
-          </Container>
-        </Box>
         <Box>
-          <Container>
+          <Container sx={{ padding: ContainerPadding }}>
             <Box
               sx={{
                 display: "flex",
@@ -111,9 +96,10 @@ export const Mobile = () => {
                   sx={{
                     fontSize: HeadFont,
                     textAlign: "left",
-                    padding: Padding,
+
                     fontWeight: "bold",
                   }}
+                  mb={2}
                 >
                   Continuously and Systematically Evolve Your Product With Our
                   Vetted Angular Developers
@@ -121,9 +107,10 @@ export const Mobile = () => {
                 <Typography
                   sx={{
                     fontSize: Para,
-                    padding: Padding,
+
                     textAlign: "left",
                   }}
+                  mb={2}
                 >
                   Our remote React developers are proficient in developing
                   visually appealing UI and UX possibilities coupled with
@@ -133,9 +120,9 @@ export const Mobile = () => {
                   team with top-of-the-line expertise in HTML + CSS, JSX,
                   JavaScript Fundamentals + ES6, DOM manipulation, Redux, Node +
                   NPM, connect with us to turbocharge your entrepreneur journey.
-                  Work with the industry's top 1% react developers to extract
-                  the best output combining React with Redux, Redux-Saga, Flow,
-                  and React DnD.
+                  Work with the industry`&apos;s top 1% react developers to
+                  extract the best output combining React with Redux,
+                  Redux-Saga, Flow, and React DnD.
                 </Typography>
                 <Box sx={{ display: "flex" }}>
                   <Button
@@ -146,10 +133,11 @@ export const Mobile = () => {
                       borderLeft: "none",
                       borderTopLeftRadius: "none",
                       borderBottomLeftRadius: "none",
-                      "&:hover":{
+                      padding: ButtonPadding,
+                      "&:hover": {
                         color: "#113f67",
                         backgroundColor: "#87c0cd",
-                      }
+                      },
                     }}
                   >
                     Hire React Developer
@@ -177,33 +165,30 @@ export const Mobile = () => {
                     sm: "100%",
                     sx: "100%",
                   },
-                  padding: {
-                    xl: "2rem 0rem",
-                    lg: "1.8rem 0rem",
-                    md: "1.5rem 0rem",
-                    sm: "1.2rem 0rem",
-                    xs: "1rem 0rem",
-                  },
+                  padding: Padding,
                   border: "1px solid gray",
                 }}
+                mb={2}
               >
                 <Typography
                   sx={{
                     fontSize: SubFont,
                     textAlign: "left",
-                    padding: Padding,
+
                     fontWeight: "bold",
-                    color:'#226597'
+                    color: "#226597",
                   }}
+                  mb={2}
                 >
                   Benefits of Hiring ReactJS developers from Bacancy
                 </Typography>
                 <Typography
                   sx={{
                     fontSize: Para,
-                    padding: Padding,
+
                     textAlign: "left",
                   }}
+                  mb={2}
                 >
                   <ol>
                     <li>
@@ -240,11 +225,12 @@ export const Mobile = () => {
                       borderLeft: "none",
                       borderTopLeftRadius: "none",
                       borderBottomLeftRadius: "none",
-                      color:'white',
-                      "&:hover":{
+                      padding: ButtonPadding,
+                      color: "white",
+                      "&:hover": {
                         color: "#113f67",
                         backgroundColor: "#87c0cd",
-                      }
+                      },
                     }}
                   >
                     Hire React Developer
@@ -259,49 +245,28 @@ export const Mobile = () => {
                       sm: "100%",
                       sx: "100%",
                     },
-                    padding: {
-                      xl: "2rem 0rem",
-                      lg: "1.8rem 0rem",
-                      md: "1.5rem 0rem",
-                      sm: "1.2rem 0rem",
-                      xs: "1rem 0rem",
-                    },
+                    padding: Padding,
                   }}
                 ></Box>
               </Box>
             </Box>
           </Container>
         </Box>
-        <Box sx={{ backgroundColor: "#f3f9fb", margin: Margin }}>
+        <Box sx={{ backgroundColor: Body, padding: ContainerPadding }}>
           <InquireSection />
         </Box>
         <Box>
-          <Container>
+          <Container sx={{ padding: ContainerPadding }}>
             <TechnicalExcellence />
           </Container>
         </Box>
-        <Box sx={{ backgroundColor: "#f3f9fb", margin: Margin }}>
-          <Container>
+        <Box sx={{ backgroundColor: Body }}>
+          <Container sx={{ padding: ContainerPadding }}>
             <Steppers />
           </Container>
         </Box>
-        <Box>
-          <Container>
-            <Box
-              sx={{
-                display: "flex",
-                flexWrap: "wrap",
-                justifyContent: "space-around",
-              }}
-            >
-              <CardWithBackground></CardWithBackground>
-              <CardWithBackground></CardWithBackground>
-              <CardWithBackground></CardWithBackground>
-            </Box>
-          </Container>
-        </Box>
-        <Box sx={{ backgroundColor: "#f3f9fb", margin: Margin }}>
-          <Container>
+        <Box sx={{ backgroundColor: Body }}>
+          <Container sx={{ padding: ContainerPadding }}>
             <FrequentQuestions />
           </Container>
         </Box>

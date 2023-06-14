@@ -33,7 +33,7 @@ export const ChallangesSolutions = styled(Box)({
   flexDirection: "column",
   maxWidth: "500px",
   padding: "25px 15px",
-  justifyContent: "center",
+  justifyContent: "flex-start",
   alignItems: "center",
   marginBottom: "10px",
   "&:last-child": "0",

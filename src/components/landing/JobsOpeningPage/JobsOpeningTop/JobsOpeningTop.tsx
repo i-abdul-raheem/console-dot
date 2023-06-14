@@ -8,7 +8,7 @@ import {
   RightFlex,
 } from "./elements";
 import { Container, Box, Typography } from "@mui/material";
-import { HeadFont, Para, Primary } from "../../utils";
+import { Dark, H1, H3, HeadFont, Para, Primary } from "../../utils";
 export const JobsOpeningTop = () => {
   return (
     <>
@@ -20,32 +20,34 @@ export const JobsOpeningTop = () => {
                 xl: "row",
                 lg: "row",
                 md: "row",
-                sm: "row",
-                xs: "row",
+                sm: "column",
+                xs: "column",
               },
               width: "100%",
               display: "flex",
             }}
           >
             <LeftFlex>
-              <Typography
+              <H1
+                mb={5}
+                variant="h1"
                 sx={{
-                  color: Primary,
-                  fontSize: HeadFont,
+                  color:'white',
                   lineHeight: "50px",
                 }}
               >
                 Kick-start Your Journey with ConsoleDot
-              </Typography>
-              <Typography
-                sx={{ color: "rgb(23 , 96 , 128 ,0.5)", fontSize: Para }}
+              </H1>
+              <H3
+              variant="h3"
+                sx={{ color: "#eee", }}
               >
                 Open Doors To New Opportunities In Your Career, We are looking
                 for enthusiasts who would welcome change with both their arms
                 wide open. And that’s how we along with you will bring a
                 transformation in the world. Find out the roles that are we are
                 currently open for:
-              </Typography>
+              </H3>
             </LeftFlex>
 
             <RightFlex>

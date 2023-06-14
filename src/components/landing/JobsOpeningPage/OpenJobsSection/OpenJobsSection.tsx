@@ -16,7 +16,7 @@ import {
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { Typography, Container, Box } from "@mui/material";
 import { useRouter } from "next/router";
-import { Dark, Primary, SubFont } from "../../utils";
+import { Body, ContainerPadding, Dark, Primary, SubFont } from "../../utils";
 import { getCareers } from "@/apis/careers";
 import { useState, useEffect } from "react";
 
@@ -30,16 +30,15 @@ export const CardSquare = ({ id, title, experiance, locationText }: props) => {
   const router = useRouter();
   return (
     <Singlecard>
-      <div style={{ padding: "20px" }}>
+      <div style={{ padding: "32px" }}>
         <CardSection>
           <CardTitle>{title}</CardTitle>
         </CardSection>
         <CardSection style={{ marginBottom: "30px" }}>
-          <StyledText>Experiance: {experiance}</StyledText>
+          <StyledText center>Experiance: {experiance}</StyledText>
         </CardSection>
         <CardSection style={{ marginBottom: "30px" }}>
-          <LocationOnIcon />
-          <StyledText>{locationText}</StyledText>
+          <StyledText fontSize={'16px'}>{locationText.slice(0, 100)}...</StyledText>
         </CardSection>
       </div>
       <SectionButton>
@@ -54,7 +53,7 @@ export const CardSquare = ({ id, title, experiance, locationText }: props) => {
             },
           }}
         >
-          APPLY NOW
+          View Job
         </StyledButton1>
       </SectionButton>
     </Singlecard>
@@ -69,23 +68,22 @@ export const OpenJobsSection = () => {
       try {
         const res = await getCareers();
         setData([...res]);
-        console.log(data, "debug jobs");
       } catch (error) {
         console.error(error);
       }
     };
 
     fetchData();
-  }, []);
+  }, [data]);
 
   return (
-    <Box sx={{ backgroundColor: "#F3F9FB" }}>
-      <Container>
-        <TopHeading>
+    <Box sx={{ backgroundColor: Body }}>
+      <Container sx={{ padding: ContainerPadding }}>
+        <TopHeading mb={2}>
           <Typography
             sx={{
               fontSize: SubFont,
-              marginRight: "5px",
+              marginRight: "8px",
             }}
           >
             Follow Us On
@@ -94,6 +92,7 @@ export const OpenJobsSection = () => {
           <Typography
             sx={{
               fontSize: SubFont,
+              marginLeft: "8px",
             }}
           >
             For The Latest Job Opportunities
@@ -106,8 +105,8 @@ export const OpenJobsSection = () => {
               <CardSquare
                 key={index}
                 title={i.title}
-                experiance={i.experiance}
-                locationText={i.locationText}
+                experiance={i.experience}
+                locationText={i.summary}
                 id={i._id}
               />
             ))}
