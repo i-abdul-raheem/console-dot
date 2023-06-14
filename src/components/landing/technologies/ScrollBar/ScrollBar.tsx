@@ -1,6 +1,6 @@
 import { List, ListItem, ScrollBarContainer } from "./elements";
 
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 interface props {
   heading: string[];
 }

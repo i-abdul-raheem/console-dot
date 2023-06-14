@@ -38,7 +38,7 @@ export const getCustomersId = async () => {
 
 export const getCaseStudy = async (id: any) => {
   const response = await axios.get(`${BASE_URL}/case_study`).then((res) => {
-    return res?.data?.data?.filter((i) => i?.ref_id === id)[0];
+    return res?.data?.data?.filter((i:any) => i?.ref_id === id)[0];
   });
   // console.log(response, "debug");
   return response;

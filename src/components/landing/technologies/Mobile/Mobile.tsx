@@ -60,7 +60,7 @@ export const mobiletechs = [
 export const Mobile = () => {
   return (
     <Box sx={{ width: "100%" }}>
-      <ProductsTop />
+      <ProductsTop sideImage={""} />
 
       <Box sx={{ display: "flex", flexDirection: "column", gap: "10px" }}>
         <Box>
@@ -226,7 +226,6 @@ export const Mobile = () => {
                       borderTopLeftRadius: "none",
                       borderBottomLeftRadius: "none",
                       padding: ButtonPadding,
-                      color: "white",
                       "&:hover": {
                         color: "#113f67",
                         backgroundColor: "#87c0cd",
@@ -257,7 +256,7 @@ export const Mobile = () => {
         </Box>
         <Box>
           <Container sx={{ padding: ContainerPadding }}>
-            <TechnicalExcellence />
+            <TechnicalExcellence head={""} specs={[]} />
           </Container>
         </Box>
         <Box sx={{ backgroundColor: Body }}>

@@ -6,11 +6,11 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { ButtonPadding, Dark, H1, H2, H3, Primary } from "../utils";
-import Image from "next/image";
+
 
 interface props {
   title: string;
-  image: string;
+  image: any;
   explanation: string;
   placeholder: string;
   onClick: any;
@@ -30,7 +30,7 @@ export default function MediaCard({
           height: 140,
           width: "100%",
         }}
-        image={`https://api.consoledot.com/file/${image}`}
+        image={image?.src || `https://api.consoledot.com/file/${image}`}
         title={image}
       />
       <CardContent>

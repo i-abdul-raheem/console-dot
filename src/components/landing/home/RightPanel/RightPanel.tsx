@@ -25,13 +25,12 @@ import { AboutUs } from "../AboutUs";
 import { useState, useEffect } from "react";
 import { Box, Container } from "@mui/material";
 export const RightPanel = () => {
-  const isMobileView = useIsMobileView();
 
-  const router = useRouter();
 
   const [headerHeight, setClientHeight] = useState(0);
   useEffect(() => {
-    setClientHeight(document.getElementById("nav")?.clientHeight);
+    const elem:any = document.getElementById("nav");
+    setClientHeight(elem?.clientHeight);
   }, []);
 
   return (

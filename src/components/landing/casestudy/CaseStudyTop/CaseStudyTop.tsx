@@ -7,6 +7,8 @@ import CheckIcon from "@mui/icons-material/Check";
 import {
   Body,
   ContainerPadding,
+  H1,
+  H2,
   HeadFont,
   Margin,
   Padding,
@@ -38,7 +40,12 @@ export const TechStackCard = ({ image }: any) => {
           height={80}
           src={`https://api.consoledot.com/file/${img}`}
           alt="image"
-          style={{ width: "70px", height: "70px", borderRadius: "10px", border:'1px solid #ddd' }}
+          style={{
+            width: "70px",
+            height: "70px",
+            borderRadius: "10px",
+            border: "1px solid #ddd",
+          }}
         />
       </Box>
     </>
@@ -58,7 +65,16 @@ export const CaseStudyTop = () => {
   const id = router.query;
   // console.log(id, "debug");
 
-  const [data, setData] = useState(null);
+  const [data, setData] = useState({
+    core_features: [],
+    how_it_work: [],
+    overview:"",
+    technologies:[],
+    challenge_short:"",
+    challenge_long:'',
+    team_members:[],
+
+  });
 
   useEffect(() => {
     const fetchData = () => {
@@ -131,7 +147,7 @@ export const CaseStudyTop = () => {
                     justifyContent: "space-around",
                   }}
                 >
-                  {data?.technologies?.map((tech: any, index: string) => (
+                  {data?.technologies?.map((tech: any, index: Number) => (
                     <TechStackCard image={tech} key={index} />
                   ))}
                 </Box>
@@ -219,13 +235,13 @@ export const CaseStudyTop = () => {
                         }}
                       >
                         <CheckIcon />
-                        <Typography
-                          component={"p"}
-                          variant={"p"}
-                          sx={{ fontSize: Para }}
+                        <H2
+                      
+                          variant='h2'
+                      
                         >
                           {tech}
-                        </Typography>
+                        </H2>
                       </Grid>
                     ))}
                   </Grid>
@@ -322,6 +338,7 @@ export const CaseStudyTop = () => {
                     title="Time Frame"
                     image={""}
                     time="On going since 2023"
+                    member={12}
                   />
                 </Box>
               </Box>

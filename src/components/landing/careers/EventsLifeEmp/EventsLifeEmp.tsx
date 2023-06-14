@@ -24,7 +24,6 @@ export const EventsLifeEmp = () => {
     <Container sx={{ padding: ContainerPadding }}>
       <Typography
         sx={{
-    
           fontSize: HeadFont,
           color: Primary,
           textAlign: "center",
@@ -50,13 +49,28 @@ export const EventsLifeEmp = () => {
               flexWrap: "wrap",
             }}
           >
-            <MediaCard title="Events" placeholder="View More"></MediaCard>
+            <MediaCard
+              title="Events"
+              placeholder="View More"
+              image=""
+              explanation=""
+              onClick={null}
+            ></MediaCard>
             <MediaCard
               title="Life of Condole."
               placeholder="View More"
+              image=""
+              explanation=""
+              onClick={null}
             ></MediaCard>
 
-            <MediaCard title="Employee" placeholder="View More"></MediaCard>
+            <MediaCard
+              title="Employee"
+              placeholder="View More"
+              image=""
+              explanation=""
+              onClick={null}
+            ></MediaCard>
           </Box>
         </Box>
       </ComponentContainer>

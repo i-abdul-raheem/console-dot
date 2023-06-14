@@ -5,7 +5,7 @@ import {
   Body,
   ContainerPadding,
   HeadFont,
-  Margin,
+
   Padding,
   SubFont,
 } from "../../utils";
@@ -82,6 +82,7 @@ export const WorkingAtConsoleDot = () => {
               title={i.heading}
               explanation={i.details}
               placeholder="explore"
+              onClick={null}
             />
           ))}
         </Box>

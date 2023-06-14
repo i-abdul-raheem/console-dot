@@ -83,6 +83,7 @@ export const AllProducts = () => {
                   placeholder="View CaseStudy"
                   key={index}
                   image={i.hero}
+                  explanation=""
                   onClick={() => handleClick(i?._id)}
                 />
               ))}

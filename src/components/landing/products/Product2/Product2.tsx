@@ -22,11 +22,11 @@ import { useState, useEffect } from "react";
 import { getProductCaseStudy } from "@/apis/products";
 import { TechStackCard } from "../../casestudy/CaseStudyTop/CaseStudyTop";
 import { TechnologyCard } from "../../technologies/ExploreTechnologies/TechnologyCard";
-import { clock } from "@/assets";
+
 export const Product2 = () => {
   const router = useRouter();
   const id = router.query;
-  const [data, setData] = useState();
+  const [data, setData] = useState<any>();
 
   useEffect(() => {
     const fetchData = () => {
@@ -42,20 +42,19 @@ export const Product2 = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id?.id]);
   useEffect(() => {
-    console.log(data, "this is data");
     // console.log(data?.[0].team_members?.length, "debug data");
   }, [data]);
-  console.log(data, "this is data");
-  const teamMembers = data?.[0]?.team_members || [];
+
+
 
   const coreFeature = data?.[0]?.core_features.length;
-  console.log(coreFeature, "core Feature");
+
   const howItWorks = data?.[0]?.how_it_work.length;
   return (
     <MainFlexColumnWrapper>
       <Box>
         {data?.map((i: any, index: Number) => (
-          <Box key={index}>
+          <Box key={index.toString()}>
             <Box sx={{ backgroundColor: "white" }}>
               <Container sx={{ padding: ContainerPadding }}>
                 <Box sx={{ width: "100%", display: "flex" }}>
@@ -290,6 +289,8 @@ export const Product2 = () => {
                     <TechnologyCard
                       title="Time Frame"
                       time="On going since 2023"
+                      image={''}
+                      member={0}
                     />
                   </Box>
                 </Box>

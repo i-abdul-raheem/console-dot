@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import { EventsLifeEmp, FollowUsOn, WorkingAtConsoleDot } from "../careers";
 import { Layout } from "../Layout/Layout";
-import { AboutConsoleSlider } from "./AboutConsoleSlider";
+
 
 export const AboutConcoleDot = () => {
   return (

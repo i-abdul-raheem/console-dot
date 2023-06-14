@@ -6,21 +6,19 @@ import {
   StyledLabel,
 } from "./elements";
 import FormData from "form-data";
-import { Typography, Container } from "@mui/material";
+import { Container } from "@mui/material";
 import { StyledButton } from "./elements";
 import {
   ContainerPadding,
   Dark,
   H1,
-  HeadFont,
   Primary,
 } from "@/components/landing/utils";
 import { useState } from "react";
-import { handleSubmit, submitJobApplication } from "@/apis/submitForm";
+import { submitJobApplication } from "@/apis/submitForm";
 import axios from "axios";
 import { BASE_URL } from "@/apis/config";
 import { useRouter } from "next/router";
-import { Layout } from "@/components/landing/Layout/Layout";
 
 interface valuesOfForm {
   name: string;
@@ -84,7 +82,7 @@ export const SubmitForm = () => {
             <StyledInput
               type="text"
               value={formValues?.name}
-              onChange={(e) =>
+              onChange={(e:any) =>
                 setFormValues({ ...formValues, name: e.target.value })
               }
             />
@@ -94,7 +92,7 @@ export const SubmitForm = () => {
             <StyledInput
               type="text"
               value={formValues?.email}
-              onChange={(e) =>
+              onChange={(e:any) =>
                 setFormValues({ ...formValues, email: e.target.value })
               }
             />
@@ -104,7 +102,7 @@ export const SubmitForm = () => {
             <StyledInput
               type="text"
               value={formValues?.phone}
-              onChange={(e) =>
+              onChange={(e:any) =>
                 setFormValues({ ...formValues, phone: e.target.value })
               }
             />

@@ -3,7 +3,7 @@ import MediaCard from "../MediaCard/MediaCard";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { getAllProjects } from "@/apis/projects";
-import { CaseStudyTop } from "../casestudy/CaseStudyTop/CaseStudyTop";
+
 import { CasestudyTop } from "../casestudy/CaseStudyTop/elements";
 import { HeadFont } from "../utils";
 export const CustomersDetail = () => {
@@ -76,13 +76,14 @@ export const CustomersDetail = () => {
             // onClick={() => router.push(`/casestudy/${details?._id}`)}
           /> */}
           {projects &&
-            projects?.map((project: any, index: string) => (
+            projects?.map((project: any, index: Number) => (
               <MediaCard
                 title={project?.title}
                 image={project?.hero}
                 placeholder="View Details"
+                explanation=""
                 onClick={() => handleClick(project?._id)}
-                key={index}
+                key={project?.id}
               />
             ))}
         </Box>

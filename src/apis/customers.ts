@@ -17,7 +17,7 @@ export const getCustomersId = async () => {
   return id;
 };
 
-export const getSingleCustomerDetail =async ({id}) => {
+export const getSingleCustomerDetail =async () => {
  const detail = await axios.get(`${BASE_URL}/customer`).then((res) => {
     return res?.data?.data.id;
   });

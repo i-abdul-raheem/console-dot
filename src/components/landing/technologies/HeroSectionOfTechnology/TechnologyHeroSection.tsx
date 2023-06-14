@@ -1,23 +1,11 @@
 import { React, TopTech } from "@/assets";
 import { Heading, StyledPara, TechTopSection } from "./elements";
 import { Box, Container } from "@mui/material";
-import {
-  Body,
-  Dark,
-  H1,
-  H2,
-  H3,
-  HeadFont,
-  Margin,
-  Padding,
-  Para,
-  Primary,
-  SubFont,
-} from "../../utils";
+import { Body, H1, H2, H3, HeadFont, Padding, Primary } from "../../utils";
 import { Typography } from "@mui/material";
 import Image from "next/image";
 interface props {
-  heroImage: string;
+  heroImage: any;
 }
 
 export const TechnologyHeroSection = ({ heroImage }: props) => {
@@ -27,11 +15,9 @@ export const TechnologyHeroSection = ({ heroImage }: props) => {
         <Box sx={{ padding: Padding }}>
           <H1 variant="h1" mb={2}>
             Let&#39;s discuss
-            <span
-              style={{ color: Primary, fontWeight: "bold", fontSize: HeadFont }}
-            >
+            <H2 variant="h2" sx={{ color: Primary }}>
               &lt;/code&gt;
-            </span>
+            </H2>
           </H1>
           <H3 variant="h3" mb={2}>
             Whether it&rsquo;s about turning your ideas into profitable software
@@ -44,7 +30,7 @@ export const TechnologyHeroSection = ({ heroImage }: props) => {
             <Image
               width={1400}
               height={100}
-              src={heroImage}
+              src={heroImage.src}
               alt="image"
               style={{ maxWidth: "100%", height: "auto" }}
             />

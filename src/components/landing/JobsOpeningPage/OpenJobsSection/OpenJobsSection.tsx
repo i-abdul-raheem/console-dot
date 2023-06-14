@@ -35,10 +35,14 @@ export const CardSquare = ({ id, title, experiance, locationText }: props) => {
           <CardTitle>{title}</CardTitle>
         </CardSection>
         <CardSection style={{ marginBottom: "30px" }}>
-          <StyledText center>Experiance: {experiance}</StyledText>
+          <StyledText fontSize={"20px"} center>
+            Experiance: {experiance}
+          </StyledText>
         </CardSection>
         <CardSection style={{ marginBottom: "30px" }}>
-          <StyledText fontSize={'16px'}>{locationText.slice(0, 100)}...</StyledText>
+          <StyledText center={false} fontSize={"16px"}>
+            {locationText.slice(0, 100)}...
+          </StyledText>
         </CardSection>
       </div>
       <SectionButton>
@@ -101,9 +105,9 @@ export const OpenJobsSection = () => {
 
         <CardContainer>
           <CardBox>
-            {data?.map((i: any, index: string) => (
+            {data?.map((i: any, index: Number) => (
               <CardSquare
-                key={index}
+                key={index.toString()}
                 title={i.title}
                 experiance={i.experience}
                 locationText={i.summary}

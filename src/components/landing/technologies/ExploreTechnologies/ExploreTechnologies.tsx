@@ -1,5 +1,5 @@
 import { TopTech, heroImage } from "@/assets";
-import { Box, Container, Card, Typography,  } from "@mui/material";
+import { Box, Container, Card, Typography } from "@mui/material";
 import {
   ContainerPadding,
   Dark,
@@ -29,7 +29,7 @@ const topImage = heroImage;
 export const ExploreTechnologies = () => {
   const [heading, setHeading] = useState<any>([]);
 
-  const [technologies, setTechnologies] = useState([]);
+  const [technologies, setTechnologies] = useState<any>([]);
 
   useEffect(() => {
     const fetchData = () => {
@@ -83,7 +83,7 @@ export const ExploreTechnologies = () => {
                     padding: Padding,
                   }}
                 >
-                  {technologies.map((myData, index1) => {
+                  {technologies.map((myData: any, index1: Number) => {
                     const temp = {};
                     return (
                       <Link
@@ -92,14 +92,16 @@ export const ExploreTechnologies = () => {
                           color: "white",
                           fontWeight: "bold",
                         }}
-                        key={index1}
+                        key={index1.toString()}
                         href={`/exploreTechnologies/${myData.category}`}
                         passHref
                       >
-                        <Box key={index1}>
+                        <Box>
                           <TechnologyCard
                             title={myData?.title}
                             image={myData?.hero}
+                            member={0}
+                            time=""
                           />
                         </Box>
                       </Link>
