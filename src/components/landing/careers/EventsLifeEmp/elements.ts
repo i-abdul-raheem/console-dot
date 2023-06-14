@@ -11,7 +11,7 @@ export const ComponentContainer = styled(Box)(()=>{
 });
 
 export const Section1 = styled(Box)({
-  backgroundColor: "whitesmoke",
+
   width: "100%",
   display:"flex",
   flexDirection:"column",

@@ -1,4 +1,4 @@
-import { Box, styled } from "@mui/material";
+import { Box, styled, Avatar, Typography } from "@mui/material";
 import { useIsMobileView } from "./utils";
 
 interface Types {
@@ -80,11 +80,97 @@ export const FullPage = styled(Box)({
 export const Wrapper = styled(Box)(() => {
   const isMobileView = useIsMobileView();
   return {
-    width: isMobileView ? "100%" : "1349px",
     display: "flex",
     flexDirection: "column",
-    flexWrap:"wrap",
+    flexWrap: "wrap",
     justifyContent: "center",
-    position: "relative",
+    backgroundColor: "#f3f9fb",
   };
 });
+export const MainFlexColumnWrapper = styled(Box)(() => {
+  return {
+    width: "100%",
+    display: "flex",
+    flexDirection: "column",
+    height: "auto",
+    boxSizing: "border-box",
+    margin: "0",
+    padding: "0",
+  };
+});
+
+export const ImageContainer = styled(Avatar)(() => {
+  return {
+    maxWidth: "100px",
+    maxHeight: "100px",
+  };
+});
+
+export const Padding = {
+  xl: "2.6rem 2.3rem",
+  lg: "2.3rem 2rem",
+  md: "2rem, 1.8rem",
+  sm: "1.5rem 1.3rem",
+  xs: "1rem .9rem",
+};
+
+export const SubFont = {
+  xl: "2rem",
+  lg: "1.8rem",
+  md: "14px",
+  sm: "11px",
+  xs: "10px",
+};
+
+export const HeadFont = {
+  xl: "3rem",
+  lg: "2.2rem",
+  md: "1.5rem",
+  sm: "1rem",
+  xs: "1rem",
+};
+
+export const Para = {
+  xl: "24px",
+  lg: "20px",
+  md: "18px",
+  sm: "16px",
+  xs: "14px",
+};
+
+export const Margin = {
+  xl: "2.6rem 2.3rem",
+  lg: "2.3rem 2rem",
+  md: "2rem, 1.8rem",
+  sm: "1.5rem 1.3rem",
+  xs: "1rem .9rem",
+};
+
+export const Primary = "#226597";
+export const Secondary = "#87c0cd";
+
+export const Dark = "#113f67";
+
+export const Body = "#f3f9fb";
+
+export const ButtonPadding = {
+  xl: "16px 20px",
+  lg: "14px 18px",
+  md: "12px 16px ",
+  sm: "10px  14px",
+  xs: "8px 12px",
+};
+
+export const H1 = styled(Typography)({
+  fontSize: "36px",
+});
+
+export const H2 = styled(Typography)({
+  fontSize: "18px",
+})
+
+
+export const H3 = styled(Typography)({
+  fontSize: "16px",
+})
+export const ContainerPadding = "1.6rem 1.2rem";

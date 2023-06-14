@@ -1,32 +1,30 @@
-import Link from "next/link";
 import { List, ListItem, ScrollBarContainer } from "./elements";
 
-export const ScrollBar = () => {
- 
+import { Link } from "react-scroll";
+interface props {
+  heading: string[];
+}
+
+export const ScrollBar = ({ heading }: props) => {
   return (
     <>
       <ScrollBarContainer>
         <List>
-          <ListItem>JavaScript</ListItem>
-          <ListItem>Mobile</ListItem>
-          <ListItem>Open Source Web</ListItem>
-          <ListItem>Machine Learning / AI</ListItem>
-          <ListItem>Data Analytics & Data Science</ListItem>
-          <ListItem>NoSQL DB</ListItem>
-          <ListItem>Big Data</ListItem>
-          <ListItem>Data Base</ListItem>
-          <ListItem>Cloud</ListItem>
-          <ListItem>SalesForce</ListItem>
-          <ListItem>lorem</ListItem>
-          <ListItem>lorem</ListItem>
-          <ListItem>lorem</ListItem>
-          <ListItem>lorem</ListItem>
-          <ListItem>lorem</ListItem>
-          <ListItem>lorem</ListItem>
-          <ListItem>lorem</ListItem>
-          <ListItem>lorem</ListItem>
+          {heading.map((head, index) => (
+            <ListItem key={index}>
+              <Link
+                to={head}
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+              >
+                {head}
+              </Link>
+            </ListItem>
+          ))}
         </List>
-        </ScrollBarContainer>
+      </ScrollBarContainer>
     </>
   );
 };

@@ -9,76 +9,71 @@ import {
   SectionTitle,
   StyledButton,
 } from "./elements";
+import { Box, Container, Typography } from "@mui/material";
+import MediaCard from "../../MediaCard/MediaCard";
+import {
+  ContainerPadding,
+  HeadFont,
+  Margin,
+  Padding,
+  Primary,
+} from "../../utils";
 
 export const EventsLifeEmp = () => {
   return (
-    <>
+    <Container sx={{ padding: ContainerPadding }}>
+      <Typography
+        sx={{
+          fontSize: HeadFont,
+          color: Primary,
+          textAlign: "center",
+        }}
+      >
+        Life Of ConsoleDot
+      </Typography>
       <ComponentContainer>
-        <Section1>
-          <div>
-          <ImageSection>
-            <Image src={Event} alt="Event Image" style={{width: "auto"}}/>
-          </ImageSection>
+        <Box sx={{ margin: Margin, padding: Padding }}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: {
+                xl: "row",
+                lg: "row",
+                md: "row",
+                sm: "column",
+                xs: "column",
+              },
+              gap: "1rem",
+              justifyContent: "space-between",
+              alignItems: "center",
+              flexWrap: "wrap",
+            }}
+          >
+            <MediaCard
+              title="Events"
+              placeholder="View More"
+              image=""
+              explanation=""
+              onClick={null}
+            ></MediaCard>
+            <MediaCard
+              title="Life of Condole."
+              placeholder="View More"
+              image=""
+              explanation=""
+              onClick={null}
+            ></MediaCard>
 
-          <SectionTitle>
-            <h2 >Events</h2>
-          </SectionTitle>
-          <SectionDescription>
-            Whether it is birthdays, culture, festivals, or seasons- we
-            celebrate every occasion with enthusiasm and joy.
-          </SectionDescription>
-          </div>
-          <SectionButton>
-            <StyledButton>
-              VIEW MORE
-              </StyledButton>
-            </SectionButton>
-            
-        </Section1>
-        <Section1>
-          <div>
-          <ImageSection>
-            <Image src={Life} alt="Event Image" style={{width: "auto", height: "auto"}} />
-          </ImageSection>
-
-          <SectionTitle>
-            <h2 >Life@ConsoleDot</h2>
-          </SectionTitle>
-          <SectionDescription>
-            With a perfect mix of life and work, our employees understand the
-            responsibility and resonate the same.
-          </SectionDescription>
-          </div>
-          <SectionButton>
-            <StyledButton>
-              VIEW MORE
-              </StyledButton>
-            </SectionButton>
-            
-        </Section1>
-        <Section1>
-          <div style={{marginBottom:"20px"}}>
-          <ImageSection>
-            <Image src={Life} alt="Event Image" style={{width:'auto',height:"auto"}}/>
-          </ImageSection>
-
-          <SectionTitle>
-            <h2>Employee Feedback</h2>
-          </SectionTitle>
-          <SectionDescription>
-            It’s not we but you who affirm our unique work culture. All ears to
-            your unsaid needs and ensure to avail you a fertile work
-            environment.
-          </SectionDescription>
-          </div>
-          <SectionButton>
-            <StyledButton>
-              VIEW MORE
-              </StyledButton>
-            </SectionButton>
-            
-        </Section1>
+            <MediaCard
+              title="Employee"
+              placeholder="View More"
+              image=""
+              explanation=""
+              onClick={null}
+            ></MediaCard>
+          </Box>
+        </Box>
       </ComponentContainer>
-    </>
+    </Container>
   );
 };

@@ -1,71 +1,120 @@
-import { Button } from "@mui/material";
-import { Wrapper } from "../../utils";
+import { Box, Button, Container, Typography } from "@mui/material";
+import {
+  Body,
+  ButtonPadding,
+  ContainerPadding,
+  Dark,
+  H1,
+  H2,
+  H3,
+  HeadFont,
+  Padding,
+  Primary,
+  Wrapper,
+} from "../../utils";
 import { ContentContainer, TitleSection, TopContent } from "./elements";
 import { StyledText } from "../../careers/WorkingAtConsoleDot/elements";
 
 export const RemoteAgile = () => {
   return (
-    <>
-      <div style={{ }}>
+    <Box sx={{ backgroundColor: Body, color: "black" }}>
+      <Container style={{ padding: ContainerPadding }}>
         <TopContent>
-          <TitleSection style={{ fontSize: "25px", fontWeight: "bold" }}>
+          <H1 variant="h1" sx={{ color: Primary, textAlign: "center" }} mb={2}>
             The Convenience of Offshoring is the Flexibility of Remote Agile.
-          </TitleSection>
+          </H1>
 
-          <TitleSection>
+          <H2 variant="h2" sx={{ textAlign: "center" }}>
             Collaborate with a passionate team of designers, developers, and
             strategists to stand-out from the crowd and shine brighter.
-          </TitleSection>
+          </H2>
         </TopContent>
-        <ContentContainer>
-          <div>
-            <h5 style={{ color: "rgb(23 , 96 , 128 )" }}>EXPERIENCES</h5>
-            <h2>Agile Mindset</h2>
-            <StyledText style={{textAlign:"start", paddingBottom:"10px"}}>
+        <ContentContainer sx={{ padding: ContainerPadding }}>
+          <div style={{ border: "1px solid Primary" }}>
+            <H2 variant="h2" sx={{ color: Dark }} mb={2}>
+              EXPERIENCES
+            </H2>
+            <H1 variant="h1" sx={{ color: Primary }} mb={2}>
+              Agile Mindset
+            </H1>
+            <H3 variant="h3" sx={{ textAlign: "start" }} mb={2}>
               Agile is not a principal or a method, but it’s an integral part of
               being Agile that is guided by principles, defined by values and
               manifested through various practices.
-            </StyledText>
+            </H3>
             <Button
-              style={{
-                backgroundColor: "rgb(23 , 96 , 128 )",
+              variant="outlined"
+              sx={{
+                backgroundColor: Dark,
                 color: "white",
                 display: "flex",
+                padding: ButtonPadding,
+                "&:hover": {
+                  color: Dark,
+                },
               }}
             >
               DISCOVER
             </Button>
           </div>
-          <div>
-            <h5 style={{ color: "rgb(23 , 96 , 128 )" }}>IMPORTANCE</h5>
-            <h2>Bacancy Values</h2>
-            <StyledText style={{textAlign:"start",paddingBottom:"10px"}}>
+
+          <div style={{ border: "1px solid Primary" }}>
+            <H2 variant="h2" sx={{ color: Dark }} mb={2}>
+              IMPORTANCE
+            </H2>
+            <H1 variant="h1" sx={{ color: Primary }} mb={2}>
+              ConsoleDot Values
+            </H1>
+            <H3 variant="h3" sx={{ textAlign: "start" }} mb={2}>
               You add value to your customer when you deliver a product or
               service (and the associated brand experience) that has been
               designed specifically to solve their problem.
-              </StyledText>
+            </H3>
             <Button
-              style={{ backgroundColor: "rgb(23 , 96 , 128 )", color: "white" }}
+              variant="outlined"
+              sx={{
+                backgroundColor: Dark,
+                color: "white",
+                display: "flex",
+                padding: ButtonPadding,
+                "&:hover": {
+                  color: Dark,
+                },
+              }}
             >
               DISCOVER
             </Button>
           </div>
-          <div>
-            <h5 style={{ color: "rgb(23 , 96 , 128 )" }}>MINDSET</h5>
-            <h2>Bacancy Cultures</h2>
-            <StyledText style={{textAlign:"start",paddingBottom:"10px"}}>
+          <div style={{ border: "1px solid Primary" }}>
+            <H2 variant="h2" sx={{ color: Dark }} mb={2}>
+              MINDSET
+            </H2>
+            <H1 variant="h1" sx={{ color: Primary }} mb={2}>
+              ConsoleDot Culture
+            </H1>
+            <H3 variant="h3" sx={{ textAlign: "start" }} mb={2}>
               Core Team will work as Scrum Team where Team will have quarterly
               goal to make sure that we run financial, administrative and
               project management prospective.
-              </StyledText>
+            </H3>
             <Button
-              style={{ backgroundColor: "rgb(23 , 96 , 128 )", color: "white" }}
+              variant="outlined"
+              sx={{
+                backgroundColor: Dark,
+                color: "white",
+                display: "flex",
+                padding: ButtonPadding,
+                "&:hover": {
+                  color: Dark,
+                },
+              }}
             >
               DISCOVER
             </Button>
           </div>
+          {/* end */}
         </ContentContainer>
-      </div>
-    </>
+      </Container>
+    </Box>
   );
 };

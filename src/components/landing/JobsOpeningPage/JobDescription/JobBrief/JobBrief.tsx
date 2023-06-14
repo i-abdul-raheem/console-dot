@@ -1,89 +1,84 @@
-import { ButtonContainer, StyledButton } from "./elements"
-import { JobBriefContainer, ListItems, PageTitle, StyledText } from "./elements"
+import { Container, Box, Typography } from "@mui/material";
+import { ButtonContainer, StyledButton } from "./elements";
+import { JobBriefContainer } from "./elements";
+import { useState, useEffect } from "react";
+import {
+  ContainerPadding,
+  Dark,
+  H1,
+  HeadFont,
+  Primary,
+} from "@/components/landing/utils";
+import { useRouter } from "next/router";
+import { getSingleCareer } from "@/apis/careers";
 
+export const JobBrief = () => {
+  const router = useRouter();
+  const query = router.query;
+  const [data, setData] = useState<any>({});
+  useEffect(() => {
+    getSingleCareer(query?.job_id).then((res) => setData(res));
+  }, [query?.job_id]);
 
+  useEffect(() => {
+    console.log(data);
+  }, [data]);
 
-export const JobBrief=()=>{
-    return(
-        <>
+  return (
+    <Box>
+      <Container sx={{ padding: ContainerPadding }}>
         <JobBriefContainer>
-        <div style={{borderBottom:"1px solid #ddd",paddingBottom:"20px"}}>
-          <PageTitle> Laravel Developer</PageTitle>
-          <StyledText style={{fontWeight:"bold" , paddingBottom:"10px"}}>Job Brief:</StyledText>
-          <StyledText>
-            Bacancy is an Agile-based offshore web Development Company providing
-            excellent service and solutions in India, the USA, Australia, and
-            Canada. We have currently got the strength of Employees. We
-            specialize in software product development and have successfully
-            executed numerous projects in software development, Web Designing &
-            Development, Mobile Technologies, Microsoft Technologies and
-            open-source as well for Internet Marketing.
-            </StyledText>
-          <StyledText><b>Role:</b>Developer</StyledText>
-          <StyledText><b>Experience:</b>3 to 5 Years</StyledText>
-          <StyledText><b>Position Open:</b>1</StyledText>
-          <StyledText><b>Job Location:</b>Work From Office</StyledText>
-          <StyledText><b>Work from Home Available:</b>NO</StyledText>
-          <StyledText><b>Salary:</b>Not a constraint for the right candidate</StyledText>
+          <div
+            style={{ borderBottom: "1px solid #ddd", paddingBottom: "10px" }}
+          >
+            <H1
+              variant="h1"
+              mb={2}
+              sx={{ color: Primary, textAlign: "center" }}
+            >
+              {data.title}
+            </H1>
+            <Typography style={{ fontWeight: "bold" }} mb={2}>
+              Job Brief:
+            </Typography>
+            <Typography mb={2}>{data?.summary}</Typography>
+            <Typography sx={{ textAlign: "left" }} mb={2}>
+              <b>Role:</b> {data?.title}
+            </Typography>
+            <Typography sx={{ textAlign: "left" }} mb={2}>
+              <b>Experience:</b> {data?.experience}
+            </Typography>
+            <Typography sx={{ textAlign: "left" }} mb={2}>
+              <b>Position Open:</b> {data?.positions}
+            </Typography>
+            <Typography sx={{ textAlign: "left" }} mb={2}>
+              <b>Job Location:</b>Work From Office
+            </Typography>
           </div>
-        
-        <div style={{borderBottom:"1px solid #ddd"}}>
-          <StyledText style={{fontWeight:"bold" , paddingTop:"10px"}}>Roles and Responsibility:</StyledText>
-          <ul style={{paddingBottom:"20px"}}>
-            <ListItems>Write clean, well designed code</ListItems>
-            <ListItems>Produce detailed specifications</ListItems>
-            <ListItems>Troubleshoot, test and maintain the core product software and databases to ensure strong optimization and functionality</ListItems>
-            <ListItems>Contribute in all phases of the development lifecycle</ListItems>
-            <ListItems>Follow industry best practices</ListItems>
-            <ListItems>Develop and deploy new features to facilitate related procedures and tools if necessary</ListItems>
-            <ListItems>Client Interaction and communication in English will be added advantage.</ListItems>
-          </ul>
-        </div>
 
-        <div style={{borderBottom:"1px solid #ddd"}}>
-          <StyledText style={{fontWeight:"bold" ,paddingTop:"10px" }}>Skill Requirement:</StyledText>
-          <ul style={{paddingBottom:"20px"}}>
-            <ListItems>Strong knowledge of Linux system with command line.</ListItems>
-            <ListItems>Strong knowledge of PHP and core PHP web frameworks such as Laravel.</ListItems>
-            <ListItems>Should have knowledge of object oriented.</ListItems>
-            <ListItems>Understanding the fully synchronous behavior of PHP</ListItems>
-            <ListItems>Understanding of MVC design patterns.</ListItems>
-            <ListItems>Good to have knowledge of Advanced laravel</ListItems>
-            <ListItems>Good to have knowledge of Vue/React.</ListItems>
-          </ul>
-        </div>
+          <div style={{ borderBottom: "1px solid #ddd", padding: "10px 0" }}>
+            <Typography sx={{ textAlign: "left" }} mb={2}>
+              <b>Qualification :</b> {data?.qualification}
+            </Typography>
+          </div>
 
-        <div style={{borderBottom:"1px solid #ddd", padding:"24px 0"}}>
-           <StyledText><b>Qualification :</b> B.Tech/B.E/MCA </StyledText>
-
-        </div>
-        <div style={{borderBottom:"1px solid #ddd", padding:"24px 0"}}>
-           <StyledText><b>Office Timings:</b> 10.00 AM to 7.00 PM</StyledText>
-
-        </div>
-
-        <div style={{borderBottom:"1px solid #ddd"}}>
-          <StyledText style={{fontWeight:"bold" , paddingTop:"10px"}}>Perks and Benefits:</StyledText>
-          <ul style={{paddingBottom:"20px"}}>
-            <ListItems>5-Days a week</ListItems>
-            <ListItems>Health Insurance</ListItems>
-            <ListItems>(28 Leaves a year) 18 paid leave & 10 public holiday</ListItems>
-            <ListItems>Recruitment referral bonus policy</ListItems>
-            <ListItems>Maternity paternity leave benefit</ListItems>
-            <ListItems>Training and Development: Certifications</ListItems>
-            <ListItems>Employee engagement activities: awards, community gathering</ListItems>
-            <ListItems>Good Infrastructure</ListItems>
-            <ListItems>Flexible working culture</ListItems>
-            <ListItems>Work From Anywhere</ListItems>
-            <ListItems>Onsite opportunity</ListItems>
-          </ul>
-        </div>
-
-        <ButtonContainer>
-            <StyledButton>Go Back</StyledButton>
-            </ButtonContainer>
-        
+          <ButtonContainer>
+            <StyledButton
+              sx={{
+                marginTop: "10px",
+                color: "white",
+                backgroundColor: Primary,
+                "&:hover": {
+                  backgroundColor: Dark,
+                },
+              }}
+              onClick={() => router.push("/jobs")}
+            >
+              Go Back
+            </StyledButton>
+          </ButtonContainer>
         </JobBriefContainer>
-        </>
-    )
-}
+      </Container>
+    </Box>
+  );
+};

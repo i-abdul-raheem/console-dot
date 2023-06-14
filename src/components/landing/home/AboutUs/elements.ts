@@ -1,25 +1,23 @@
 import { styled, Box, Typography } from "@mui/material";
-import { useIsMobileView } from "../../utils/utils";
+import { useDeskView, useIsMobileView } from "../../utils/utils";
 
 export const AboutUsContainer = styled(Box)({
-  width: "auto",
-  padding:"64px 0"
+  width: "100%",
+  height: "100%",
 });
 
 export const SectionTitleDescrip = styled(Box)({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  paddingBottom:"32px",
+  paddingBottom: "32px",
   justifyContent: "center",
 });
 
 export const SectionTitle = styled(Typography)({
-  fontWeight: "bold",
-  fontSize: "25px",
   alignItems: "center",
   justifyContent: "center",
-  marginBottom: "10px",
+
   wordWrap: "break-word",
   overflowWrap: "break-word",
 });
@@ -32,6 +30,7 @@ export const SectionDescrip = styled(Typography)({
   textAlign: "center",
   wordWrap: "break-word",
   overflowWrap: "break-word",
+  paddingLeft: "5px",
 });
 
 export const AgileContainer = styled(Box)({
@@ -44,10 +43,10 @@ export const DetailRow = styled(Box)(() => {
   const isMobileView = useIsMobileView();
   return {
     display: "flex",
-    flexDirection: isMobileView ? "column" : "row",
+    flexWrap: "wrap",
     justifyContent: "center",
     columnGap: "30px",
-    paddingBottom:"32px"
+    paddingBottom: "32px",
   };
 });
 
@@ -56,6 +55,7 @@ export const DetailRowBox = styled(Box)({
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
+  maxWidth: "15rem",
 });
 
 export const BoxText = styled(Typography)({
@@ -64,29 +64,26 @@ export const BoxText = styled(Typography)({
   overflowWrap: "break-word",
   textAlign: "center",
 });
-export const BoxLabel = styled("label")({});
-
-export const PicSectionContainer = styled(Box)(() => {
-  const isMobileView = useIsMobileView();
-  return {
-    display: "flex",
-    flexDirection: isMobileView ? "column" : "row",
-    columnGap: "10px",
-    width: "100%",
-  };
+export const BoxLabel = styled("label")({
+  fontSize: "20px",
+  fontWeight: "bold",
 });
+
+export const PicSectionContainer = styled(Box)({});
 
 export const PicSection = styled(Box)({
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  width: "auto",
+  width: "100%",
 });
 
-export const PicContainerContentSection = styled(Box)({
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  width: "auto",
-  textAlign: "center",
+export const PicContainerContentSection = styled(Box)(() => {
+  const isDeskView = useDeskView();
+
+  return {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "start",
+    textAlign: "left",
+    width: "100%",
+    padding: isDeskView ? "5px" : "10px",
+  };
 });

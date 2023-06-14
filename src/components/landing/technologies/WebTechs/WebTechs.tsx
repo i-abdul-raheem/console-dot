@@ -1,104 +1,202 @@
-import { React, TopTech } from "@/assets";
-import { Box, colors } from "@mui/material";
-import Image from "next/image";
-import {
-  CardBox,
-  CardContainer,
-  SingleCard,
-  TechHeading,
-} from "./elements";
+import React, { useEffect, useState, useRef } from "react";
+import { Box, Container, Typography } from "@mui/material";
+
+import { HeadFont, Padding, SubFont } from "../../utils";
+import { SingleCard } from "./elements";
 
 interface props {
-  logo: any;
-  name: string;
+  heading: string;
+  details: string;
 }
 
-export const CardSingle = ({ logo, name }: props) => {
+export const CardSingle = ({ heading, details }: props) => {
   return (
     <SingleCard>
-      <Image src={logo} alt="logo" style={{width:"70px" , height:"auto"}}/>
-      <label>{name}</label>
+      <Typography sx={{ fontSize: HeadFont }}>{heading}</Typography>
+      <Typography sx={{ fontSize: SubFont }}>{details}</Typography>
     </SingleCard>
   );
 };
 
 export const tech = [
   {
-    logo: React,
-    name: "ReactJS",
+    heading: "ReactJS Plugin Development",
+    details:
+      "Leverage our on-time maintenance and support services to meet your business objectives under all the scenarios.",
   },
   {
-    logo: React,
-    name: "Node JS",
+    heading: "ReactJS Plugin Development",
+    details:
+      "Leverage our on-time maintenance and support services to meet your business objectives under all the scenarios.",
   },
   {
-    logo: React,
-    name: "Vue",
+    heading: "ReactJS Plugin Development",
+    details:
+      "Leverage our on-time maintenance and support services to meet your business objectives under all the scenarios.",
   },
   {
-    logo: React,
-    name: "Angular JS",
+    heading: "ReactJS Plugin Development",
+    details:
+      "Leverage our on-time maintenance and support services to meet your business objectives under all the scenarios. JS",
   },
   {
-    logo: React,
-    name: "Ember JS",
+    heading: "ReactJS Plugin Development",
+    details:
+      "Leverage our on-time maintenance and support services to meet your business objectives under all the scenarios.S",
   },
   {
-    logo: React,
-    name: "Bootstrap",
+    heading: "ReactJS Plugin Development",
+    details:
+      "Leverage our on-time maintenance and support services to meet your business objectives under all the scenarios.ap",
   },
   {
-    logo: React,
-    name: "Polymer JS",
+    heading: "ReactJS Plugin Development",
+    details:
+      "Leverage our on-time maintenance and support services to meet your business objectives under all the scenarios. JS",
   },
   {
-    logo: React,
-    name: "Front End",
+    heading: "ReactJS Plugin Development",
+    details:
+      "Leverage our on-time maintenance and support services to meet your business objectives under all the scenarios.nd",
   },
   {
-    logo: React,
-    name: "Mern Stack",
+    heading: "ReactJS Plugin Development",
+    details:
+      "Leverage our on-time maintenance and support services to meet your business objectives under all the scenarios.ack",
   },
   {
-    logo: React,
-    name: "Mean Stack",
+    heading: "ReactJS Plugin Development",
+    details:
+      "Leverage our on-time maintenance and support services to meet your business objectives under all the scenarios.ack",
   },
   {
-    logo: React,
-    name: "Backbone JS",
+    heading: "ReactJS Plugin Development",
+    details:
+      "Leverage our on-time maintenance and support services to meet your business objectives under all the scenarios.e JS",
   },
   {
-    logo: React,
-    name: "Quasar",
+    heading: "ReactJS Plugin Development",
+    details:
+      "Leverage our on-time maintenance and support services to meet your business objectives under all the scenarios.",
   },
   {
-    logo: React,
-    name: "JavaScript",
+    heading: "ReactJS Plugin Development",
+    details:
+      "Leverage our on-time maintenance and support services to meet your business objectives under all the scenarios.ipt",
   },
   {
-    logo: React,
-    name: "TypeScript",
+    heading: "ReactJS Plugin Development",
+    details:
+      "Leverage our on-time maintenance and support services to meet your business objectives under all the scenarios.ipt",
   },
   {
-    logo: React,
-    name: "Next JS",
+    heading: "ReactJS Plugin Development",
+    details:
+      "Leverage our on-time maintenance and support services to meet your business objectives under all the scenarios.",
   },
 ];
 
 export const WebTechs = () => {
+  const [isPositionFixed, setIsPositionFixed] = useState(false);
+  const fixedElementRef = useRef<any>(null);
+  let scrollTop = null;
+  if (fixedElementRef && fixedElementRef.current) {
+    scrollTop = fixedElementRef.current.scrollTop;
+    console.log(scrollTop, "in if ");
+  }
+  const handleScroll = () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    console.log(scrollTop, "in handle");
+    if (scrollTop > 900) {
+      setIsPositionFixed(false);
+    }
+
+    if (scrollTop > 7200) {
+      setIsPositionFixed(true);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const fixedElementStyle = {
+    position: isPositionFixed ? "fixed" : "static",
+    top: "0px",
+    backgroundColor: isPositionFixed ? "red" : "white",
+  };
+
   return (
-    <>
-      <CardContainer>
-        
-          <TechHeading style={{}}>Web Development</TechHeading>
-        
-        <CardBox>
-          {tech.map((i, index) => (
-            <CardSingle key={index} logo={i.logo} name={i.name} />
-          ))}
-        </CardBox>
-        </CardContainer>
-      
-    </>
+    <Box sx={{ backgroundColor: "#e2f1ff" }}>
+      <Container>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: {
+              xl: "row",
+              lg: "row",
+              md: "row",
+              sm: "column",
+              xs: "column",
+            },
+            padding: Padding,
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              width: {
+                xl: "50%",
+                lg: "50%",
+                md: "50%",
+                sm: "100%",
+                xs: "100%",
+              },
+            }}
+          >
+            <Box>
+              {tech.map((item, index) => (
+                <CardSingle
+                  key={index}
+                  heading={item.heading}
+                  details={item.details}
+                />
+              ))}
+            </Box>
+          </Box>
+          <Box
+            ref={fixedElementRef}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              width: {
+                xl: "50%",
+                lg: "50%",
+                md: "50%",
+                sm: "100%",
+                xs: "100%",
+              },
+              ...fixedElementStyle,
+            }}
+          >
+            <Typography sx={{ fontSize: "20px" }}>
+              ReactJS Development Services Where Front-end Evolution Begins
+            </Typography>
+            <Typography sx={{ fontSize: "16px" }}>
+              We are pioneers in building high-octane web applications with
+              proven skills in React JS development services. Hire React
+              developers with versatile skills aligning with your business
+              requirements. We thrive on fulfilling our clients`&apos; core
+              objectives, and it has always been our firm endeavor to deliver
+              the most prudent React development solutions best suited for your
+              business.
+            </Typography>
+          </Box>
+        </Box>
+      </Container>
+    </Box>
   );
 };

@@ -1,12 +1,13 @@
+import { transform } from "typescript";
 import { styled, Box, Typography } from "@mui/material";
-import { TransformImage } from "@/assets";
+import { DigitalTransmission } from "@/assets";
 import { useId } from "react";
 import { useIsMobileView } from "../../utils/utils";
+import { ContainerPadding } from "../../utils";
 export const DigiContainer = styled(Box)({
-  
   width: "auto",
   marginBottom: "10px",
-  paddingBottom:"64px"
+  paddingBottom: "64px",
 });
 
 export const SectionTitleDescrip = styled(Box)({
@@ -14,51 +15,7 @@ export const SectionTitleDescrip = styled(Box)({
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
-  padding:"30px 0"
-});
-
-export const SectionTitle = styled(Typography)({
-  fontWeight: "bold",
-  fontSize: "25px",
-  display:"flex",
-  alignItems: "center",
-  justifyContent: "center",
-  marginBottom: "10px",
-  wordWrap: "break-word",
-  overflowWrap: "break-word",
-});
-
-export const SectionDescrip = styled(Typography)({
-  fontSize: "20px",
-  color: "#696969",
-  textAlign:"center"
-});
-
-export const Container = styled(Box)({width:'100%'});
-
-export const BoxesContainer = styled(Box)(()=>{
-  const isMobileView=useIsMobileView();
-  return{
-  display: "flex",
-  flexDirection:isMobileView? "column":"row",
-  marginBottom: "10px",
-  padding: "10px",
-  columnGap:"10px",
-  backgroundImage: `url(${TransformImage.src})`,
-  backgroundRepeat:"no-repeat",
-  backgroundSize:"cover",
-  height:"400px",
-  "&:before": {
-    position: "absolute",
-    left: 0,
-    width: "100%",
-    height: "400px",
-    backgroundColor: "rgba(0,0,0,0.6)",
-    content: '""',
-    zIndex: 10,
-  },
-  
- }
+  padding: "30px 0",
 });
 
 export const SquareBox = styled(Box)({
@@ -67,6 +24,45 @@ export const SquareBox = styled(Box)({
     transition: "0.6s",
     backgroundSize: "110%",
   },
-  
-  
+});
+
+export const Background = styled(Box)({
+  position: "relative",
+  display: "flex",
+  objectFit: "contain",
+  backgroundImage: `url(${DigitalTransmission.src})`,
+  backgroundSize: "cover",
+  minHeight: "500px",
+  backgroundPosition: "center",
+});
+export const SingleBox = styled(Box)(() => {
+  return {
+    position: "relative",
+    alignItems: "flex-end",
+    borderRight: "1px dotted white",
+    transition: "all 0.3s ease",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "flex-end",
+    padding: "1rem 2rem",
+    width: "100%",
+    boxSizing: "border-box",
+    zIndex: 99,
+    "&:before": {
+      position: "absolute",
+      content: '""',
+      backgroundColor: "transparent",
+      width: "100%",
+      height: "100%",
+      top: 0,
+      left: 0,
+    },
+    "&:hover:before": {
+      backgroundColor: "rgba(0,0,0,0.6)",
+    },
+    "&:hover": {
+      opacity: ".9",
+      paddingBottom: "2rem",
+    },
+  };
 });

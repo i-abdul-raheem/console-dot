@@ -1,4 +1,4 @@
 export * from "./TechnologiesWrapper";
-export * from "./TechTopPage";
+export * from "./ExploreTechnologies";
 export * from "./WebTechs";
-export * from "./WebFrame";
+export * from "./Mobile";

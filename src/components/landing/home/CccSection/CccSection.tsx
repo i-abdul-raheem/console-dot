@@ -1,4 +1,4 @@
-import Box from "@mui/material/Box";
+import { Box, Typography } from "@mui/material";
 import {
   CardSection,
   CccContainer,
@@ -20,72 +20,85 @@ import {
 import { Image0, Image1, Image2, Image4, Image5, Image6, Pic1 } from "@/assets";
 import { url } from "inspector";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
-import { Wrapper } from "../../utils";
+import {
+  Body,
+  ContainerPadding,
+  H1,
+  H2,
+  HeadFont,
+  Margin,
+  Primary,
+  SubFont,
+  Wrapper,
+} from "../../utils";
+import { Container } from "@mui/material";
 export const CccSection = () => {
   return (
-    <CccContainer>
-      <SectionTitleDescrip>
-        <SectionTitle>Connect, Collaborate and Create</SectionTitle>
-        <SectionDescrip>
-          Partner with us to work with on-demand Agile product team. We are
-          always committed to your growth.
-        </SectionDescrip>
-      </SectionTitleDescrip>
-      <ImageSectionContainer>
-        <ImageRow>
-        
-          <ImageLarge1>
-          
-            <ImageSectionContent>
-              <ImageText> ConsoleDot Tech Agility</ImageText>
-              <ArrowRightAltIcon />
-            </ImageSectionContent>
-          </ImageLarge1>
-          
-          <ColumnInMobile>
-            <ImageSmall2>
-              <ImageSectionContent>
-                <ImageText> ConsoleDot Tech Agility</ImageText>
-                <ArrowRightAltIcon />
-              </ImageSectionContent>
-              </ImageSmall2>
-           
-              
-              <ImageSmall3>
-              <ImageSectionContent>
-                <ImageText> ConsoleDot Tech Agility</ImageText>
-                <ArrowRightAltIcon />
-              </ImageSectionContent>
-            </ImageSmall3>
-            </ColumnInMobile>
-        </ImageRow>
-        <ImageRow>
-        <ColumnInMobile>
-          <ImageSmall4>
-            <ImageSectionContent>
-              <ImageText>ConsoleDot Tech Agility</ImageText>
-              <ArrowRightAltIcon />
-            </ImageSectionContent>
-          </ImageSmall4>
-          <ImageSmall5>
-            <ImageSectionContent>
-              <ImageText>ConsoleDot Tech Agility</ImageText>
-              <ArrowRightAltIcon />
-            </ImageSectionContent>
-          </ImageSmall5>
-          </ColumnInMobile>
-          
-          
-          <ImageLarge6>
-            <ImageSectionContent>
-              <ImageText>ConsoleDot Tech Agility</ImageText>
-              <ArrowRightAltIcon />
-            </ImageSectionContent>
-          </ImageLarge6>
-        </ImageRow>
-      </ImageSectionContainer>
+    <Box sx={{ backgroundColor: Body }}>
+      <Container sx={{ padding: ContainerPadding }}>
+        <CccContainer>
+          <SectionTitleDescrip>
+            <H1 variant="h1" sx={{ color: Primary }} mb={2}>
+              Connect, Collaborate and Create
+            </H1>
+            <H2 variant="h2" sx={{ color: "black" }}>
+              Partner with us to work with on-demand Agile product team. We are
+              always committed to your growth.
+            </H2>
+          </SectionTitleDescrip>
+          <ImageSectionContainer>
+            <ImageRow>
+              <ImageLarge6>
+                <ImageSectionContent>
+                  <ImageText>ConsoleDot Tech Agility</ImageText>
+                  <ArrowRightAltIcon sx={{ color: "white", zIndex: "999" }} />
+                </ImageSectionContent>
+              </ImageLarge6>
 
-      <CardSection></CardSection>
-    </CccContainer>
+              <ColumnInMobile>
+                <ImageSmall3>
+                  <ImageSectionContent>
+                    <ImageText> ConsoleDot Tech Agility</ImageText>
+                    <ArrowRightAltIcon sx={{ color: "white", zIndex: "999" }} />
+                  </ImageSectionContent>
+                </ImageSmall3>
+
+                <ImageSmall3>
+                  <ImageSectionContent>
+                    <ImageText> ConsoleDot Tech Agility</ImageText>
+                    <ArrowRightAltIcon sx={{ color: "white", zIndex: "999" }} />
+                  </ImageSectionContent>
+                </ImageSmall3>
+              </ColumnInMobile>
+            </ImageRow>
+            <ImageRow>
+              <ColumnInMobile>
+                <ImageSmall4>
+                  <ImageSectionContent>
+                    <ImageText>ConsoleDot Tech Agility</ImageText>
+                    <ArrowRightAltIcon sx={{ color: "white", zIndex: "999" }} />
+                  </ImageSectionContent>
+                </ImageSmall4>
+                <ImageSmall5>
+                  <ImageSectionContent>
+                    <ImageText>ConsoleDot Tech Agility</ImageText>
+                    <ArrowRightAltIcon sx={{ color: "white", zIndex: "999" }} />
+                  </ImageSectionContent>
+                </ImageSmall5>
+              </ColumnInMobile>
+
+              <ImageLarge6>
+                <ImageSectionContent>
+                  <ImageText>ConsoleDot Tech Agility</ImageText>
+                  <ArrowRightAltIcon sx={{ color: "white", zIndex: "999" }} />
+                </ImageSectionContent>
+              </ImageLarge6>
+            </ImageRow>
+          </ImageSectionContainer>
+
+          <CardSection></CardSection>
+        </CccContainer>
+      </Container>
+    </Box>
   );
 };

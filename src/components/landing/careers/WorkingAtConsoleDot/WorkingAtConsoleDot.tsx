@@ -1,49 +1,19 @@
-import Image from "next/image";
-import {
-  CardSection,
-  ComponentContainer,
-  DescriptionSection,
-  FlexContiner,
-  SectionButton,
-  Singlecard,
-  StyledButton,
-  StyledText,
-  TitleSection,
-} from "./elements";
 import { JobOpening } from "@/assets";
-import { TitleAndDescripContiner } from "./elements";
+import MediaCard from "../../MediaCard/MediaCard";
+import { Box, Container, Typography } from "@mui/material";
+import {
+  Body,
+  ContainerPadding,
+  HeadFont,
 
+  Padding,
+  SubFont,
+} from "../../utils";
 interface Props {
   image: any;
   heading: String;
   details: String;
 }
-
-export const CardBox = ({ image, heading, details }: Props) => {
-  return (
-    <Singlecard>
-      <div style={{padding: "20px"}}>
-        <CardSection sx={{display:'flex', justifyContent:'center', alignItems:"center"}}>
-          <Image
-            src={image}
-            alt="Job Openoing Badge"
-            width={100}
-            height={100}
-          />
-        </CardSection>
-        <CardSection>
-          <h3>{heading}</h3>
-        </CardSection>
-        <CardSection style={{ marginBottom: "50px" }}>
-          <StyledText>{details}</StyledText>
-        </CardSection>
-      </div>
-      <SectionButton>
-        <StyledButton>EXPOLRE MORE</StyledButton>
-      </SectionButton>
-    </Singlecard>
-  );
-};
 
 export const WorkingAtConsoleDot = () => {
   const cards = [
@@ -84,29 +54,39 @@ export const WorkingAtConsoleDot = () => {
     },
   ];
   return (
-    <>
-      <ComponentContainer>
-        <TitleAndDescripContiner>
-          <TitleSection>Working @ ConsoleDot</TitleSection>
-          <DescriptionSection>
-            <StyledText>
-              Here is what ConsoleDot’s job looks like. Take a dive into the
-              setup and realize what have you been missing until now in your
-              career.
-            </StyledText>
-          </DescriptionSection>
-        </TitleAndDescripContiner>
-        <FlexContiner>
+    <Box sx={{ width: "100%", bgcolor: Body }}>
+      <Container sx={{ padding: ContainerPadding }}>
+        <Box sx={{ textAlign: "center" }}>
+          <Typography
+            sx={{fontSize: HeadFont, color: "#226597" }}
+          >
+            Working @ ConsoleDot
+          </Typography>
+          <Typography sx={{ padding: Padding, fontSize: SubFont }}>
+            Here is what ConsoleDot job looks like. Take a dive into the setup
+            and realize what have you been missing until now in your career.
+          </Typography>
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-around",
+            flexWrap: "wrap",
+         
+          }}
+        >
           {cards.map((i, index) => (
-            <CardBox
+            <MediaCard
               key={index}
               image={i.image}
-              heading={i.heading}
-              details={i.details}
+              title={i.heading}
+              explanation={i.details}
+              placeholder="explore"
+              onClick={null}
             />
           ))}
-        </FlexContiner>
-      </ComponentContainer>
-    </>
+        </Box>
+      </Container>
+    </Box>
   );
 };

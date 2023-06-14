@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { CardContent, CardHeading, CardText, ClientCard, ClientCardHeading, ClientCardsSection } from "../FortuneClients/elements";
+import { CardContent, CardHeading, CardText, ClientCard, ClientCardHeading, ClientCardsSection } from "../../ExploreCaseStudies/elements";
 import { Chess2 } from "@/assets";
 import { CsReactContainer } from "./elements";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";

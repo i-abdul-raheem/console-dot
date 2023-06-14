@@ -1,5 +1,6 @@
 import { Footer } from "../../Footer";
 import { Header } from "../../Header";
+import { Layout } from "../../Layout/Layout";
 import { Wrapper } from "../../utils";
 import { MobResWrap } from "../../utils/utils";
 import { JobsDescription } from "../JobDescription";
@@ -9,12 +10,10 @@ import { OpenJobsSection } from "../OpenJobsSection";
 export const JobsOpeningPageWrapper = () => {
   return (
     <>
-    <MobResWrap>
-        {/* <Header/> */}
+      <Layout>
         <JobsOpeningTop />
         <OpenJobsSection />
-        </MobResWrap>
-      
+      </Layout>
     </>
   );
 };

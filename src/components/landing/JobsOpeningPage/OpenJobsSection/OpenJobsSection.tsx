@@ -14,48 +14,50 @@ import {
   TopHeading,
 } from "./elements";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import { MainLogo } from "@/assets";
+import { Typography, Container, Box } from "@mui/material";
 import { useRouter } from "next/router";
+import { Body, ContainerPadding, Dark, Primary, SubFont } from "../../utils";
+import { getCareers } from "@/apis/careers";
+import { useState, useEffect } from "react";
 
 interface props {
-  image: any;
   title: string;
   experiance: string;
   locationText: string;
+  id: string;
 }
-export const CardSquare = ({
-  image,
-  title,
-  experiance,
-  locationText,
-}: props) => {
+export const CardSquare = ({ id, title, experiance, locationText }: props) => {
   const router = useRouter();
   return (
     <Singlecard>
-      <div style={{ padding: "20px" }}>
-        <CardSection
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            marginBottom: "20px",
-          }}
-        >
-          <Image src={image} alt="Job Openoing Badge" width={40} height={40} />
-        </CardSection>
+      <div style={{ padding: "32px" }}>
         <CardSection>
           <CardTitle>{title}</CardTitle>
         </CardSection>
-        <CardSection style={{ marginBottom: "50px" }}>
-          <StyledText>Experiance: {experiance}</StyledText>
+        <CardSection style={{ marginBottom: "30px" }}>
+          <StyledText fontSize={"20px"} center>
+            Experiance: {experiance}
+          </StyledText>
         </CardSection>
-        <CardSection style={{ marginBottom: "50px" }}>
-          <LocationOnIcon />
-          <StyledText>{locationText}</StyledText>
+        <CardSection style={{ marginBottom: "30px" }}>
+          <StyledText center={false} fontSize={"16px"}>
+            {locationText.slice(0, 100)}...
+          </StyledText>
         </CardSection>
       </div>
       <SectionButton>
-        <StyledButton1 onClick={() => router.push("/jobs/id")}>
-          APPLY NOW
+        <StyledButton1
+          onClick={() => router.push(`/jobs/${id}`)}
+          sx={{
+            marginTop: "10px",
+            color: "white",
+            backgroundColor: Primary,
+            "&:hover": {
+              backgroundColor: Dark,
+            },
+          }}
+        >
+          View Job
         </StyledButton1>
       </SectionButton>
     </Singlecard>
@@ -63,114 +65,58 @@ export const CardSquare = ({
 };
 
 export const OpenJobsSection = () => {
-  const cardContent = [
-    {
-      image: MainLogo,
-      title: "Laravel Developer",
-      experiance: "3 To 5 Years",
-      locationText: "Work From Office",
-    },
+  const [data, setData] = useState<any[]>([]);
+  const router = useRouter();
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await getCareers();
+        setData([...res]);
+      } catch (error) {
+        console.error(error);
+      }
+    };
 
-    {
-      image: MainLogo,
-      title: "Business Development Executive",
-      experiance: "1 To 4 Years",
-      locationText: "Work From Office",
-    },
+    fetchData();
+  }, [data]);
 
-    {
-      image: MainLogo,
-      title: ".Net core and Angular",
-      experiance: " 2+ Years",
-      locationText: "Work From Office",
-    },
-
-    {
-      image: MainLogo,
-      title: "UI/UX Designer",
-      experiance: " 2+ Years",
-      locationText: "Work From Office",
-    },
-
-    {
-      image: MainLogo,
-      title: "Embedded Software Engineer",
-      experiance: "1 To 4 Years",
-      locationText: "Work From Office",
-    },
-
-    {
-      image: MainLogo,
-      title: "Talent Acquisition Lead",
-      experiance: "1 To 4 Years",
-
-      locationText: "Work From Office",
-    },
-
-    {
-      image: MainLogo,
-      title: "Ruby on Rails",
-      experiance: "1 To 4 Years",
-
-      locationText: "Work From Office",
-    },
-
-    {
-      image: MainLogo,
-      title: "Devops",
-      experiance: "1 To 4 Years",
-
-      locationText: "Work From Office",
-    },
-
-    {
-      image: MainLogo,
-      title: "Salesforce",
-      experiance: "1 To 4 Years",
-
-      locationText: "Work From Office",
-    },
-  ];
   return (
-    <>
-      <TopHeading>
-        <h1
-          style={{
-            fontSize: "25px",
-            textAlign: "center",
-            wordWrap: "break-word",
-            overflowWrap: "break-word",
-          }}
-        >
-          Follow Us On
-        </h1>
-        <StyledLinkedinImg src={JobsLinkedin} alt="Image" />
-        <h1
-          style={{
-            fontSize: "25px",
-            alignItems: "center",
-            justifyContent: "center",
-            textAlign: "center",
-            wordWrap: "break-word",
-            overflowWrap: "break-word",
-          }}
-        >
-          For The Latest Job Opportunities
-        </h1>
-      </TopHeading>
-      <CardContainer>
-        <CardBox>
-          {cardContent.map((i, index) => (
-            <CardSquare
-              key={index}
-              image={i.image}
-              title={i.title}
-              experiance={i.experiance}
-              locationText={i.locationText}
-            />
-          ))}
-        </CardBox>
-      </CardContainer>
-    </>
+    <Box sx={{ backgroundColor: Body }}>
+      <Container sx={{ padding: ContainerPadding }}>
+        <TopHeading mb={2}>
+          <Typography
+            sx={{
+              fontSize: SubFont,
+              marginRight: "8px",
+            }}
+          >
+            Follow Us On
+          </Typography>
+          <StyledLinkedinImg src={JobsLinkedin} alt="Image" />
+          <Typography
+            sx={{
+              fontSize: SubFont,
+              marginLeft: "8px",
+            }}
+          >
+            For The Latest Job Opportunities
+          </Typography>
+        </TopHeading>
+
+        <CardContainer>
+          <CardBox>
+            {data?.map((i: any, index: Number) => (
+              <CardSquare
+                key={index.toString()}
+                title={i.title}
+                experiance={i.experience}
+                locationText={i.summary}
+                id={i._id}
+              />
+            ))}
+          </CardBox>
+        </CardContainer>
+      </Container>
+    </Box>
   );
 };

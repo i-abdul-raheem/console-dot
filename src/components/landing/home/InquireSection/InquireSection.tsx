@@ -1,4 +1,11 @@
-import { TextField, Button, TextareaAutosize } from "@mui/material";
+import {
+  TextField,
+  Button,
+  TextareaAutosize,
+  Container,
+  Typography,
+  Box,
+} from "@mui/material";
 import {
   FormSection,
   InputsFirstRow,
@@ -6,58 +13,196 @@ import {
   SectionContainer,
   SectionTitle,
   StyledButton,
+  StyledTextarea,
 } from "./elements";
-import { Wrapper } from "../../utils";
-import { ColumnInMobile } from "../CccSection/elements";
+import {
+  ButtonPadding,
+  ContainerPadding,
+  Dark,
+  H1,
+  H2,
+  HeadFont,
+  Padding,
+  Primary,
+  Secondary,
+  SubFont,
+} from "../../utils";
 
 export const InquireSection = () => {
+  const labelStyle = {
+    color: "white",
+  };
+  const textAreaStyles = {
+    "::placeholder": {
+      color: "white",
+    },
+  };
   return (
-    <>
-      <SectionContainer>
-        <SectionTitle>
-          <h1
-            style={{
-              wordWrap: "break-word",
-              overflowWrap: "break-word",
+    <Container sx={{ background: Primary, padding: ContainerPadding }}>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: {
+            xl: "row",
+            lg: "row",
+            md: "row",
+            sm: "column",
+            xs: "column",
+          },
+        }}
+      >
+        <Box sx={{ padding: Padding }}>
+          <H1
+            variant="h1"
+            sx={{
+              textAlign: "center",
+              color: "white",
+            }}
+            mb={5}
+          >
+            Continuously and Systematically Evolve Your Product With Our Vetted
+            Angular Developers
+          </H1>
+          <H2
+            variant="h2"
+            mb={2}
+            sx={{
+              textAlign: "center",
+              color: "white",
             }}
           >
-            How Can We Help You?{" "}
-          </h1>
-        </SectionTitle>
+            We ensure you’re matched with the right talent resource based on
+            your requirement.
+          </H2>
+        </Box>
         <FormSection>
-          <InputsFirstRow>
-            <TextField
-              id="outlined-basic"
-              style={{ width: "100%" }}
-              label="Your Name"
-              variant="outlined"
-            />
-
-            <TextField
-              id="outlined-basic"
-              style={{ width: "100%" }}
-              label="Email Address"
-              variant="outlined"
-            />
-          </InputsFirstRow>
           <TextField
             id="outlined-basic"
-            style={{ width: "100%" }}
-            label="Phone Number"
-            variant="outlined"
+            InputLabelProps={{
+              style: labelStyle,
+            }}
+            inputProps={{
+              style: labelStyle,
+            }}
+            sx={{
+              width: "50",
+              "& label.Mui-focused": {
+                color: "#fff",
+              },
+              "& .MuiInput-underline:after": {
+                borderBottomColor: "#fff",
+              },
+              "& .MuiOutlinedInput-root": {
+                "& fieldset": {
+                  borderColor: "#fff",
+                },
+                "&:hover fieldset": {
+                  borderColor: "#fff",
+                },
+                "&.Mui-focused fieldset": {
+                  borderColor: "#fff",
+                },
+              },
+            }}
+            label="Your Name"
+            size="small"
           />
 
-          <TextareaAutosize
-            id="outlined-basic"
-            placeholder="Your Message"
-            minRows={7}
-            style={{ fontSize: "20px" }}
+          <TextField
+            InputLabelProps={{
+              style: labelStyle,
+            }}
+            inputProps={{
+              style: labelStyle,
+            }}
+            sx={{
+              width: "50",
+              "& label.Mui-focused": {
+                color: "#fff",
+              },
+              "& .MuiInput-underline:after": {
+                borderBottomColor: "#fff",
+              },
+              "& .MuiOutlinedInput-root": {
+                "& fieldset": {
+                  borderColor: "#fff",
+                },
+                "&:hover fieldset": {
+                  borderColor: "#fff",
+                },
+                "&.Mui-focused fieldset": {
+                  borderColor: "#fff",
+                },
+              },
+            }}
+            label="Email Address"
+            size="small"
           />
-          <div style={{ display: "flex", justifyContent: "flex-end" }}>
-            <StyledButton>Inquire Now</StyledButton>
-          </div>
+
+          <TextField
+            id="outlined-basic"
+            InputLabelProps={{
+              style: labelStyle,
+            }}
+            inputProps={{
+              style: labelStyle,
+            }}
+            sx={{
+              width: "50",
+              "& label.Mui-focused": {
+                color: "#fff",
+              },
+              "& .MuiInput-underline:after": {
+                borderBottomColor: "#fff",
+              },
+              "& .MuiOutlinedInput-root": {
+                "& fieldset": {
+                  borderColor: "#fff",
+                },
+                "&:hover fieldset": {
+                  borderColor: "#fff",
+                },
+                "&.Mui-focused fieldset": {
+                  borderColor: "#fff",
+                },
+              },
+            }}
+            label="Phone Number"
+            variant="outlined"
+            size="small"
+          />
+
+          <StyledTextarea
+            aria-label="minimum height"
+            minRows={3}
+            placeholder="your message"
+            sx={textAreaStyles}
+          />
+
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              padding: Padding,
+            }}
+          >
+            <Button
+              sx={{
+                padding: ButtonPadding,
+                backgroundColor: "white",
+                fontWeight: "bold",
+                color: Dark,
+                "&:hover": {
+                  backgroundColor: Dark,
+                  color: "white",
+                },
+              }}
+            >
+              Inquire Now
+            </Button>
+          </Box>
         </FormSection>
-      </SectionContainer>
-    </>
+      </Box>
+    </Container>
   );
 };

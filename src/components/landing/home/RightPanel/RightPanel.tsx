@@ -15,43 +15,39 @@ import {
   BottomPanel,
   BottomLink,
   ArrowBtn,
-  RightContainer,
+  HeroImageContainer,
 } from "./elements";
 import Link from "next/link";
 import { useIsMobileView } from "../../utils/utils";
 import { Wrapper } from "../../utils";
 import { useRouter } from "next/router";
 import { AboutUs } from "../AboutUs";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Box, Container } from "@mui/material";
 export const RightPanel = () => {
-  const isMobileView = useIsMobileView();
 
 
-  
-  const router=useRouter();
-  
+  const [headerHeight, setClientHeight] = useState(0);
+  useEffect(() => {
+    const elem:any = document.getElementById("nav");
+    setClientHeight(elem?.clientHeight);
+  }, []);
+
   return (
-    <div
-      style={{
-        position:"relative",
-        display: "flex",
-        alignItems: "flex-start",
-        justifyContent: "center",
-        width: "100%",
-        zIndex: 3,
-      }}
-    >
-      <div style={{ width: "100%" }}>
-        <div
-          style={{
+    <HeroImageContainer>
+      <div style={{ width: "100%", position: "relative" }}>
+        <Container
+          sx={{
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
             width: "calc(100% - 65px)",
-            height: "calc(100vh - 64px - 73px - 64px)",
+            minHeight: "calc(100vh - 83px - 70px - 51.41px)",
             textAlign: "center",
-            padding: 32,
+            position: "relative",
+            marginTop: `calc(${headerHeight}px + 40px)`,
+            marginBottom: "82.41px",
           }}
         >
           <Heading>DEDICATED TO INNOVATION </Heading>
@@ -77,17 +73,36 @@ export const RightPanel = () => {
             <span style={{ color: "#fff" }}>DEVELOPMENT</span>
           </DynamicText>
 
-          <DescripHeading>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: {
+                xl: "row",
+                lg: "row",
+                md: "row",
+                sm: "column",
+                xs: "column",
+              },
+            }}
+          >
             <DescripItems>TOP 1% IT TALENT</DescripItems>
             <DescripItems>TIME ZONE ALIGNED</DescripItems>
             <DescripItems>EXPERIENCED TEAM</DescripItems>
-          </DescripHeading>
-        </div>
+          </Box>
+        </Container>
         <BottomPanel>
-          
-          <button style={{backgroundColor:"transparent", border:"none", fontSize:"16px", color:"white"}}>LEARN MORE</button>
-          <ArrowBtn href="#">
-            <KeyboardArrowDownIcon style={{color:"#fff"}} />{" "}
+          <button
+            style={{
+              backgroundColor: "transparent",
+              border: "none",
+              fontSize: "16px",
+              color: "white",
+            }}
+          >
+            LEARN MORE
+          </button>
+          <ArrowBtn href="#about">
+            <KeyboardArrowDownIcon style={{ color: "#fff" }} />{" "}
           </ArrowBtn>
         </BottomPanel>
       </div>
@@ -95,17 +110,34 @@ export const RightPanel = () => {
       <RightBox>
         <IconsList>
           <ListItems>
-            <FacebookIcon style={{color:"#fff"}}/>
+            <a
+              href="https://www.linkedin.com/company/consoledot/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FacebookIcon style={{ color: "#fff" }} />
+            </a>
           </ListItems>
           <ListItems>
-            <LinkedInIcon style={{color:"#fff"}}/>
+            <a
+              href="https://www.linkedin.com/company/consoledot/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <LinkedInIcon style={{ color: "#fff" }} />
+            </a>
           </ListItems>
           <ListItems>
-            <TwitterIcon style={{color:"#fff"}}/>
+            <a
+              href="https://www.linkedin.com/company/consoledot/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <TwitterIcon style={{ color: "#fff" }} />
+            </a>
           </ListItems>
         </IconsList>
       </RightBox>
-    </div>
+    </HeroImageContainer>
   );
-
-            }
+};

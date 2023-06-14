@@ -1,18 +1,13 @@
-import { CaseStudyTop } from "../CaseStudyTop/CaseStudyTop"
-import { CsNode } from "../CsNode"
-import { CsReact } from "../CsReact"
-import { FortuneClients } from "../FortuneClients"
+import { CaseStudyTop } from "../CaseStudyTop/CaseStudyTop";
+// import { ExploreCaseStudies } from "../../ExploreCaseStudies";
+// import { Layout } from "../../Layout/Layout";
 
+export const CaseStudyWrapper = () => {
+  return (
+    <>
+      <CaseStudyTop />
 
-
-export const CaseStudyWrapper=()=>{
-    return(
-        <>
-        
-        <CaseStudyTop/>
-        <FortuneClients/>
-        <CsReact/>
-        <CsNode/>
-        </>
-    )
-}
+      {/* <ExploreCaseStudies /> */}
+    </>
+  );
+};
