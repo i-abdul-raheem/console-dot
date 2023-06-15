@@ -9,8 +9,19 @@ import {
 } from "../../home/AboutUs/elements";
 import { useRouter } from "next/router";
 import { Container, Box, Divider } from "@mui/material";
-import { Padding } from "../../utils";
-
+import { H2, Padding } from "../../utils";
+import { NameHeading } from "../elements";
+const navLogoStyle = (inverse: Boolean) => {
+  return {
+    color: "#0D7789",
+    fontSize: {
+      xl: "2.8rem",
+      lg: "2rem",
+      md: "2rem",
+      sm: "2rem",
+    },
+  };
+};
 export const MenuPage = () => {
   const router = useRouter();
   return (
@@ -56,21 +67,34 @@ export const MenuPage = () => {
                 padding: { xl: "32px" },
               }}
             >
-              <Image
-                src={MainLogo}
-                alt="logo"
-                style={{ width: "50px", height: "50px" }}
-              />
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "flex-start",
+                  alignItems: "center",
+                  mb: 2,
+                }}
+              >
+                <NameHeading sx={navLogoStyle(true)}>
+                  Console
+                  <span style={{ color: "#224575", marginRight: "7px" }}>
+                    Dot
+                  </span>
+                </NameHeading>
+                <Image
+                  src={MainLogo}
+                  alt="logo"
+                  style={{ width: "50px", height: "50px" }}
+                />
+              </Box>
               <div style={{ paddingBottom: "64px" }}>
-                <h1>ConssoelDot</h1>
-                <span style={{ fontSize: "20px", textAlign: "center" }}>
+                <H2 variant="h2" sx={{ textAlign: "left" }}>
                   ConssoelDot represents the connected world, offering
                   innovative and customer-centric information technology
                   experiences, enabling Enterprises, Associates and the Society
                   to Rise™.
-                </span>
+                </H2>
               </div>
-              <Divider />
             </Box>
             <Box>
               <DetailRow
@@ -101,14 +125,21 @@ export const MenuPage = () => {
               </DetailRow>
             </Box>
           </Box>
-          {/* Side Nav of header */}
+
           <Box
             sx={{
-              padding: "32px",
+              padding: "20px",
               background: "linear-gradient(to bottom left, #226597, #5D8AA8)",
+              display: "flex",
+              justifyContent: "flex-start",
+              alignItems: "start",
             }}
           >
-            <ul>
+            <ul
+              style={{
+                textAlign: "center",
+              }}
+            >
               <StyledMenuList
                 onClick={() => router.push("/careers")}
                 sx={{
@@ -124,49 +155,7 @@ export const MenuPage = () => {
               >
                 Careers
               </StyledMenuList>
-            
-              {/* <StyledMenuList
-                sx={{
-                  cursor: "pointer",
-                  fontSize: {
-                    xl: "2.8rem",
-                    lg: "2.5rem",
-                    md: "2.3rem",
-                    sm: "2rem",
-                    xs: "1rem",
-                  },
-                }}
-              >
-                Blogs
-              </StyledMenuList> */}
-              {/* <StyledMenuList
-                sx={{
-                  cursor: "pointer",
-                  fontSize: {
-                    xl: "2.8rem",
-                    lg: "2.5rem",
-                    md: "2.3rem",
-                    sm: "2rem",
-                    xs: "1rem",
-                  },
-                }}
-              >
-                Resources
-              </StyledMenuList> */}
-              {/* <StyledMenuList
-                sx={{
-                  cursor: "pointer",
-                  fontSize: {
-                    xl: "2.8rem",
-                    lg: "2.5rem",
-                    md: "2.3rem",
-                    sm: "2rem",
-                    xs: "1rem",
-                  },
-                }}
-              >
-                Customer Reviews
-              </StyledMenuList> */}
+
               <StyledMenuList
                 sx={{
                   fontSize: {

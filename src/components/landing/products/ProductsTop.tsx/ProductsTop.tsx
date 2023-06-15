@@ -13,14 +13,13 @@ import { Type } from "typescript";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import SettingsIcon from "@mui/icons-material/Settings";
 import PersonAddAltIcon from "@mui/icons-material/PersonAddAlt";
-import { HeadFont, Padding, SubFont } from "../../utils";
+import { Dark, H1, H2, HeadFont, Padding, Primary, SubFont } from "../../utils";
+import { Tech } from "@/assets";
 interface Types {
-  sideImage: string;
+  sideImage: any;
 }
 
 export const ProductsTop = ({ sideImage }: Types) => {
-  const imageUrl =
-    "https://images.unsplash.com/photo-1421757350652-9f65a35effc7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1174&q=80";
   const backgroundImageUrl =
     "url(https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80)";
   return (
@@ -70,20 +69,21 @@ export const ProductsTop = ({ sideImage }: Types) => {
             width: { xl: "70%", lg: "70%", md: "70%", sm: "100%", xs: "100%" },
           }}
         >
-          <ProductsHeadingText
+          <H1
             sx={{
-              fontSize: HeadFont,
               textAlign: "left",
-              padding: Padding,
+              color: "white",
+              mb: 3,
             }}
           >
             Hire React Developer on Hourly or Monthly Basis
-          </ProductsHeadingText>
-          <ProductsHeadingText
+          </H1>
+          <H2
+            variant="h2"
             sx={{
-              fontSize: SubFont,
               textAlign: "left",
-              padding: Padding,
+              color: "white",
+              mb: 3,
             }}
           >
             Hire AngularJS developer from us to build a secure, scalable, and
@@ -91,35 +91,39 @@ export const ProductsTop = ({ sideImage }: Types) => {
             expertise in all the Angular versions from version 2.0.0 to 15.0.0
             as our mainstream front-end technology. Join the front-end
             revolution with our 80+ senior Angular developers.
-          </ProductsHeadingText>
+          </H2>
           <Box sx={{ display: "flex" }}>
             <Stack
               sx={{
-                width: "25ch",
+                width: "20ch",
               }}
               component="form"
               spacing={2}
               noValidate
-              autoComplete="off"
+              autoComplete="on"
             >
               <TextField
                 sx={{ backgroundColor: "white" }}
                 hiddenLabel
                 id="filled-hidden-label-normal"
-                defaultValue="Email Adress"
+                // defaultValue="Email Adress"
+                label="email@example.com"
               />
             </Stack>
             <Button
               sx={{
-                backgroundColor: "#156380",
+                backgroundColor: Primary,
                 color: "white",
                 fontWeight: "bold",
                 borderLeft: "none",
                 borderTopLeftRadius: "none",
                 borderBottomLeftRadius: "none",
+                "&:hover": {
+                  bgcolor: Dark,
+                },
               }}
             >
-              Hire React Developer
+              Hire Developer
             </Button>
           </Box>
           <Box
@@ -150,7 +154,7 @@ export const ProductsTop = ({ sideImage }: Types) => {
                 },
               }}
             >
-              <BusinessCenterIcon sx={{ color: "#f58220" }} />
+              <BusinessCenterIcon sx={{ color: "white" }} />
               <h6>11+ Years of Experience </h6>
             </Box>
             <Box
@@ -168,7 +172,7 @@ export const ProductsTop = ({ sideImage }: Types) => {
                 },
               }}
             >
-              <SettingsIcon sx={{ color: "#f58220" }} />
+              <SettingsIcon sx={{ color: "white" }} />
               <h6>React Upgrade Service</h6>
             </Box>
             <Box
@@ -186,7 +190,7 @@ export const ProductsTop = ({ sideImage }: Types) => {
                 },
               }}
             >
-              <PersonAddAltIcon sx={{ color: "#f58220" }} />
+              <PersonAddAltIcon sx={{ color: "#white" }} />
               <h6>15 Days Risk Free Trial</h6>
             </Box>
           </Box>
@@ -205,7 +209,13 @@ export const ProductsTop = ({ sideImage }: Types) => {
             },
           }}
         >
-          <CardMedia component="img" height="300" image={sideImage} />
+          <CardMedia
+            component="img"
+            height="300"
+            image={
+              sideImage?.src||`https://api.consoledot.com/file${sideImage}`
+            }
+          />
         </Box>
       </Container>
     </Box>
