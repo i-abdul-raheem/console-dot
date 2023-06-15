@@ -25,6 +25,7 @@ interface props {
   category: string;
   id: string;
 }
+
 const topImage = heroImage;
 export const ExploreTechnologies = () => {
   const [heading, setHeading] = useState<any>([]);
