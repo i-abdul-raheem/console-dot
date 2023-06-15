@@ -109,9 +109,6 @@ export const Header = ({ inverse }: Types) => {
               </ListItem>
 
               <ListItem>
-                <StyledButton inverse={inverse}>WHO WE WORK WITH</StyledButton>
-              </ListItem>
-              <ListItem>
                 <StyledButton
                   inverse={inverse}
                   onClick={() => router.push("/aboutUs")}

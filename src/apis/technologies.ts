@@ -12,6 +12,18 @@ export const getTechnologies = async () => {
   }
 };
 
+export const techCategory = async () => {
+  try {
+    const response = await axios.get(`${BASE_URL}/technology_category`);
+    console.log(response, "category");
+    return response?.data;
+  } catch (error) {
+    // Handle the error
+    console.log(error);
+    return null;
+  }
+};
+
 export const getSingleTechnology = async (id: any) => {
   try {
     const response = await axios.get(`${BASE_URL}/technology/${id}`);

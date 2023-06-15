@@ -90,16 +90,16 @@ export const Mobile = () => {
                     },
                     padding: Padding,
                     color: "white",
-                    backgroundColor: "#87c0cd",
+                    backgroundColor: Primary,
                   }}
                 >
                   <H1
                     variant="h1"
                     sx={{
                       textAlign: "left",
-                      color: Dark,
+                      color: "white",
                     }}
-                    mb={2}
+                    mb={3}
                   >
                     Continuously and Systematically Evolve Your Product With Our
                     Vetted Angular Developers
@@ -126,7 +126,7 @@ export const Mobile = () => {
                   <Box sx={{ display: "flex" }}>
                     <Button
                       sx={{
-                        backgroundColor: Primary,
+                        backgroundColor: Dark,
                         color: "white",
                         fontWeight: "bold",
                         borderLeft: "none",
@@ -134,6 +134,7 @@ export const Mobile = () => {
                         borderBottomLeftRadius: "none",
                         padding: ButtonPadding,
                         "&:hover": {
+                          border: "1px solid white",
                           backgroundColor: Dark,
                         },
                       }}

@@ -1,30 +1,30 @@
-import { List, ListItem, ScrollBarContainer } from "./elements";
+import { Box } from "@mui/material";
+import { ListItem, ScrollBarContainer } from "./elements";
 
 import { Link } from "react-scroll";
 interface props {
-  heading: string[];
+  heading: any[];
+  stack: any;
 }
 
-export const ScrollBar = ({ heading }: props) => {
+export const ScrollBar = ({ heading, stack }: props) => {
   return (
     <>
-      <ScrollBarContainer>
-        <List>
-          {heading.map((head, index) => (
-            <ListItem key={index}>
-              <Link
-                to={head}
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={500}
-              >
-                {head}
-              </Link>
-            </ListItem>
-          ))}
-        </List>
-      </ScrollBarContainer>
+      <Box sx={{ color: "white" }}>
+        {Object.keys(stack).map((head, index) => (
+          <ListItem key={index}>
+            <Link
+              to={head}
+              spy={true}
+              smooth={true}
+              offset={-200}
+              duration={500}
+            >
+              {head}
+            </Link>
+          </ListItem>
+        ))}
+      </Box>
     </>
   );
 };

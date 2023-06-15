@@ -9,6 +9,7 @@ import {
   ContainerPadding,
   H1,
   H2,
+  H3,
   HeadFont,
   Margin,
   Padding,
@@ -68,12 +69,11 @@ export const CaseStudyTop = () => {
   const [data, setData] = useState({
     core_features: [],
     how_it_work: [],
-    overview:"",
-    technologies:[],
-    challenge_short:"",
-    challenge_long:'',
-    team_members:[],
-
+    overview: "",
+    technologies: [],
+    challenge_short: "",
+    challenge_long: "",
+    team_members: [],
   });
 
   useEffect(() => {
@@ -101,45 +101,39 @@ export const CaseStudyTop = () => {
       <Box>
         <CasestudyTop />
         <Box sx={{ backgroundColor: "white" }}>
-          <Container>
+          <Container sx={{ padding: ContainerPadding }}>
             <Box sx={{ width: "100%", display: "flex" }}>
               <Box
                 sx={{
                   width: "50%",
                   backgroundColor: Primary,
                   color: Body,
-                  padding: Padding,
+                  padding: ContainerPadding,
                 }}
               >
-                <Typography sx={{ fontSize: HeadFont, textAlign: "center" }}>
+                <H1 variant="h1" sx={{ textAlign: "center" }} mb={2}>
                   Overview
-                </Typography>
-                <Typography
-                  sx={{
-                    fontSize: SubFont,
-                    padding: Padding,
-                  }}
-                >
-                  {data?.overview}
-                </Typography>
+                </H1>
+                <H2 variant="h2">{data?.overview}</H2>
               </Box>
               <Box
                 sx={{
                   width: "50%",
                   backgroundColor: "white",
                   color: Body,
-                  padding: Padding,
+                  padding: ContainerPadding,
                 }}
               >
-                <Typography
+                <H1
+                  mb={2}
+                  variant="h1"
                   sx={{
-                    fontSize: HeadFont,
                     textAlign: "center",
                     color: Primary,
                   }}
                 >
                   TECHNICAL STACK
-                </Typography>
+                </H1>
                 <Box
                   sx={{
                     display: "flex",
@@ -158,17 +152,16 @@ export const CaseStudyTop = () => {
 
         <Box sx={{ backgroundColor: Body }}>
           <Container sx={{ padding: ContainerPadding }}>
-            <Typography
+            <H1
+              variant="h1"
               sx={{
-                fontSize: HeadFont,
-
                 color: Primary,
                 textAlign: "center",
                 padding: Padding,
               }}
             >
               Challenges & Solutions
-            </Typography>
+            </H1>
             <Box
               sx={{
                 display: "flex",
@@ -177,20 +170,20 @@ export const CaseStudyTop = () => {
               }}
             >
               <ChallangesSolutions>
-                <Typography sx={{ fontSize: HeadFont, color: Primary, mb: 3 }}>
+                <H1 variant="h2" sx={{ color: Primary, mb: 3 }}>
                   Summary
-                </Typography>
-                <Typography sx={{ fontSize: Para }}>
+                </H1>
+                <H2 variant="h2" sx={{ mb: 2 }}>
                   {data?.challenge_short}
-                </Typography>
+                </H2>
               </ChallangesSolutions>
               <ChallangesSolutions>
-                <Typography sx={{ fontSize: HeadFont, color: Primary, mb: 3 }}>
+                <H1 variant="h2" sx={{ color: Primary, mb: 3 }}>
                   Details
-                </Typography>
-                <Typography sx={{ fontSize: Para }}>
+                </H1>
+                <H2 variant="h2" sx={{ mb: 2 }}>
                   {data?.challenge_long}
-                </Typography>
+                </H2>
               </ChallangesSolutions>
             </Box>
           </Container>
@@ -199,16 +192,16 @@ export const CaseStudyTop = () => {
           <Container>
             {coreFeature > 0 && (
               <Box>
-                <Typography
+                <H1
+                  variant="h1"
                   sx={{
-                    fontSize: HeadFont,
                     color: Primary,
                     textAlign: "center",
                     margin: Margin,
                   }}
                 >
                   Core Features
-                </Typography>
+                </H1>
                 <Box
                   sx={{
                     display: "flex",
@@ -235,13 +228,7 @@ export const CaseStudyTop = () => {
                         }}
                       >
                         <CheckIcon />
-                        <H2
-                      
-                          variant='h2'
-                      
-                        >
-                          {tech}
-                        </H2>
+                        <H2 variant="h2">{tech}</H2>
                       </Grid>
                     ))}
                   </Grid>
@@ -250,16 +237,16 @@ export const CaseStudyTop = () => {
             )}
             {howItWorks > 0 && (
               <Box>
-                <Typography
+                <H1
+                  variant="h2"
                   sx={{
-                    fontSize: HeadFont,
                     color: Primary,
                     textAlign: "center",
                     margin: Margin,
                   }}
                 >
                   How It Works
-                </Typography>
+                </H1>
                 <Box
                   sx={{
                     display: "flex",
@@ -279,7 +266,8 @@ export const CaseStudyTop = () => {
               </Box>
             )}
             <Box>
-              <Typography
+              <H1
+                variant="h1"
                 sx={{
                   fontSize: HeadFont,
                   color: Primary,
@@ -288,7 +276,7 @@ export const CaseStudyTop = () => {
                 }}
               >
                 Developers & Time Frame
-              </Typography>
+              </H1>
               <Box
                 sx={{
                   display: "flex",

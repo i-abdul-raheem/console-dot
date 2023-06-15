@@ -13,7 +13,15 @@ import {
   SectionTitleDescrip,
 } from "./elements";
 import { Pic1 } from "@/assets";
-import { ContainerPadding, H1, H2, H3, HeadFont, Wrapper } from "../../utils";
+import {
+  ContainerPadding,
+  H1,
+  H2,
+  H3,
+  HeadFont,
+  Primary,
+  Wrapper,
+} from "../../utils";
 import { Box, Container, Typography } from "@mui/material";
 
 export const AboutUs = () => {
@@ -21,7 +29,9 @@ export const AboutUs = () => {
     <Container id="about" sx={{ padding: ContainerPadding }}>
       <AboutUsContainer>
         <SectionTitleDescrip>
-          <H1 variant="h1">ABOUT US</H1>
+          <H1 variant="h1" sx={{ color: Primary }}>
+            ABOUT US
+          </H1>
           <H2 variant="h2">
             A global leader in next-generation digital services and consulting
           </H2>
@@ -99,7 +109,7 @@ export const AboutUs = () => {
             <H2 variant="h2" mb={2} sx={{}}>
               Knowledge @Insights Success Magazine
             </H2>
-            <H3 variant="h3" sx={{color:'#555'}}>
+            <H3 variant="h3" sx={{ color: "#555" }}>
               Bacancy represents the connected world, offering innovative and
               customer-centric information technology experiences, enabling
               Enterprises, Associates and the Society to Rise™.

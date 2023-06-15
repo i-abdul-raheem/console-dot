@@ -21,6 +21,10 @@ export const BasicCard = ({ members }: any) => {
         width: 200,
         boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)",
         border: "1px solid #ddd",
+        transition: "0.3s all ease-in-out",
+        "&:hover": {
+          scale: "1.1",
+        },
       }}
     >
       <CardContent sx={{ textAlign: "center" }}>

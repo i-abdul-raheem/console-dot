@@ -9,7 +9,7 @@ import {
 } from "../../home/AboutUs/elements";
 import { useRouter } from "next/router";
 import { Container, Box, Divider } from "@mui/material";
-import { H2, Padding } from "../../utils";
+import { ContainerPadding, H2, Padding } from "../../utils";
 import { NameHeading } from "../elements";
 const navLogoStyle = (inverse: Boolean) => {
   return {
@@ -56,7 +56,7 @@ export const MenuPage = () => {
                 sm: "10%",
                 xs: "100%",
               },
-              padding: "1rem",
+              padding: ContainerPadding,
             }}
           >
             <Box

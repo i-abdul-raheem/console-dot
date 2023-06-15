@@ -12,7 +12,6 @@ export const MenuPageContainer = styled(Box)({
   justifyContent: "center",
   alignItems: "left",
   height: "auto",
-
 });
 
 export const StyledMenuList = styled("li")({
@@ -21,6 +20,7 @@ export const StyledMenuList = styled("li")({
   fontWeight: "bold",
   color: "#fff",
   listStyle: "none",
+
   transition: "0.3s all ease-in-out",
   "&:hover": {
     scale: "1.1",
