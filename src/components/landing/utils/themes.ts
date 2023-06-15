@@ -162,15 +162,17 @@ export const ButtonPadding = {
 };
 
 export const H1 = styled(Typography)({
-  fontSize: "36px",
+  fontSize: "30px",
+  lineHeight: "40px",
 });
 
 export const H2 = styled(Typography)({
   fontSize: "18px",
-})
-
+  lineHeight: "25px",
+});
 
 export const H3 = styled(Typography)({
   fontSize: "16px",
-})
+  lineHeight: "22px",
+});
 export const ContainerPadding = "1.6rem 1.2rem";

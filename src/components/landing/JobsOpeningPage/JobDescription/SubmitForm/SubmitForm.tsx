@@ -82,7 +82,7 @@ export const SubmitForm = () => {
             <StyledInput
               type="text"
               value={formValues?.name}
-              onChange={(e:any) =>
+              onChange={(e: any) =>
                 setFormValues({ ...formValues, name: e.target.value })
               }
             />
@@ -92,7 +92,7 @@ export const SubmitForm = () => {
             <StyledInput
               type="text"
               value={formValues?.email}
-              onChange={(e:any) =>
+              onChange={(e: any) =>
                 setFormValues({ ...formValues, email: e.target.value })
               }
             />
@@ -102,7 +102,7 @@ export const SubmitForm = () => {
             <StyledInput
               type="text"
               value={formValues?.phone}
-              onChange={(e:any) =>
+              onChange={(e: any) =>
                 setFormValues({ ...formValues, phone: e.target.value })
               }
             />
@@ -145,6 +145,7 @@ export const SubmitForm = () => {
                 },
               }}
               onClick={handleclick}
+              type="submit"
             >
               Submit
             </StyledButton>

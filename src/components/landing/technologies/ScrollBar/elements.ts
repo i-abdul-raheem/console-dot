@@ -15,11 +15,12 @@ export const ScrollBarContainer = styled(Box)(() => {
 
 export const ListItem = styled(Box)({
   fontSize: "20px",
-  padding: "10px 5px",
+  padding: "10px 15px",
   borderBottom: "1px solid #ddd",
   backgroundColor: Primary,
   scale: ".8",
   transition: "transform 0.3s ease-in-out",
+  cursor:'pointer',
 
   "&:hover": {
     backgroundColor: Dark,
@@ -29,6 +30,4 @@ export const ListItem = styled(Box)({
   },
 });
 
-export const List = styled(Box)({
-  backgroundColor: "#f3f9fb",
-});
+

@@ -3,6 +3,7 @@ import { Box, Container, Card, Typography } from "@mui/material";
 import {
   ContainerPadding,
   Dark,
+  H1,
   HeadFont,
   Margin,
   Padding,
@@ -16,32 +17,45 @@ import Link from "next/link";
 import { InquireSection } from "../../home";
 import { Layout } from "../../Layout/Layout";
 import { StyledDivider } from "./elements";
-import { getTechnologies } from "@/apis/technologies";
+import { getTechnologies, techCategory } from "@/apis/technologies";
 
 // data of the array
-interface props {
-  title: string;
-  image: string;
-  category: string;
-  id: string;
-}
 
 const topImage = heroImage;
 export const ExploreTechnologies = () => {
-  const [heading, setHeading] = useState<any>([]);
+  const [heading, setHeading] = useState<any>(null);
 
   const [technologies, setTechnologies] = useState<any>([]);
 
-  useEffect(() => {
-    const fetchData = () => {
-      getTechnologies().then((res) => {
-        setTechnologies(res?.data);
-        console.log(technologies);
-      });
-    };
-    fetchData();
-  }, [technologies]);
+  const [techStack, setTechStack] = useState<any>({});
 
+  const fetchData = () => {
+    techCategory().then((res) => {
+      setHeading(res?.data);
+    });
+    getTechnologies().then((res) => {
+      setTechnologies(res?.data);
+      console.log(technologies), "technologies";
+    });
+  };
+  useEffect(() => {
+    fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    let temp0 = {};
+    heading &&
+      heading.map((head: any) => {
+        const temp: any = {};
+        temp[head?.title] = technologies.filter(
+          (tech: any) => tech?.category === head?._id
+        );
+        temp0 = { ...temp0, ...temp };
+      });
+    setTechStack({ ...temp0 });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [heading]);
   return (
     <Layout>
       <Box sx={{ width: "100%", backgroundColor: "white" }}>
@@ -61,56 +75,53 @@ export const ExploreTechnologies = () => {
                 },
               }}
             >
-              {/* {heading.map((head: String, index: Number) => ( */}
-              <Box>
-                <Box
-                  sx={{
-                    fontSize: HeadFont,
-                    textAlign: "center",
-                    color: Primary,
-                    margin: Margin,
-                    fontWeight: "bold",
-                  }}
-                  // id={head.toString()}
-                >
-                  {/* {head} */}
-                  <StyledDivider></StyledDivider>
-                </Box>
-                <Box
-                  sx={{
-                    display: "flex",
-                    flexWrap: "wrap",
-                    justifyContent: "space-around",
-                    padding: Padding,
-                  }}
-                >
-                  {technologies.map((myData: any, index1: Number) => {
-                    const temp = {};
+              {techStack &&
+                Object.keys(techStack).map((head0) => {
+                  if (techStack[head0].length > 0) {
                     return (
-                      <Link
-                        style={{
-                          textDecoration: "none",
-                          color: "white",
-                          fontWeight: "bold",
-                        }}
-                        key={index1.toString()}
-                        href={`/exploreTechnologies/${myData.category}`}
-                        passHref
-                      >
-                        <Box>
-                          <TechnologyCard
-                            title={myData?.title}
-                            image={myData?.hero}
-                            member={0}
-                            time=""
-                          />
+                      <>
+                        <H1 variant="h1" sx={{ textAlign: "center" }}>
+                          {head0}
+                        </H1>
+                        <Box
+                          id={head0}
+                          sx={{
+                            display: "flex",
+                            flexWrap: "wrap",
+                            justifyContent: "space-around",
+                            padding: Padding,
+                          }}
+                        >
+                          {techStack[head0].map(
+                            (myData: any, index1: Number) => {
+                              return (
+                                <Link
+                                  style={{
+                                    textDecoration: "none",
+                                    color: "white",
+                                    fontWeight: "bold",
+                                  }}
+                                  key={index1.toString()}
+                                  href={`/exploreTechnologies/${myData.category}`}
+                                  passHref
+                                >
+                                  <Box>
+                                    <TechnologyCard
+                                      title={myData?.title}
+                                      image={myData?.hero}
+                                      member={0}
+                                      time=""
+                                    />
+                                  </Box>
+                                </Link>
+                              );
+                            }
+                          )}
                         </Box>
-                      </Link>
+                      </>
                     );
-                  })}
-                </Box>
-              </Box>
-              {/* ))} */}
+                  }
+                })}
             </Box>
             <Box
               sx={{
@@ -124,7 +135,7 @@ export const ExploreTechnologies = () => {
                 },
               }}
             >
-              <ScrollBar heading={heading} />
+              <ScrollBar heading={heading} stack={techStack} />
             </Box>
           </Box>
         </Container>

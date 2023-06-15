@@ -1,5 +1,15 @@
 import { Box, Container, Button, Typography } from "@mui/material";
-import { HeadFont, ImageContainer, Padding, SubFont } from "../../utils";
+import {
+  Dark,
+  H1,
+  H2,
+  H3,
+  HeadFont,
+  ImageContainer,
+  Padding,
+  Primary,
+  SubFont,
+} from "../../utils";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
@@ -76,22 +86,23 @@ export const Steppers = () => {
           border: "1px solid gray",
         }}
       >
-        <Typography
+        <H1
           sx={{
-            fontSize: HeadFont,
             textAlign: "left",
-            padding: Padding,
-            fontWeight: "bold",
+            padding: "20px",
+            color: Dark,
+            mb: 2,
           }}
+          variant="h1"
         >
           Continuously and Systematically Evolve Your Product With Our Vetted
           Angular Developers
-        </Typography>
-        <Typography
+        </H1>
+        <H2
+          variant="h2"
           sx={{
-            fontSize: SubFont,
-            padding: Padding,
             textAlign: "left",
+            padding: "20px",
           }}
         >
           We are early adopters and now the veterans of this widely used
@@ -105,7 +116,7 @@ export const Steppers = () => {
           develop lightweight and interactive applications, as our core
           competency lies in building interactive user interfaces with the help
           of powerful React libraries.
-        </Typography>
+        </H2>
         <Box
           sx={{
             display: "flex",
@@ -116,13 +127,16 @@ export const Steppers = () => {
         >
           <Button
             sx={{
-              backgroundColor: "#156380",
+              backgroundColor: Primary,
               color: "white",
               fontWeight: "bold",
               borderLeft: "none",
               borderTopLeftRadius: "none",
               borderBottomLeftRadius: "none",
               width: "90%",
+              "&:hover": {
+                bgcolor: Dark,
+              },
             }}
             size="large"
           >

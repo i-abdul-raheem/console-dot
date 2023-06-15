@@ -1,17 +1,14 @@
-import { Box, Container, Button, Typography, Grid } from "@mui/material";
+import { Box, Container, Grid } from "@mui/material";
 
 import {
   Body,
   ContainerPadding,
-  Dark,
   H1,
   H2,
   H3,
-  HeadFont,
   MainFlexColumnWrapper,
   Margin,
   Padding,
-  Para,
   Primary,
 } from "../../utils";
 import { InquireSection } from "../../home";
@@ -44,8 +41,6 @@ export const Product2 = () => {
   useEffect(() => {
     // console.log(data?.[0].team_members?.length, "debug data");
   }, [data]);
-
-
 
   const coreFeature = data?.[0]?.core_features.length;
 
@@ -289,7 +284,7 @@ export const Product2 = () => {
                     <TechnologyCard
                       title="Time Frame"
                       time="On going since 2023"
-                      image={''}
+                      image={""}
                       member={0}
                     />
                   </Box>
